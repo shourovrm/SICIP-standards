@@ -1,13 +1,11 @@
 # DECISIONS
 
 ## Current state
-Repo scaffolded + assets in. `lab-standards/` = 23 workbooks (22 orgs + standalone Weaving), exact SICIP template, live formulas. `competency-standards/<ORG>/` = **162 CS PDFs** across 22 orgs (docx-only converted via soffice; original filenames keep the date), 0 zero-byte, 162 MB, none >25 MB (Cloudflare-safe). 162 not 163 = BPI "Electrical Works V2" is a duplicate of the revised Electrical Works (dropped as a CS; the lab workbook still has both sheets — reconcile in data.json). `docs/mockups/` = site + font mockups; `docs/reference-lab-index.html` carries the sector map. `scripts/` = build_lab_standard.py + dump_tail/head.py. Site (`web/`, `data/data.json`) NOT built yet.
+Site BUILT and verified locally (Playwright: search, calculator math, print sheet, confirms, CS iframe, mobile, all 162 slugs + asset URLs 200). Pure static: root `index.html` + `web/` (css/js/fonts, self-hosted Space Grotesk + Spline Sans variable woff2). Hash router `#/cs` (default, CS tab first per user) / `#/lab` / `#/{cs,lab}/<org>--<course>`. `data/data.json` = 162 entries (gen via `scripts/gen_data.py`; reads workbooks + reference index + `data/peer-data.json` for dates/pdf map). All 162 courses have cs_pdf; 8 approved=null (no date in filename OR cover — genuinely unknown); 5 sector=null (Beautification). Deploy root = repo root (asset paths `lab-standards/…`, `competency-standards/…` work as-is). NOT yet deployed to Cloudflare.
 
 ## Next
-- Reconstruct `data/data.json` from workbooks + sectors (reference index) + filename dates.
-- Rebuild `gen_index.py` (lost in a scratchpad wipe) — logic is in CLAUDE.md/site spec.
-- Build the static site in `web/` per the CLAUDE.md design spec (router, font #3, calculator, PDF preview, confirmations, print CSS).
-- Wire Cloudflare Pages deploy.
+- Deploy: Cloudflare Pages, output dir `/`, no build (git integration or `wrangler pages deploy .`).
+- Optional: `_headers` for cache control on pdfs/xlsx.
 
 ## Gotchas
 - External source drive remounts between `/run/media/rms/New Volume` and `New Volume1` — detect the live path before any file op; the /tmp scratchpad keyed to the old mount name gets wiped on remount (lost scripts/JSON once). Keep working files in-repo, not /tmp.
@@ -15,6 +13,9 @@ Repo scaffolded + assets in. `lab-standards/` = 23 workbooks (22 orgs + standalo
 - Non-integer required qtys in some CS ("As required", "05 sets") → template builder coerces leading int, keeps original in Remarks; `F` cell wraps `IFERROR(...,0)`.
 - 5 lab standards have no sector (all Beautification) — second line blank, not a fallback label.
 - ISC-T&H workbook filename contains `&`; href must be URL-encoded. Mahila-Polytechnic file is hyphenated but displays "Mahila Polytechnic".
+- Hash navigation: browser scroll restoration fires AFTER the hashchange handler — `history.scrollRestoration='manual'` required or detail pages open mid-scroll.
+- 11 equipment rows have blank/non-numeric Required in the SOURCE workbooks (Mahila Cyber Security ×7 etc.) — row scores 0 like the xlsx IFERROR; not a bug.
+- data.json regen: `python scripts/gen_data.py` (needs data/peer-data.json present).
 
 ## Tried / rejected
 - pdf→HTML conversion for CS preview — mangles tables; use embedded PDF instead.
@@ -29,3 +30,7 @@ Repo scaffolded + assets in. `lab-standards/` = 23 workbooks (22 orgs + standalo
 2026-08-19 | approval date from filename, doc-cover for ~8 gaps, label "Approved" | user decision
 2026-08-19 | CS = embedded PDF preview, no Open full; downloads/prints confirm first | user decision
 2026-08-19 | Cloudflare Pages; CBLMs deferred | size fits CS (~150MB), CBLM ~4.6GB later
+2026-08-19 | data.json via gen_data.py layered on peer-data.json | peer session extracted raw feed; gen adds boilerplate/remarks/date+pdf fixes
+2026-08-19 | 8 dateless CS stay approved=null | no date in filename or first 3 PDF pages
+2026-08-19 | CS tab first, #/cs is default landing | user request
+2026-08-19 | site built: root index.html + web/, deploy root = repo root | asset paths resolve without copying 162MB of PDFs
