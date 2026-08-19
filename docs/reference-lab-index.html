@@ -1,0 +1,321 @@
+<title>SICIP Lab Standards</title>
+<style>
+:root{
+  --bg:#f4f5f7; --surface:#ffffff; --panel:#fbfbfc;
+  --ink:#181b20; --muted:#5b626c; --faint:#8a919b;
+  --line:#e3e6ea; --line-strong:#d3d7dd;
+  --acc:#1f5fbf; --acc-ink:#17498f; --acc-tint:#e8f0fb; --mark:#fde68a;
+  --r:12px; --shadow:0 1px 2px rgba(20,24,31,.04);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* Header */
+.top{
+  position:sticky;top:0;z-index:20;background:var(--bg);
+  border-bottom:1px solid var(--line-strong);
+}
+.top-in{max-width:1120px;margin:0 auto;padding:20px 20px 16px}
+h1{margin:0;font-size:20px;font-weight:650;letter-spacing:-.01em}
+.sub{margin:2px 0 14px;color:var(--muted);font-size:13.5px}
+.search{position:relative}
+.search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--faint)}
+#q{
+  width:100%;padding:11px 14px 11px 40px;font-size:14.5px;font-family:inherit;
+  color:var(--ink);background:var(--surface);border:1px solid var(--line-strong);
+  border-radius:10px;box-shadow:var(--shadow);transition:border-color .15s,box-shadow .15s;
+}
+#q::placeholder{color:var(--faint)}
+#q:focus{outline:none;border-color:var(--acc);box-shadow:0 0 0 3px var(--acc-tint)}
+.count{margin-top:9px;font-size:12.5px;color:var(--muted);min-height:1em}
+.count b{color:var(--ink);font-weight:600}
+
+/* Directory */
+main{padding:24px 0 64px}
+.grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+  gap:14px;align-items:start;
+}
+.org{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  overflow:hidden;
+}
+.org-hd{
+  display:flex;align-items:center;gap:10px;padding:12px 14px;
+  border-bottom:1px solid var(--line);background:var(--panel);
+}
+.org-name{
+  font-weight:650;font-size:15px;color:var(--ink);text-decoration:none;letter-spacing:-.01em;
+}
+.org-name:hover{color:var(--acc-ink)}
+.org-count{
+  margin-left:auto;font-size:11.5px;font-weight:600;color:var(--muted);
+  background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:2px 9px;
+}
+.course-list{list-style:none;margin:0;padding:6px}
+.course a{
+  display:flex;flex-direction:column;gap:1px;padding:7px 9px;border-radius:7px;
+  text-decoration:none;color:inherit;transition:background .12s;
+}
+.course a:hover{background:var(--acc-tint)}
+.c-name{font-size:13.5px;font-weight:550;color:var(--ink)}
+.c-full{font-size:11.5px;color:var(--faint);line-height:1.35}
+.course.hit a{background:var(--acc-tint)}
+.course.hit .c-name{color:var(--acc-ink)}
+mark{background:var(--mark);color:inherit;border-radius:2px;padding:0 1px}
+.org.dim{display:none}
+.course.off{display:none}
+.empty{display:none;text-align:center;color:var(--muted);padding:60px 20px;font-size:14px}
+.empty.show{display:block}
+footer{color:var(--faint);font-size:12px;text-align:center;padding:8px 0 40px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="top">
+  <div class="top-in">
+    <h1>SICIP Workshop &amp; Lab Facility Standards</h1>
+    <p class="sub">22 organisations &middot; 163 competency standards &middot; select any to open its Excel workbook</p>
+    <div class="search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="q" type="search" autocomplete="off" spellcheck="false"
+        placeholder="Search organisation, course, or sector (e.g. HVAC, welding, shipbuilding, ICT)">
+    </div>
+    <div class="count" id="count"></div>
+  </div>
+</div>
+
+<main><div class="wrap">
+  <div class="grid" id="grid">
+<section class="org" data-org="aeosib">
+<header class="org-hd">
+<a class="org-name" href="./AEOSIB-lab-standard.xlsx">AEOSIB</a>
+<span class="org-count">4</span>
+</header>
+<ul class="course-list"><li class="course" data-course="marine engine op &amp; maint marine engine operation and maintenance shipbuilding"><a href="./AEOSIB-lab-standard.xlsx"><span class="c-name">Marine Engine Operation and Maintenance</span><span class="c-full">Sector: Shipbuilding</span></a></li><li class="course" data-course="welding 1g 2g 3g welding and fabrication (1g, 2g &amp; 3g) shipbuilding"><a href="./AEOSIB-lab-standard.xlsx"><span class="c-name">Welding and Fabrication (1G, 2G &amp; 3G)</span><span class="c-full">Sector: Shipbuilding</span></a></li><li class="course" data-course="electrical instl &amp; maint electrical installation and maintenance (shipbuilding) shipbuilding"><a href="./AEOSIB-lab-standard.xlsx"><span class="c-name">Electrical Installation and Maintenance (Shipbuilding)</span><span class="c-full">Sector: Shipbuilding</span></a></li><li class="course" data-course="boiler op &amp; maintenance boiler operation and maintenance shipbuilding"><a href="./AEOSIB-lab-standard.xlsx"><span class="c-name">Boiler Operation and Maintenance</span><span class="c-full">Sector: Shipbuilding</span></a></li></ul>
+</section>
+<section class="org" data-org="asia-ttc">
+<header class="org-hd">
+<a class="org-name" href="./Asia-TTC-lab-standard.xlsx">Asia-TTC</a>
+<span class="org-count">5</span>
+</header>
+<ul class="course-list"><li class="course" data-course="attc-elec terminator electrical terminator and fitter construction"><a href="./Asia-TTC-lab-standard.xlsx"><span class="c-name">Electrical Terminator and Fitter</span><span class="c-full">Sector: Construction</span></a></li><li class="course" data-course="attc-building electrif building electrification construction"><a href="./Asia-TTC-lab-standard.xlsx"><span class="c-name">Building Electrification</span><span class="c-full">Sector: Construction</span></a></li><li class="course" data-course="attc-tig mig welding tig and mig welding construction"><a href="./Asia-TTC-lab-standard.xlsx"><span class="c-name">TIG and MIG WELDING</span><span class="c-full">Sector: Construction</span></a></li><li class="course" data-course="attc-adv masonry advanced masonry construction"><a href="./Asia-TTC-lab-standard.xlsx"><span class="c-name">Advanced Masonry</span><span class="c-full">Sector: Construction</span></a></li><li class="course" data-course="attc-plumbing pipe fit plumbing and pipe fitting construction"><a href="./Asia-TTC-lab-standard.xlsx"><span class="c-name">Plumbing and Pipe Fitting</span><span class="c-full">Sector: Construction</span></a></li></ul>
+</section>
+<section class="org" data-org="bacco">
+<header class="org-hd">
+<a class="org-name" href="./BACCO-lab-standard.xlsx">BACCO</a>
+<span class="org-count">5</span>
+</header>
+<ul class="course-list"><li class="course" data-course="accounting outsourcing accounting services-outsourcing ict"><a href="./BACCO-lab-standard.xlsx"><span class="c-name">Accounting Services-Outsourcing</span><span class="c-full">Sector: ICT</span></a></li><li class="course" data-course="adv image processing advanced image processing &amp; technique ict"><a href="./BACCO-lab-standard.xlsx"><span class="c-name">Advanced Image Processing &amp; Technique</span><span class="c-full">Sector: ICT</span></a></li><li class="course" data-course="social media marketing social media marketing and content moderation ict"><a href="./BACCO-lab-standard.xlsx"><span class="c-name">Social Media Marketing and Content Moderation</span><span class="c-full">Sector: ICT</span></a></li><li class="course" data-course="ai driven freelancers ai driven freelancers ict"><a href="./BACCO-lab-standard.xlsx"><span class="c-name">AI Driven Freelancers</span><span class="c-full">Sector: ICT</span></a></li><li class="course" data-course="digital business ops digital business operations ict"><a href="./BACCO-lab-standard.xlsx"><span class="c-name">Digital Business Operations</span><span class="c-full">Sector: ICT</span></a></li></ul>
+</section>
+<section class="org" data-org="baci">
+<header class="org-hd">
+<a class="org-name" href="./BACI-lab-standard.xlsx">BACI</a>
+<span class="org-count">6</span>
+</header>
+<ul class="course-list"><li class="course" data-course="masonry &amp; steel binding masonry and steel binding construction"><a href="./BACI-lab-standard.xlsx"><span class="c-name">Masonry and Steel Binding</span><span class="c-full">Sector: Construction</span></a></li><li class="course" data-course="electrical install &amp; maint electrical installation &amp; maintenance (construction) construction"><a href="./BACI-lab-standard.xlsx"><span class="c-name">Electrical Installation &amp; Maintenance (Construction)</span><span class="c-full">Sector: Construction</span></a></li><li class="course" data-course="plumbing and pipe fitting plumbing and pipe fitting construction"><a href="./BACI-lab-standard.xlsx"><span class="c-name">Plumbing and Pipe Fitting</span><span class="c-full">Sector: Construction</span></a></li><li class="course" data-course="tile and marble works tile and marble works construction"><a href="./BACI-lab-standard.xlsx"><span class="c-name">Tile and Marble Works</span><span class="c-full">Sector: Construction</span></a></li><li class="course" data-course="scaffolding scaffolding construction"><a href="./BACI-lab-standard.xlsx"><span class="c-name">Scaffolding</span><span class="c-full">Sector: Construction</span></a></li><li class="course" data-course="hvac installation of heating, ventilation &amp; air conditioning (hvac) construction"><a href="./BACI-lab-standard.xlsx"><span class="c-name">Installation of Heating, Ventilation &amp; Air Conditioning (HVAC)</span><span class="c-full">Sector: Construction</span></a></li></ul>
+</section>
+<section class="org" data-org="basis">
+<header class="org-hd">
+<a class="org-name" href="./BASIS-lab-standard.xlsx">BASIS</a>
+<span class="org-count">4</span>
+</header>
+<ul class="course-list"><li class="course" data-course="ui-ux design ui/ux design (it sector) it"><a href="./BASIS-lab-standard.xlsx"><span class="c-name">UI/UX Design (IT Sector)</span><span class="c-full">Sector: IT</span></a></li><li class="course" data-course="ai tool mgmt &amp; prompt eng ai tool management &amp; prompt engineering ict"><a href="./BASIS-lab-standard.xlsx"><span class="c-name">AI Tool Management &amp; Prompt Engineering</span><span class="c-full">Sector: ICT</span></a></li><li class="course" data-course="python programming python programming (it sector) it"><a href="./BASIS-lab-standard.xlsx"><span class="c-name">Python Programming (IT Sector)</span><span class="c-full">Sector: IT</span></a></li><li class="course" data-course="technical sales specialist technical sales specialist (it sector) it"><a href="./BASIS-lab-standard.xlsx"><span class="c-name">Technical Sales Specialist (IT Sector)</span><span class="c-full">Sector: IT</span></a></li></ul>
+</section>
+<section class="org" data-org="beioa">
+<header class="org-hd">
+<a class="org-name" href="./BEIOA-lab-standard.xlsx">BEIOA</a>
+<span class="org-count">7</span>
+</header>
+<ul class="course-list"><li class="course" data-course="1-cad-cam design prog cad-cam design and programming (mechanical) light engineering"><a href="./BEIOA-lab-standard.xlsx"><span class="c-name">CAD-CAM Design and Programming (Mechanical)</span><span class="c-full">Sector: Light Engineering</span></a></li><li class="course" data-course="2-cnc machine operation cnc machine operation light engineering"><a href="./BEIOA-lab-standard.xlsx"><span class="c-name">CNC Machine Operation</span><span class="c-full">Sector: Light Engineering</span></a></li><li class="course" data-course="3-elect install maint electrical installation &amp; maintenance (industry) light engineering"><a href="./BEIOA-lab-standard.xlsx"><span class="c-name">Electrical Installation &amp; Maintenance (Industry)</span><span class="c-full">Sector: Light Engineering</span></a></li><li class="course" data-course="4-refrigeration ac refrigeration and air conditioning light engineering"><a href="./BEIOA-lab-standard.xlsx"><span class="c-name">Refrigeration and Air Conditioning</span><span class="c-full">Sector: Light Engineering</span></a></li><li class="course" data-course="5-machine shop practice machine shop practice light engineering"><a href="./BEIOA-lab-standard.xlsx"><span class="c-name">Machine Shop Practice</span><span class="c-full">Sector: Light Engineering</span></a></li><li class="course" data-course="6-welding 1g2g3g welding (1g, 2g &amp; 3g) light engineering"><a href="./BEIOA-lab-standard.xlsx"><span class="c-name">Welding (1G, 2G &amp; 3G)</span><span class="c-full">Sector: Light Engineering</span></a></li><li class="course" data-course="7-plc operation certificate course in plc/plc operation light engineering"><a href="./BEIOA-lab-standard.xlsx"><span class="c-name">Certificate course in PLC/PLC operation</span><span class="c-full">Sector: Light Engineering</span></a></li></ul>
+</section>
+<section class="org" data-org="bgmea">
+<header class="org-hd">
+<a class="org-name" href="./BGMEA-lab-standard.xlsx">BGMEA</a>
+<span class="org-count">12</span>
+</header>
+<ul class="course-list"><li class="course" data-course="sewing machine op (lingerie) sewing machine operation (lingerie) rmg"><a href="./BGMEA-lab-standard.xlsx"><span class="c-name">Sewing Machine Operation (Lingerie)</span><span class="c-full">Sector: RMG</span></a></li><li class="course" data-course="sweater linking operation sweater linking operation rmg"><a href="./BGMEA-lab-standard.xlsx"><span class="c-name">Sweater Linking Operation</span><span class="c-full">Sector: RMG</span></a></li><li class="course" data-course="computerised sweater machine computerised sweater machine operation rmg"><a href="./BGMEA-lab-standard.xlsx"><span class="c-name">Computerised Sweater Machine Operation</span><span class="c-full">Sector: RMG</span></a></li><li class="course" data-course="adv sewing machine op (multi) advanced sewing machine operation (multi skills) rmg"><a href="./BGMEA-lab-standard.xlsx"><span class="c-name">Advanced Sewing Machine Operation (Multi Skills)</span><span class="c-full">Sector: RMG</span></a></li><li class="course" data-course="supply chain mgmt &amp; prod plan supply chain management &amp; production planning rmg"><a href="./BGMEA-lab-standard.xlsx"><span class="c-name">Supply Chain Management &amp; Production Planning</span><span class="c-full">Sector: RMG</span></a></li><li class="course" data-course="industrial eng &amp; lean mfg industrial engineering and lean manufacturing rmg"><a href="./BGMEA-lab-standard.xlsx"><span class="c-name">Industrial Engineering and Lean Manufacturing</span><span class="c-full">Sector: RMG</span></a></li><li class="course" data-course="advanced quality control mgmt advanced quality control management rmg"><a href="./BGMEA-lab-standard.xlsx"><span class="c-name">Advanced Quality Control Management</span><span class="c-full">Sector: RMG</span></a></li><li class="course" data-course="business dev &amp; merchandising business development and merchandising rmg"><a href="./BGMEA-lab-standard.xlsx"><span class="c-name">Business Development and Merchandising</span><span class="c-full">Sector: RMG</span></a></li><li class="course" data-course="social compliance &amp; env mgmt social compliance and environmental management rmg"><a href="./BGMEA-lab-standard.xlsx"><span class="c-name">Social Compliance and Environmental Management</span><span class="c-full">Sector: RMG</span></a></li><li class="course" data-course="3d fashion design 3d fashion design rmg"><a href="./BGMEA-lab-standard.xlsx"><span class="c-name">3D Fashion Design</span><span class="c-full">Sector: RMG</span></a></li><li class="course" data-course="jacquard programming jacquard programming rmg"><a href="./BGMEA-lab-standard.xlsx"><span class="c-name">Jacquard Programming</span><span class="c-full">Sector: RMG</span></a></li><li class="course" data-course="advanced pattern making cad advanced pattern making with cad rmg"><a href="./BGMEA-lab-standard.xlsx"><span class="c-name">Advanced Pattern Making with CAD</span><span class="c-full">Sector: RMG</span></a></li></ul>
+</section>
+<section class="org" data-org="bitac">
+<header class="org-hd">
+<a class="org-name" href="./BITAC-lab-standard.xlsx">BITAC</a>
+<span class="org-count">7</span>
+</header>
+<ul class="course-list"><li class="course" data-course="industrial automation industrial automation light engineering"><a href="./BITAC-lab-standard.xlsx"><span class="c-name">Industrial Automation</span><span class="c-full">Sector: Light Engineering</span></a></li><li class="course" data-course="pneumatic &amp; hydraulic system pneumatic &amp; hydraulic system operation and maintenance light engineering"><a href="./BITAC-lab-standard.xlsx"><span class="c-name">Pneumatic &amp; Hydraulic System Operation and Maintenance</span><span class="c-full">Sector: Light Engineering</span></a></li><li class="course" data-course="industrial robot operation industrial robot operation and troubleshooting light engineering"><a href="./BITAC-lab-standard.xlsx"><span class="c-name">Industrial Robot Operation and Troubleshooting</span><span class="c-full">Sector: Light Engineering</span></a></li><li class="course" data-course="industrial elec &amp; electronics industrial electrical and electronics application light engineering"><a href="./BITAC-lab-standard.xlsx"><span class="c-name">Industrial Electrical and Electronics Application</span><span class="c-full">Sector: Light Engineering</span></a></li><li class="course" data-course="3d printing technology 3d printing technology light engineering"><a href="./BITAC-lab-standard.xlsx"><span class="c-name">3D Printing Technology</span><span class="c-full">Sector: Light Engineering</span></a></li><li class="course" data-course="cad-cam design &amp; programming cad-cam design and programming (mechanical) light engineering"><a href="./BITAC-lab-standard.xlsx"><span class="c-name">CAD-CAM Design and Programming (Mechanical)</span><span class="c-full">Sector: Light Engineering</span></a></li><li class="course" data-course="advanced cnc machining center advanced cnc machining center operation and practice light engineering"><a href="./BITAC-lab-standard.xlsx"><span class="c-name">Advanced CNC Machining Center Operation and Practice</span><span class="c-full">Sector: Light Engineering</span></a></li></ul>
+</section>
+<section class="org" data-org="bjma">
+<header class="org-hd">
+<a class="org-name" href="./BJMA-lab-standard.xlsx">BJMA</a>
+<span class="org-count">9</span>
+</header>
+<ul class="course-list"><li class="course" data-course="jute bleach dye printing jute bleaching, dyeing, and printing jute"><a href="./BJMA-lab-standard.xlsx"><span class="c-name">Jute Bleaching, Dyeing, and Printing</span><span class="c-full">Sector: Jute</span></a></li><li class="course" data-course="spinning winding beaming spinning, winding, beaming and twisting machine operation jute"><a href="./BJMA-lab-standard.xlsx"><span class="c-name">Spinning, Winding, Beaming and Twisting Machine Operation</span><span class="c-full">Sector: Jute</span></a></li><li class="course" data-course="compliance sustainability compliance and sustainability issues jute"><a href="./BJMA-lab-standard.xlsx"><span class="c-name">Compliance and Sustainability Issues</span><span class="c-full">Sector: Jute</span></a></li><li class="course" data-course="jute mill machinery maint maintenance of jute mills machinery jute"><a href="./BJMA-lab-standard.xlsx"><span class="c-name">Maintenance of Jute Mills Machinery</span><span class="c-full">Sector: Jute</span></a></li><li class="course" data-course="merchandising merchandising jute"><a href="./BJMA-lab-standard.xlsx"><span class="c-name">Merchandising</span><span class="c-full">Sector: Jute</span></a></li><li class="course" data-course="pattern design prod dev pattern design and product development (jute sector) jute"><a href="./BJMA-lab-standard.xlsx"><span class="c-name">Pattern Design and Product Development (Jute Sector)</span><span class="c-full">Sector: Jute</span></a></li><li class="course" data-course="weaving and finishing weaving and finishing jute"><a href="./BJMA-lab-standard.xlsx"><span class="c-name">Weaving and Finishing</span><span class="c-full">Sector: Jute</span></a></li><li class="course" data-course="batching preparing drawing batching, preparing and drawing jute"><a href="./BJMA-lab-standard.xlsx"><span class="c-name">Batching, Preparing and Drawing</span><span class="c-full">Sector: Jute</span></a></li><li class="course" data-course="industry supervisor industry supervisor jute"><a href="./BJMA-lab-standard.xlsx"><span class="c-name">Industry Supervisor</span><span class="c-full">Sector: Jute</span></a></li></ul>
+</section>
+<section class="org" data-org="bkmea">
+<header class="org-hd">
+<a class="org-name" href="./BKMEA-lab-standard.xlsx">BKMEA</a>
+<span class="org-count">8</span>
+</header>
+<ul class="course-list"><li class="course" data-course="apparel merchandising apparel merchandising rmg"><a href="./BKMEA-lab-standard.xlsx"><span class="c-name">Apparel Merchandising</span><span class="c-full">Sector: RMG</span></a></li><li class="course" data-course="advanced garments production advanced garments production and lean management rmg"><a href="./BKMEA-lab-standard.xlsx"><span class="c-name">Advanced Garments Production and Lean Management</span><span class="c-full">Sector: RMG</span></a></li><li class="course" data-course="social &amp; env compliance rmg social and environmental compliance for rmg rmg"><a href="./BKMEA-lab-standard.xlsx"><span class="c-name">Social and Environmental Compliance for RMG</span><span class="c-full">Sector: RMG</span></a></li><li class="course" data-course="trade &amp; business relations trade and business relations management rmg"><a href="./BKMEA-lab-standard.xlsx"><span class="c-name">Trade and Business Relations Management</span><span class="c-full">Sector: RMG</span></a></li><li class="course" data-course="production planning &amp; scm production planning &amp; supply chain management rmg"><a href="./BKMEA-lab-standard.xlsx"><span class="c-name">Production Planning &amp; Supply Chain Management</span><span class="c-full">Sector: RMG</span></a></li><li class="course" data-course="quality control for rmg quality control for rmg rmg"><a href="./BKMEA-lab-standard.xlsx"><span class="c-name">Quality Control for RMG</span><span class="c-full">Sector: RMG</span></a></li><li class="course" data-course="computerised sweater machine computerised sweater machine operation rmg"><a href="./BKMEA-lab-standard.xlsx"><span class="c-name">Computerised Sweater Machine Operation</span><span class="c-full">Sector: RMG</span></a></li><li class="course" data-course="advanced sewing machine op advanced sewing machine operation (multi skills) rmg"><a href="./BKMEA-lab-standard.xlsx"><span class="c-name">Advanced Sewing Machine Operation (Multi Skills)</span><span class="c-full">Sector: RMG</span></a></li></ul>
+</section>
+<section class="org" data-org="bmet">
+<header class="org-hd">
+<a class="org-name" href="./BMET-lab-standard.xlsx">BMET</a>
+<span class="org-count">30</span>
+</header>
+<ul class="course-list"><li class="course" data-course="advanced auto mechanic advanced auto mechanics transport"><a href="./BMET-lab-standard.xlsx"><span class="c-name">Advanced Auto Mechanics</span><span class="c-full">Sector: Transport</span></a></li><li class="course" data-course="graphic and ui design graphic and ui design ict"><a href="./BMET-lab-standard.xlsx"><span class="c-name">Graphic and UI Design</span><span class="c-full">Sector: ICT</span></a></li><li class="course" data-course="hotel housekeeping hotel housekeeping tourism &amp; hospitality"><a href="./BMET-lab-standard.xlsx"><span class="c-name">Hotel Housekeeping</span><span class="c-full">Sector: Tourism &amp; Hospitality</span></a></li><li class="course" data-course="hvac installation of heating, ventilation &amp; air conditioning (hvac) construction"><a href="./BMET-lab-standard.xlsx"><span class="c-name">Installation of Heating, Ventilation &amp; Air Conditioning (HVAC)</span><span class="c-full">Sector: Construction</span></a></li><li class="course" data-course="industrial electronics industrial electronics light engineering"><a href="./BMET-lab-standard.xlsx"><span class="c-name">Industrial Electronics</span><span class="c-full">Sector: Light Engineering</span></a></li><li class="course" data-course="it support service it support service ict"><a href="./BMET-lab-standard.xlsx"><span class="c-name">IT Support Service</span><span class="c-full">Sector: ICT</span></a></li><li class="course" data-course="machine shop practice machine shop practice light engineering"><a href="./BMET-lab-standard.xlsx"><span class="c-name">Machine Shop Practice</span><span class="c-full">Sector: Light Engineering</span></a></li><li class="course" data-course="marine engine artificer marine engine artificer shipbuilding"><a href="./BMET-lab-standard.xlsx"><span class="c-name">Marine Engine Artificer</span><span class="c-full">Sector: Shipbuilding</span></a></li><li class="course" data-course="masonry and rod binding masonry and rod binding construction"><a href="./BMET-lab-standard.xlsx"><span class="c-name">Masonry and Rod Binding</span><span class="c-full">Sector: Construction</span></a></li><li class="course" data-course="mobile phone servicing mobile phone servicing ict"><a href="./BMET-lab-standard.xlsx"><span class="c-name">Mobile Phone Servicing</span><span class="c-full">Sector: ICT</span></a></li><li class="course" data-course="plc operation plc operation light engineering"><a href="./BMET-lab-standard.xlsx"><span class="c-name">PLC operation</span><span class="c-full">Sector: Light Engineering</span></a></li><li class="course" data-course="advanced culinary art advanced culinary art tourism &amp; hospitality"><a href="./BMET-lab-standard.xlsx"><span class="c-name">Advanced Culinary Art</span><span class="c-full">Sector: Tourism &amp; Hospitality</span></a></li><li class="course" data-course="plumbing and pipe fitting plumbing and pipe fitting construction"><a href="./BMET-lab-standard.xlsx"><span class="c-name">Plumbing and Pipe Fitting</span><span class="c-full">Sector: Construction</span></a></li><li class="course" data-course="quality control management quality control management rmg"><a href="./BMET-lab-standard.xlsx"><span class="c-name">Quality Control Management</span><span class="c-full">Sector: RMG</span></a></li><li class="course" data-course="refrigeration and ac refrigeration and air conditioning light engineering"><a href="./BMET-lab-standard.xlsx"><span class="c-name">Refrigeration and Air Conditioning</span><span class="c-full">Sector: Light Engineering</span></a></li><li class="course" data-course="scaffolding scaffolding construction"><a href="./BMET-lab-standard.xlsx"><span class="c-name">Scaffolding</span><span class="c-full">Sector: Construction</span></a></li><li class="course" data-course="ship piping ship piping shipbuilding"><a href="./BMET-lab-standard.xlsx"><span class="c-name">Ship Piping</span><span class="c-full">Sector: Shipbuilding</span></a></li><li class="course" data-course="ship safety firefighting ship safety and firefighting shipbuilding"><a href="./BMET-lab-standard.xlsx"><span class="c-name">Ship Safety and Firefighting</span><span class="c-full">Sector: Shipbuilding</span></a></li><li class="course" data-course="substation maintenance substation maintenance and servicing light engineering"><a href="./BMET-lab-standard.xlsx"><span class="c-name">Substation Maintenance and Servicing</span><span class="c-full">Sector: Light Engineering</span></a></li><li class="course" data-course="ship painting ship painting shipbuilding"><a href="./BMET-lab-standard.xlsx"><span class="c-name">Ship Painting</span><span class="c-full">Sector: Shipbuilding</span></a></li><li class="course" data-course="agri machinery o&amp;m agriculture machinery operation and maintenance agriculture"><a href="./BMET-lab-standard.xlsx"><span class="c-name">Agriculture Machinery Operation and Maintenance</span><span class="c-full">Sector: Agriculture</span></a></li><li class="course" data-course="road roller &amp; excavator heavy equipment operation (road roller &amp; excavator) construction"><a href="./BMET-lab-standard.xlsx"><span class="c-name">Heavy Equipment Operation (Road Roller &amp; Excavator)</span><span class="c-full">Sector: Construction</span></a></li><li class="course" data-course="adv sewing machine op advanced sewing machine operation rmg"><a href="./BMET-lab-standard.xlsx"><span class="c-name">Advanced Sewing Machine Operation</span><span class="c-full">Sector: RMG</span></a></li><li class="course" data-course="crane and forklift heavy equipment operation (crane and forklift) construction"><a href="./BMET-lab-standard.xlsx"><span class="c-name">Heavy Equipment Operation (Crane and Forklift)</span><span class="c-full">Sector: Construction</span></a></li><li class="course" data-course="advanced welding 4g5g6g advanced welding (4g,5g and 6g) shipbuilding"><a href="./BMET-lab-standard.xlsx"><span class="c-name">Advanced Welding (4G,5G and 6G)</span><span class="c-full">Sector: Shipbuilding</span></a></li><li class="course" data-course="beautification beautification "><a href="./BMET-lab-standard.xlsx"><span class="c-name">Beautification</span><span class="c-full"></span></a></li><li class="course" data-course="cad cam design &amp; cnc cad cam design and cnc 
+machine operation light engineering"><a href="./BMET-lab-standard.xlsx"><span class="c-name">CAD CAM Design and CNC 
+Machine Operation</span><span class="c-full">Sector: Light Engineering</span></a></li><li class="course" data-course="eim construction electrical installation &amp; maintenance (construction) construction"><a href="./BMET-lab-standard.xlsx"><span class="c-name">Electrical Installation &amp; Maintenance (Construction)</span><span class="c-full">Sector: Construction</span></a></li><li class="course" data-course="eim industry electrical installation &amp; maintenance (industry) light engineering"><a href="./BMET-lab-standard.xlsx"><span class="c-name">Electrical Installation &amp; Maintenance (Industry)</span><span class="c-full">Sector: Light Engineering</span></a></li><li class="course" data-course="food and beverage service food and beverage service tourism &amp; hospitality"><a href="./BMET-lab-standard.xlsx"><span class="c-name">Food and Beverage Service</span><span class="c-full">Sector: Tourism &amp; Hospitality</span></a></li></ul>
+</section>
+<section class="org" data-org="bpi">
+<header class="org-hd">
+<a class="org-name" href="./BPI-lab-standard.xlsx">BPI</a>
+<span class="org-count">4</span>
+</header>
+<ul class="course-list"><li class="course" data-course="gas pipe welding gas pipe welding in energy sector energy"><a href="./BPI-lab-standard.xlsx"><span class="c-name">Gas Pipe Welding in Energy Sector</span><span class="c-full">Sector: Energy</span></a></li><li class="course" data-course="advanced pipe fitting advanced pipe fitting for gas and onshore rigs energy"><a href="./BPI-lab-standard.xlsx"><span class="c-name">Advanced Pipe Fitting for Gas and Onshore Rigs</span><span class="c-full">Sector: Energy</span></a></li><li class="course" data-course="electrical works electrical works in energy sector energy"><a href="./BPI-lab-standard.xlsx"><span class="c-name">Electrical Works in Energy Sector</span><span class="c-full">Sector: Energy</span></a></li><li class="course" data-course="electrical works v2 electrical works in energy sector energy"><a href="./BPI-lab-standard.xlsx"><span class="c-name">Electrical Works in Energy Sector</span><span class="c-full">Sector: Energy</span></a></li></ul>
+</section>
+<section class="org" data-org="brtc">
+<header class="org-hd">
+<a class="org-name" href="./BRTC-lab-standard.xlsx">BRTC</a>
+<span class="org-count">1</span>
+</header>
+<ul class="course-list"><li class="course" data-course="brtc-motor driving motor driving with basic maintenance transport"><a href="./BRTC-lab-standard.xlsx"><span class="c-name">Motor Driving with Basic Maintenance</span><span class="c-full">Sector: Transport</span></a></li></ul>
+</section>
+<section class="org" data-org="bsia">
+<header class="org-hd">
+<a class="org-name" href="./BSIA-lab-standard.xlsx">BSIA</a>
+<span class="org-count">5</span>
+</header>
+<ul class="course-list"><li class="course" data-course="ic design &amp; layout ic design and layout engineering semiconductor / vlsi"><a href="./BSIA-lab-standard.xlsx"><span class="c-name">IC Design and Layout Engineering</span><span class="c-full">Sector: Semiconductor / VLSI</span></a></li><li class="course" data-course="adv physical design rtl-gdsii advanced physical design program: rtl to gdsii semiconductor / vlsi"><a href="./BSIA-lab-standard.xlsx"><span class="c-name">Advanced Physical Design Program: RTL to GDSII</span><span class="c-full">Sector: Semiconductor / VLSI</span></a></li><li class="course" data-course="dft and verification eng dft and verification engineering program for asic designers semiconductor / vlsi"><a href="./BSIA-lab-standard.xlsx"><span class="c-name">DFT and Verification Engineering Program for ASIC Designers</span><span class="c-full">Sector: Semiconductor / VLSI</span></a></li><li class="course" data-course="applied semiconductor power applied semiconductor systems: power devices and industrial integration semiconductor"><a href="./BSIA-lab-standard.xlsx"><span class="c-name">Applied Semiconductor Systems: Power Devices and Industrial Integration</span><span class="c-full">Sector: Semiconductor</span></a></li><li class="course" data-course="smart systems engineering smart systems engineering: embedded design and semiconductor application interfaces semiconductor"><a href="./BSIA-lab-standard.xlsx"><span class="c-name">Smart Systems Engineering: Embedded Design and Semiconductor Application Interfaces</span><span class="c-full">Sector: Semiconductor</span></a></li></ul>
+</section>
+<section class="org" data-org="bwcci">
+<header class="org-hd">
+<a class="org-name" href="./BWCCI-lab-standard.xlsx">BWCCI</a>
+<span class="org-count">7</span>
+</header>
+<ul class="course-list"><li class="course" data-course="beautification beautification and entrepreneurship development "><a href="./BWCCI-lab-standard.xlsx"><span class="c-name">Beautification and entrepreneurship development</span><span class="c-full"></span></a></li><li class="course" data-course="fashion design fashion design, product development and entrepreneurship rmg"><a href="./BWCCI-lab-standard.xlsx"><span class="c-name">Fashion Design, Product Development and Entrepreneurship</span><span class="c-full">Sector: RMG</span></a></li><li class="course" data-course="food &amp; beverage food and beverage production and entrepreneurship development tourism and hospitality"><a href="./BWCCI-lab-standard.xlsx"><span class="c-name">Food and Beverage Production and Entrepreneurship Development</span><span class="c-full">Sector: Tourism And Hospitality</span></a></li><li class="course" data-course="digital marketing digital marketing, freelancing and entrepreneurship development ict"><a href="./BWCCI-lab-standard.xlsx"><span class="c-name">Digital Marketing, Freelancing and Entrepreneurship Development</span><span class="c-full">Sector: ICT</span></a></li><li class="course" data-course="graphic design graphic design ad entrepreneurship development ict"><a href="./BWCCI-lab-standard.xlsx"><span class="c-name">Graphic Design ad Entrepreneurship Development</span><span class="c-full">Sector: ICT</span></a></li><li class="course" data-course="beautification-res beautification and entrepreneurship development (residential) "><a href="./BWCCI-lab-standard.xlsx"><span class="c-name">Beautification and Entrepreneurship Development (Residential)</span><span class="c-full"></span></a></li><li class="course" data-course="fashion design-res fashion design, product development and entrepreneurship (residential) rmg"><a href="./BWCCI-lab-standard.xlsx"><span class="c-name">Fashion Design, Product Development and Entrepreneurship (Residential)</span><span class="c-full">Sector: RMG</span></a></li></ul>
+</section>
+<section class="org" data-org="dte">
+<header class="org-hd">
+<a class="org-name" href="./DTE-lab-standard.xlsx">DTE</a>
+<span class="org-count">10</span>
+</header>
+<ul class="course-list"><li class="course" data-course="dte-welding welding light engineering"><a href="./DTE-lab-standard.xlsx"><span class="c-name">Welding</span><span class="c-full">Sector: Light Engineering</span></a></li><li class="course" data-course="dte-sewing machine op sewing machine operation rmg"><a href="./DTE-lab-standard.xlsx"><span class="c-name">Sewing Machine Operation</span><span class="c-full">Sector: RMG</span></a></li><li class="course" data-course="dte-welding 4g-6g 4g - 6g welding shipbuilding"><a href="./DTE-lab-standard.xlsx"><span class="c-name">4G - 6G Welding</span><span class="c-full">Sector: Shipbuilding</span></a></li><li class="course" data-course="dte-adv sewing machine advanced sewing machine operation rmg"><a href="./DTE-lab-standard.xlsx"><span class="c-name">Advanced Sewing Machine Operation</span><span class="c-full">Sector: RMG</span></a></li><li class="course" data-course="dte-eim electrical installation &amp; maintenance (construction) construction"><a href="./DTE-lab-standard.xlsx"><span class="c-name">Electrical Installation &amp; Maintenance (Construction)</span><span class="c-full">Sector: Construction</span></a></li><li class="course" data-course="dte-interior design interior design and decoration  fit out management construction"><a href="./DTE-lab-standard.xlsx"><span class="c-name">Interior Design and Decoration  Fit Out Management</span><span class="c-full">Sector: Construction</span></a></li><li class="course" data-course="dte-it support mobile it support technique &amp; mobile phone servicing ict"><a href="./DTE-lab-standard.xlsx"><span class="c-name">IT Support Technique &amp; Mobile Phone Servicing</span><span class="c-full">Sector: ICT</span></a></li><li class="course" data-course="dte-jute product dev jute product development jute"><a href="./DTE-lab-standard.xlsx"><span class="c-name">Jute Product Development</span><span class="c-full">Sector: Jute</span></a></li><li class="course" data-course="dte-motorcycle maint motor cycle maintenance and servicing transport"><a href="./DTE-lab-standard.xlsx"><span class="c-name">Motor Cycle Maintenance and Servicing</span><span class="c-full">Sector: Transport</span></a></li><li class="course" data-course="dte-plumbing pipe fit plumbing and pipe fitting construction"><a href="./DTE-lab-standard.xlsx"><span class="c-name">Plumbing and Pipe Fitting</span><span class="c-full">Sector: Construction</span></a></li></ul>
+</section>
+<section class="org" data-org="isc-t&amp;h">
+<header class="org-hd">
+<a class="org-name" href="./ISC-T%26H-lab-standard.xlsx">ISC-T&amp;H</a>
+<span class="org-count">4</span>
+</header>
+<ul class="course-list"><li class="course" data-course="f&amp;b production cooking food and beverage production (cooking) tourism &amp; hospitality"><a href="./ISC-T%26H-lab-standard.xlsx"><span class="c-name">Food And Beverage Production (Cooking)</span><span class="c-full">Sector: Tourism &amp; Hospitality</span></a></li><li class="course" data-course="food and beverage service food and beverage service tourism &amp; hospitality"><a href="./ISC-T%26H-lab-standard.xlsx"><span class="c-name">Food and Beverage Service</span><span class="c-full">Sector: Tourism &amp; Hospitality</span></a></li><li class="course" data-course="housekeeping housekeeping tourism &amp; hospitality"><a href="./ISC-T%26H-lab-standard.xlsx"><span class="c-name">Housekeeping</span><span class="c-full">Sector: Tourism &amp; Hospitality</span></a></li><li class="course" data-course="bakery and pastry prod bakery and pastry production tourism &amp; hospitality"><a href="./ISC-T%26H-lab-standard.xlsx"><span class="c-name">Bakery and Pastry Production</span><span class="c-full">Sector: Tourism &amp; Hospitality</span></a></li></ul>
+</section>
+<section class="org" data-org="lfmeab">
+<header class="org-hd">
+<a class="org-name" href="./LFMEAB-lab-standard.xlsx">LFMEAB</a>
+<span class="org-count">9</span>
+</header>
+<ul class="course-list"><li class="course" data-course="1-footwear multitask multitasking operation for footwear manufacturing leather and footwear industry"><a href="./LFMEAB-lab-standard.xlsx"><span class="c-name">Multitasking Operation for Footwear Manufacturing</span><span class="c-full">Sector: Leather and Footwear Industry</span></a></li><li class="course" data-course="2-leather goods multitask multitasking operation for leather goods manufacturing leather and footwear industry"><a href="./LFMEAB-lab-standard.xlsx"><span class="c-name">Multitasking Operation for Leather Goods Manufacturing</span><span class="c-full">Sector: Leather and Footwear Industry</span></a></li><li class="course" data-course="3-footwear cad cam footwear and leather goods design and development with cad cam leather goods and footwear"><a href="./LFMEAB-lab-standard.xlsx"><span class="c-name">Footwear and Leather Goods Design and Development with CAD CAM</span><span class="c-full">Sector: Leather Goods and Footwear</span></a></li><li class="course" data-course="4-compliance sustainability compliance &amp; sustainability for footwear &amp; leather goods sector leather goods &amp; footwear"><a href="./LFMEAB-lab-standard.xlsx"><span class="c-name">Compliance &amp; Sustainability for Footwear &amp; Leather Goods Sector</span><span class="c-full">Sector: Leather Goods &amp; Footwear</span></a></li><li class="course" data-course="5-industrial productivity industrial productivity improvement leather goods &amp; footwear"><a href="./LFMEAB-lab-standard.xlsx"><span class="c-name">Industrial Productivity Improvement</span><span class="c-full">Sector: Leather Goods &amp; Footwear</span></a></li><li class="course" data-course="6-supervisory leadership supervisory management &amp; leadership skills development leather goods &amp; footwear"><a href="./LFMEAB-lab-standard.xlsx"><span class="c-name">Supervisory Management &amp; Leadership Skills Development</span><span class="c-full">Sector: Leather Goods &amp; Footwear</span></a></li><li class="course" data-course="7-supply chain mgmt supply chain management for footwear and leather goods sector leather and footwear"><a href="./LFMEAB-lab-standard.xlsx"><span class="c-name">Supply Chain Management for Footwear and Leather Goods Sector</span><span class="c-full">Sector: Leather and Footwear</span></a></li><li class="course" data-course="8-merchandising merchandising for footwear &amp; leather goods sector leather goods &amp; footwear"><a href="./LFMEAB-lab-standard.xlsx"><span class="c-name">Merchandising for Footwear &amp; Leather Goods Sector</span><span class="c-full">Sector: Leather Goods &amp; Footwear</span></a></li><li class="course" data-course="9-quality control quality control &amp; assurance leather goods &amp; footwear"><a href="./LFMEAB-lab-standard.xlsx"><span class="c-name">Quality Control &amp; Assurance</span><span class="c-full">Sector: Leather Goods &amp; Footwear</span></a></li></ul>
+</section>
+<section class="org" data-org="mahila polytechnic">
+<header class="org-hd">
+<a class="org-name" href="./Mahila-Polytechnic-lab-standard.xlsx">Mahila Polytechnic</a>
+<span class="org-count">3</span>
+</header>
+<ul class="course-list"><li class="course" data-course="cyber security advanced cyber security (advanced) ict"><a href="./Mahila-Polytechnic-lab-standard.xlsx"><span class="c-name">Cyber Security (Advanced)</span><span class="c-full">Sector: ICT</span></a></li><li class="course" data-course="bakery and food prod adv bakery and food production (advanced) hotel and tourism"><a href="./Mahila-Polytechnic-lab-standard.xlsx"><span class="c-name">Bakery and Food Production (Advanced)</span><span class="c-full">Sector: Hotel And Tourism</span></a></li><li class="course" data-course="industrial automation adv industrial automation light engineering"><a href="./Mahila-Polytechnic-lab-standard.xlsx"><span class="c-name">Industrial Automation</span><span class="c-full">Sector: Light Engineering</span></a></li></ul>
+</section>
+<section class="org" data-org="pksf">
+<header class="org-hd">
+<a class="org-name" href="./PKSF-lab-standard.xlsx">PKSF</a>
+<span class="org-count">12</span>
+</header>
+<ul class="course-list"><li class="course" data-course="bakery and pastry production bakery and pastry production tourism &amp; hospitality"><a href="./PKSF-lab-standard.xlsx"><span class="c-name">Bakery and Pastry Production</span><span class="c-full">Sector: Tourism &amp; Hospitality</span></a></li><li class="course" data-course="food and beverage production food and beverage production tourism &amp; hospitality"><a href="./PKSF-lab-standard.xlsx"><span class="c-name">Food and Beverage Production</span><span class="c-full">Sector: Tourism &amp; Hospitality</span></a></li><li class="course" data-course="professional digital mktg professional digital marketing ict"><a href="./PKSF-lab-standard.xlsx"><span class="c-name">Professional Digital Marketing</span><span class="c-full">Sector: ICT</span></a></li><li class="course" data-course="auto mechanics auto mechanics transport"><a href="./PKSF-lab-standard.xlsx"><span class="c-name">Auto Mechanics</span><span class="c-full">Sector: Transport</span></a></li><li class="course" data-course="beautification beautification "><a href="./PKSF-lab-standard.xlsx"><span class="c-name">Beautification</span><span class="c-full"></span></a></li><li class="course" data-course="electrical install &amp; maint electrical installation &amp; maintenance (construction) construction"><a href="./PKSF-lab-standard.xlsx"><span class="c-name">Electrical Installation &amp; Maintenance (Construction)</span><span class="c-full">Sector: Construction</span></a></li><li class="course" data-course="fashion garments fashion garments rmg"><a href="./PKSF-lab-standard.xlsx"><span class="c-name">Fashion Garments</span><span class="c-full">Sector: RMG</span></a></li><li class="course" data-course="plumbing and pipe fitting plumbing and pipe fitting construction"><a href="./PKSF-lab-standard.xlsx"><span class="c-name">Plumbing and Pipe Fitting</span><span class="c-full">Sector: Construction</span></a></li><li class="course" data-course="refrigeration and ac refrigeration and air conditioning light engineering"><a href="./PKSF-lab-standard.xlsx"><span class="c-name">Refrigeration and Air Conditioning</span><span class="c-full">Sector: Light Engineering</span></a></li><li class="course" data-course="graphic design graphic design ict"><a href="./PKSF-lab-standard.xlsx"><span class="c-name">Graphic Design</span><span class="c-full">Sector: ICT</span></a></li><li class="course" data-course="it freelancing it freelancing ict"><a href="./PKSF-lab-standard.xlsx"><span class="c-name">IT Freelancing</span><span class="c-full">Sector: ICT</span></a></li><li class="course" data-course="mobile phone servicing mobile phone servicing ict"><a href="./PKSF-lab-standard.xlsx"><span class="c-name">Mobile Phone Servicing</span><span class="c-full">Sector: ICT</span></a></li></ul>
+</section>
+<section class="org" data-org="rehab">
+<header class="org-hd">
+<a class="org-name" href="./REHAB-lab-standard.xlsx">REHAB</a>
+<span class="org-count">4</span>
+</header>
+<ul class="course-list"><li class="course" data-course="electrical install &amp; maint electrical installation &amp; maintenance (construction) construction"><a href="./REHAB-lab-standard.xlsx"><span class="c-name">Electrical Installation &amp; Maintenance (Construction)</span><span class="c-full">Sector: Construction</span></a></li><li class="course" data-course="plumbing and pipe fitting plumbing and pipe fitting construction"><a href="./REHAB-lab-standard.xlsx"><span class="c-name">Plumbing and Pipe Fitting</span><span class="c-full">Sector: Construction</span></a></li><li class="course" data-course="masonry &amp; steel binding masonry and steel binding construction"><a href="./REHAB-lab-standard.xlsx"><span class="c-name">Masonry and Steel Binding</span><span class="c-full">Sector: Construction</span></a></li><li class="course" data-course="tile and marble works tile and marble works construction"><a href="./REHAB-lab-standard.xlsx"><span class="c-name">Tile and Marble Works</span><span class="c-full">Sector: Construction</span></a></li></ul>
+</section>
+<section class="org" data-org="weab">
+<header class="org-hd">
+<a class="org-name" href="./WEAB-lab-standard.xlsx">WEAB</a>
+<span class="org-count">7</span>
+</header>
+<ul class="course-list"><li class="course" data-course="food &amp; beverage food and beverage production and entrepreneurship development tourism and hospitality"><a href="./WEAB-lab-standard.xlsx"><span class="c-name">Food and Beverage Production and Entrepreneurship Development</span><span class="c-full">Sector: Tourism and Hospitality</span></a></li><li class="course" data-course="bakery &amp; pastry bakery &amp; pastry production and entrepreneurship development tourism and hospitality"><a href="./WEAB-lab-standard.xlsx"><span class="c-name">Bakery &amp; Pastry Production and Entrepreneurship Development</span><span class="c-full">Sector: Tourism and Hospitality</span></a></li><li class="course" data-course="digital marketing digital marketing, it freelancing and entrepreneurship development ict"><a href="./WEAB-lab-standard.xlsx"><span class="c-name">Digital Marketing, IT Freelancing and Entrepreneurship Development</span><span class="c-full">Sector: ICT</span></a></li><li class="course" data-course="fashion design fashion design, product development and entrepreneurship rmg"><a href="./WEAB-lab-standard.xlsx"><span class="c-name">Fashion Design, Product Development and Entrepreneurship</span><span class="c-full">Sector: RMG</span></a></li><li class="course" data-course="beautification beautification and entrepreneurship development "><a href="./WEAB-lab-standard.xlsx"><span class="c-name">Beautification and entrepreneurship development</span><span class="c-full"></span></a></li><li class="course" data-course="graphic design graphic design ad entrepreneurship development ict"><a href="./WEAB-lab-standard.xlsx"><span class="c-name">Graphic Design ad Entrepreneurship Development</span><span class="c-full">Sector: ICT</span></a></li><li class="course" data-course="barista &amp; beverage professional barista &amp; beverage preparation and entrepreneurship development tourism and hospitality"><a href="./WEAB-lab-standard.xlsx"><span class="c-name">Professional Barista &amp; Beverage Preparation and Entrepreneurship Development</span><span class="c-full">Sector: Tourism and Hospitality</span></a></li></ul>
+</section>
+  </div>
+  <p class="empty" id="empty">No organisation or course matches that search.</p>
+</div></main>
+<footer>Local index &middot; keep index.html beside the .xlsx workbooks</footer>
+
+<script>
+const q = document.getElementById('q');
+const orgs = [...document.querySelectorAll('.org')];
+const countEl = document.getElementById('count');
+const emptyEl = document.getElementById('empty');
+
+// cache original text of both lines (course name + sector) for re-highlighting
+for (const c of document.querySelectorAll('.course')) {
+  c._name = c.querySelector('.c-name').textContent;
+  c._full = c.querySelector('.c-full').textContent;
+}
+
+function esc(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+
+function hl(node, text, term) {
+  if (!term) { node.textContent = text; return; }
+  const re = new RegExp('(' + esc(term) + ')', 'ig');
+  node.innerHTML = text.replace(re, '<mark>$1</mark>');
+}
+
+function mark(el, term) {
+  // highlight the match wherever it is — course name and/or sector line
+  hl(el.querySelector('.c-name'), el._name, term);
+  hl(el.querySelector('.c-full'), el._full, term);
+}
+
+function run() {
+  const t = q.value.trim().toLowerCase();
+  let visibleOrgs = 0, hits = 0;
+
+  for (const org of orgs) {
+    const courses = [...org.querySelectorAll('.course')];
+    if (!t) {
+      org.classList.remove('dim');
+      courses.forEach(c => { c.classList.remove('off','hit'); mark(c,''); });
+      visibleOrgs++;
+      continue;
+    }
+    const orgMatch = org.dataset.org.includes(t);
+    let shown = 0;
+    for (const c of courses) {
+      const cMatch = c.dataset.course.includes(t);
+      if (orgMatch) {
+        // org search: show the whole org, no course highlight
+        c.classList.remove('off','hit'); mark(c,''); shown++;
+      } else if (cMatch) {
+        // course search: show + pinpoint just the matches
+        c.classList.remove('off'); c.classList.add('hit'); mark(c,t); shown++; hits++;
+      } else {
+        c.classList.add('off'); c.classList.remove('hit'); mark(c,'');
+      }
+    }
+    org.classList.toggle('dim', shown === 0);
+    if (shown) visibleOrgs++;
+  }
+
+  if (!t) { countEl.textContent = ''; emptyEl.classList.remove('show'); return; }
+  emptyEl.classList.toggle('show', visibleOrgs === 0);
+  countEl.innerHTML = visibleOrgs === 0 ? '' :
+    (hits ? `<b>${hits}</b> course${hits>1?'s':''} in <b>${visibleOrgs}</b> organisation${visibleOrgs>1?'s':''}`
+          : `<b>${visibleOrgs}</b> organisation${visibleOrgs>1?'s':''}`);
+}
+
+q.addEventListener('input', run);
+q.addEventListener('keydown', e => { if (e.key === 'Escape') { q.value=''; run(); } });
+</script>

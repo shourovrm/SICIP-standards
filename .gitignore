@@ -1,0 +1,24 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node / site build (future)
+node_modules/
+dist/
+.wrangler/
+
+# Browser automation & temp
+.playwright-mcp/
+*.tmp
+/tmp/
+
+# Deferred heavy assets — CBLMs go to Cloudflare R2, never committed
+cblm/

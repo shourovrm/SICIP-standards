@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Font options — SICIP Standards</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&family=Instrument+Serif&family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Spline+Sans:wght@400;500;600&family=Libre+Caslon+Display&family=Libre+Franklin:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f4f2;--surface:#fff;--panel:#fafbf9;--ink:#17211c;--muted:#586158;--faint:#87908a;
+ --line:#e4e7e3;--line-strong:#d3d8d2;--accent:#0e6b58;--accent-ink:#0a4f42;--accent-tint:#e4f1ec;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,sans-serif;padding:34px 22px 80px}
+.wrap{max-width:1080px;margin:0 auto}
+.pgh{font:700 15px system-ui;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;margin:0 0 4px}
+.pgt{font:600 26px/1.2 system-ui;margin:0 0 26px}
+.opt{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin-bottom:18px}
+.optlabel{display:flex;align-items:baseline;gap:10px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.optnum{font:700 13px system-ui;color:#fff;background:var(--accent);border-radius:20px;padding:3px 11px}
+.optname{font:600 15px system-ui;color:var(--ink)}
+.optmeta{font:13px system-ui;color:var(--faint);margin-left:auto}
+.demo{display:grid;grid-template-columns:1.1fr 1fr;gap:26px;align-items:start}
+.brand{font-size:26px;letter-spacing:-.015em;line-height:1}
+.brand .dot{color:var(--accent)}
+.h{font-size:27px;letter-spacing:-.01em;margin:14px 0 6px;line-height:1.15}
+.body{font-size:16.5px;color:var(--muted);max-width:46ch;margin:0}
+.mini{border:1px solid var(--line);border-radius:11px;overflow:hidden}
+.mini .hd{display:flex;align-items:center;padding:11px 14px;background:var(--panel);border-bottom:1px solid var(--line)}
+.mini .on{font-weight:700;font-size:15px}.mini .bd{margin-left:auto;font-size:12px;font-weight:600;color:var(--accent-ink);background:var(--accent-tint);border-radius:20px;padding:3px 10px}
+.mini .li{padding:9px 14px;border-bottom:1px solid var(--line)}
+.mini .li:last-child{border-bottom:0}
+.mini .cn{font-weight:500;font-size:15px}.mini .cs{font-size:12.5px;color:var(--faint);margin-top:1px}
+.btn{margin-top:14px;display:inline-block;background:var(--accent);color:#fff;font-weight:600;font-size:14px;padding:9px 16px;border-radius:9px}
+/* per-option font vars */
+.f1{--head:'Fraunces',serif;--bodyf:'Hanken Grotesk',sans-serif}
+.f2{--head:'Instrument Serif',serif;--bodyf:'IBM Plex Sans',sans-serif}
+.f3{--head:'Space Grotesk',sans-serif;--bodyf:'Spline Sans',sans-serif}
+.f4{--head:'Libre Caslon Display',serif;--bodyf:'Libre Franklin',sans-serif}
+.f5{--head:'Bricolage Grotesque',sans-serif;--bodyf:'Bricolage Grotesque',sans-serif}
+.f6{--head:'Newsreader',serif;--bodyf:'DM Sans',sans-serif}
+.opt .brand,.opt .h,.opt .on{font-family:var(--head)}
+.opt .brand,.opt .on{font-weight:700}.opt .h{font-weight:600}
+.opt .body,.opt .cn,.opt .cs,.opt .bd,.opt .btn{font-family:var(--bodyf)}
+</style></head>
+<body><div class="wrap">
+<p class="pgh">SICIP Standards Platform</p>
+<h1 class="pgt">Font collections — pick one</h1>
+
+<div class="opt f1"><div class="optlabel"><span class="optnum">1</span><span class="optname">Fraunces × Hanken Grotesk</span><span class="optmeta">warm editorial serif + human grotesque</span></div>
+  <div class="demo"><div>
+    <div class="brand">SICIP<span class="dot">.</span>Standards</div>
+    <div class="h">Workshop &amp; Lab Facility Standards</div>
+    <p class="body">Browse every competency standard, calculate a facility score, and print the official record.</p>
+    <span class="btn">Calculate score</span></div>
+    <div class="mini"><div class="hd"><span class="on">BMET</span><span class="bd">30</span></div>
+      <div class="li"><div class="cn">Installation of HVAC</div><div class="cs">Sector: Construction</div></div>
+      <div class="li"><div class="cn">Marine Engine Artificer</div><div class="cs">Sector: Shipbuilding</div></div></div>
+  </div></div>
+
+<div class="opt f2"><div class="optlabel"><span class="optnum">2</span><span class="optname">Instrument Serif × IBM Plex Sans</span><span class="optmeta">elegant display serif + technical humanist</span></div>
+  <div class="demo"><div>
+    <div class="brand">SICIP<span class="dot">.</span>Standards</div>
+    <div class="h">Workshop &amp; Lab Facility Standards</div>
+    <p class="body">Browse every competency standard, calculate a facility score, and print the official record.</p>
+    <span class="btn">Calculate score</span></div>
+    <div class="mini"><div class="hd"><span class="on">BMET</span><span class="bd">30</span></div>
+      <div class="li"><div class="cn">Installation of HVAC</div><div class="cs">Sector: Construction</div></div>
+      <div class="li"><div class="cn">Marine Engine Artificer</div><div class="cs">Sector: Shipbuilding</div></div></div>
+  </div></div>
+
+<div class="opt f3"><div class="optlabel"><span class="optnum">3</span><span class="optname">Space Grotesk × Spline Sans</span><span class="optmeta">engineering / technical, distinctive letterforms</span></div>
+  <div class="demo"><div>
+    <div class="brand">SICIP<span class="dot">.</span>Standards</div>
+    <div class="h">Workshop &amp; Lab Facility Standards</div>
+    <p class="body">Browse every competency standard, calculate a facility score, and print the official record.</p>
+    <span class="btn">Calculate score</span></div>
+    <div class="mini"><div class="hd"><span class="on">BMET</span><span class="bd">30</span></div>
+      <div class="li"><div class="cn">Installation of HVAC</div><div class="cs">Sector: Construction</div></div>
+      <div class="li"><div class="cn">Marine Engine Artificer</div><div class="cs">Sector: Shipbuilding</div></div></div>
+  </div></div>
+
+<div class="opt f4"><div class="optlabel"><span class="optnum">4</span><span class="optname">Libre Caslon Display × Libre Franklin</span><span class="optmeta">classic official / government heritage</span></div>
+  <div class="demo"><div>
+    <div class="brand">SICIP<span class="dot">.</span>Standards</div>
+    <div class="h">Workshop &amp; Lab Facility Standards</div>
+    <p class="body">Browse every competency standard, calculate a facility score, and print the official record.</p>
+    <span class="btn">Calculate score</span></div>
+    <div class="mini"><div class="hd"><span class="on">BMET</span><span class="bd">30</span></div>
+      <div class="li"><div class="cn">Installation of HVAC</div><div class="cs">Sector: Construction</div></div>
+      <div class="li"><div class="cn">Marine Engine Artificer</div><div class="cs">Sector: Shipbuilding</div></div></div>
+  </div></div>
+
+<div class="opt f5"><div class="optlabel"><span class="optnum">5</span><span class="optname">Bricolage Grotesque (single family)</span><span class="optmeta">one characterful grotesque, headings + body</span></div>
+  <div class="demo"><div>
+    <div class="brand">SICIP<span class="dot">.</span>Standards</div>
+    <div class="h">Workshop &amp; Lab Facility Standards</div>
+    <p class="body">Browse every competency standard, calculate a facility score, and print the official record.</p>
+    <span class="btn">Calculate score</span></div>
+    <div class="mini"><div class="hd"><span class="on">BMET</span><span class="bd">30</span></div>
+      <div class="li"><div class="cn">Installation of HVAC</div><div class="cs">Sector: Construction</div></div>
+      <div class="li"><div class="cn">Marine Engine Artificer</div><div class="cs">Sector: Shipbuilding</div></div></div>
+  </div></div>
+
+<div class="opt f6"><div class="optlabel"><span class="optnum">6</span><span class="optname">Newsreader × DM Sans</span><span class="optmeta">literary/newsprint serif + calm geometric</span></div>
+  <div class="demo"><div>
+    <div class="brand">SICIP<span class="dot">.</span>Standards</div>
+    <div class="h">Workshop &amp; Lab Facility Standards</div>
+    <p class="body">Browse every competency standard, calculate a facility score, and print the official record.</p>
+    <span class="btn">Calculate score</span></div>
+    <div class="mini"><div class="hd"><span class="on">BMET</span><span class="bd">30</span></div>
+      <div class="li"><div class="cn">Installation of HVAC</div><div class="cs">Sector: Construction</div></div>
+      <div class="li"><div class="cn">Marine Engine Artificer</div><div class="cs">Sector: Shipbuilding</div></div></div>
+  </div></div>
+
+</div></body></html>
