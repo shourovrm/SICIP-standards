@@ -16,7 +16,7 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 - Hash navigation: browser scroll restoration fires AFTER the hashchange handler — `history.scrollRestoration='manual'` required or detail pages open mid-scroll.
 - 11 equipment rows have blank/non-numeric Required in the SOURCE workbooks (Mahila Cyber Security ×7 etc.) — row scores 0 like the xlsx IFERROR; not a bug.
 - data.json regen: `python scripts/gen_data.py` (needs data/peer-data.json present); per-course xlsx regen: `python scripts/split_sheets.py` (needs data.json + workbooks).
-- Official template scores a BLANK Available cell as full weight (Excel/LO MIN() ignores blanks) — source-template semantics, downloaded xlsx keeps it; the on-page calculator counts blank as 0.
+- Official template scores a BLANK Available cell as full weight (Excel/LO MIN() ignores blanks), disagreeing with the page calculator (blank=0) — so downloads always write explicit 0 into every untouched D cell (parity verified page 3.11 == LO 3.1055…).
 - Browsers heuristically cache css/js (http.server sends no cache headers) — bump `?v=N` in index.html whenever web/ assets change, or users get stale code.
 
 ## Tried / rejected
