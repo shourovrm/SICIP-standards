@@ -17,6 +17,7 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 - 11 equipment rows have blank/non-numeric Required in the SOURCE workbooks (Mahila Cyber Security ×7 etc.) — row scores 0 like the xlsx IFERROR; not a bug.
 - data.json regen: `python scripts/gen_data.py` (needs data/peer-data.json present); per-course xlsx regen: `python scripts/split_sheets.py` (needs data.json + workbooks).
 - Official template scores a BLANK Available cell as full weight (Excel/LO MIN() ignores blanks) — source-template semantics, downloaded xlsx keeps it; the on-page calculator counts blank as 0.
+- Browsers heuristically cache css/js (http.server sends no cache headers) — bump `?v=N` in index.html whenever web/ assets change, or users get stale code.
 
 ## Tried / rejected
 - pdf→HTML conversion for CS preview — mangles tables; use embedded PDF instead.
@@ -37,3 +38,4 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 2026-08-19 | site built: root index.html + web/, deploy root = repo root | asset paths resolve without copying 162MB of PDFs
 2026-08-20 | lab-page Download = per-course sheet w/ filled Available; org badge keeps whole workbook | user request; split_sheets.py + client zip patch (xlsx-fill.js), no libs
 2026-08-20 | GitHub = code only (history rewritten, documents gitignored), public; deploys = wrangler direct upload from local | user wants docs off GH; Pages git-integration impossible without assets
+2026-08-20 | REVERSED: full repo (incl. documents) pushed to GitHub public | user: documents are public anyway; rewrite skipped, backup bundle kept
