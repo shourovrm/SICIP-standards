@@ -239,7 +239,14 @@ function labPage(id) {
   document.getElementById('calc').addEventListener('click', calc);
 
   document.getElementById('dl').addEventListener('click', async () => {
-    if (await confirmBox(`Download the ${e.org} lab-standard workbook (.xlsx)?`)) location.href = encPath(e.xlsx);
+    if (!await confirmBox(`Download the “${e.course_name}” lab standard (.xlsx, with your entered Available values)?`)) return;
+    const values = [...view.querySelectorAll('.equip input')].map(i => Math.max(0, Number(i.value) || 0));
+    const url = 'data/xlsx/' + cSlug(e) + '.xlsx';
+    const a = document.createElement('a');
+    a.href = values.some(v => v > 0) ? URL.createObjectURL(await xlsxFill(url, values)) : url;
+    a.download = e.org_slug + ' - ' + e.course_name + '.xlsx';
+    document.body.appendChild(a); a.click(); a.remove();
+    if (a.href.startsWith('blob:')) setTimeout(() => URL.revokeObjectURL(a.href), 5000);
   });
 
   document.getElementById('print').addEventListener('click', async () => {

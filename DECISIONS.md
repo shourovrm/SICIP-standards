@@ -15,7 +15,8 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 - ISC-T&H workbook filename contains `&`; href must be URL-encoded. Mahila-Polytechnic file is hyphenated but displays "Mahila Polytechnic".
 - Hash navigation: browser scroll restoration fires AFTER the hashchange handler — `history.scrollRestoration='manual'` required or detail pages open mid-scroll.
 - 11 equipment rows have blank/non-numeric Required in the SOURCE workbooks (Mahila Cyber Security ×7 etc.) — row scores 0 like the xlsx IFERROR; not a bug.
-- data.json regen: `python scripts/gen_data.py` (needs data/peer-data.json present).
+- data.json regen: `python scripts/gen_data.py` (needs data/peer-data.json present); per-course xlsx regen: `python scripts/split_sheets.py` (needs data.json + workbooks).
+- Official template scores a BLANK Available cell as full weight (Excel/LO MIN() ignores blanks) — source-template semantics, downloaded xlsx keeps it; the on-page calculator counts blank as 0.
 
 ## Tried / rejected
 - pdf→HTML conversion for CS preview — mangles tables; use embedded PDF instead.
@@ -34,3 +35,5 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 2026-08-19 | 8 dateless CS stay approved=null | no date in filename or first 3 PDF pages
 2026-08-19 | CS tab first, #/cs is default landing | user request
 2026-08-19 | site built: root index.html + web/, deploy root = repo root | asset paths resolve without copying 162MB of PDFs
+2026-08-20 | lab-page Download = per-course sheet w/ filled Available; org badge keeps whole workbook | user request; split_sheets.py + client zip patch (xlsx-fill.js), no libs
+2026-08-20 | GitHub = code only (history rewritten, documents gitignored), public; deploys = wrangler direct upload from local | user wants docs off GH; Pages git-integration impossible without assets
