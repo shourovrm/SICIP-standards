@@ -4,8 +4,7 @@
 Site BUILT and verified locally (Playwright: search, calculator math, print sheet, confirms, CS iframe, mobile, all 162 slugs + asset URLs 200). Pure static: root `index.html` + `web/` (css/js/fonts, self-hosted Space Grotesk + Spline Sans variable woff2). Hash router `#/cs` (default, CS tab first per user) / `#/lab` / `#/{cs,lab}/<org>--<course>`. `data/data.json` = 162 entries (gen via `scripts/gen_data.py`; reads workbooks + reference index + `data/peer-data.json` for dates/pdf map). All 162 courses have cs_pdf; 8 approved=null (no date in filename OR cover — genuinely unknown); 5 sector=null (Beautification). Deploy root = repo root (asset paths `lab-standards/…`, `competency-standards/…` work as-is). NOT yet deployed to Cloudflare.
 
 ## Next
-- User connects GitHub repo in Cloudflare dashboard (Pages → Connect to Git → shourovrm/SICIP-standards, no build command, output `/`).
-- Optional: `_headers` for cache control on pdfs/xlsx.
+- Optional: `_headers` for cache control on pdfs/xlsx; custom domain.
 - LATER — CBLMs (REMIND USER of this runbook when CBLMs come up): files >25MB, ~4.6GB → R2, NOT git/Pages. Steps: (1) dashboard: R2 → create bucket `sicip-cblm`; (2) bucket Settings → enable r2.dev public access (gives base URL); (3) drop files in local `cblm/` (already gitignored), bulk-upload via wrangler (`npx wrangler login` once); (4) add `cblm` URL field to data.json + Download CBLM button on course pages; push → Pages auto-deploys. R2 free: 10GB, zero egress.
 
 ## Gotchas
@@ -40,3 +39,4 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 2026-08-20 | lab-page Download = per-course sheet w/ filled Available; org badge keeps whole workbook | user request; split_sheets.py + client zip patch (xlsx-fill.js), no libs
 2026-08-20 | GitHub = code only (history rewritten, documents gitignored), public; deploys = wrangler direct upload from local | user wants docs off GH; Pages git-integration impossible without assets
 2026-08-20 | REVERSED: full repo (incl. documents) pushed to GitHub public | user: documents are public anyway; rewrite skipped, backup bundle kept
+2026-08-20 | LIVE: https://sicip-standards.pages.dev (Pages git integration, auto-deploy on push) | production verified: 162 courses, calc, xlsx fill, pdf/font/workbook URLs 200
