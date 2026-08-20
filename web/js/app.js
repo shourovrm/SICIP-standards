@@ -239,7 +239,7 @@ function labPage(id) {
   document.getElementById('calc').addEventListener('click', calc);
 
   document.getElementById('dl').addEventListener('click', async () => {
-    if (!await confirmBox(`Download the “${e.course_name}” lab standard (.xlsx, with your entered Available values)?`)) return;
+    if (!await confirmBox(`Download the “${e.course_name}” lab standard?`)) return;
     const values = [...view.querySelectorAll('.equip input')].map(i => Math.max(0, Number(i.value) || 0));
     const url = 'data/xlsx/' + cSlug(e) + '.xlsx';
     const a = document.createElement('a');
