@@ -243,7 +243,7 @@ function labPage(id) {
     const values = [...view.querySelectorAll('.equip input')].map(i => Math.max(0, Number(i.value) || 0));
     const url = 'data/xlsx/' + cSlug(e) + '.xlsx';
     const a = document.createElement('a');
-    a.href = values.some(v => v > 0) ? URL.createObjectURL(await xlsxFill(url, values)) : url;
+    a.href = URL.createObjectURL(await xlsxFill(url, values));
     a.download = e.org_slug + ' - ' + e.course_name + '.xlsx';
     document.body.appendChild(a); a.click(); a.remove();
     if (a.href.startsWith('blob:')) setTimeout(() => URL.revokeObjectURL(a.href), 5000);

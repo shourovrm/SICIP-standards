@@ -87,7 +87,8 @@ const xlsxFill = (() => {
     const sheet = entries.find(e => e.name === 'xl/worksheets/sheet1.xml');
     let xml = new TextDecoder().decode(sheet.data);
     values.forEach((v, i) => {
-      if (!(v > 0)) return; // unfilled → leave the cell blank, like the template
+      // always write, 0 included: a blank D cell scores FULL weight in Excel
+      // (MIN ignores blanks), which would disagree with the page calculator
       const r = 16 + i;
       xml = xml.replace(new RegExp(`(<c r="D${r}"[^>]*?)(/>|></c>)`),
                         `$1><v>${v}</v></c>`);
