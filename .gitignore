@@ -22,3 +22,4 @@ dist/
 
 # Deferred heavy assets — CBLMs go to Cloudflare R2, never committed
 cblm/
+Business-Plan/
