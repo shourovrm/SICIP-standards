@@ -13175,16 +13175,16 @@
   "trainees": 25,
   "space": "Classroom – 350 sft (33 sqm)\nWorkshop/ lab – 800 sft (75 sqm)\nOR\nClassroom cum workshop – 1000 sft (93 sqm)",
   "boilerplate": "•The institute shall not use the same facilities for any other projects/organizations offering a similar course.\n•The institute must provide sufficient evidence to prove ownership of the proposed training equipment.\nThe list denotes the minimum training equipment and facility required to effectively conduct training for a specific course. Additionally, the institute must ensure that all other necessary training tools, equipment, and furniture are available to meet the requirement of competency standards (CS) provided by SICIP.\nFor the operation of training course on Fashion Design, Product Development and Entrepreneurship, the institute must ensure the availability of at least 80% of the major training equipment and training facilities (according to the CS) to be eligible for SICIP training delivery. If the score is below 80%, the remaining equipment and facilities need to be installed before the commencement of the training.\nThe institute will also provide all other hand tools and power tools as per CS for 25 trainees. Also, they will arrange adequate seating arrangement and classroom setup for the 25 trainees.",
-  "approved": "24 Jul 2025",
+  "approved": "29 Apr 2026",
   "equipment": [
    {
-    "name": "Computers/Laptop",
-    "required": 1,
+    "name": "Computer / Laptop (with relevant design software)",
+    "required": 5,
     "weight": 5,
     "remark": null
    },
    {
-    "name": "Projector & Screen (HD quality, HDMI support, 3000+ lumens)",
+    "name": "Multimedia Projector & Screen (HD quality, HDMI support)",
     "required": 1,
     "weight": 5,
     "remark": null
@@ -13196,56 +13196,104 @@
     "remark": null
    },
    {
-    "name": "Mannequins/Dress Forms (Female and male standard sizes)",
-    "required": 2,
-    "weight": 9,
-    "remark": null
-   },
-   {
-    "name": "Single needle lock stitch machine",
-    "required": 15,
+    "name": "Single Needle Lock Stitch Machine (Industrial/Domestic)",
+    "required": 25,
     "weight": 10,
     "remark": null
    },
    {
-    "name": "Overlock machine",
+    "name": "Overlock Machine (3 or 4 threads)",
     "required": 2,
     "weight": 9,
     "remark": null
    },
    {
-    "name": "Cutting table (60”x 50”)",
+    "name": "Embroidery Machine (Manual/Computerized)",
+    "required": 1,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Button Hole Machine",
+    "required": 1,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Button Stitch Machine",
+    "required": 1,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Cutting Table (Standard size: min. 5ft - 60”x50”)",
     "required": 2,
     "weight": 7,
     "remark": null
    },
    {
-    "name": "Electric iron",
+    "name": "Pattern Making & Printing Table (Min 5ft)",
+    "required": 3,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Mannequins / Dress Forms (Male, Female, and Child standard sizes)",
+    "required": 5,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Electric Steam Iron with Ironing Table",
     "required": 1,
     "weight": 6,
     "remark": null
    },
    {
-    "name": "Electric steam iron with iron table",
-    "required": 1,
-    "weight": 6,
+    "name": "Burner for Dyeing and Printing",
+    "required": 2,
+    "weight": 5,
     "remark": null
    },
    {
-    "name": "Scissors (10”-12”)",
+    "name": "Tracing Wheels",
     "required": 25,
     "weight": 4,
     "remark": null
    },
    {
-    "name": "Sewing tool box",
+    "name": "Sets of Pattern Making Curves (French curve, Hip curve, etc.)",
+    "required": 25,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Fabric Cutting Scissors (10”-12”)",
+    "required": 25,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Different Screen for Printing",
+    "required": 10,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Different Dices for Block Printing",
+    "required": 15,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Sewing Tool Box (Measuring tape, tailor’s chalk, needles, etc.)",
     "required": 25,
     "weight": 4,
     "remark": null
    }
   ],
   "xlsx": "lab-standards/BWCCI-lab-standard.xlsx",
-  "cs_pdf": "competency-standards/BWCCI/2). BWCCI_CS_ Fashion Design and ENT 24 July 2025.pdf"
+  "cs_pdf": "competency-standards/BWCCI/2). BWCCI_CS_ Fashion Design and ENT 29 April 2026 (Revised).pdf"
  },
  {
   "org": "BWCCI",

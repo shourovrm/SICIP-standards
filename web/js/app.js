@@ -189,7 +189,7 @@ function labPage(id) {
             <td class="sn">${i + 1}</td>
             <td>${esc(r.name)}${r.remark ? `<span class="rmk">${esc(r.remark)}</span>` : ''}</td>
             <td class="num">${r.required ?? ''}</td>
-            <td class="num"><input type="number" min="0" step="any" value="0" data-i="${i}"
+            <td class="num"><input type="number" min="0" step="any" value="0" data-i="${i}" inputmode="decimal" enterkeyhint="next"
                  aria-label="Available ${esc(r.name)}"></td>
             <td class="num">${r.weight}</td>
             <td class="num score" data-i="${i}">–</td>
@@ -218,6 +218,17 @@ function labPage(id) {
     if (!req || req <= 0) return 0;
     return Math.min(av, req) * r.weight / req;
   };
+  // mobile: select the 0 on focus so typing replaces it; Enter/Next jumps to the next row
+  const inputs = [...view.querySelectorAll('.equip input')];
+  inputs.forEach((inp, k) => {
+    inp.addEventListener('focus', () => { if (inp.value === '0') inp.value = ''; });  // select() is unreliable on mobile number inputs
+    inp.addEventListener('blur', () => { if (inp.value === '') inp.value = '0'; });
+    inp.addEventListener('keydown', ev => {
+      if (ev.key !== 'Enter') return;
+      ev.preventDefault();
+      (inputs[k + 1] || document.getElementById('calc')).focus();
+    });
+  });
   const calc = () => {
     let sum = 0;
     view.querySelectorAll('.equip input').forEach(inp => {
@@ -293,6 +304,9 @@ function printSheet(e, r) {
   window.print();
 }
 
+/* browsers without an inline PDF viewer (Android Chrome, WebView) download an iframe'd PDF on page open */
+const INLINE_PDF = 'pdfViewerEnabled' in navigator ? navigator.pdfViewerEnabled : !/Android/i.test(navigator.userAgent);
+
 /* ---------- competency standard page ---------- */
 function csPage(id) {
   const e = find(id);
@@ -310,7 +324,9 @@ function csPage(id) {
     <button class="primary" id="dl-pdf">Download PDF</button>
     <button id="print-pdf">Print</button>
   </div>
-  <iframe class="cs-frame" id="pdf-frame" src="${pdf}" title="${esc(e.course_name)} — competency standard PDF"></iframe>`;
+  ${INLINE_PDF
+    ? `<iframe class="cs-frame" id="pdf-frame" src="${pdf}" title="${esc(e.course_name)} — competency standard PDF"></iframe>`
+    : `<div class="cs-noframe"><p>PDF preview is not available on this device.</p><p>Use <strong>Download PDF</strong> to save the standard, or open it in a new tab: <a href="${pdf}" target="_blank" rel="noopener">open PDF</a>.</p></div>`}`;
 
   document.getElementById('dl-pdf').addEventListener('click', async () => {
     if (!await confirmBox(`Download the competency standard PDF for “${e.course_name}”?`)) return;
@@ -322,7 +338,7 @@ function csPage(id) {
     if (!await confirmBox(`Print the competency standard for “${e.course_name}”?`)) return;
     const f = document.getElementById('pdf-frame');
     try { f.contentWindow.focus(); f.contentWindow.print(); }
-    catch { window.open(pdf, '_blank'); }
+    catch { window.open(pdf, '_blank'); }  // no inline viewer (mobile): open in new tab
   });
   window.scrollTo(0, 0);
 }
