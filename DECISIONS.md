@@ -48,3 +48,4 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 2026-08-30 | BP report/slides revised: terse text, no narrative/Part 4/lab column, +hr/day, days/wk, classes/batch (stated only), level-shaded raw-material chart, Motor Driving BMET+DTE BP-only rows, Sweater Linking dropped | user review
 2026-08-30 | Schedule fields re-checked in all 22 BPs (4 agents); stated-only in merge.py SCHED/COURSE_SCHED; added similar-courses.xlsx | user request
 2026-08-30 | Course levels now user-assigned (levels.json from xlsx edits) — overrides BP-stated; report/slides header + Part 1/2 trimmed | user request
+2026-08-30 | Trainer-pay chart (paired bars per role, monthly; hourly/daily as text row) beside raw-material chart in report + slides | user picked option A
