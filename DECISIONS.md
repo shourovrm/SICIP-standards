@@ -20,6 +20,7 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 - 11 equipment rows have blank/non-numeric Required in the SOURCE workbooks (Mahila Cyber Security ×7 etc.) — row scores 0 like the xlsx IFERROR; not a bug.
 - data.json regen: `python scripts/gen_data.py` (needs data/peer-data.json present); per-course xlsx regen: `python scripts/split_sheets.py` (needs data.json + workbooks).
 - Official template scores a BLANK Available cell as full weight (Excel/LO MIN() ignores blanks), disagreeing with the page calculator (blank=0) — so downloads always write explicit 0 into every untouched D cell (parity verified page 3.11 == LO 3.1055…).
+- CS preview = self-hosted pdf.js 6.3 (`web/pdfjs/`, 8.3 MB: pruned to en-US locale, no .map/sample/debugger; draw/annotation tools hidden via a rule appended to viewer.css — viewer.html has a CSP that blocks inline styles; `viewer.css?v=N` must be bumped when that file changes). Iframe src = `viewer.html?file=../../../<cs_pdf>#zoom=page-fit`.
 - CS page iframe height is set by JS to the remaining viewport (`fit()` on load/resize) so the whole preview window is on screen; a fixed vh cut the bottom off.
 - Available inputs: `select()` is unreliable on mobile number inputs — a "0" is cleared on focus and restored on blur; Enter/Next jumps to the next row.
 - Updating a CS: replace PDF, edit `data/peer-data.json` (cs_pdf + approved), rebuild the workbook sheet with `scripts/build_lab_standard.build_sheet`, then `gen_data.py` + `split_sheets.py` (revert the 161 untouched per-course xlsx — they only change timestamps).
@@ -55,3 +56,4 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 2026-08-30 | BWCCI Fashion Design CS replaced by 29 Apr 2026 (Revised) docx→pdf; lab standard rebuilt from its Workshop/Lab Facility Standard (19 items); new-item weights by analogy with other orgs' sheets | user supplied revised CS
 2026-08-30 | Mobile fixes: no PDF iframe where no inline viewer; Available inputs clear 0 on focus, Enter = next | user reports from phone
 2026-08-30 | Reverted mobile PDF placeholder (auto-download was a Firefox-mobile quirk, Chrome fine); CS iframe now sized to remaining viewport | user
+2026-08-30 | CS preview switched from browser PDF plugin to self-hosted pdf.js viewer (same UI everywhere, visible scrollbar, page-fit on open, no draw tools) | Chrome plugin showed part of a page + overlay-only scrollbar; Firefox mobile auto-downloaded

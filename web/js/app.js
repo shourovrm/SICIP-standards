@@ -304,6 +304,9 @@ function printSheet(e, r) {
   window.print();
 }
 
+/* self-hosted pdf.js viewer (web/pdfjs) — same UI in every browser; file path is relative to viewer.html */
+const viewerUrl = rel => 'web/pdfjs/web/viewer.html?file=' + encodeURIComponent('../../../' + rel) + '#zoom=page-fit';
+
 /* ---------- competency standard page ---------- */
 function csPage(id) {
   const e = find(id);
@@ -321,7 +324,7 @@ function csPage(id) {
     <button class="primary" id="dl-pdf">Download PDF</button>
     <button id="print-pdf">Print</button>
   </div>
-  <iframe class="cs-frame" id="pdf-frame" src="${pdf}" title="${esc(e.course_name)} — competency standard PDF"></iframe>`;
+  <iframe class="cs-frame" id="pdf-frame" src="${viewerUrl(e.cs_pdf)}" title="${esc(e.course_name)} — competency standard PDF"></iframe>`;
   // fill the rest of the viewport so the whole preview window is on screen
   const frame = document.getElementById('pdf-frame');
   const fit = () => { frame.style.height = Math.max(420, window.innerHeight - frame.getBoundingClientRect().top - 16) + 'px'; };
