@@ -305,7 +305,8 @@ function printSheet(e, r) {
 }
 
 /* self-hosted pdf.js viewer (web/pdfjs) — same UI in every browser; file path is relative to viewer.html */
-const viewerUrl = rel => 'web/pdfjs/web/viewer.html?file=' + encodeURIComponent('../../../' + rel) + '#zoom=page-fit&pagemode=none';
+const viewerUrl = rel => 'web/pdfjs/web/viewer.html?file=' + encodeURIComponent('../../../' + rel) + '#zoom=page-fit'
+  + (matchMedia('(max-width: 900px)').matches ? '&pagemode=none' : '&pagemode=outline');  // phones: outline sidebar would cover the page
 
 /* ---------- competency standard page ---------- */
 function csPage(id) {
