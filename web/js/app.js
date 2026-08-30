@@ -305,7 +305,7 @@ function printSheet(e, r) {
 }
 
 /* self-hosted pdf.js viewer (web/pdfjs) — same UI in every browser; file path is relative to viewer.html */
-const viewerUrl = rel => 'web/pdfjs/web/viewer.html?file=' + encodeURIComponent('../../../' + rel) + '#zoom=page-fit';
+const viewerUrl = rel => 'web/pdfjs/web/viewer.html?file=' + encodeURIComponent('../../../' + rel) + '#zoom=page-fit&pagemode=none';
 
 /* ---------- competency standard page ---------- */
 function csPage(id) {
