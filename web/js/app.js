@@ -304,9 +304,6 @@ function printSheet(e, r) {
   window.print();
 }
 
-/* browsers without an inline PDF viewer (Android Chrome, WebView) download an iframe'd PDF on page open */
-const INLINE_PDF = 'pdfViewerEnabled' in navigator ? navigator.pdfViewerEnabled : !/Android/i.test(navigator.userAgent);
-
 /* ---------- competency standard page ---------- */
 function csPage(id) {
   const e = find(id);
@@ -324,9 +321,11 @@ function csPage(id) {
     <button class="primary" id="dl-pdf">Download PDF</button>
     <button id="print-pdf">Print</button>
   </div>
-  ${INLINE_PDF
-    ? `<iframe class="cs-frame" id="pdf-frame" src="${pdf}" title="${esc(e.course_name)} — competency standard PDF"></iframe>`
-    : `<div class="cs-noframe"><p>PDF preview is not available on this device.</p><p>Use <strong>Download PDF</strong> to save the standard, or open it in a new tab: <a href="${pdf}" target="_blank" rel="noopener">open PDF</a>.</p></div>`}`;
+  <iframe class="cs-frame" id="pdf-frame" src="${pdf}" title="${esc(e.course_name)} — competency standard PDF"></iframe>`;
+  // fill the rest of the viewport so the whole preview window is on screen
+  const frame = document.getElementById('pdf-frame');
+  const fit = () => { frame.style.height = Math.max(420, window.innerHeight - frame.getBoundingClientRect().top - 16) + 'px'; };
+  fit(); window.addEventListener('resize', fit);
 
   document.getElementById('dl-pdf').addEventListener('click', async () => {
     if (!await confirmBox(`Download the competency standard PDF for “${e.course_name}”?`)) return;
@@ -338,7 +337,7 @@ function csPage(id) {
     if (!await confirmBox(`Print the competency standard for “${e.course_name}”?`)) return;
     const f = document.getElementById('pdf-frame');
     try { f.contentWindow.focus(); f.contentWindow.print(); }
-    catch { window.open(pdf, '_blank'); }  // no inline viewer (mobile): open in new tab
+    catch { window.open(pdf, '_blank'); }
   });
   window.scrollTo(0, 0);
 }

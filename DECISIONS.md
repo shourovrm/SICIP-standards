@@ -20,7 +20,7 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 - 11 equipment rows have blank/non-numeric Required in the SOURCE workbooks (Mahila Cyber Security ×7 etc.) — row scores 0 like the xlsx IFERROR; not a bug.
 - data.json regen: `python scripts/gen_data.py` (needs data/peer-data.json present); per-course xlsx regen: `python scripts/split_sheets.py` (needs data.json + workbooks).
 - Official template scores a BLANK Available cell as full weight (Excel/LO MIN() ignores blanks), disagreeing with the page calculator (blank=0) — so downloads always write explicit 0 into every untouched D cell (parity verified page 3.11 == LO 3.1055…).
-- CS page: browsers without an inline PDF viewer (`navigator.pdfViewerEnabled` false, Android Chrome) download an iframe'd PDF on page open — app.js shows a placeholder card instead of the iframe there.
+- CS page iframe height is set by JS to the remaining viewport (`fit()` on load/resize) so the whole preview window is on screen; a fixed vh cut the bottom off.
 - Available inputs: `select()` is unreliable on mobile number inputs — a "0" is cleared on focus and restored on blur; Enter/Next jumps to the next row.
 - Updating a CS: replace PDF, edit `data/peer-data.json` (cs_pdf + approved), rebuild the workbook sheet with `scripts/build_lab_standard.build_sheet`, then `gen_data.py` + `split_sheets.py` (revert the 161 untouched per-course xlsx — they only change timestamps).
 - Browsers heuristically cache css/js (http.server sends no cache headers) — bump `?v=N` in index.html whenever web/ assets change, or users get stale code.
@@ -54,3 +54,4 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 2026-08-30 | Trainer-pay chart (paired bars per role, monthly; hourly/daily as text row) beside raw-material chart in report + slides | user picked option A
 2026-08-30 | BWCCI Fashion Design CS replaced by 29 Apr 2026 (Revised) docx→pdf; lab standard rebuilt from its Workshop/Lab Facility Standard (19 items); new-item weights by analogy with other orgs' sheets | user supplied revised CS
 2026-08-30 | Mobile fixes: no PDF iframe where no inline viewer; Available inputs clear 0 on focus, Enter = next | user reports from phone
+2026-08-30 | Reverted mobile PDF placeholder (auto-download was a Firefox-mobile quirk, Chrome fine); CS iframe now sized to remaining viewport | user
