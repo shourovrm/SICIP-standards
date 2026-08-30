@@ -45,3 +45,4 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 2026-08-20 | LIVE: https://sicip-standards.pages.dev (Pages git integration, auto-deploy on push) | production verified: 162 courses, calc, xlsx fill, pdf/font/workbook URLs 200
 2026-08-25 | BP similar-course comparison: 33 groups, 118 courses; report, slides + pipeline kept in Business-Plan/analysis (gitignored, off GitHub) | user request; level never inferred, blanks kept blank
 2026-08-30 | BITAC BPs (Short + Advanced, scanned) OCR'd + merged into BP analysis; Drone/illegible OCR figures left blank | user supplied BPs; no inference rule
+2026-08-30 | BP report/slides revised: terse text, no narrative/Part 4/lab column, +hr/day, days/wk, classes/batch (stated only), level-shaded raw-material chart, Motor Driving BMET+DTE BP-only rows, Sweater Linking dropped | user review
