@@ -8207,3 +8207,6 @@ dialog :link{
 
 /* SICIP: no annotation/draw tools */
 #editorModeButtons,#editorModeSeparator{display:none!important}
+/* SICIP: rotate buttons moved to the main toolbar — icon vars are scoped to the secondary menu */
+#toolbarViewerRight #pageRotateCcw::before{-webkit-mask-image:url(images/secondaryToolbarButton-rotateCcw.svg);mask-image:url(images/secondaryToolbarButton-rotateCcw.svg)}
+#toolbarViewerRight #pageRotateCw::before{-webkit-mask-image:url(images/secondaryToolbarButton-rotateCw.svg);mask-image:url(images/secondaryToolbarButton-rotateCw.svg)}
