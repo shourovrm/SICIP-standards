@@ -9,7 +9,7 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 - LATER — CBLMs (REMIND USER of this runbook when CBLMs come up): files >25MB, ~4.6GB → R2, NOT git/Pages. Steps: (1) dashboard: R2 → create bucket `sicip-cblm`; (2) bucket Settings → enable r2.dev public access (gives base URL); (3) drop files in local `cblm/` (already gitignored), bulk-upload via wrangler (`npx wrangler login` once); (4) add `cblm` URL field to data.json + Download CBLM button on course pages; push → Pages auto-deploys. R2 free: 10GB, zero egress.
 
 ## Gotchas
-- `Business-Plan/` is gitignored (raw BP docs); extracted numbers + report live in `Business-Plan/analysis/` (also gitignored, NOT on GitHub). BP .doc→txt via soffice; scanned PDFs need tesseract + eng.traineddata from tessdata_fast (system tessdata only has afr/osd).
+- `Business-Plan/` is gitignored (raw BP docs); extracted numbers + report live in `Business-Plan/analysis/` (also gitignored, NOT on GitHub). BP .doc→txt via soffice drops some tables (REHAB Table 3) — convert to html when a table looks empty; scanned PDFs need tesseract + eng.traineddata from tessdata_fast (system tessdata only has afr/osd).
 - `pkill -f '<pattern>'` inside the Bash tool kills the tool's own shell if the pattern appears in its command line — use `kill <pid>`.
 - External source drive remounts between `/run/media/rms/New Volume` and `New Volume1` — detect the live path before any file op; the /tmp scratchpad keyed to the old mount name gets wiped on remount (lost scripts/JSON once). Keep working files in-repo, not /tmp.
 - Parallel `soffice` needs a unique `-env:UserInstallation=file:///tmp/lo_<id>` per instance or it deadlocks on the profile lock.
