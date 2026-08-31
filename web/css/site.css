@@ -90,7 +90,7 @@ a.org-count:hover{background:var(--accent);color:#fff}
 .lab-side{position:sticky;top:72px;display:grid;gap:16px}
 .lab-main{display:grid;gap:16px}
 .docname{font-size:14px;color:var(--muted);font-weight:500;margin:0 0 6px}
-.course{font-size:24px;font-weight:700;line-height:1.2;margin:0;text-wrap:balance}
+.lab .course-h{font-size:24px;font-weight:700;line-height:1.2;margin:0;text-wrap:balance}
 .facts{display:grid;gap:12px;margin:16px 0 0}
 .facts dt{font-size:13px;color:var(--muted);letter-spacing:.02em;margin:0 0 1px}
 .facts dd{margin:0;font-size:16.5px;font-weight:500;font-variant-numeric:tabular-nums}
@@ -98,8 +98,8 @@ a.org-count:hover{background:var(--accent);color:#fff}
 .hint{font-size:14px;color:var(--muted);margin:0 0 8px}
 .space{margin:0;font-weight:500;font-variant-numeric:tabular-nums}
 .pre{white-space:pre-line}
-.sec{font-size:19px;font-weight:600;margin:0 0 10px;text-wrap:balance}
-.sec small{display:block;font-family:"Spline Sans",system-ui,sans-serif;font-size:15px;font-weight:400;color:var(--muted);letter-spacing:0;margin-top:2px}
+.lab .sec{font-size:19px;font-weight:600;margin:0 0 10px;text-wrap:balance}
+.lab .sec small{display:block;font-family:"Spline Sans",system-ui,sans-serif;font-size:15px;font-weight:400;color:var(--muted);letter-spacing:0;margin-top:2px}
 .rules{max-width:68ch}
 .rules ul{margin:0 0 14px;padding-left:19px}
 .rules li{margin:0 0 6px}

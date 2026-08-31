@@ -175,7 +175,7 @@ function labPage(id) {
     <aside class="lab-side">
       <div class="card">
         <p class="docname">Course-wise Training Infrastructure and Facilities</p>
-        <h1 class="course">${esc(e.course_name)}</h1>
+        <h1 class="course-h">${esc(e.course_name)}</h1>
         <dl class="facts">
           <div><dt>Organisation</dt><dd>${esc(e.org)}${e.sector ? ' · ' + esc(e.sector) : ''}</dd></div>
           <div><dt>Number of Trainees</dt><dd>${e.trainees}</dd></div>
