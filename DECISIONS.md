@@ -59,3 +59,4 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 2026-08-30 | CS preview switched from browser PDF plugin to self-hosted pdf.js viewer (same UI everywhere, visible scrollbar, page-fit on open, no draw tools) | Chrome plugin showed part of a page + overlay-only scrollbar; Firefox mobile auto-downloaded
 2026-08-31 | AEOSIB raw material + trainer pay recovered from rotated Table 23.2 (p.40); chart hours/level sub-label was 18px via `.group .sub` clash — now `.bars text.sub` 9px, label 17px; BP: subtitle dropped from course tables | user request
 2026-08-31 | BP chart labels: org always bold; course on 2nd line when org has several courses in a group (clab/lab_svg); label 16px, sub 12px; course cut 27 report / 24 slides | user picked mockup D; 17px one-line labels overflowed
+2026-08-31 | AEOSIB Electrical (Shipbuilding) level Basic→Mid in levels.json | BP states Mid Level Course (p.40 pay = Mid rate)
