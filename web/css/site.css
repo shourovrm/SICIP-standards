@@ -83,34 +83,58 @@ a.org-count:hover{background:var(--accent);color:#fff}
 /* Detail pages */
 .back{display:inline-block;margin:2px 0 14px;font-size:14.5px;text-decoration:none;color:var(--muted)}
 .back:hover{color:var(--accent-ink)}
-.doc{
-  background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
-  box-shadow:var(--shadow);padding:30px 34px 34px;max-width:980px;
-}
-.doc-title{margin:0 0 18px;font-size:24px;font-weight:700}
-.kv{margin:0 0 20px;border-top:1px solid var(--line)}
-.kv > div{display:flex;gap:14px;padding:8px 0;border-bottom:1px solid var(--line);font-size:15.5px}
-.kv dt{flex:0 0 190px;color:var(--muted);margin:0}
-.kv dd{margin:0}
-.doc h3{font-size:18px;margin:26px 0 10px}
-.space-tbl,.equip{width:100%;border-collapse:collapse;font-size:15px}
-.space-tbl th,.space-tbl td,.equip th,.equip td{
-  border:1px solid var(--line-strong);padding:8px 11px;text-align:left;vertical-align:top;
-}
-.space-tbl th,.equip th{background:var(--panel);font-weight:600;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:22px 26px}
+
+/* Lab standard: sticky sidebar + sheet */
+.lab{display:grid;grid-template-columns:300px minmax(0,1fr);gap:22px;align-items:start}
+.lab-side{position:sticky;top:72px;display:grid;gap:16px}
+.lab-main{display:grid;gap:16px}
+.docname{font-size:14px;color:var(--muted);font-weight:500;margin:0 0 6px}
+.course{font-size:24px;font-weight:700;line-height:1.2;margin:0;text-wrap:balance}
+.facts{display:grid;gap:12px;margin:16px 0 0}
+.facts dt{font-size:13px;color:var(--muted);letter-spacing:.02em;margin:0 0 1px}
+.facts dd{margin:0;font-size:16.5px;font-weight:500;font-variant-numeric:tabular-nums}
+.side-h{font-family:"Spline Sans",system-ui,sans-serif;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.hint{font-size:14px;color:var(--muted);margin:0 0 8px}
+.space{margin:0;font-weight:500;font-variant-numeric:tabular-nums}
 .pre{white-space:pre-line}
-.boiler{white-space:pre-line;color:var(--muted);font-size:14.5px;margin:0 0 18px}
+.sec{font-size:19px;font-weight:600;margin:0 0 10px;text-wrap:balance}
+.sec small{display:block;font-family:"Spline Sans",system-ui,sans-serif;font-size:15px;font-weight:400;color:var(--muted);letter-spacing:0;margin-top:2px}
+.rules{max-width:68ch}
+.rules ul{margin:0 0 14px;padding-left:19px}
+.rules li{margin:0 0 6px}
+.rules li::marker{color:var(--accent)}
+.rules p{margin:0 0 14px;text-wrap:pretty}
+.rules p:last-child{margin:0}
+.rules strong{font-weight:600}
+
+/* live score card */
+.live .n{font-family:"Space Grotesk",sans-serif;font-size:36px;font-weight:700;line-height:1.2;font-variant-numeric:tabular-nums}
+.live .n small{font-size:15px;color:var(--muted);font-weight:500;font-family:"Spline Sans",system-ui,sans-serif}
+.pill{display:inline-block;white-space:nowrap;font-size:14px;font-weight:600;padding:3px 11px;border-radius:999px;margin:6px 0 12px}
+.pill.ok{background:var(--accent-tint);color:var(--accent-ink)}
+.pill.no{background:#fbe9e5;color:var(--warn)}
+.live .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:7px 0;border-top:1px solid var(--line);font-size:15px;font-variant-numeric:tabular-nums}
+.live .row b{font-family:"Space Grotesk",sans-serif;font-size:19px;font-weight:700;white-space:nowrap}
+.live .actions{margin-top:14px;flex-direction:column;align-items:stretch}
+.live .actions button{text-align:center}
+
+/* equipment table */
 .tbl-scroll{overflow-x:auto}
-.equip{min-width:640px}
+.equip{width:100%;border-collapse:collapse;font-size:16px;font-variant-numeric:tabular-nums;min-width:640px}
+.equip th,.equip td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}
+.equip thead th{font-size:12px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--line-strong);padding-bottom:8px}
 .equip td.num,.equip th.num{text-align:right;white-space:nowrap}
-.equip td.sn{text-align:right;color:var(--faint);width:44px}
-.equip .rmk{display:block;font-size:12.5px;color:var(--faint)}
+.equip td.sn{text-align:right;color:var(--faint);width:48px}
+.equip td.score{color:var(--muted)}
+.equip .rmk{display:block;font-size:13px;color:var(--faint)}
 .equip input{
-  width:84px;padding:5px 8px;font:inherit;font-size:15px;text-align:right;
+  width:88px;padding:6px 10px;font:inherit;font-size:16px;text-align:right;
   border:1px solid var(--line-strong);border-radius:7px;background:var(--surface);color:var(--ink);
+  font-variant-numeric:tabular-nums;
 }
-.equip input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-tint)}
-.equip tfoot td{background:var(--panel);font-weight:600}
+.equip input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-tint)}
+.equip tfoot td{background:var(--panel);font-weight:600;border-bottom:0;border-top:2px solid var(--line-strong)}
 
 .actions{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0 0}
 button,.btn{
@@ -121,17 +145,6 @@ button,.btn{
 button:hover,.btn:hover{border-color:var(--accent);color:var(--accent-ink)}
 .primary{background:var(--accent);border-color:var(--accent);color:#fff}
 .primary:hover{background:var(--accent-ink);border-color:var(--accent-ink);color:#fff}
-
-.results{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
-.results[hidden]{display:none}
-.score-card{
-  flex:1 1 180px;background:var(--panel);border:1px solid var(--line);border-radius:10px;
-  padding:14px 18px;
-}
-.score-card .lbl{font-size:13.5px;color:var(--muted)}
-.score-card .val{font-family:"Space Grotesk",sans-serif;font-size:27px;font-weight:700}
-.score-card.ok .val{color:var(--accent-ink)}
-.score-card.no .val{color:var(--warn)}
 
 /* CS page */
 .cs-meta{display:flex;gap:8px 22px;flex-wrap:wrap;color:var(--muted);font-size:15px;margin:4px 0 16px}
@@ -158,10 +171,11 @@ dialog::backdrop{background:rgba(23,33,28,.35)}
   .wordmark{font-size:19px}
   .tabs{margin-left:0}
   main{padding:20px 14px 60px}
-  .doc{padding:20px 16px 24px}
-  .kv > div{flex-direction:column;gap:1px}
-  .kv dt{flex:none}
-  .results{flex-direction:column}
+  .card{padding:18px 16px 20px}
+  .lab{grid-template-columns:minmax(0,1fr);gap:14px}
+  .lab-side{position:static;display:contents}
+  .lab-main{display:contents}
+  .lab .live{order:9}
 }
 @media (prefers-reduced-motion:no-preference){
   .tabs a,button,.btn,.course a,a.org-count{transition:background .12s,color .12s,border-color .12s}

@@ -159,58 +159,80 @@ function labPage(id) {
   setTitle(e.course_name);
   const sumW = e.equipment.reduce((n, r) => n + (r.weight || 0), 0);
 
+  // boilerplate text exact; "•" lines become list items, the rest paragraphs
+  const rules = (() => {
+    const lines = (e.boilerplate || '').split('\n').map(l => l.trim()).filter(Boolean);
+    const li = lines.filter(l => l.startsWith('•')).map(l => `<li>${esc(l.slice(1).trim())}</li>`).join('');
+    const ps = lines.filter(l => !l.startsWith('•'))
+      .map(l => `<p>${esc(l).replace('at least 80%', '<strong>at least 80%</strong>')}</p>`).join('');
+    return (li ? `<ul>${li}</ul>` : '') + ps;
+  })();
+  const space = esc((e.space || '').split('\n').map(l => l.trim()).filter(Boolean).join('\n'));
+
   view.innerHTML = `
   <a class="back" href="#/lab">← Lab Standards</a>
-  <article class="doc">
-    <h2 class="doc-title">Course-wise Training Infrastructure and Facilities</h2>
-    <dl class="kv">
-      <div><dt>Course Name</dt><dd>${esc(e.course_name)}</dd></div>
-      <div><dt>Number of Trainees</dt><dd>${e.trainees}</dd></div>
-      <div><dt>Sector · Organisation</dt><dd>${e.sector ? esc(e.sector) + ' · ' : ''}${esc(e.org)}</dd></div>
-      ${e.approved ? `<div><dt>Approved</dt><dd>${esc(e.approved)}</dd></div>` : ''}
-    </dl>
-    <h3>Course-wise Training Space (Theoretical Classroom, Workshop/ Lab/ Classroom cum Workshop)</h3>
-    <table class="space-tbl">
-      <thead><tr><th>Course Name</th><th>SICIP required space for ${e.trainees} trainees</th></tr></thead>
-      <tbody><tr><td>${esc(e.course_name)}</td><td class="pre">${esc(e.space)}</td></tr></tbody>
-    </table>
-    <h3>Major Training Equipment and Training Facilities</h3>
-    <p class="boiler">${esc(e.boilerplate || '')}</p>
-    <div class="tbl-scroll">
-      <table class="equip" id="equip">
-        <thead><tr>
-          <th class="num">S.N.</th><th>Major equipment &amp; facilities</th>
-          <th class="num">Required</th><th class="num">Available</th>
-          <th class="num">Weight</th><th class="num">Score</th>
-        </tr></thead>
-        <tbody>
-          ${e.equipment.map((r, i) => `
-          <tr>
-            <td class="sn">${i + 1}</td>
-            <td>${esc(r.name)}${r.remark ? `<span class="rmk">${esc(r.remark)}</span>` : ''}</td>
-            <td class="num">${r.required ?? ''}</td>
-            <td class="num"><input type="number" min="0" step="any" value="0" data-i="${i}" inputmode="decimal" enterkeyhint="next"
-                 aria-label="Available ${esc(r.name)}"></td>
-            <td class="num">${r.weight}</td>
-            <td class="num score" data-i="${i}">–</td>
-          </tr>`).join('')}
-        </tbody>
-        <tfoot><tr>
-          <td colspan="4">Sum</td><td class="num">${fmt(sumW)}</td><td class="num" id="sum-score">–</td>
-        </tr></tfoot>
-      </table>
+  <div class="lab">
+    <aside class="lab-side">
+      <div class="card">
+        <p class="docname">Course-wise Training Infrastructure and Facilities</p>
+        <h1 class="course">${esc(e.course_name)}</h1>
+        <dl class="facts">
+          <div><dt>Organisation</dt><dd>${esc(e.org)}${e.sector ? ' · ' + esc(e.sector) : ''}</dd></div>
+          <div><dt>Number of Trainees</dt><dd>${e.trainees}</dd></div>
+          ${e.approved ? `<div><dt>Approved</dt><dd>${esc(e.approved)}</dd></div>` : ''}
+        </dl>
+      </div>
+      <div class="card">
+        <h3 class="side-h">Training space</h3>
+        <p class="hint">Theoretical classroom, workshop/lab, or classroom cum workshop — SICIP required space for ${e.trainees} trainees</p>
+        <p class="pre space">${space}</p>
+      </div>
+      <div class="card live">
+        <h3 class="side-h">Facility score</h3>
+        <div class="n"><span id="s100">0</span><small> / 100</small></div>
+        <span class="pill no" id="elig">Below 80 — not eligible</span>
+        <div class="row"><span>Points out of 30</span><b id="s30">0</b></div>
+        <div class="row"><span>Weighted score</span><b><span id="sum-score">0</span> / ${fmt(sumW)}</b></div>
+        <div class="actions">
+          <button class="primary" id="dl">Download .xlsx</button>
+          <button id="print">Print</button>
+        </div>
+      </div>
+    </aside>
+    <div class="lab-main">
+      <div class="card"><div class="rules">
+        <h2 class="sec">Conditions</h2>
+        ${rules}
+      </div></div>
+      <div class="card">
+        <h2 class="sec">Major training equipment and facilities <small>Enter what the institute has in <em>Available</em> — the score updates as you type.</small></h2>
+        <div class="tbl-scroll">
+          <table class="equip" id="equip">
+            <thead><tr>
+              <th class="num">S.N.</th><th>Major equipment &amp; facilities</th>
+              <th class="num">Required</th><th class="num">Available</th>
+              <th class="num">Weight</th><th class="num">Score</th>
+            </tr></thead>
+            <tbody>
+              ${e.equipment.map((r, i) => `
+              <tr>
+                <td class="sn">${i + 1}</td>
+                <td>${esc(r.name)}${r.remark ? `<span class="rmk">${esc(r.remark)}</span>` : ''}</td>
+                <td class="num">${r.required ?? ''}</td>
+                <td class="num"><input type="number" min="0" step="any" value="0" data-i="${i}" inputmode="decimal" enterkeyhint="next"
+                     aria-label="Available ${esc(r.name)}"></td>
+                <td class="num">${r.weight}</td>
+                <td class="num score" data-i="${i}">0</td>
+              </tr>`).join('')}
+            </tbody>
+            <tfoot><tr>
+              <td colspan="4">Sum</td><td class="num">${fmt(sumW)}</td><td class="num" id="sum-w-score">0</td>
+            </tr></tfoot>
+          </table>
+        </div>
+      </div>
     </div>
-    <div class="actions">
-      <button class="primary" id="calc">Calculate</button>
-      <button id="print">Print</button>
-      <button id="dl">Download .xlsx</button>
-    </div>
-    <div class="results" id="results" hidden>
-      <div class="score-card" id="card-score"><div class="lbl">Score out of 100</div><div class="val">–</div></div>
-      <div class="score-card" id="card-points"><div class="lbl">Total achieved points out of 30</div><div class="val">–</div></div>
-      <div class="score-card" id="card-elig"><div class="lbl">Eligibility (≥ 80 required)</div><div class="val">–</div></div>
-    </div>
-  </article>`;
+  </div>`;
 
   // row score mirrors xlsx: IFERROR(MIN(C,D)*E/C, 0)
   const rowScore = (r, av) => {
@@ -223,10 +245,11 @@ function labPage(id) {
   inputs.forEach((inp, k) => {
     inp.addEventListener('focus', () => { if (inp.value === '0') inp.value = ''; });  // select() is unreliable on mobile number inputs
     inp.addEventListener('blur', () => { if (inp.value === '') inp.value = '0'; });
+    inp.addEventListener('input', () => calc());
     inp.addEventListener('keydown', ev => {
       if (ev.key !== 'Enter') return;
       ev.preventDefault();
-      (inputs[k + 1] || document.getElementById('calc')).focus();
+      (inputs[k + 1] || document.getElementById('dl')).focus();
     });
   });
   const calc = () => {
@@ -239,15 +262,14 @@ function labPage(id) {
     });
     const score = sumW ? sum / sumW * 100 : 0, points = score * 30 / 100, ok = score >= 80;
     document.getElementById('sum-score').textContent = fmt(sum);
-    const res = document.getElementById('results');
-    res.hidden = false;
-    const set = (id, v, cls) => { const c = document.getElementById(id); c.querySelector('.val').textContent = v; if (cls) c.className = 'score-card ' + cls; };
-    set('card-score', fmt(score), ok ? 'ok' : 'no');
-    set('card-points', fmt(points));
-    set('card-elig', ok ? 'Eligible' : 'Not eligible', ok ? 'ok' : 'no');
+    document.getElementById('sum-w-score').textContent = fmt(sum);
+    document.getElementById('s100').textContent = fmt(score);
+    document.getElementById('s30').textContent = fmt(points);
+    const el = document.getElementById('elig');
+    el.className = 'pill ' + (ok ? 'ok' : 'no');
+    el.textContent = ok ? 'Eligible' : 'Below 80 — not eligible';
     return { sum, score, points, ok };
   };
-  document.getElementById('calc').addEventListener('click', calc);
 
   document.getElementById('dl').addEventListener('click', async () => {
     if (!await confirmBox(`Download the “${e.course_name}” lab standard?`)) return;

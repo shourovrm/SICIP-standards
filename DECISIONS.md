@@ -26,6 +26,7 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 - CS page iframe height is set by JS to the remaining viewport (`fit()` on load/resize) so the whole preview window is on screen; a fixed vh cut the bottom off.
 - Available inputs: `select()` is unreliable on mobile number inputs — a "0" is cleared on focus and restored on blur; Enter/Next jumps to the next row.
 - Updating a CS: replace PDF, edit `data/peer-data.json` (cs_pdf + approved), rebuild the workbook sheet with `scripts/build_lab_standard.build_sheet`, then `gen_data.py` + `split_sheets.py` (revert the 161 untouched per-course xlsx — they only change timestamps).
+- Lab page = mockup B (docs/mockups/lab-page-mockups.html): sticky sidebar (facts, space, live score card w/ Download+Print) + Conditions and equipment cards; score recomputes on every input, no Calculate button. Grid columns must be `minmax(0,1fr)` or the 640px-min table blows the page width on mobile; mobile uses `display:contents` + `order` to put the score card last.
 - Browsers heuristically cache css/js (http.server sends no cache headers) — bump `?v=N` in index.html whenever web/ assets change, or users get stale code.
 
 ## Tried / rejected
@@ -65,3 +66,5 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 2026-08-31 | Course levels re-reviewed from BP source text (5 agents, bp_txt/levels_review_*.json): 52 explicit matches, 0 wrong, 2 non-binary (DTE Welding 'Level-1,2,3,4', BITAC Ind. Electrical 'Basic to Advanced'), 62 not stated in BP (BMET, BEIOA, REHAB, DTE, PKSF, Asia-TTC, BRTC = user-assigned); BMET Electrical (Industry) BP-row mismatch fixed (raw 5,000→6,000) | user distrusts old JSON
 2026-08-31 | Business-Plan/html/: all 25 BPs as mobile HTML (index.html; Word→LibreOffice XHTML stripped to semantic tags; scanned/PDF → 120dpi page image per page + collapsible OCR text, auto-rotated). QA by 5 agents: 1,468 tables cell-identical to source, 411 pages verified; 3 builder bugs + 13 rotation markers fixed | user request
 2026-08-31 | Available (D) = explicit 0 in all 23 org workbooks + builder + per-course xlsx; fill regex replaces existing <v> | org workbook download showed 30/30 (blank D = full weight)
+2026-08-31 | Lab page redesigned per mockup B (sidebar + live score; boilerplate as list+paragraphs, text exact; 16px tabular table) | user: 'writings do not look good'; picked B from 4 Helium mockups
+2026-08-31 | Mockups shown in playwright-helium from docs/mockups/, never Artifacts | user request
