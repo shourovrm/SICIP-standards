@@ -1,0 +1,390 @@
+<!doctype html><html lang="en"><head><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<title>Lab Standard Page Mockups</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Spline+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#f3f4f2; --surface:#fff; --panel:#fafbf9;
+  --ink:#17211c; --muted:#4f5a53; --faint:#7d867f;
+  --line:#e4e7e3; --line-strong:#d3d8d2;
+  --accent:#0e6b58; --accent-ink:#0a4f42; --accent-tint:#e4f1ec;
+  --warn:#b4402f; --warn-tint:#fbe9e5;
+  --shadow:0 1px 2px rgba(23,33,28,.05);
+  --disp:"Space Grotesk","Spline Sans",system-ui,sans-serif;
+  --body:"Spline Sans",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#131917; --surface:#1b2320; --panel:#1f2926;
+    --ink:#eef2ee; --muted:#b3bcb5; --faint:#8a948c;
+    --line:#2b3531; --line-strong:#3a4641;
+    --accent:#4fb59a; --accent-ink:#8fd6c2; --accent-tint:#1c3a32;
+    --warn:#ef8a78; --warn-tint:#3d221d;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#131917; --surface:#1b2320; --panel:#1f2926;
+  --ink:#eef2ee; --muted:#b3bcb5; --faint:#8a948c;
+  --line:#2b3531; --line-strong:#3a4641;
+  --accent:#4fb59a; --accent-ink:#8fd6c2; --accent-tint:#1c3a32;
+  --warn:#ef8a78; --warn-tint:#3d221d;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:1.0625rem/1.6 var(--body);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--disp);letter-spacing:-.012em;margin:0;text-wrap:balance}
+a{color:var(--accent-ink)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+button{font:inherit;cursor:pointer}
+
+/* ---- mockup chrome ---- */
+.chrome{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line-strong)}
+.chrome-in{max-width:1180px;margin:0 auto;padding:.75rem 1.25rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.chrome h1{font-size:1.125rem;font-weight:600}
+.chrome p{margin:0;color:var(--muted);font-size:.875rem}
+.vtabs{margin-left:auto;display:flex;gap:.25rem;background:var(--surface);border:1px solid var(--line-strong);border-radius:.625rem;padding:.2rem}
+.vtabs button{border:0;background:none;color:var(--muted);font-weight:500;font-size:.9375rem;padding:.4rem .85rem;border-radius:.45rem}
+.vtabs button[aria-selected="true"]{background:var(--accent-tint);color:var(--accent-ink);font-weight:600}
+.note{max-width:1180px;margin:0 auto;padding:1rem 1.25rem 0;color:var(--muted);font-size:.9375rem;max-width:70ch}
+.note b{color:var(--ink);font-weight:600}
+.v{display:none}
+.v.on{display:block}
+
+/* ---- site shell (as on the live site) ---- */
+.top{border-bottom:1px solid var(--line-strong);background:var(--bg)}
+.top-in{max-width:1180px;margin:0 auto;padding:.875rem 1.25rem;display:flex;align-items:baseline;gap:1.6rem;flex-wrap:wrap}
+.wordmark{font-family:var(--disp);font-size:1.375rem;font-weight:700;color:var(--ink);text-decoration:none}
+.tabs{display:flex;gap:.25rem;margin-left:auto}
+.tabs a{text-decoration:none;color:var(--muted);font-weight:500;font-size:.9375rem;padding:.45rem .9rem;border-radius:.5rem}
+.tabs a[aria-current]{background:var(--accent-tint);color:var(--accent-ink);font-weight:600}
+main{max-width:1180px;margin:0 auto;padding:1.6rem 1.25rem 4.5rem}
+.back{display:inline-block;margin:0 0 .9rem;font-size:.9375rem;text-decoration:none;color:var(--muted)}
+.back:hover{color:var(--accent-ink)}
+
+/* ---- shared type roles ---- */
+.docname{font-size:.875rem;color:var(--muted);font-weight:500;margin:0 0 .35rem}
+.course{font-size:1.75rem;font-weight:700;line-height:1.2}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem 1.5rem;margin:1.25rem 0 0}
+.facts div{min-width:0}
+.facts dt{font-size:.8125rem;color:var(--muted);letter-spacing:.02em;margin:0 0 .1rem}
+.facts dd{margin:0;font-size:1.0625rem;font-weight:500;font-variant-numeric:tabular-nums}
+.sec{font-size:1.1875rem;font-weight:600;margin:0 0 .6rem}
+.sec small{display:block;font-family:var(--body);font-size:.9375rem;font-weight:400;color:var(--muted);letter-spacing:0;margin-top:.15rem}
+.rules{max-width:68ch}
+.rules ul{margin:0 0 .9rem;padding-left:1.2rem}
+.rules li{margin:0 0 .35rem;padding-left:.15rem}
+.rules li::marker{color:var(--accent)}
+.rules p{margin:0 0 .9rem;text-wrap:pretty}
+.rules p:last-child{margin:0}
+.rules strong{font-weight:600}
+.space{display:grid;grid-template-columns:auto 1fr;gap:.45rem 1.5rem;margin:0;font-variant-numeric:tabular-nums}
+.space dt{color:var(--muted)}
+.space dd{margin:0;font-weight:500}
+
+/* ---- equipment table ---- */
+.tbl-scroll{overflow-x:auto}
+table.equip{width:100%;border-collapse:collapse;font-size:1rem;font-variant-numeric:tabular-nums;min-width:640px}
+.equip th,.equip td{padding:.6rem .75rem;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}
+.equip thead th{font-size:.75rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--line-strong);padding-bottom:.5rem}
+.equip .num{text-align:right;white-space:nowrap}
+.equip td.sn{color:var(--faint);width:3rem;text-align:right}
+.equip td.sc{color:var(--muted)}
+.equip input{width:5.5rem;padding:.4rem .6rem;font:inherit;font-size:1rem;text-align:right;color:var(--ink);background:var(--surface);border:1px solid var(--line-strong);border-radius:.4rem;font-variant-numeric:tabular-nums}
+.equip input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-tint)}
+.equip tfoot td{font-weight:600;border-bottom:0;border-top:2px solid var(--line-strong);background:var(--panel)}
+
+/* ---- actions + score ---- */
+.actions{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+.btn{font-size:.9375rem;font-weight:500;padding:.55rem 1.1rem;border-radius:.5rem;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);text-decoration:none}
+.btn:hover{border-color:var(--accent);color:var(--accent-ink)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
+:root[data-theme="dark"] .btn.primary,:root:not([data-theme="light"]) .btn.primary{color:var(--bg)}
+.score{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:.625rem;overflow:hidden}
+.score>div{background:var(--panel);padding:.85rem 1.1rem}
+.score .l{font-size:.8125rem;color:var(--muted)}
+.score .n{font-family:var(--disp);font-size:1.75rem;font-weight:700;line-height:1.2;font-variant-numeric:tabular-nums}
+.score .n small{font-size:.9375rem;color:var(--muted);font-weight:500;font-family:var(--body)}
+.pill{display:inline-block;white-space:nowrap;font-size:.875rem;font-weight:600;padding:.2rem .7rem;border-radius:999px;background:var(--panel);color:var(--muted);border:1px solid var(--line-strong);margin-top:.35rem}
+.pill.ok{background:var(--accent-tint);color:var(--accent-ink);border-color:transparent}
+.pill.no{background:var(--warn-tint);color:var(--warn);border-color:transparent}
+.hint{font-size:.875rem;color:var(--muted);margin:.5rem 0 0}
+
+/* ===== A: course-first document ===== */
+.A .doc{background:var(--surface);border:1px solid var(--line);border-radius:.75rem;box-shadow:var(--shadow);padding:2rem 2.25rem 2.25rem;max-width:1000px}
+.A .doc-hd{padding-bottom:1.5rem;border-bottom:1px solid var(--line);margin-bottom:1.75rem}
+.A section+section{margin-top:2.25rem}
+.A .two{margin-bottom:2.25rem}
+.A .two section{margin-top:0}
+.A .two .space{grid-template-columns:1fr;gap:.1rem}
+.A .two .space dt{font-size:.875rem}
+.A .two .space dd{margin-bottom:.5rem;white-space:nowrap}
+.A .two{display:grid;grid-template-columns:minmax(0,66ch) minmax(240px,1fr);gap:2.5rem;align-items:start}
+.A .actions{margin-top:1.25rem}
+.A .score{margin-top:1.25rem}
+
+/* ===== B: ledger with sticky sidebar ===== */
+.B .lay{display:grid;grid-template-columns:300px 1fr;gap:1.5rem;align-items:start}
+.B aside{position:sticky;top:1rem;display:grid;gap:1rem}
+.B .card{background:var(--surface);border:1px solid var(--line);border-radius:.75rem;box-shadow:var(--shadow);padding:1.25rem 1.4rem}
+.B .facts{grid-template-columns:1fr;gap:.75rem;margin-top:1rem}
+.B .course{font-size:1.5rem}
+.B .card h3{font-size:.8125rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 .6rem;font-family:var(--body)}
+.B .space{grid-template-columns:1fr;gap:.15rem}
+.B .space dt{font-size:.875rem}
+.B .space dd{margin-bottom:.5rem}
+.B .live .n{font-size:2.25rem}
+.B .live .row{display:flex;justify-content:space-between;align-items:baseline;padding:.45rem 0;border-top:1px solid var(--line);font-variant-numeric:tabular-nums}
+.B .live .row:first-of-type{border-top:0}
+.B .live .row b{font-family:var(--disp);font-size:1.25rem;font-weight:700}
+.B .live .actions{margin-top:.9rem;flex-direction:column;align-items:stretch}
+.B .live .btn{text-align:center}
+.B .main{display:grid;gap:1rem}
+.B .main .card{padding:1.5rem 1.75rem}
+
+/* ===== C: table first, conditions collapsed ===== */
+.C .doc{max-width:1000px}
+.C .doc-hd{display:flex;justify-content:space-between;gap:2rem;align-items:flex-end;flex-wrap:wrap;padding:0 0 1.25rem;border-bottom:2px solid var(--ink);margin-bottom:1.25rem}
+.C .course{font-size:2rem}
+.C .meta{display:flex;gap:.5rem 1.4rem;flex-wrap:wrap;color:var(--muted);font-size:.9375rem;margin-top:.35rem}
+.C .meta b{color:var(--ink);font-weight:500}
+.C .sheet{background:var(--surface);border:1px solid var(--line);border-radius:.75rem;box-shadow:var(--shadow);padding:1.5rem 1.75rem}
+.C .sheet-hd{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;margin-bottom:.75rem}
+.C details{margin-top:1.25rem;border:1px solid var(--line);border-radius:.625rem;background:var(--surface)}
+.C summary{cursor:pointer;padding:.8rem 1.1rem;font-weight:600;font-family:var(--disp);font-size:1.0625rem;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.C summary::-webkit-details-marker{display:none}
+.C summary::after{content:"+";font-weight:500;color:var(--muted);font-size:1.25rem}
+.C details[open] summary::after{content:"–"}
+.C details .in{padding:0 1.1rem 1.1rem;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.C .foot{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;margin-top:1.25rem}
+.C .score{flex:1 1 380px}
+
+@media (max-width:760px){
+  .A .doc{padding:1.25rem 1rem 1.5rem}
+  .A .two,.C details .in{grid-template-columns:1fr}
+  .B .lay{grid-template-columns:1fr}
+  .B aside{position:static}
+  .C .course{font-size:1.625rem}
+}
+@media (prefers-reduced-motion:no-preference){
+  .btn,.vtabs button,.tabs a{transition:background .15s,color .15s,border-color .15s}
+}
+</style></head><body>
+
+<div class="chrome">
+  <div class="chrome-in">
+    <h1>Lab standard page — 3 directions</h1>
+    <p>Same course (AEOSIB · Marine Engine), inputs and Calculate work in each.</p>
+    <div class="vtabs" role="tablist">
+      <button role="tab" aria-selected="true" data-v="A">A · Course-first</button>
+      <button role="tab" aria-selected="false" data-v="B">B · Ledger</button>
+      <button role="tab" aria-selected="false" data-v="C">C · Table-first</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ A ============ -->
+<div class="v A on" id="vA">
+<p class="note"><b>A · Course-first document.</b> Keeps the official order. Course name becomes the heading, template title demoted to a document label. Conditions set as a real list + prose in body ink at 68ch. Score strip appears under the table.</p>
+<header class="top"><div class="top-in"><a class="wordmark" href="#">SICIP&nbsp;Standards</a><nav class="tabs"><a href="#">Competency Standards</a><a href="#" aria-current="page">Lab Standards</a></nav></div></header>
+<main>
+  <a class="back" href="#">← Lab Standards</a>
+  <article class="doc">
+    <div class="doc-hd">
+      <p class="docname">Course-wise Training Infrastructure and Facilities</p>
+      <h1 class="course">Marine Engine Operation and Maintenance</h1>
+      <dl class="facts">
+        <div><dt>Organisation</dt><dd>AEOSIB</dd></div>
+        <div><dt>Sector</dt><dd>Shipbuilding</dd></div>
+        <div><dt>Trainees per batch</dt><dd>25</dd></div>
+        <div><dt>Approved</dt><dd>07 Jan 2026</dd></div>
+      </dl>
+    </div>
+
+    <div class="two">
+      <section class="rules">
+        <h2 class="sec">Conditions</h2>
+        <ul>
+          <li>The institute shall not use the same facilities for any other projects/organisations offering a similar course.</li>
+          <li>The institute must provide sufficient evidence to prove ownership of the proposed training equipment.</li>
+        </ul>
+        <p>The list denotes the minimum training equipment and facility required to conduct this course. The institute must also ensure that all other training tools, equipment and furniture required by the competency standard (CS) are available.</p>
+        <p>To be eligible for SICIP training delivery the institute must have <strong>at least 80%</strong> of the major training equipment and facilities below. If the score is below 80%, the remaining items must be installed before training begins.</p>
+        <p>The institute will also provide all other hand tools and power tools as per CS, and adequate seating and classroom setup, for 25 trainees.</p>
+      </section>
+      <section>
+        <h2 class="sec">Training space <small>Theoretical classroom, workshop/lab, or classroom cum workshop — for 25 trainees</small></h2>
+        <dl class="space">
+          <dt>Classroom</dt><dd>350 sft (33 sqm)</dd>
+          <dt>Workshop / lab</dt><dd>800 sft (75 sqm)</dd>
+          <dt>or Classroom cum workshop</dt><dd>1000 sft (93 sqm)</dd>
+        </dl>
+      </section>
+    </div>
+
+    <section>
+      <h2 class="sec">Major training equipment and facilities <small>Enter what the institute has in <em>Available</em>, then calculate.</small></h2>
+      <div class="tbl-scroll" data-table></div>
+      <div class="actions">
+        <button class="btn primary" data-calc>Calculate score</button>
+        <button class="btn">Print</button>
+        <button class="btn">Download .xlsx</button>
+      </div>
+      <div class="score" data-score hidden>
+        <div><div class="l">Score out of 100</div><div class="n" data-s100>–</div></div>
+        <div><div class="l">Points out of 30</div><div class="n" data-s30>–</div></div>
+        <div><div class="l">Eligibility (80 required)</div><span class="pill" data-elig>Not calculated</span></div>
+      </div>
+    </section>
+  </article>
+</main>
+</div>
+
+<!-- ============ B ============ -->
+<div class="v B" id="vB">
+<p class="note"><b>B · Ledger.</b> Two columns: the sheet on the right, a sticky sidebar with course facts, space and a live score that updates as you type — no Calculate button needed. Best for desktop assessment work; stacks on mobile.</p>
+<header class="top"><div class="top-in"><a class="wordmark" href="#">SICIP&nbsp;Standards</a><nav class="tabs"><a href="#">Competency Standards</a><a href="#" aria-current="page">Lab Standards</a></nav></div></header>
+<main>
+  <a class="back" href="#">← Lab Standards</a>
+  <div class="lay">
+    <aside>
+      <div class="card">
+        <p class="docname">Lab standard</p>
+        <h1 class="course">Marine Engine Operation and Maintenance</h1>
+        <dl class="facts">
+          <div><dt>Organisation</dt><dd>AEOSIB · Shipbuilding</dd></div>
+          <div><dt>Trainees per batch</dt><dd>25</dd></div>
+          <div><dt>Approved</dt><dd>07 Jan 2026</dd></div>
+        </dl>
+      </div>
+      <div class="card">
+        <h3>Training space</h3>
+        <dl class="space">
+          <dt>Classroom</dt><dd>350 sft (33 sqm)</dd>
+          <dt>Workshop / lab</dt><dd>800 sft (75 sqm)</dd>
+          <dt>or Classroom cum workshop</dt><dd>1000 sft (93 sqm)</dd>
+        </dl>
+      </div>
+      <div class="card live">
+        <h3>Facility score</h3>
+        <div class="n"><span data-s100>0</span><small> / 100</small></div>
+        <span class="pill no" data-elig>Below 80 — not eligible</span>
+        <div class="row" style="margin-top:.75rem"><span>Points out of 30</span><b data-s30>0</b></div>
+        <div class="row"><span>Weighted score</span><b><span data-sum>0</span> / 82</b></div>
+        <div class="actions">
+          <button class="btn primary">Download .xlsx</button>
+          <button class="btn">Print</button>
+        </div>
+      </div>
+    </aside>
+    <div class="main">
+      <div class="card rules">
+        <h2 class="sec">Conditions</h2>
+        <ul>
+          <li>The institute shall not use the same facilities for any other projects/organisations offering a similar course.</li>
+          <li>The institute must provide sufficient evidence to prove ownership of the proposed training equipment.</li>
+        </ul>
+        <p>The list below is the minimum equipment and facility for this course; all other tools, equipment and furniture required by the CS must also be available. To be eligible, the institute must have <strong>at least 80%</strong> of the items by weight — otherwise the remaining items must be installed before training begins.</p>
+      </div>
+      <div class="card">
+        <h2 class="sec">Major training equipment and facilities <small>Score updates as you type.</small></h2>
+        <div class="tbl-scroll" data-table data-live></div>
+      </div>
+    </div>
+  </div>
+</main>
+</div>
+
+<!-- ============ C ============ -->
+<div class="v C" id="vC">
+<p class="note"><b>C · Table-first.</b> The equipment sheet is the job, so it comes first. Conditions and space sit in a collapsed panel above the sheet; the heading carries the facts inline. Score and actions share one footer row.</p>
+<header class="top"><div class="top-in"><a class="wordmark" href="#">SICIP&nbsp;Standards</a><nav class="tabs"><a href="#">Competency Standards</a><a href="#" aria-current="page">Lab Standards</a></nav></div></header>
+<main>
+  <a class="back" href="#">← Lab Standards</a>
+  <div class="doc">
+    <div class="doc-hd">
+      <div>
+        <p class="docname">Course-wise Training Infrastructure and Facilities</p>
+        <h1 class="course">Marine Engine Operation and Maintenance</h1>
+        <p class="meta"><span><b>AEOSIB</b> · Shipbuilding</span><span><b>25</b> trainees per batch</span><span>Approved <b>07 Jan 2026</b></span></p>
+      </div>
+    </div>
+
+    <details>
+      <summary>Training space and conditions</summary>
+      <div class="in">
+        <div>
+          <dl class="space">
+            <dt>Classroom</dt><dd>350 sft (33 sqm)</dd>
+            <dt>Workshop / lab</dt><dd>800 sft (75 sqm)</dd>
+            <dt>or Classroom cum workshop</dt><dd>1000 sft (93 sqm)</dd>
+          </dl>
+        </div>
+        <div class="rules">
+          <ul>
+            <li>The institute shall not use the same facilities for any other projects/organisations offering a similar course.</li>
+            <li>The institute must provide sufficient evidence to prove ownership of the proposed training equipment.</li>
+          </ul>
+          <p>Minimum equipment and facility for this course; all other CS-required tools, equipment, furniture and seating for 25 trainees must also be available. Eligibility needs <strong>at least 80%</strong> by weight; otherwise remaining items are installed before training begins.</p>
+        </div>
+      </div>
+    </details>
+
+    <div class="sheet" style="margin-top:1.25rem">
+      <div class="sheet-hd">
+        <h2 class="sec">Major training equipment and facilities</h2>
+        <p class="hint" style="margin:0">Enter what the institute has, then calculate.</p>
+      </div>
+      <div class="tbl-scroll" data-table></div>
+      <div class="foot">
+        <div class="score" data-score>
+          <div><div class="l">Score out of 100</div><div class="n" data-s100>–</div></div>
+          <div><div class="l">Points out of 30</div><div class="n" data-s30>–</div></div>
+          <div><div class="l">Eligibility (80 required)</div><span class="pill" data-elig>Not calculated</span></div>
+        </div>
+        <div class="actions">
+          <button class="btn primary" data-calc>Calculate</button>
+          <button class="btn">Print</button>
+          <button class="btn">Download .xlsx</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</div>
+
+<script>
+const EQ=[["Computer with internet connection",1,5],["Projector and projector screen",1,5],["Marine Diesel engine",3,10],["Engine Cooler (Tube type)",1,8],["Engine Cooler (Plate type)",1,8],["Engine Crank shaft",1,7],["Different engine component set",2,7],["Centrifugal Pump",2,7],["Positive displacement pump",2,7],["Main bearing",1,6],["Crank pin bearing",1,6],["Battery (100 AH) with charger",1,6]];
+const SUMW=EQ.reduce((n,r)=>n+r[2],0);
+const fmt=n=>(Math.round(n*100)/100).toLocaleString('en',{maximumFractionDigits:2});
+const tableHTML=`<table class="equip"><thead><tr><th class="num">S.N.</th><th>Major equipment &amp; facilities</th><th class="num">Required</th><th class="num">Available</th><th class="num">Weight</th><th class="num">Score</th></tr></thead><tbody>${EQ.map((r,i)=>`<tr><td class="sn">${i+1}</td><td>${r[0]}</td><td class="num">${r[1]}</td><td class="num"><input type="number" min="0" step="any" value="0" inputmode="decimal" aria-label="Available ${r[0]}"></td><td class="num">${r[2]}</td><td class="num sc" data-i="${i}">–</td></tr>`).join('')}</tbody><tfoot><tr><td colspan="4">Sum</td><td class="num">${SUMW}</td><td class="num" data-sum>–</td></tr></tfoot></table>`;
+
+document.querySelectorAll('.v').forEach(v=>{
+  const host=v.querySelector('[data-table]'); host.innerHTML=tableHTML;
+  const inputs=[...host.querySelectorAll('input')];
+  const calc=()=>{
+    let sum=0;
+    inputs.forEach((inp,i)=>{const [_,req,w]=EQ[i];const av=Math.max(0,Number(inp.value)||0);const s=Math.min(av,req)*w/req;sum+=s;host.querySelector(`[data-i="${i}"]`).textContent=fmt(s)});
+    const score=sum/SUMW*100, ok=score>=80;
+    v.querySelectorAll('[data-sum]').forEach(el=>el.textContent=fmt(sum));
+    v.querySelectorAll('[data-s100]').forEach(el=>el.textContent=fmt(score));
+    v.querySelectorAll('[data-s30]').forEach(el=>el.textContent=fmt(score*.3));
+    v.querySelectorAll('[data-elig]').forEach(el=>{el.className='pill '+(ok?'ok':'no');el.textContent=ok?'Eligible':(score>0?`Below 80 — not eligible`:'Below 80 — not eligible')});
+    const sc=v.querySelector('[data-score]'); if(sc) sc.hidden=false;
+  };
+  inputs.forEach((inp,k)=>{
+    inp.addEventListener('focus',()=>{if(inp.value==='0')inp.value=''});
+    inp.addEventListener('blur',()=>{if(inp.value==='')inp.value='0'});
+    inp.addEventListener('keydown',ev=>{if(ev.key==='Enter'){ev.preventDefault();(inputs[k+1]||v.querySelector('[data-calc]')||inp).focus()}});
+    if(host.hasAttribute('data-live')) inp.addEventListener('input',calc);
+  });
+  v.querySelectorAll('[data-calc]').forEach(b=>b.addEventListener('click',calc));
+});
+document.querySelectorAll('.vtabs button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.vtabs button').forEach(x=>x.setAttribute('aria-selected',x===b));
+  document.querySelectorAll('.v').forEach(x=>x.classList.toggle('on',x.id==='v'+b.dataset.v));
+  window.scrollTo(0,0);
+  try{localStorage.setItem('labmock',b.dataset.v)}catch(e){}
+}));
+try{const s=localStorage.getItem('labmock');if(s)document.querySelector(`.vtabs [data-v="${s}"]`)?.click()}catch(e){}
+</script>
+</body></html>
