@@ -90,7 +90,7 @@ const xlsxFill = (() => {
       // always write, 0 included: a blank D cell scores FULL weight in Excel
       // (MIN ignores blanks), which would disagree with the page calculator
       const r = 16 + i;
-      xml = xml.replace(new RegExp(`(<c r="D${r}"[^>]*?)(/>|></c>)`),
+      xml = xml.replace(new RegExp(`(<c r="D${r}"[^>]*?)(/>|>(?:<v>[^<]*</v>)?</c>)`),
                         `$1><v>${v}</v></c>`);
     });
     sheet.data = new TextEncoder().encode(xml);

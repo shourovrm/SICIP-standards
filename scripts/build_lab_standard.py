@@ -104,7 +104,7 @@ def build_sheet(ws, co):
         set_cell(ws, f"A{r}", i + 1, font=F11(), align=CEN())
         set_cell(ws, f"B{r}", name, font=F11(), align=Alignment(horizontal="left", vertical="top", wrap_text=True))
         set_cell(ws, f"C{r}", qty, font=F11(), align=CEN(True))
-        set_cell(ws, f"D{r}", None, font=F11(), align=CEN(True))
+        set_cell(ws, f"D{r}", 0, font=F11(), align=CEN(True))
         set_cell(ws, f"E{r}", weight, font=F11(), align=CEN(True))
         set_cell(ws, f"F{r}", f"=IFERROR(MIN(C{r},D{r})*E{r}/C{r},0)", font=F11(), align=CEN(True))
         set_cell(ws, f"G{r}", remark, font=F11(), align=CEN(True))
