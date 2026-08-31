@@ -122,6 +122,13 @@ table.equip{width:100%;border-collapse:collapse;font-size:1rem;font-variant-nume
 .A .actions{margin-top:1.25rem}
 .A .score{margin-top:1.25rem}
 
+/* ===== D: A + live score (sticky strip) ===== */
+.D .score{position:sticky;bottom:0;z-index:5;margin:1.25rem -2.25rem -2.25rem;border-radius:0 0 .75rem .75rem;border-width:1px 0 0;box-shadow:0 -6px 18px rgba(23,33,28,.06)}
+.D .score>div{background:var(--surface)}
+.D .score .n{font-size:1.5rem}
+.D .actions{margin-top:1.25rem}
+@media (max-width:760px){.D .score{margin:1rem -1rem -1.5rem}}
+
 /* ===== B: ledger with sticky sidebar ===== */
 .B .lay{display:grid;grid-template-columns:300px 1fr;gap:1.5rem;align-items:start}
 .B aside{position:sticky;top:1rem;display:grid;gap:1rem}
@@ -178,6 +185,7 @@ table.equip{width:100%;border-collapse:collapse;font-size:1rem;font-variant-nume
       <button role="tab" aria-selected="true" data-v="A">A · Course-first</button>
       <button role="tab" aria-selected="false" data-v="B">B · Ledger</button>
       <button role="tab" aria-selected="false" data-v="C">C · Table-first</button>
+      <button role="tab" aria-selected="false" data-v="D">D · A + live score</button>
     </div>
   </div>
 </div>
@@ -233,6 +241,62 @@ table.equip{width:100%;border-collapse:collapse;font-size:1rem;font-variant-nume
         <div><div class="l">Score out of 100</div><div class="n" data-s100>–</div></div>
         <div><div class="l">Points out of 30</div><div class="n" data-s30>–</div></div>
         <div><div class="l">Eligibility (80 required)</div><span class="pill" data-elig>Not calculated</span></div>
+      </div>
+    </section>
+  </article>
+</main>
+</div>
+
+<!-- ============ D ============ -->
+<div class="v A D" id="vD">
+<p class="note"><b>D · A + live score.</b> Variant A layout; the score strip is always visible, sticks to the bottom of the window while you scroll the table, and updates as you type. No Calculate button.</p>
+<header class="top"><div class="top-in"><a class="wordmark" href="#">SICIP&nbsp;Standards</a><nav class="tabs"><a href="#">Competency Standards</a><a href="#" aria-current="page">Lab Standards</a></nav></div></header>
+<main>
+  <a class="back" href="#">← Lab Standards</a>
+  <article class="doc">
+    <div class="doc-hd">
+      <p class="docname">Course-wise Training Infrastructure and Facilities</p>
+      <h1 class="course">Marine Engine Operation and Maintenance</h1>
+      <dl class="facts">
+        <div><dt>Organisation</dt><dd>AEOSIB</dd></div>
+        <div><dt>Sector</dt><dd>Shipbuilding</dd></div>
+        <div><dt>Trainees per batch</dt><dd>25</dd></div>
+        <div><dt>Approved</dt><dd>07 Jan 2026</dd></div>
+      </dl>
+    </div>
+
+    <div class="two">
+      <section class="rules">
+        <h2 class="sec">Conditions</h2>
+        <ul>
+          <li>The institute shall not use the same facilities for any other projects/organisations offering a similar course.</li>
+          <li>The institute must provide sufficient evidence to prove ownership of the proposed training equipment.</li>
+        </ul>
+        <p>The list denotes the minimum training equipment and facility required to conduct this course. The institute must also ensure that all other training tools, equipment and furniture required by the competency standard (CS) are available.</p>
+        <p>To be eligible for SICIP training delivery the institute must have <strong>at least 80%</strong> of the major training equipment and facilities below. If the score is below 80%, the remaining items must be installed before training begins.</p>
+        <p>The institute will also provide all other hand tools and power tools as per CS, and adequate seating and classroom setup, for 25 trainees.</p>
+      </section>
+      <section>
+        <h2 class="sec">Training space <small>Theoretical classroom, workshop/lab, or classroom cum workshop — for 25 trainees</small></h2>
+        <dl class="space">
+          <dt>Classroom</dt><dd>350 sft (33 sqm)</dd>
+          <dt>Workshop / lab</dt><dd>800 sft (75 sqm)</dd>
+          <dt>or Classroom cum workshop</dt><dd>1000 sft (93 sqm)</dd>
+        </dl>
+      </section>
+    </div>
+
+    <section>
+      <h2 class="sec">Major training equipment and facilities <small>Enter what the institute has in <em>Available</em> — the score updates as you type.</small></h2>
+      <div class="tbl-scroll" data-table data-live></div>
+      <div class="actions">
+        <button class="btn primary">Download .xlsx</button>
+        <button class="btn">Print</button>
+      </div>
+      <div class="score" data-score>
+        <div><div class="l">Score out of 100</div><div class="n" data-s100>0</div></div>
+        <div><div class="l">Points out of 30</div><div class="n" data-s30>0</div></div>
+        <div><div class="l">Eligibility (80 required)</div><span class="pill no" data-elig>Below 80 — not eligible</span></div>
       </div>
     </section>
   </article>
@@ -378,6 +442,7 @@ document.querySelectorAll('.v').forEach(v=>{
     if(host.hasAttribute('data-live')) inp.addEventListener('input',calc);
   });
   v.querySelectorAll('[data-calc]').forEach(b=>b.addEventListener('click',calc));
+  if(host.hasAttribute('data-live')) calc();
 });
 document.querySelectorAll('.vtabs button').forEach(b=>b.addEventListener('click',()=>{
   document.querySelectorAll('.vtabs button').forEach(x=>x.setAttribute('aria-selected',x===b));
