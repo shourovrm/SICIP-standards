@@ -71,3 +71,4 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 2026-09-09 | PKSF Fashion Garments lab standard rebuilt from user xlsx (~/Downloads): 11 items → 22 (Σ weight 187); printing/dyeing/embroidery + domestic & industrial SNLS | user supplied revised list
 2026-09-09 | Weights unified across 21 same-list groups (36 sheets, 292 cells): reference = BWCCI if in group, else WEAB, else BMET, else BGMEA. CAD-CAM: BITAC weights onto BEIOA + BMET common 9 items, BMET keeps 4 extras | user request after F&B precedent
 2026-09-09 | WEAB Fashion Design + BWCCI Fashion Design (Residential) rebuilt from BWCCI Fashion Design (19 items, Σ112); rule: BWCCI residential = non-residential lab standard | user request
+2026-09-09 | Welding weights unified to DTE Welding/Asia-TTC set (already agreeing pair) across AEOSIB, BEIOA, BMET, DTE 4G-6G + BPI Gas Pipe Welding shared items; required kept per level; AEOSIB mixed MIG/TIG=2 left as-is | user request

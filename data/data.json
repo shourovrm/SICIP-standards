@@ -118,13 +118,13 @@
    {
     "name": "AC/DC Arc welding machine",
     "required": 10,
-    "weight": 10,
+    "weight": 9,
     "remark": null
    },
    {
     "name": "Gas welding set",
     "required": 3,
-    "weight": 9,
+    "weight": 8,
     "remark": null
    },
    {
@@ -154,7 +154,7 @@
    {
     "name": "Power grinding machine",
     "required": 1,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
@@ -172,25 +172,25 @@
    {
     "name": "Tool box set for welding workshop",
     "required": 10,
-    "weight": 4,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Fire extinguisher",
     "required": 4,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
     "name": "Welding booth with exhaust system",
     "required": 10,
-    "weight": 8,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "First aid box",
     "required": 3,
-    "weight": 4,
+    "weight": 3,
     "remark": null
    }
   ],
@@ -3100,7 +3100,7 @@
    {
     "name": "AC/DC Arc welding machine",
     "required": 10,
-    "weight": 10,
+    "weight": 9,
     "remark": null
    },
    {
@@ -3124,7 +3124,7 @@
    {
     "name": "Gas cutting set",
     "required": 2,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
@@ -3142,7 +3142,7 @@
    {
     "name": "Hand grinding machine",
     "required": 4,
-    "weight": 5,
+    "weight": 6,
     "remark": null
    },
    {
@@ -3154,13 +3154,13 @@
    {
     "name": "Tool box set for welding workshop",
     "required": 10,
-    "weight": 4,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Fire extinguisher",
     "required": 4,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
@@ -10954,7 +10954,7 @@
    {
     "name": "AC/DC Arc welding machine",
     "required": 10,
-    "weight": 10,
+    "weight": 9,
     "remark": null
    },
    {
@@ -10978,13 +10978,13 @@
    {
     "name": "Gas cutting set",
     "required": 3,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
     "name": "Spare cylinder set (Argon, oxygen and acetylene)",
     "required": 1,
-    "weight": 5,
+    "weight": 6,
     "remark": null
    },
    {
@@ -10996,19 +10996,19 @@
    {
     "name": "Hand grinding machine",
     "required": 10,
-    "weight": 5,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Bench vice",
     "required": 10,
-    "weight": 4,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Tool box set for welding workshop",
     "required": 10,
-    "weight": 4,
+    "weight": 5,
     "remark": null
    },
    {
@@ -11020,7 +11020,7 @@
    {
     "name": "Welding booth with exhaust system",
     "required": 10,
-    "weight": 6,
+    "weight": 7,
     "remark": null
    },
    {
@@ -11848,19 +11848,19 @@
    {
     "name": "AC/DC Arc welding machine",
     "required": 10,
-    "weight": 10,
+    "weight": 9,
     "remark": null
    },
    {
     "name": "TIG welding machine",
     "required": 10,
-    "weight": 10,
+    "weight": 9,
     "remark": null
    },
    {
     "name": "Gas cutting set",
     "required": 3,
-    "weight": 9,
+    "weight": 8,
     "remark": null
    },
    {
@@ -11884,13 +11884,13 @@
    {
     "name": "Tool box set for welding workshop",
     "required": 10,
-    "weight": 4,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Fire extinguisher",
     "required": 4,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
@@ -11902,7 +11902,7 @@
    {
     "name": "First aid box",
     "required": 3,
-    "weight": 4,
+    "weight": 3,
     "remark": null
    }
   ],
