@@ -2533,19 +2533,19 @@
    {
     "name": "Workstation computer with CAD and CAM software",
     "required": 26,
-    "weight": 10,
+    "weight": 9,
     "remark": null
    },
    {
     "name": "CNC Lathe Machine",
     "required": 1,
-    "weight": 9,
+    "weight": 10,
     "remark": null
    },
    {
     "name": "CNC Milling Machine",
     "required": 1,
-    "weight": 9,
+    "weight": 10,
     "remark": null
    },
    {
@@ -2557,19 +2557,19 @@
    {
     "name": "Working Table",
     "required": 2,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
     "name": "Cutting tools set for lathe machine",
     "required": 2,
-    "weight": 6,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Cutting tools set for milling machine",
     "required": 2,
-    "weight": 6,
+    "weight": 7,
     "remark": null
    },
    {
@@ -11188,37 +11188,37 @@
    {
     "name": "Bench Vice",
     "required": 5,
-    "weight": 4,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Working Table",
     "required": 2,
-    "weight": 3,
+    "weight": 4,
     "remark": null
    },
    {
     "name": "Cutting tools set for lathe machine",
     "required": 2,
-    "weight": 6,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Cutting tools set for milling machine",
     "required": 2,
-    "weight": 6,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Vernier caliper",
     "required": 5,
-    "weight": 4,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Micrometer",
     "required": 5,
-    "weight": 4,
+    "weight": 5,
     "remark": null
    },
    {
