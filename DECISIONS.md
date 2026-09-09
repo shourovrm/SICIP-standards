@@ -67,3 +67,4 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 2026-08-31 | Lab page redesigned per mockup B (sidebar + live score; boilerplate as list+paragraphs, text exact; 16px tabular table) | user: 'writings do not look good'; picked B from 4 Helium mockups
 2026-08-31 | Mockups shown in playwright-helium from docs/mockups/, never Artifacts | user request
 2026-09-03 | Business-Plan/ moved out to ~/repos/SICIP-BPs (own repo) | BP analysis is separate work; keep site repo lean
+2026-09-09 | F&B Production (PKSF, WEAB, ISC-T&H) weights unified to BWCCI sheet (Σ117); scale label "mm" -> "10 kg" | same items+required across 4 orgs, user asked one weight set

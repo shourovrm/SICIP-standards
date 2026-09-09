@@ -13409,7 +13409,7 @@
     "remark": null
    },
    {
-    "name": "Weighing Scale (Preferred capacity mm)",
+    "name": "Weighing Scale (Preferred capacity 10 kg)",
     "required": 1,
     "weight": 4,
     "remark": null
@@ -14938,7 +14938,7 @@
    {
     "name": "Electric and induction stoves",
     "required": 5,
-    "weight": 8,
+    "weight": 9,
     "remark": null
    },
    {
@@ -14986,19 +14986,19 @@
    {
     "name": "Convection Oven/Deck oven",
     "required": 1,
-    "weight": 8,
+    "weight": 9,
     "remark": null
    },
    {
     "name": "Working table (preferred size – 6ft x 3ft)",
     "required": 5,
-    "weight": 5,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Table with Sink",
     "required": 2,
-    "weight": 5,
+    "weight": 6,
     "remark": null
    },
    {
@@ -15028,7 +15028,7 @@
    {
     "name": "Weighing Scale (Preferred capacity 1 kg)",
     "required": 5,
-    "weight": 3,
+    "weight": 4,
     "remark": null
    }
   ],
@@ -17227,7 +17227,7 @@
    {
     "name": "Electric and induction stoves",
     "required": 5,
-    "weight": 8,
+    "weight": 9,
     "remark": null
    },
    {
@@ -17245,7 +17245,7 @@
    {
     "name": "Refrigerator (200-300 L)",
     "required": 2,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
@@ -17263,31 +17263,31 @@
    {
     "name": "Griller",
     "required": 1,
-    "weight": 8,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Meat mincer",
     "required": 1,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Convection Oven/Deck oven",
     "required": 1,
-    "weight": 8,
+    "weight": 9,
     "remark": null
    },
    {
     "name": "Working table (preferred size – 6ft x 3ft)",
     "required": 5,
-    "weight": 5,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Table with Sink",
     "required": 2,
-    "weight": 5,
+    "weight": 6,
     "remark": null
    },
    {
@@ -17309,9 +17309,9 @@
     "remark": null
    },
    {
-    "name": "Weighing Scale (Preferred capacity mm)",
+    "name": "Weighing Scale (Preferred capacity 10 kg)",
     "required": 1,
-    "weight": 3,
+    "weight": 4,
     "remark": null
    },
    {
@@ -18980,7 +18980,7 @@
     "remark": null
    },
    {
-    "name": "Weighing Scale (Preferred capacity mm)",
+    "name": "Weighing Scale (Preferred capacity 10 kg)",
     "required": 1,
     "weight": 4,
     "remark": null
