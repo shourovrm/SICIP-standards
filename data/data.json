@@ -31,13 +31,13 @@
    {
     "name": "Engine Cooler (Tube type)",
     "required": 1,
-    "weight": 8,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Engine Cooler (Plate type)",
     "required": 1,
-    "weight": 8,
+    "weight": 6,
     "remark": null
    },
    {
@@ -49,7 +49,7 @@
    {
     "name": "Different engine component set",
     "required": 2,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
@@ -67,19 +67,19 @@
    {
     "name": "Main bearing",
     "required": 1,
-    "weight": 6,
+    "weight": 4,
     "remark": null
    },
    {
     "name": "Crank pin bearing",
     "required": 1,
-    "weight": 6,
+    "weight": 4,
     "remark": null
    },
    {
     "name": "Battery (100 AH) with charger",
     "required": 1,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    }
   ],
@@ -1723,7 +1723,7 @@
    {
     "name": "Trolley/ Van",
     "required": 1,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
@@ -1741,7 +1741,7 @@
    {
     "name": "Angle Grinder",
     "required": 5,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
@@ -1759,13 +1759,13 @@
    {
     "name": "Rod Binding Machine",
     "required": 2,
-    "weight": 9,
+    "weight": 8,
     "remark": null
    },
    {
     "name": "Portable arc welding machine",
     "required": 1,
-    "weight": 8,
+    "weight": 6,
     "remark": null
    }
   ],
@@ -1798,7 +1798,7 @@
    {
     "name": "Channel wiring practice board/booth",
     "required": 25,
-    "weight": 9,
+    "weight": 8,
     "remark": null
    },
    {
@@ -1828,7 +1828,7 @@
    {
     "name": "Generator (2 to 5 KW)",
     "required": 1,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
@@ -1840,7 +1840,7 @@
    {
     "name": "Changeover switch",
     "required": 3,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
@@ -1852,13 +1852,13 @@
    {
     "name": "Electric drill machine",
     "required": 10,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Electric grinding machine",
     "required": 10,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
@@ -1876,13 +1876,13 @@
    {
     "name": "Earth tester",
     "required": 2,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Megger",
     "required": 2,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
@@ -1906,7 +1906,7 @@
    {
     "name": "Ceiling fan",
     "required": 5,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
@@ -1981,7 +1981,7 @@
    {
     "name": "Urinal",
     "required": 2,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
@@ -2005,7 +2005,7 @@
    {
     "name": "Hot and cold-water mixer tap",
     "required": 5,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
@@ -2017,13 +2017,13 @@
    {
     "name": "Pipe threading machine",
     "required": 1,
-    "weight": 9,
+    "weight": 8,
     "remark": null
    },
    {
     "name": "Thread cutter",
     "required": 16,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
@@ -2035,7 +2035,7 @@
    {
     "name": "Pedestal grinder",
     "required": 2,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
@@ -2047,25 +2047,25 @@
    {
     "name": "PPR welding machine",
     "required": 5,
-    "weight": 9,
+    "weight": 8,
     "remark": null
    },
    {
     "name": "Core cutting machine",
     "required": 1,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Plastic septic tank",
     "required": 1,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Water pump",
     "required": 5,
-    "weight": 6,
+    "weight": 7,
     "remark": null
    },
    {
@@ -2161,7 +2161,7 @@
    {
     "name": "Working platform (aluminum/toe board), range of length 5’, width 2’",
     "required": 8,
-    "weight": 9,
+    "weight": 8,
     "remark": null
    },
    {
@@ -2185,7 +2185,7 @@
    {
     "name": "Rachet spanner",
     "required": 25,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
@@ -2197,13 +2197,13 @@
    {
     "name": "Magnetic spirit level",
     "required": 25,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
     "name": "Measuring tape (steel)",
     "required": 25,
-    "weight": 4,
+    "weight": 3,
     "remark": null
    },
    {
@@ -2230,13 +2230,13 @@
    {
     "name": "Chiller",
     "required": 1,
-    "weight": 10,
+    "weight": 9,
     "remark": null
    },
    {
     "name": "Pump (Primary and Secondary)",
     "required": 2,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
@@ -2260,37 +2260,37 @@
    {
     "name": "MS Pipe (2” Dia) each of 20’",
     "required": 4,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
     "name": "MS Pipe (1” Dia) each of 20’",
     "required": 4,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
     "name": "Copper tube (1/2”, 3/4”, 1” Dia) each of 1 coil",
     "required": 3,
-    "weight": 6,
+    "weight": 4,
     "remark": null
    },
    {
     "name": "Gate valve (2”, and 1” Dia) each of 6 pcs",
     "required": 2,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
     "name": "Chilled water control valve (1” and 2” Dia) each of 2 pcs",
     "required": 4,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Flexible pipe joint (2”, and 1” Dia) each of 4 pcs",
     "required": 8,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
@@ -2302,7 +2302,7 @@
    {
     "name": "Electrical control system",
     "required": 1,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    }
   ],
@@ -2701,7 +2701,7 @@
    {
     "name": "Main Distribution Board with busbar, CB and other accessories (Training model)",
     "required": 5,
-    "weight": 9,
+    "weight": 8,
     "remark": null
    },
    {
@@ -2713,13 +2713,13 @@
    {
     "name": "DOL Starter panel",
     "required": 4,
-    "weight": 8,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Star Delta Starter panel",
     "required": 2,
-    "weight": 8,
+    "weight": 7,
     "remark": null
    },
    {
@@ -2743,25 +2743,25 @@
    {
     "name": "Timer",
     "required": 10,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
     "name": "Pilot lamp & Push switch",
     "required": 20,
-    "weight": 4,
+    "weight": 3,
     "remark": null
    },
    {
     "name": "Push switch",
     "required": 30,
-    "weight": 4,
+    "weight": 3,
     "remark": null
    },
    {
     "name": "Generator (Minimum 2 KW)",
     "required": 1,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
@@ -2785,7 +2785,7 @@
    {
     "name": "Soldering Stations",
     "required": 5,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
@@ -2803,7 +2803,7 @@
    {
     "name": "Multi meter/AVO meter",
     "required": 10,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
@@ -2827,13 +2827,13 @@
    {
     "name": "Tachometer",
     "required": 2,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
     "name": "Clamp Meter",
     "required": 2,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
@@ -2851,7 +2851,7 @@
    {
     "name": "Three phase induction motor (minimum 3hp)",
     "required": 4,
-    "weight": 8,
+    "weight": 7,
     "remark": null
    },
    {
@@ -2896,19 +2896,19 @@
    {
     "name": "Window Type AC",
     "required": 2,
-    "weight": 8,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Cassette Type AC",
     "required": 1,
-    "weight": 8,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Vacuum Pumps",
     "required": 5,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
@@ -2920,7 +2920,7 @@
    {
     "name": "Refrigeration Model",
     "required": 2,
-    "weight": 9,
+    "weight": 6,
     "remark": null
    },
    {
@@ -2938,7 +2938,7 @@
    {
     "name": "Working Table",
     "required": 5,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
@@ -2950,13 +2950,13 @@
    {
     "name": "Freeze (Frost)",
     "required": 5,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Freeze (Non-Frost)",
     "required": 2,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
@@ -2968,7 +2968,7 @@
    {
     "name": "Cylinder with Nitrogen gas",
     "required": 2,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
@@ -2992,7 +2992,7 @@
    {
     "name": "Refrigerant Recovery Cylinder",
     "required": 2,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    }
   ],
@@ -3013,7 +3013,7 @@
    {
     "name": "Lathe Machine",
     "required": 10,
-    "weight": 9,
+    "weight": 10,
     "remark": null
    },
    {
@@ -3037,7 +3037,7 @@
    {
     "name": "Bench Vice",
     "required": 8,
-    "weight": 5,
+    "weight": 6,
     "remark": null
    },
    {
@@ -3049,13 +3049,13 @@
    {
     "name": "Power hacksaw",
     "required": 1,
-    "weight": 5,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Cut off saw",
     "required": 1,
-    "weight": 5,
+    "weight": 6,
     "remark": null
    },
    {
@@ -3667,13 +3667,13 @@
    {
     "name": "Single Needle Lock Stitch Machine",
     "required": 30,
-    "weight": 9,
+    "weight": 10,
     "remark": null
    },
    {
     "name": "Overlock Machine",
     "required": 5,
-    "weight": 8,
+    "weight": 9,
     "remark": null
    },
    {
@@ -3685,25 +3685,25 @@
    {
     "name": "Double Needle Lock Stitch Machine",
     "required": 2,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
     "name": "Feed of the Arm Machine",
     "required": 2,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
     "name": "Multi Needle Chain Stitch Machine",
     "required": 3,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
     "name": "Single Needle Chain Stitch Machine",
     "required": 2,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
@@ -3727,7 +3727,7 @@
    {
     "name": "Iron Set",
     "required": 2,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
@@ -3982,25 +3982,25 @@
    {
     "name": "Display Board Samples of trims (sewing trims, finishing trims) and accessories (informative, decorative, paper, plastic)",
     "required": 10,
-    "weight": 5,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Fabric defect samples (yarn defects, weaving/knit defects, dyeing/printing/finishing defects)",
     "required": 20,
-    "weight": 5,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Samples of different embellishments defect (prints, embroidery)",
     "required": 20,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
     "name": "Samples of garment defects",
     "required": 20,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
@@ -4030,19 +4030,19 @@
    {
     "name": "Pilling testers for fabric surface quality evaluation",
     "required": 1,
-    "weight": 8,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Abrasion testers for wear and tear simulation",
     "required": 1,
-    "weight": 8,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Colour fastness testers for colour durability assessment",
     "required": 1,
-    "weight": 8,
+    "weight": 7,
     "remark": null
    },
    {
@@ -4060,19 +4060,19 @@
    {
     "name": "Light Box",
     "required": 1,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "GSM Cutter",
     "required": 2,
-    "weight": 4,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Button Pull Test Machine",
     "required": 1,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    }
   ],
@@ -7618,25 +7618,25 @@
    {
     "name": "Desktop Computer with Planning software",
     "required": 25,
-    "weight": 8,
+    "weight": 9,
     "remark": null
    },
    {
     "name": "Laptop",
     "required": 1,
-    "weight": 5,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Different Garment Sample (Woven & Knit)",
     "required": 30,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Different Fabric Sample (Woven & Knit)",
     "required": 30,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
@@ -7648,19 +7648,19 @@
    {
     "name": "Single needle lock stitch machine",
     "required": 1,
-    "weight": 7,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Over lock machine",
     "required": 1,
-    "weight": 7,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Flat lock machine",
     "required": 1,
-    "weight": 7,
+    "weight": 5,
     "remark": null
    },
    {
@@ -7723,19 +7723,19 @@
    {
     "name": "Fabric defect samples (yarn defects, weaving/knit defects, dyeing/printing/finishing defects)",
     "required": 20,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Samples of different embellishments defect (prints, embroidery)",
     "required": 20,
-    "weight": 7,
+    "weight": 4,
     "remark": null
    },
    {
     "name": "Samples of garment defects",
     "required": 20,
-    "weight": 7,
+    "weight": 4,
     "remark": null
    },
    {
@@ -7759,55 +7759,55 @@
    {
     "name": "Tensile testers for fabric strength testing",
     "required": 1,
-    "weight": 9,
+    "weight": 8,
     "remark": null
    },
    {
     "name": "Pilling testers for fabric surface quality evaluation",
     "required": 1,
-    "weight": 9,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Abrasion testers for wear and tear simulation",
     "required": 1,
-    "weight": 9,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Colour fastness testers for colour durability assessment",
     "required": 1,
-    "weight": 9,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Gray scale",
     "required": 6,
-    "weight": 6,
+    "weight": 4,
     "remark": null
    },
    {
     "name": "Measurement tape",
     "required": 26,
-    "weight": 4,
+    "weight": 3,
     "remark": null
    },
    {
     "name": "Light Box",
     "required": 1,
-    "weight": 7,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "GSM Cutter",
     "required": 2,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Button Pull Test Machine",
     "required": 1,
-    "weight": 8,
+    "weight": 6,
     "remark": null
    }
   ],
@@ -7858,25 +7858,25 @@
    {
     "name": "White board",
     "required": 1,
-    "weight": 4,
+    "weight": 3,
     "remark": null
    },
    {
     "name": "Weighing Scale",
     "required": 1,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
     "name": "Jacquard Machine (minimum)",
     "required": 10,
-    "weight": 10,
+    "weight": 9,
     "remark": null
    },
    {
     "name": "Wooden working table (5’ x 3’)",
     "required": 2,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    }
   ],
@@ -7909,7 +7909,7 @@
    {
     "name": "Single Needle Lock Stitch Machine",
     "required": 30,
-    "weight": 9,
+    "weight": 10,
     "remark": null
    },
    {
@@ -7921,7 +7921,7 @@
    {
     "name": "Flat Lock Machine Operation",
     "required": 2,
-    "weight": 9,
+    "weight": 8,
     "remark": null
    },
    {
@@ -7951,31 +7951,31 @@
    {
     "name": "Bar Tack Machine",
     "required": 2,
-    "weight": 8,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Auto Pocket Welting (APW)",
     "required": 1,
-    "weight": 8,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Quality check table (Min.  5 Feet)",
     "required": 2,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Iron Set",
     "required": 2,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Iron Table",
     "required": 2,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    }
   ],
@@ -8167,7 +8167,7 @@
    {
     "name": "Scanner",
     "required": 1,
-    "weight": 5,
+    "weight": 6,
     "remark": null
    },
    {
@@ -8197,7 +8197,7 @@
    {
     "name": "Ergonomic chairs and desks (Plastic chairs/stool not acceptable)",
     "required": 26,
-    "weight": 3,
+    "weight": 5,
     "remark": null
    }
   ],
@@ -11065,61 +11065,61 @@
    {
     "name": "Hair cutting chair",
     "required": 5,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
     "name": "Facial bed",
     "required": 5,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
     "name": "Manicure and pedicure table",
     "required": 5,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
     "name": "Threading chair",
     "required": 5,
-    "weight": 5,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Shampoo bed",
     "required": 2,
-    "weight": 5,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Steam machine (face)",
     "required": 5,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
     "name": "Steam machine (hair)",
     "required": 2,
-    "weight": 6,
+    "weight": 8,
     "remark": null
    },
    {
     "name": "Hair dryer",
     "required": 5,
-    "weight": 5,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Hair straightener",
     "required": 5,
-    "weight": 5,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Curl/tong",
     "required": 5,
-    "weight": 4,
+    "weight": 6,
     "remark": null
    },
    {
@@ -11131,19 +11131,19 @@
    {
     "name": "Crimper",
     "required": 2,
-    "weight": 4,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Facial machine (3 in one)",
     "required": 2,
-    "weight": 7,
+    "weight": 9,
     "remark": null
    },
    {
     "name": "Wax heater",
     "required": 5,
-    "weight": 5,
+    "weight": 7,
     "remark": null
    },
    {
@@ -13691,13 +13691,13 @@
   "approved": "24 Jul 2025",
   "equipment": [
    {
-    "name": "Computers/Laptop",
-    "required": 1,
+    "name": "Computer / Laptop (with relevant design software)",
+    "required": 5,
     "weight": 5,
     "remark": null
    },
    {
-    "name": "Projector & Screen (HD quality, HDMI support, 3000+ lumens)",
+    "name": "Multimedia Projector & Screen (HD quality, HDMI support)",
     "required": 1,
     "weight": 5,
     "remark": null
@@ -13709,49 +13709,97 @@
     "remark": null
    },
    {
-    "name": "Mannequins/Dress Forms (Female and male standard sizes)",
-    "required": 2,
-    "weight": 9,
-    "remark": null
-   },
-   {
-    "name": "Single needle lock stitch machine",
-    "required": 15,
+    "name": "Single Needle Lock Stitch Machine (Industrial/Domestic)",
+    "required": 25,
     "weight": 10,
     "remark": null
    },
    {
-    "name": "Overlock machine",
+    "name": "Overlock Machine (3 or 4 threads)",
     "required": 2,
     "weight": 9,
     "remark": null
    },
    {
-    "name": "Cutting table (60”x 50”)",
+    "name": "Embroidery Machine (Manual/Computerized)",
+    "required": 1,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Button Hole Machine",
+    "required": 1,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Button Stitch Machine",
+    "required": 1,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Cutting Table (Standard size: min. 5ft - 60”x50”)",
     "required": 2,
     "weight": 7,
     "remark": null
    },
    {
-    "name": "Electric iron",
+    "name": "Pattern Making & Printing Table (Min 5ft)",
+    "required": 3,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Mannequins / Dress Forms (Male, Female, and Child standard sizes)",
+    "required": 5,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Electric Steam Iron with Ironing Table",
     "required": 1,
     "weight": 6,
     "remark": null
    },
    {
-    "name": "Electric steam iron with iron table",
-    "required": 1,
-    "weight": 6,
+    "name": "Burner for Dyeing and Printing",
+    "required": 2,
+    "weight": 5,
     "remark": null
    },
    {
-    "name": "Scissors (10”-12”)",
+    "name": "Tracing Wheels",
     "required": 25,
     "weight": 4,
     "remark": null
    },
    {
-    "name": "Sewing tool box",
+    "name": "Sets of Pattern Making Curves (French curve, Hip curve, etc.)",
+    "required": 25,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Fabric Cutting Scissors (10”-12”)",
+    "required": 25,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Different Screen for Printing",
+    "required": 10,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Different Dices for Block Printing",
+    "required": 15,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Sewing Tool Box (Measuring tape, tailor’s chalk, needles, etc.)",
     "required": 25,
     "weight": 4,
     "remark": null
@@ -14089,7 +14137,7 @@
    {
     "name": "Overlock Machine",
     "required": 5,
-    "weight": 8,
+    "weight": 9,
     "remark": null
    },
    {
@@ -14107,19 +14155,19 @@
    {
     "name": "Feed of the Arm Machine",
     "required": 2,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
     "name": "Multi Needle Chain Stitch Machine",
     "required": 3,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
     "name": "Single Needle Chain Stitch Machine",
     "required": 2,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
@@ -14131,7 +14179,7 @@
    {
     "name": "Auto Pocket Welting (APW)",
     "required": 1,
-    "weight": 8,
+    "weight": 7,
     "remark": null
    },
    {
@@ -14182,7 +14230,7 @@
    {
     "name": "Channel wiring practice board/booth",
     "required": 25,
-    "weight": 9,
+    "weight": 8,
     "remark": null
    },
    {
@@ -14212,7 +14260,7 @@
    {
     "name": "Generator (2 to 5 KW)",
     "required": 1,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
@@ -14224,25 +14272,25 @@
    {
     "name": "Changeover switch",
     "required": 3,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Solar power system (Solar panel, battery, charge controller and load)",
     "required": 5,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
     "name": "Electric drill machine",
     "required": 10,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Electric grinding machine",
     "required": 10,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
@@ -14260,13 +14308,13 @@
    {
     "name": "Earth tester",
     "required": 2,
-    "weight": 5,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Megger",
     "required": 2,
-    "weight": 5,
+    "weight": 6,
     "remark": null
    },
    {
@@ -14278,13 +14326,13 @@
    {
     "name": "Single phase induction motor",
     "required": 5,
-    "weight": 6,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Three phase induction motor",
     "required": 3,
-    "weight": 6,
+    "weight": 7,
     "remark": null
    },
    {
@@ -14296,7 +14344,7 @@
    {
     "name": "Pump Motor",
     "required": 2,
-    "weight": 5,
+    "weight": 6,
     "remark": null
    },
    {
@@ -14797,13 +14845,13 @@
    {
     "name": "Western commode",
     "required": 5,
-    "weight": 6,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Asian commode",
     "required": 5,
-    "weight": 6,
+    "weight": 7,
     "remark": null
    },
    {
@@ -14815,7 +14863,7 @@
    {
     "name": "Shower unit",
     "required": 5,
-    "weight": 5,
+    "weight": 6,
     "remark": null
    },
    {
@@ -14863,7 +14911,7 @@
    {
     "name": "Pedestal grinder",
     "required": 2,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
@@ -14881,7 +14929,7 @@
    {
     "name": "Core cutting machine",
     "required": 1,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
@@ -14893,7 +14941,7 @@
    {
     "name": "Water pump",
     "required": 5,
-    "weight": 6,
+    "weight": 7,
     "remark": null
    },
    {
@@ -15061,13 +15109,13 @@
    {
     "name": "Service counter",
     "required": 1,
-    "weight": 8,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Juicer",
     "required": 1,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
@@ -15085,13 +15133,13 @@
    {
     "name": "Crockeries (Dinner plate, appetizer plate, dessert plate, BB plate, soup cup, soup saucer, tea cup and saucer)",
     "required": 20,
-    "weight": 7,
+    "weight": 8,
     "remark": "20 set"
    },
    {
     "name": "Cutleries (Table knife, table fork, table spoon, soup spoon, dessert spoon, dessert fork, butter knife,",
     "required": 20,
-    "weight": 7,
+    "weight": 8,
     "remark": "20 set"
    },
    {
@@ -15109,13 +15157,13 @@
    {
     "name": "Silencer",
     "required": 4,
-    "weight": 4,
+    "weight": 3,
     "remark": null
    },
    {
     "name": "Table cloth",
     "required": 4,
-    "weight": 4,
+    "weight": 3,
     "remark": null
    },
    {
@@ -15127,7 +15175,7 @@
    {
     "name": "Table top",
     "required": 4,
-    "weight": 4,
+    "weight": 3,
     "remark": null
    },
    {
@@ -15157,43 +15205,43 @@
    {
     "name": "Bill folder",
     "required": 4,
-    "weight": 4,
+    "weight": 3,
     "remark": null
    },
    {
     "name": "Menu card",
     "required": 16,
-    "weight": 4,
+    "weight": 3,
     "remark": null
    },
    {
     "name": "KOT (Kitchen Order Token)",
     "required": 10,
-    "weight": 4,
+    "weight": 3,
     "remark": null
    },
    {
     "name": "Bread basket",
     "required": 8,
-    "weight": 4,
+    "weight": 3,
     "remark": null
    },
    {
     "name": "Service utensils (Tong, service spoon, service fork, soup ladle)",
     "required": 4,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Salver tray",
     "required": 8,
-    "weight": 4,
+    "weight": 3,
     "remark": null
    },
    {
     "name": "Long tray",
     "required": 4,
-    "weight": 4,
+    "weight": 3,
     "remark": null
    },
    {
@@ -15268,7 +15316,7 @@
    {
     "name": "A set of room materials comprising -\nHospitality tray (drinking water, tea kettle, sugar, coffee, tea, creamer, milk, cup, glass, saucers, spoon), \nRoom directory \nRoom collateral (Do Not Disturb (DND)/Privacy Please and makeup sign, brochure, minibar price list, room service menu) \nNote pad, Pen/Pencil\nTissue box \nShoe horn\nLaundry bag \nSlipper",
     "required": 1,
-    "weight": 6,
+    "weight": 8,
     "remark": "1 set"
    },
    {
@@ -15280,13 +15328,13 @@
    {
     "name": "Complete set up of bathroom with bathtub",
     "required": 1,
-    "weight": 8,
+    "weight": 9,
     "remark": null
    },
    {
     "name": "Bath room amenities: Soap (hand and bath), shampoo, Shower gel, Conditioner, Body lotion, Sanitary bag (women), Dental kit (Tooth paste and brush), Shaving kit, Loofa, Shower cap, Comb",
     "required": 1,
-    "weight": 4,
+    "weight": 6,
     "remark": "1 set"
    },
    {
@@ -15298,25 +15346,25 @@
    {
     "name": "Air-Conditioner",
     "required": 1,
-    "weight": 7,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Television (LED)",
     "required": 1,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Minibar",
     "required": 1,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Safe deposit box",
     "required": 1,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
@@ -15328,19 +15376,19 @@
    {
     "name": "Writing desk with chair",
     "required": 1,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
     "name": "Linens (Bed sheet, Duvet and cover, pillow with cover, bed runner and bed cushion)",
     "required": 1,
-    "weight": 5,
+    "weight": 7,
     "remark": "1 set"
    },
    {
     "name": "Terry (Bath towel, hand towel, face towel, bath met and bathrobe)",
     "required": 1,
-    "weight": 5,
+    "weight": 7,
     "remark": "1 set"
    },
    {
@@ -15370,25 +15418,25 @@
    {
     "name": "Tub chair and coffee table",
     "required": 1,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
     "name": "Vacuum cleaner (wet and dry)",
     "required": 1,
-    "weight": 8,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Glass wiper (short/long)",
     "required": 4,
-    "weight": 3,
+    "weight": 4,
     "remark": null
    },
    {
     "name": "Squeezer (short/long)",
     "required": 4,
-    "weight": 3,
+    "weight": 4,
     "remark": null
    },
    {
@@ -15400,7 +15448,7 @@
    {
     "name": "Hand caddie box",
     "required": 2,
-    "weight": 4,
+    "weight": 3,
     "remark": null
    },
    {
@@ -15481,7 +15529,7 @@
    {
     "name": "Electric egg beater",
     "required": 6,
-    "weight": 5,
+    "weight": 6,
     "remark": null
    },
    {
@@ -15493,13 +15541,13 @@
    {
     "name": "Dough mixing machine",
     "required": 1,
-    "weight": 8,
+    "weight": 9,
     "remark": null
    },
    {
     "name": "Chocolate melting machine",
     "required": 1,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
@@ -15523,13 +15571,13 @@
    {
     "name": "Working table-SS made (preferred size – 6ft x 3ft)",
     "required": 5,
-    "weight": 5,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Table with sink",
     "required": 2,
-    "weight": 5,
+    "weight": 6,
     "remark": null
    },
    {
@@ -17068,7 +17116,7 @@
    {
     "name": "Cooking station (02 burner)",
     "required": 1,
-    "weight": 9,
+    "weight": 8,
     "remark": null
    },
    {
@@ -17086,13 +17134,13 @@
    {
     "name": "Cooling rack",
     "required": 1,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Utensil rack",
     "required": 1,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
@@ -17116,13 +17164,13 @@
    {
     "name": "Rolling pin",
     "required": 6,
-    "weight": 4,
+    "weight": 3,
     "remark": null
    },
    {
     "name": "Dough mixing machine",
     "required": 1,
-    "weight": 8,
+    "weight": 9,
     "remark": null
    },
    {
@@ -17134,7 +17182,7 @@
    {
     "name": "Refrigerator (200-300 L)",
     "required": 1,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
@@ -17152,13 +17200,13 @@
    {
     "name": "Working table-SS made (preferred size – 6ft x 3ft)",
     "required": 5,
-    "weight": 5,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Table with sink",
     "required": 2,
-    "weight": 5,
+    "weight": 6,
     "remark": null
    },
    {
@@ -17338,19 +17386,19 @@
    {
     "name": "Computer/Laptop",
     "required": 1,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
     "name": "Printer",
     "required": 1,
-    "weight": 4,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Scanner",
     "required": 1,
-    "weight": 4,
+    "weight": 6,
     "remark": null
    },
    {
@@ -17362,7 +17410,7 @@
    {
     "name": "Projector: \nHigh-resolution projector (HD or 4K) for instructor presentations, large screen for the room to ensure visibility for all trainees.",
     "required": 1,
-    "weight": 8,
+    "weight": 6,
     "remark": null
    },
    {
@@ -17374,7 +17422,7 @@
    {
     "name": "Ergonomic chairs and desks",
     "required": 25,
-    "weight": 3,
+    "weight": 5,
     "remark": null
    },
    {
@@ -17431,7 +17479,7 @@
    {
     "name": "VVTi engine",
     "required": 2,
-    "weight": 9,
+    "weight": 8,
     "remark": null
    },
    {
@@ -17449,31 +17497,31 @@
    {
     "name": "Power gear system",
     "required": 2,
-    "weight": 8,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Power transmission system",
     "required": 1,
-    "weight": 8,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Tire changer machine",
     "required": 1,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Wheel balancing machine",
     "required": 1,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Hydraulic lift",
     "required": 1,
-    "weight": 8,
+    "weight": 9,
     "remark": null
    },
    {
@@ -17485,19 +17533,19 @@
    {
     "name": "Exhaust gas analyser",
     "required": 1,
-    "weight": 6,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Engine scanner",
     "required": 1,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
     "name": "On board diagnostic (OBD) scanner",
     "required": 1,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
@@ -17509,19 +17557,19 @@
    {
     "name": "Trainer board of auto electric system",
     "required": 1,
-    "weight": 6,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Trainer board of brake system",
     "required": 1,
-    "weight": 6,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Trainer board of transmission system",
     "required": 1,
-    "weight": 6,
+    "weight": 7,
     "remark": null
    },
    {
@@ -17572,43 +17620,43 @@
    {
     "name": "Hair cutting chair",
     "required": 5,
-    "weight": 6,
+    "weight": 8,
     "remark": null
    },
    {
     "name": "Facial bed",
     "required": 5,
-    "weight": 6,
+    "weight": 8,
     "remark": null
    },
    {
     "name": "Manicure and pedicure table",
     "required": 5,
-    "weight": 6,
+    "weight": 8,
     "remark": null
    },
    {
     "name": "Threading chair",
     "required": 5,
-    "weight": 5,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Shampoo bed",
     "required": 2,
-    "weight": 5,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Steam machine (face)",
     "required": 5,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
     "name": "Steam machine (hair)",
     "required": 2,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
@@ -17638,25 +17686,25 @@
    {
     "name": "Crimper",
     "required": 2,
-    "weight": 5,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Facial machine (3 in one)",
     "required": 2,
-    "weight": 8,
+    "weight": 9,
     "remark": null
    },
    {
     "name": "Wax heater",
     "required": 5,
-    "weight": 6,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Piercing gun",
     "required": 2,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    }
   ],
@@ -17689,7 +17737,7 @@
    {
     "name": "Channel wiring practice board/booth",
     "required": 25,
-    "weight": 9,
+    "weight": 8,
     "remark": null
    },
    {
@@ -17701,7 +17749,7 @@
    {
     "name": "Main Distribution Board with busbar, CB and other accessories (Training model)",
     "required": 5,
-    "weight": 9,
+    "weight": 8,
     "remark": null
    },
    {
@@ -17713,7 +17761,7 @@
    {
     "name": "DOL Starter",
     "required": 10,
-    "weight": 8,
+    "weight": 7,
     "remark": null
    },
    {
@@ -17731,7 +17779,7 @@
    {
     "name": "Changeover switch",
     "required": 3,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
@@ -17743,61 +17791,61 @@
    {
     "name": "Electric drill machine",
     "required": 10,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Electric grinding machine",
     "required": 10,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Energy Meter (1 Phase)",
     "required": 10,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Energy Meter (3 Phase)",
     "required": 5,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Earth tester",
     "required": 2,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Megger",
     "required": 2,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Phase sequence meter",
     "required": 1,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Single phase induction motor",
     "required": 5,
-    "weight": 8,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Three phase induction motor",
     "required": 3,
-    "weight": 8,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Ceiling fan",
     "required": 5,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
@@ -17995,13 +18043,13 @@
    {
     "name": "Kitchen Sink",
     "required": 2,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Water Basin",
     "required": 5,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
@@ -18019,7 +18067,7 @@
    {
     "name": "Urinal",
     "required": 2,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
@@ -18043,7 +18091,7 @@
    {
     "name": "Hot and cold-water mixer tap",
     "required": 5,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
@@ -18061,7 +18109,7 @@
    {
     "name": "Thread cutter",
     "required": 16,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
@@ -18073,7 +18121,7 @@
    {
     "name": "Pedestal grinder",
     "required": 2,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
@@ -18091,7 +18139,7 @@
    {
     "name": "Core cutting machine",
     "required": 1,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
@@ -18103,7 +18151,7 @@
    {
     "name": "Water pump",
     "required": 5,
-    "weight": 6,
+    "weight": 7,
     "remark": null
    },
    {
@@ -18130,19 +18178,19 @@
    {
     "name": "Split Type AC (1 Inverter type and 4 non-inverter type)",
     "required": 5,
-    "weight": 10,
+    "weight": 9,
     "remark": null
    },
    {
     "name": "Window Type AC",
     "required": 2,
-    "weight": 9,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Cassette Type AC",
     "required": 1,
-    "weight": 8,
+    "weight": 7,
     "remark": null
    },
    {
@@ -18154,49 +18202,49 @@
    {
     "name": "Swaging Tools set",
     "required": 5,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Refrigeration Model",
     "required": 2,
-    "weight": 8,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Flaring Tools set",
     "required": 5,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Gas welding Set and its accessories (Cylinder with O2 and acetylene gas)",
     "required": 1,
-    "weight": 6,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Working Table",
     "required": 5,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
     "name": "Leak detectors",
     "required": 2,
-    "weight": 6,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Freeze (Frost)",
     "required": 5,
-    "weight": 8,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Freeze (Non-Frost)",
     "required": 2,
-    "weight": 8,
+    "weight": 6,
     "remark": null
    },
    {
@@ -18226,7 +18274,7 @@
    {
     "name": "Refrigerant Recovery Machine",
     "required": 2,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
@@ -18265,19 +18313,19 @@
    {
     "name": "Color Printer",
     "required": 1,
-    "weight": 5,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Scanner",
     "required": 1,
-    "weight": 4,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Projector or Large Display Screen",
     "required": 1,
-    "weight": 8,
+    "weight": 6,
     "remark": null
    },
    {
@@ -18301,7 +18349,7 @@
    {
     "name": "Ergonomic chairs and desks (Plastic chairs/stool not acceptable)",
     "required": 26,
-    "weight": 3,
+    "weight": 5,
     "remark": null
    }
   ],
@@ -18322,19 +18370,19 @@
    {
     "name": "Computer/Laptop",
     "required": 1,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
     "name": "Printer",
     "required": 1,
-    "weight": 4,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Scanner",
     "required": 1,
-    "weight": 4,
+    "weight": 6,
     "remark": null
    },
    {
@@ -18346,7 +18394,7 @@
    {
     "name": "Projector: \nHigh-resolution projector (HD or 4K) for instructor presentations, large screen for the room to ensure visibility for all trainees.",
     "required": 1,
-    "weight": 8,
+    "weight": 6,
     "remark": null
    },
    {
@@ -18358,7 +18406,7 @@
    {
     "name": "Ergonomic chairs and desks",
     "required": 25,
-    "weight": 3,
+    "weight": 5,
     "remark": null
    },
    {
@@ -18397,7 +18445,7 @@
    {
     "name": "Working Station",
     "required": 25,
-    "weight": 5,
+    "weight": 8,
     "remark": null
    },
    {
@@ -18421,19 +18469,19 @@
    {
     "name": "Multimeters",
     "required": 25,
-    "weight": 8,
+    "weight": 7,
     "remark": null
    },
    {
     "name": "Power Supply Units",
     "required": 25,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Battery Testers",
     "required": 5,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
@@ -18445,7 +18493,7 @@
    {
     "name": "USB Testers (for current and voltage checks)",
     "required": 5,
-    "weight": 6,
+    "weight": 4,
     "remark": null
    },
    {
@@ -18463,7 +18511,7 @@
    {
     "name": "Opening Tools",
     "required": 25,
-    "weight": 4,
+    "weight": 3,
     "remark": null
    },
    {
@@ -18481,19 +18529,19 @@
    {
     "name": "Magnifying Glasses with Lamp",
     "required": 25,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
     "name": "Defective Mobile Phone",
     "required": 15,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
     "name": "New Mobile Phone",
     "required": 10,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    }
   ],
@@ -18526,7 +18574,7 @@
    {
     "name": "Channel wiring practice board/booth",
     "required": 25,
-    "weight": 9,
+    "weight": 8,
     "remark": null
    },
    {
@@ -18556,7 +18604,7 @@
    {
     "name": "Generator (2 to 5 KW)",
     "required": 1,
-    "weight": 7,
+    "weight": 8,
     "remark": null
    },
    {
@@ -18568,7 +18616,7 @@
    {
     "name": "Changeover switch",
     "required": 3,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
@@ -18580,13 +18628,13 @@
    {
     "name": "Electric drill machine",
     "required": 10,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Electric grinding machine",
     "required": 10,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
@@ -18604,13 +18652,13 @@
    {
     "name": "Earth tester",
     "required": 2,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Megger",
     "required": 2,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
@@ -18634,7 +18682,7 @@
    {
     "name": "Ceiling fan",
     "required": 5,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
@@ -18709,7 +18757,7 @@
    {
     "name": "Urinal",
     "required": 2,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
@@ -18733,7 +18781,7 @@
    {
     "name": "Hot and cold-water mixer tap",
     "required": 5,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
@@ -18745,13 +18793,13 @@
    {
     "name": "Pipe threading machine",
     "required": 1,
-    "weight": 9,
+    "weight": 8,
     "remark": null
    },
    {
     "name": "Thread cutter",
     "required": 16,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
@@ -18763,7 +18811,7 @@
    {
     "name": "Pedestal grinder",
     "required": 2,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
@@ -18775,25 +18823,25 @@
    {
     "name": "PPR welding machine",
     "required": 5,
-    "weight": 9,
+    "weight": 8,
     "remark": null
    },
    {
     "name": "Core cutting machine",
     "required": 1,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
     "name": "Plastic septic tank",
     "required": 1,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Water pump",
     "required": 5,
-    "weight": 6,
+    "weight": 7,
     "remark": null
    },
    {
@@ -18838,7 +18886,7 @@
    {
     "name": "Trolley/ Van",
     "required": 1,
-    "weight": 5,
+    "weight": 4,
     "remark": null
    },
    {
@@ -18856,7 +18904,7 @@
    {
     "name": "Angle Grinder",
     "required": 5,
-    "weight": 7,
+    "weight": 6,
     "remark": null
    },
    {
@@ -18874,13 +18922,13 @@
    {
     "name": "Rod Binding Machine",
     "required": 2,
-    "weight": 9,
+    "weight": 8,
     "remark": null
    },
    {
     "name": "Portable arc welding machine",
     "required": 1,
-    "weight": 8,
+    "weight": 6,
     "remark": null
    }
   ],
@@ -19289,13 +19337,13 @@
   "approved": "24 Jul 2025",
   "equipment": [
    {
-    "name": "Computers/Laptop",
-    "required": 1,
+    "name": "Computer / Laptop (with relevant design software)",
+    "required": 5,
     "weight": 5,
     "remark": null
    },
    {
-    "name": "Projector & Screen (HD quality, HDMI support, 3000+ lumens)",
+    "name": "Multimedia Projector & Screen (HD quality, HDMI support)",
     "required": 1,
     "weight": 5,
     "remark": null
@@ -19307,49 +19355,97 @@
     "remark": null
    },
    {
-    "name": "Mannequins/Dress Forms (Female and male standard sizes)",
-    "required": 2,
-    "weight": 9,
-    "remark": null
-   },
-   {
-    "name": "Single needle lock stitch machine",
-    "required": 15,
+    "name": "Single Needle Lock Stitch Machine (Industrial/Domestic)",
+    "required": 25,
     "weight": 10,
     "remark": null
    },
    {
-    "name": "Overlock machine",
+    "name": "Overlock Machine (3 or 4 threads)",
     "required": 2,
     "weight": 9,
     "remark": null
    },
    {
-    "name": "Cutting table (60”x 50”)",
+    "name": "Embroidery Machine (Manual/Computerized)",
+    "required": 1,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Button Hole Machine",
+    "required": 1,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Button Stitch Machine",
+    "required": 1,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Cutting Table (Standard size: min. 5ft - 60”x50”)",
     "required": 2,
     "weight": 7,
     "remark": null
    },
    {
-    "name": "Electric iron",
+    "name": "Pattern Making & Printing Table (Min 5ft)",
+    "required": 3,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Mannequins / Dress Forms (Male, Female, and Child standard sizes)",
+    "required": 5,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Electric Steam Iron with Ironing Table",
     "required": 1,
     "weight": 6,
     "remark": null
    },
    {
-    "name": "Electric steam iron with iron table",
-    "required": 1,
-    "weight": 6,
+    "name": "Burner for Dyeing and Printing",
+    "required": 2,
+    "weight": 5,
     "remark": null
    },
    {
-    "name": "Scissors (10”-12”)",
+    "name": "Tracing Wheels",
     "required": 25,
     "weight": 4,
     "remark": null
    },
    {
-    "name": "Sewing tool box",
+    "name": "Sets of Pattern Making Curves (French curve, Hip curve, etc.)",
+    "required": 25,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Fabric Cutting Scissors (10”-12”)",
+    "required": 25,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Different Screen for Printing",
+    "required": 10,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Different Dices for Block Printing",
+    "required": 15,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Sewing Tool Box (Measuring tape, tailor’s chalk, needles, etc.)",
     "required": 25,
     "weight": 4,
     "remark": null

@@ -69,3 +69,5 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 2026-09-03 | Business-Plan/ moved out to ~/repos/SICIP-BPs (own repo) | BP analysis is separate work; keep site repo lean
 2026-09-09 | F&B Production (PKSF, WEAB, ISC-T&H) weights unified to BWCCI sheet (Σ117); scale labels unified "10 kg" / "5 kg" | same items+required across 4 orgs, user asked one weight set
 2026-09-09 | PKSF Fashion Garments lab standard rebuilt from user xlsx (~/Downloads): 11 items → 22 (Σ weight 187); printing/dyeing/embroidery + domestic & industrial SNLS | user supplied revised list
+2026-09-09 | Weights unified across 21 same-list groups (36 sheets, 292 cells): reference = BWCCI if in group, else WEAB, else BMET, else BGMEA. CAD-CAM excluded (BMET 13 items ≠ BEIOA/BITAC 9) | user request after F&B precedent
+2026-09-09 | WEAB Fashion Design + BWCCI Fashion Design (Residential) rebuilt from BWCCI Fashion Design (19 items, Σ112); rule: BWCCI residential = non-residential lab standard | user request
