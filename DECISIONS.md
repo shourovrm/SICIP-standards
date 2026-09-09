@@ -27,6 +27,8 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 - Lab page = mockup B (docs/mockups/lab-page-mockups.html): sticky sidebar (facts, space, live score card w/ Download+Print) + Conditions and equipment cards; score recomputes on every input, no Calculate button. Grid columns must be `minmax(0,1fr)` or the 640px-min table blows the page width on mobile; mobile uses `display:contents` + `order` to put the score card last.
 - Browsers heuristically cache css/js (http.server sends no cache headers) — bump `?v=N` in index.html whenever web/ assets change, or users get stale code.
 
+- BPI Electrical Works CS: only the repo 06 May 26 PDF (11 units) is valid; an April 2026 6-unit "gas plant" draft is obsolete — never cite it.
+
 ## Tried / rejected
 - pdf→HTML conversion for CS preview — mangles tables; use embedded PDF instead.
 - Fonts Public Sans / Inter / Source Serif — read as AI-templated; chose Space Grotesk × Spline Sans (#3).
