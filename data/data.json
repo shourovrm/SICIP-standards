@@ -17828,69 +17828,135 @@
   "approved": "24 Jul 2025",
   "equipment": [
    {
-    "name": "Computers/Laptop",
+    "name": "Computer/ Laptop",
     "required": 1,
     "weight": 5,
     "remark": null
    },
    {
-    "name": "Projector & Screen (HD quality, HDMI support, 3000+ lumens)",
+    "name": "Multimedia Projector",
     "required": 1,
-    "weight": 5,
+    "weight": 8,
     "remark": null
    },
    {
-    "name": "Printer",
-    "required": 1,
-    "weight": 4,
+    "name": "Table for Printing",
+    "required": 3,
+    "weight": 10,
     "remark": null
    },
    {
-    "name": "Mannequins/Dress Forms (Female and male standard sizes)",
+    "name": "Fabric Cutting Table",
     "required": 2,
-    "weight": 6,
+    "weight": 8,
     "remark": null
    },
    {
-    "name": "Single needle lock stitch machine",
+    "name": "Pattern Making Table",
+    "required": 2,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Mannequin doll (Child, male and female)",
+    "required": 3,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "Sample Fashion Garments Product",
     "required": 15,
     "weight": 10,
     "remark": null
    },
    {
-    "name": "Overlock machine",
-    "required": 2,
-    "weight": 9,
+    "name": "Sample Technical Package",
+    "required": 5,
+    "weight": 5,
     "remark": null
    },
    {
-    "name": "Cutting table (60”x 50”)",
-    "required": 2,
-    "weight": 6,
+    "name": "Sample Motif and Embellishment",
+    "required": 15,
+    "weight": 5,
     "remark": null
    },
    {
-    "name": "Electric iron",
-    "required": 1,
-    "weight": 6,
-    "remark": null
-   },
-   {
-    "name": "Electric steam iron with iron table",
-    "required": 1,
-    "weight": 6,
-    "remark": null
-   },
-   {
-    "name": "Scissors (10”-12”)",
+    "name": "Sets of Pattern Making Curves",
     "required": 25,
-    "weight": 4,
+    "weight": 8,
     "remark": null
    },
    {
-    "name": "Sewing tool box",
+    "name": "Tracing Wheels",
     "required": 25,
-    "weight": 4,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "Hoops and Frames Set",
+    "required": 25,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Embroidery Machine",
+    "required": 2,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Different Dices for Block for Printing",
+    "required": 25,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Different Screen for Printing",
+    "required": 15,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Burner for Dyeing and Printing",
+    "required": 2,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "Fabric Cutting Scissor (6-10 inches)",
+    "required": 5,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "Straight Knife",
+    "required": 1,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "Single Needle Machine (Domestic)",
+    "required": 10,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Single Needle Machine (Industrial)",
+    "required": 10,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Overlock Machines",
+    "required": 3,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Industrial Iron with Table",
+    "required": 2,
+    "weight": 8,
     "remark": null
    }
   ],
