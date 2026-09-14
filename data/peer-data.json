@@ -11058,9 +11058,9 @@
       "approved_source": "filename",
       "equipment": [
         {
-          "name": "Computer/Laptop (Trainer)",
-          "required": 1,
-          "weight": 5
+          "name": "High-performance Desktop/Laptop Workstation (25 trainees + 01 trainer)",
+          "required": 26,
+          "weight": 10
         },
         {
           "name": "Printer",
@@ -11071,11 +11071,6 @@
           "name": "Multimedia Projector",
           "required": 1,
           "weight": 5
-        },
-        {
-          "name": "High-performance Desktop/Laptop Workstation",
-          "required": 25,
-          "weight": 9
         },
         {
           "name": "ATE Test Program Development Software (Advantest SmarTest Offline/Simulator or equivalent ATE simulation environment)",
@@ -11139,12 +11134,12 @@
         },
         {
           "name": "ATE Access or Remote/Partner ATE Facility (Advantest V93000 or equivalent) for Demonstration",
-          "required": 1,
+          "required": "01 set",
           "weight": 10
         },
         {
           "name": "Sample Production Test Data Sets (STDF/CSV) with Analysis Templates",
-          "required": 1,
+          "required": "01 set",
           "weight": 8
         },
         {
@@ -11159,7 +11154,7 @@
         },
         {
           "name": "First Aid and Fire Safety Equipment",
-          "required": 1,
+          "required": "01 set",
           "weight": 5
         }
       ],

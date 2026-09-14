@@ -13156,9 +13156,9 @@
   "approved": "31 Aug 2026",
   "equipment": [
    {
-    "name": "Computer/Laptop (Trainer)",
-    "required": 1,
-    "weight": 5,
+    "name": "High-performance Desktop/Laptop Workstation (25 trainees + 01 trainer)",
+    "required": 26,
+    "weight": 10,
     "remark": null
    },
    {
@@ -13171,12 +13171,6 @@
     "name": "Multimedia Projector",
     "required": 1,
     "weight": 5,
-    "remark": null
-   },
-   {
-    "name": "High-performance Desktop/Laptop Workstation",
-    "required": 25,
-    "weight": 9,
     "remark": null
    },
    {
