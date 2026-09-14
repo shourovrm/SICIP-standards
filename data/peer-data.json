@@ -11060,17 +11060,17 @@
         {
           "name": "Computer/Laptop (Trainer)",
           "required": 1,
-          "weight": 8
+          "weight": 5
         },
         {
           "name": "Printer",
           "required": 1,
-          "weight": 6
+          "weight": 5
         },
         {
           "name": "Multimedia Projector",
           "required": 1,
-          "weight": 7
+          "weight": 5
         },
         {
           "name": "High-performance Desktop/Laptop Workstation",

@@ -13158,19 +13158,19 @@
    {
     "name": "Computer/Laptop (Trainer)",
     "required": 1,
-    "weight": 8,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Printer",
     "required": 1,
-    "weight": 6,
+    "weight": 5,
     "remark": null
    },
    {
     "name": "Multimedia Projector",
     "required": 1,
-    "weight": 7,
+    "weight": 5,
     "remark": null
    },
    {
