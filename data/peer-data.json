@@ -4,10 +4,10 @@
     "course": "org, org_slug, course_name, sheet, sector|null, trainees, space, approved ('DD Mon YYYY'|null), approved_source, equipment[{name, required(int|str), weight(int)}], cs_pdf(repo-relative|null)"
   },
   "counts": {
-    "courses": 162,
-    "with_date": 153,
-    "with_pdf": 161,
-    "with_sector": 157
+    "courses": 164,
+    "with_date": 156,
+    "with_pdf": 164,
+    "with_sector": 159
   },
   "known_mismatches": [
     "Weaving-and-Finishing-Jute-lab-standard.xlsx is a standalone duplicate of BJMA's 'Weaving and Finishing' sheet — excluded from courses.",
@@ -11047,6 +11047,125 @@
       "cs_pdf": "competency-standards/BSIA/5. BSIA_SMART SYSTEMS ENGINEERING EMBEDDED DESIGN AND SEMICONDUCTOR APPLICATION INTERFACES 20072026.pdf"
     },
     {
+      "org": "BSIA",
+      "org_slug": "BSIA",
+      "course_name": "Semiconductor Testing Engineering",
+      "sheet": "Semiconductor Testing Eng",
+      "sector": "Semiconductor",
+      "trainees": 25,
+      "space": "Computer Lab (400 sft) and Test & Measurement Laboratory (700–800 sft) for 25 trainees",
+      "approved": "31 Aug 2026",
+      "approved_source": "filename",
+      "equipment": [
+        {
+          "name": "Computer/Laptop (Trainer)",
+          "required": 1,
+          "weight": 8
+        },
+        {
+          "name": "Printer",
+          "required": 1,
+          "weight": 6
+        },
+        {
+          "name": "Multimedia Projector",
+          "required": 1,
+          "weight": 7
+        },
+        {
+          "name": "High-performance Desktop/Laptop Workstation",
+          "required": 25,
+          "weight": 9
+        },
+        {
+          "name": "ATE Test Program Development Software (Advantest SmarTest Offline/Simulator or equivalent ATE simulation environment)",
+          "required": 25,
+          "weight": 10
+        },
+        {
+          "name": "Data Analysis Software (Spreadsheet/Statistical/Scripting Tools)",
+          "required": 25,
+          "weight": 8
+        },
+        {
+          "name": "Digital Multimeter",
+          "required": 25,
+          "weight": 7
+        },
+        {
+          "name": "ESD-safe Workbench with ESD Mat and Wrist Strap",
+          "required": 25,
+          "weight": 8
+        },
+        {
+          "name": "Sample IC Devices and Test Boards (Digital, Analog, Mixed-Signal)",
+          "required": 25,
+          "weight": 9
+        },
+        {
+          "name": "Breadboard and Electronic Component Kits",
+          "required": 25,
+          "weight": 6
+        },
+        {
+          "name": "Digital Storage Oscilloscope",
+          "required": 13,
+          "weight": 9
+        },
+        {
+          "name": "DC Regulated Power Supply",
+          "required": 13,
+          "weight": 8
+        },
+        {
+          "name": "Function/Signal Generator",
+          "required": 13,
+          "weight": 8
+        },
+        {
+          "name": "Logic Analyzer",
+          "required": 13,
+          "weight": 8
+        },
+        {
+          "name": "Sample Loadboard/DUT Board and Socket Demonstration Kits",
+          "required": 5,
+          "weight": 8
+        },
+        {
+          "name": "Probe Card and Test Fixture Illustration/Demonstration Set",
+          "required": 2,
+          "weight": 7
+        },
+        {
+          "name": "ATE Access or Remote/Partner ATE Facility (Advantest V93000 or equivalent) for Demonstration",
+          "required": 1,
+          "weight": 10
+        },
+        {
+          "name": "Sample Production Test Data Sets (STDF/CSV) with Analysis Templates",
+          "required": 1,
+          "weight": 8
+        },
+        {
+          "name": "Internet Connectivity with Network Switch and Router",
+          "required": 1,
+          "weight": 6
+        },
+        {
+          "name": "Central File/Storage Server",
+          "required": 1,
+          "weight": 6
+        },
+        {
+          "name": "First Aid and Fire Safety Equipment",
+          "required": 1,
+          "weight": 5
+        }
+      ],
+      "cs_pdf": "competency-standards/BSIA/6. BSIA_Semiconductor Testing Engineering_31 Aug 26.pdf"
+    },
+    {
       "org": "BWCCI",
       "org_slug": "BWCCI",
       "course_name": "Beautification and entrepreneurship development",
@@ -15565,6 +15684,155 @@
         }
       ],
       "cs_pdf": "competency-standards/PKSF/12. PKSF_Develop_CS_ on Mobile Phone Servicing 31 July 2025.pdf"
+    },
+    {
+      "org": "PKSF",
+      "org_slug": "PKSF",
+      "course_name": "Housekeeping",
+      "sheet": "Housekeeping",
+      "sector": "Tourism & Hospitality",
+      "trainees": 25,
+      "space": "Classroom – minimum 350 sft. (33 sqm)\nWorkshop/ lab – 800 sft. (75 sqm)",
+      "approved": "22 Apr 2025",
+      "approved_source": "filename",
+      "equipment": [
+        {
+          "name": "Computers/Laptop",
+          "required": 1,
+          "weight": 5
+        },
+        {
+          "name": "Multimedia Projector",
+          "required": 1,
+          "weight": 5
+        },
+        {
+          "name": "Complete set up of hotel room with twin bed and side table",
+          "required": 1,
+          "weight": 9
+        },
+        {
+          "name": "A set of room materials comprising -\nHospitality tray (drinking water, tea kettle, sugar, coffee, tea, creamer, milk, cup, glass, saucers, spoon), \nRoom directory \nRoom collateral (Do Not Disturb (DND)/Privacy Please and makeup sign, brochure, minibar price list, room service menu) \nNote pad, Pen/Pencil\nTissue box \nShoe horn\nLaundry bag \nSlipper",
+          "required": 1,
+          "weight": 6
+        },
+        {
+          "name": "Bin Basket",
+          "required": 2,
+          "weight": 3
+        },
+        {
+          "name": "Complete set up of bathroom with bathtub",
+          "required": 1,
+          "weight": 8
+        },
+        {
+          "name": "Bath room amenities: Soap (hand and bath), shampoo, Shower gel, Conditioner, Body lotion, Sanitary bag (women), Dental kit (Tooth paste and brush), Shaving kit, Loofa, Shower cap, Comb",
+          "required": 1,
+          "weight": 4
+        },
+        {
+          "name": "Room attendant trolley",
+          "required": 1,
+          "weight": 7
+        },
+        {
+          "name": "Air-Conditioner",
+          "required": 1,
+          "weight": 7
+        },
+        {
+          "name": "Television (LED)",
+          "required": 1,
+          "weight": 6
+        },
+        {
+          "name": "Minibar",
+          "required": 1,
+          "weight": 6
+        },
+        {
+          "name": "Safe deposit box",
+          "required": 1,
+          "weight": 6
+        },
+        {
+          "name": "Cub board with three types of hangers",
+          "required": 1,
+          "weight": 5
+        },
+        {
+          "name": "Writing desk with chair",
+          "required": 1,
+          "weight": 5
+        },
+        {
+          "name": "Linens (Bed sheet, Duvet and cover, pillow with cover, bed runner and bed cushion)",
+          "required": 1,
+          "weight": 5
+        },
+        {
+          "name": "Terry (Bath towel, hand towel, face towel, bath met and bathrobe)",
+          "required": 1,
+          "weight": 5
+        },
+        {
+          "name": "Hand iron with board",
+          "required": 2,
+          "weight": 6
+        },
+        {
+          "name": "Hand Brush",
+          "required": 5,
+          "weight": 3
+        },
+        {
+          "name": "Bucket",
+          "required": 2,
+          "weight": 3
+        },
+        {
+          "name": "Telephone set",
+          "required": 1,
+          "weight": 4
+        },
+        {
+          "name": "Tub chair and coffee table",
+          "required": 1,
+          "weight": 5
+        },
+        {
+          "name": "Vacuum cleaner (wet and dry)",
+          "required": 1,
+          "weight": 8
+        },
+        {
+          "name": "Glass wiper (short/long)",
+          "required": 4,
+          "weight": 3
+        },
+        {
+          "name": "Squeezer (short/long)",
+          "required": 4,
+          "weight": 3
+        },
+        {
+          "name": "Ladder",
+          "required": 1,
+          "weight": 4
+        },
+        {
+          "name": "Hand caddie box",
+          "required": 2,
+          "weight": 4
+        },
+        {
+          "name": "Prayer mat",
+          "required": 1,
+          "weight": 3
+        }
+      ],
+      "cs_pdf": "competency-standards/PKSF/13. ISC-T&H_FINAL-(M)-CS_HouseKeeping 22 April 2025.pdf"
     },
     {
       "org": "REHAB",

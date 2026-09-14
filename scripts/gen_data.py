@@ -100,7 +100,14 @@ def read_sheet(ws):
                 "remark": ws.cell(r, 7).value or None,
             })
         r += 1
-    return course_name, trainees, space, boilerplate, equip
+    # footnote under the table (e.g. the air-conditioning halving rule), if any
+    note = None
+    for rr in range(r, r + 12):
+        v = ws.cell(rr, 1).value
+        if isinstance(v, str) and v.strip().startswith("*"):
+            note = v.strip()
+            break
+    return course_name, trainees, space, boilerplate, equip, note
 
 
 # ---------- 2b. cs_pdf fallback fuzzy match (when peer-data has none) ----------
@@ -185,7 +192,7 @@ def main():
                 unmatched_sheets.append((org_slug, course_name))
                 continue
             ws = wb[sheet_name]
-            b3, trainees, space, boilerplate, equip = read_sheet(ws)
+            b3, trainees, space, boilerplate, equip, note = read_sheet(ws)
 
             key = (org_slug, norm(course_name))
             pc = peer_by_key.get(key)
@@ -214,6 +221,7 @@ def main():
                 "trainees": int(trainees) if trainees is not None else None,
                 "space": str(space).strip() if space else "",
                 "boilerplate": str(boilerplate).strip() if boilerplate else "",
+                "note": note,
                 "approved": approved,
                 "equipment": equip,
                 "xlsx": f"lab-standards/{xlsx_path.name}",
@@ -224,8 +232,8 @@ def main():
 
     # ---------------- validation ----------------
     print(f"\n=== VALIDATION REPORT ===")
-    print(f"total entries: {len(entries)} (expect 162)")
-    assert len(entries) == 162, f"expected 162 entries, got {len(entries)}"
+    print(f"total entries: {len(entries)} (expect 164)")
+    assert len(entries) == 164, f"expected 164 entries, got {len(entries)}"
 
     seen = set()
     dupes = []
