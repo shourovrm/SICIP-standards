@@ -165,7 +165,8 @@ function labPage(id) {
     const li = lines.filter(l => l.startsWith('•')).map(l => `<li>${esc(l.slice(1).trim())}</li>`).join('');
     const ps = lines.filter(l => !l.startsWith('•'))
       .map(l => `<p>${esc(l).replace('at least 80%', '<strong>at least 80%</strong>')}</p>`).join('');
-    return (li ? `<ul>${li}</ul>` : '') + ps;
+    return (li ? `<ul>${li}</ul>` : '') + ps
+      + (e.note ? `<p class="note">${esc(e.note)}</p>` : '');
   })();
   const space = esc((e.space || '').split('\n').map(l => l.trim()).filter(Boolean).join('\n'));
 
@@ -193,6 +194,8 @@ function labPage(id) {
         <span class="pill no" id="elig">Below 80 — not eligible</span>
         <div class="row"><span>Points out of 30</span><b id="s30">0</b></div>
         <div class="row"><span>Weighted score</span><b><span id="sum-score">0</span> / ${fmt(sumW)}</b></div>
+        ${e.note ? `<label class="ac"><input type="checkbox" id="ac" checked> Lab is air-conditioned</label>
+        <p class="ac-hint" id="ac-hint" hidden>Not air-conditioned — points halved.</p>` : ''}
         <div class="actions">
           <button class="primary" id="dl">Download .xlsx</button>
           <button id="print">Print</button>
@@ -252,6 +255,8 @@ function labPage(id) {
       (inputs[k + 1] || document.getElementById('dl')).focus();
     });
   });
+  const acBox = document.getElementById('ac');
+  if (acBox) acBox.addEventListener('change', () => calc());
   const calc = () => {
     let sum = 0;
     view.querySelectorAll('.equip input').forEach(inp => {
@@ -260,7 +265,11 @@ function labPage(id) {
       sum += s;
       view.querySelector(`.score[data-i="${i}"]`).textContent = fmt(s);
     });
-    const score = sumW ? sum / sumW * 100 : 0, points = score * 30 / 100, ok = score >= 80;
+    const score = sumW ? sum / sumW * 100 : 0, ok = score >= 80;
+    const ac = document.getElementById('ac');
+    const halved = !!ac && !ac.checked;          // CS footnote: no air-conditioning halves the points
+    const points = halved ? score * 30 / 100 / 2 : score * 30 / 100;
+    if (ac) document.getElementById('ac-hint').hidden = !halved;
     document.getElementById('sum-score').textContent = fmt(sum);
     document.getElementById('sum-w-score').textContent = fmt(sum);
     document.getElementById('s100').textContent = fmt(score);
@@ -268,7 +277,7 @@ function labPage(id) {
     const el = document.getElementById('elig');
     el.className = 'pill ' + (ok ? 'ok' : 'no');
     el.textContent = ok ? 'Eligible' : 'Below 80 — not eligible';
-    return { sum, score, points, ok };
+    return { sum, score, points, ok, halved };
   };
 
   document.getElementById('dl').addEventListener('click', async () => {
@@ -318,8 +327,9 @@ function printSheet(e, r) {
       <tr class="b"><td>Sum</td><td></td><td></td><td></td>
         <td class="c">${fmt(e.equipment.reduce((n, x) => n + (x.weight || 0), 0))}</td><td class="c">${fmt(r.sum)}</td><td></td></tr>
       <tr class="b"><td colspan="5">Score out of 100</td><td class="c">${fmt(r.score)}</td><td></td></tr>
-      <tr class="b"><td colspan="5">Total achieved points out of 30</td><td class="c">${fmt(r.points)}</td><td></td></tr>
-    </table>`;
+      <tr class="b"><td colspan="5">Total achieved points out of 30${r.halved ? ' (halved — lab not air-conditioned)' : ''}</td><td class="c">${fmt(r.points)}</td><td></td></tr>
+    </table>
+    ${e.note ? `<p class="small">${esc(e.note)}</p>` : ''}`;
   document.body.classList.add('printing-sheet');
   const cleanup = () => { document.body.classList.remove('printing-sheet'); ps.innerHTML = ''; };
   window.addEventListener('afterprint', cleanup, { once: true });

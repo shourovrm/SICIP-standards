@@ -107,6 +107,8 @@ a.org-count:hover{background:var(--accent);color:#fff}
 .rules p{margin:0 0 14px;text-wrap:pretty}
 .rules p:last-child{margin:0}
 .rules strong{font-weight:600}
+/* CS footnote (air-conditioning halving rule) */
+.rules .note{margin-top:16px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:15.5px}
 
 /* live score card */
 .live .n{font-family:"Space Grotesk",sans-serif;font-size:36px;font-weight:700;line-height:1.2;font-variant-numeric:tabular-nums}
@@ -116,6 +118,10 @@ a.org-count:hover{background:var(--accent);color:#fff}
 .pill.no{background:#fbe9e5;color:var(--warn)}
 .live .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:7px 0;border-top:1px solid var(--line);font-size:15px;font-variant-numeric:tabular-nums}
 .live .row b{font-family:"Space Grotesk",sans-serif;font-size:19px;font-weight:700;white-space:nowrap}
+/* air-conditioning condition — halves the points when unchecked */
+.live .ac{display:flex;align-items:center;gap:8px;padding:9px 0 0;border-top:1px solid var(--line);margin-top:7px;font-size:15px;cursor:pointer}
+.live .ac input{accent-color:var(--accent);width:16px;height:16px;cursor:pointer}
+.live .ac-hint{margin:4px 0 0;font-size:14px;color:var(--warn)}
 .live .actions{margin-top:14px;flex-direction:column;align-items:stretch}
 .live .actions button{text-align:center}
 

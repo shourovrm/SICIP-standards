@@ -2,7 +2,7 @@
 """Build SICIP lab-standard xlsx sheets from structured course data.
 build_sheet(ws, course) writes one styled sheet matching the Beautification template.
 main(json_path, out_dir) builds a full workbook from {outfile, courses:[...]}.
-Course: {sheet, course_name, trainees, space, equipment:[[name, qty, weight], ...]}.
+Course: {sheet, course_name, trainees, space, equipment:[[name, qty, weight], ...], note?}.
 qty may be a string; leading integer is used and the original kept in Remarks.
 """
 import sys, os, json, re
@@ -131,6 +131,14 @@ def build_sheet(ws, co):
     ws.merge_cells(f"A{pts_r}:E{pts_r}")
     set_cell(ws, f"F{pts_r}", f"=F{score_r}*30/100", font=F11(True), align=CEN())
     set_cell(ws, f"G{pts_r}", "Points", font=F11(True), align=CEN())
+
+    # optional footnote under the table (e.g. the air-conditioning halving rule)
+    note = co.get("note")
+    if note:
+        note_r = pts_r + 1
+        ws.merge_cells(f"A{note_r}:G{note_r}")
+        set_cell(ws, f"A{note_r}", note, font=F11(False), align=LEFT, border=False)
+        ws.row_dimensions[note_r].height = 14.15
 
 def main(json_path, out_dir):
     d = json.load(open(json_path))
