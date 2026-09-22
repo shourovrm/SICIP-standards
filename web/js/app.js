@@ -57,6 +57,32 @@ function route() {
 const find = id => DATA.find(e => cSlug(e) === id);
 const setTitle = t => { document.title = t ? t + ' — SICIP Standards' : 'SICIP Standards'; };
 
+/* ---------- CS org zip: fetch every PDF, pack client-side ---------- */
+async function downloadOrgPdfs(org, badge) {
+  // a PDF shared by two courses would otherwise appear twice in the zip
+  const paths = [...new Set(org.courses.map(c => c.cs_pdf))];
+  const label = badge.textContent;
+  badge.textContent = '…';
+  badge.setAttribute('aria-busy', 'true');
+  try {
+    const entries = await Promise.all(paths.map(async p => {
+      const res = await fetch(encPath(p));
+      if (!res.ok) throw new Error(`${res.status} ${p}`);
+      return { name: p.split('/').pop(), data: new Uint8Array(await res.arrayBuffer()) };
+    }));
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(zipStore(entries, 'application/zip'));
+    a.download = org.slug + '-competency-standards.zip';
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 10000);
+  } catch (err) {
+    alert('Download failed: ' + err.message);
+  } finally {
+    badge.textContent = label;
+    badge.removeAttribute('aria-busy');
+  }
+}
+
 /* ---------- directory (shared by lab & cs) ---------- */
 function directory(kind) {
   const isLab = kind === 'lab';
@@ -80,7 +106,8 @@ function directory(kind) {
         ${isLab
           ? `<a class="org-count" href="${encPath(o.courses[0].xlsx)}" download
                title="Download ${esc(o.org)} workbook (.xlsx)">${o.courses.length} ↓</a>`
-          : `<span class="org-count">${o.courses.length}</span>`}
+          : `<a class="org-count" href="#" role="button" data-slug="${esc(o.slug)}"
+               title="Download all ${esc(o.org)} competency standards (.zip)">${o.courses.length} ↓</a>`}
       </div>
       <ul class="course-list">
         ${o.courses.map(c => `
@@ -96,11 +123,17 @@ function directory(kind) {
   <p class="empty" id="empty">No matches.</p>`;
 
   // download confirmation on org badges
-  if (isLab) view.querySelectorAll('a.org-count').forEach(a => {
+  view.querySelectorAll('a.org-count').forEach(a => {
     a.addEventListener('click', async e => {
       e.preventDefault();
-      if (await confirmBox(`Download the ${a.closest('.org').querySelector('.org-name').textContent} lab-standard workbook (.xlsx)?`))
-        location.href = a.href;
+      const orgName = a.closest('.org').querySelector('.org-name').textContent;
+      if (isLab) {
+        if (await confirmBox(`Download the ${orgName} lab-standard workbook (.xlsx)?`)) location.href = a.href;
+        return;
+      }
+      const org = orgs.find(o => o.slug === a.dataset.slug);
+      if (await confirmBox(`Download all ${org.courses.length} ${orgName} competency standards (.zip)?`))
+        downloadOrgPdfs(org, a);
     });
   });
 
