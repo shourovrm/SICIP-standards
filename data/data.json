@@ -12114,248 +12114,314 @@
   "sheet": "Electrical Works",
   "sector": "Energy",
   "trainees": 25,
-  "space": "Classroom – 350 sft (33 sqm)\nWorkshop/ lab – 800 sft (75 sq) OR\nClassroom cum workshop – 1000 sft (93 sqm)",
+  "space": "Classroom – 350 sft (33 sqm)\nWorkshop/ lab – 800 sft (75 sqm) OR\nClassroom cum workshop – 1000 sft (93 sqm)",
   "boilerplate": "•The institute shall not use the same facilities for any other projects/organizations offering a similar course.\n•The institute must provide sufficient evidence to prove ownership of the proposed training equipment.\nThe list denotes the minimum training equipment and facility required to effectively conduct training for a specific course. Additionally, the institute must ensure that all other necessary training tools, equipment, and furniture are available to meet the requirement of competency standards (CS) provided by SICIP.\nFor the operation of training course on Electrical Works in Energy Sector, the institute must ensure the availability of at least 80% of the major training equipment and training facilities (according to the CS) to be eligible for SICIP training delivery. If the score is below 80%, the remaining equipment and facilities need to be installed before the commencement of the training.\nThe institute will also provide all other hand tools and power tools as per CS for 25 trainees. Also, they will arrange adequate seating arrangement and classroom setup for the 25 trainees.",
   "note": null,
-  "approved": "06 May 2026",
+  "approved": "15 Sep 2026",
   "equipment": [
    {
-    "name": "Computers/Laptop",
+    "name": "Computer/Laptop",
     "required": 1,
     "weight": 5,
     "remark": null
    },
    {
-    "name": "Multimedia Projector",
+    "name": "Multimedia Projector with projection screen",
     "required": 1,
     "weight": 5,
     "remark": null
    },
    {
-    "name": "Internet connectivity",
+    "name": "Internet Connectivity for Video-based and flipped-classroom deliver",
     "required": 1,
     "weight": 5,
+    "remark": "01 line"
+   },
+   {
+    "name": "Whiteboard with Accessories",
+    "required": 1,
+    "weight": 3,
     "remark": null
    },
    {
-    "name": "Generators (25 KVA) Diesel operated",
+    "name": "Training Seating set and instructor desk",
+    "required": 26,
+    "weight": 3,
+    "remark": "26 (25+01)"
+   },
+   {
+    "name": "Charts/ models: Electrical symbols, single-line diagram, wiring diagram, safety signs, electric-shock treatment",
+    "required": 1,
+    "weight": 3,
+    "remark": "01 set"
+   },
+   {
+    "name": "Diesel Generator Set, 3-phase/1 phase, 400/V230V, ≥5 kVA",
     "required": 1,
     "weight": 9,
     "remark": null
    },
    {
-    "name": "Transformers (3-5KVA) single phase 220/110V",
-    "required": 3,
+    "name": "Automatic Transfer Switch(ATS)",
+    "required": 1,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Main LT panel 3-phase 400V (Incoming MCCB, busbar, CTs, Voltmeters/ammeter/energy meter, outgoing MCBs, indicator lamps)",
+    "required": 1,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "Transformer bank, 3 × single phase 2-5 kVA 400/230 V",
+    "required": 1,
     "weight": 9,
-    "remark": null
+    "remark": "01 set"
    },
    {
-    "name": "Circuit breakers (SPMCB, DPMCB, TPMCB)",
-    "required": 6,
-    "weight": 7,
-    "remark": null
-   },
-   {
-    "name": "Switchgear (CB, LBS, Relays, Fuses, CT, PT)",
-    "required": 3,
-    "weight": 8,
-    "remark": "03 (Each)"
-   },
-   {
-    "name": "3-phase induction Motor (3 to 5 hp.)",
-    "required": 3,
-    "weight": 8,
-    "remark": null
-   },
-   {
-    "name": "Motor Control panels (Star-Delta)",
-    "required": 5,
-    "weight": 8,
-    "remark": "05 sets"
-   },
-   {
-    "name": "Electrical goods/fittings",
-    "required": 10,
-    "weight": 4,
-    "remark": "10 for each"
-   },
-   {
-    "name": "Battery (50 AH, 12V) with charger",
-    "required": 3,
+    "name": "Battery bank 12 V 50 Ah(lead-acid or VRL type) with charger and battery bench",
+    "required": 1,
     "weight": 5,
+    "remark": "01 set"
+   },
+   {
+    "name": "Main Distribution Board (MDB) with Busbar, isolator, Circuit breakers)",
+    "required": 1,
+    "weight": 7,
     "remark": null
    },
    {
-    "name": "Distribution boards",
+    "name": "Sub-distribution Board (SDB with MCB, MCCB, RCCB, ELCB )",
     "required": 5,
     "weight": 7,
     "remark": null
    },
    {
-    "name": "Earthing equipment",
-    "required": 3,
-    "weight": 7,
-    "remark": null
-   },
-   {
-    "name": "Lightning protection system",
-    "required": 3,
+    "name": "3 phase energy meter (direct-connected and CT-operated for LT/HT metering practice",
+    "required": 2,
     "weight": 6,
     "remark": null
    },
    {
-    "name": "Cable/Wire (1rm, 1.5rm, 2.5rm & 1 coil flexible wire)",
+    "name": "Energy meter, single phase",
+    "required": 2,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Load Bank, resistive-single phase~2KW",
+    "required": 2,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Wiring practice board with DB, one-way /two-way/intermediate switches, sockets outlets, ceiling rose, lamp, lamp holders, fan point",
+    "required": 12,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "Cable tray",
+    "required": 2,
+    "weight": 4,
+    "remark": "02 sets"
+   },
+   {
+    "name": "3 phase induction motor 3-5 hp",
+    "required": 5,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "Single phase motor- 0.5-1hp",
+    "required": 5,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Magnetic contactors with thermal overload relay",
     "required": 10,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Motor starter panel: DOL ×2, star-delta ×2, forward-reverse ×1 (contactor, Overload relay, timer, push buttons, selector switch, indicator lamps)",
+    "required": 5,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "Earthing installation training set(rod electrode, plate electrode, earth pit with chamber and other necessary accessories)",
+    "required": 2,
+    "weight": 7,
+    "remark": "02 sets"
+   },
+   {
+    "name": "Lightning Protection system demonstration set( not mandatory)",
+    "required": 1,
     "weight": 3,
-    "remark": "10 coils"
+    "remark": "01 set"
    },
    {
-    "name": "Fire extinguisher",
-    "required": 4,
+    "name": "Work bench with bench vice",
+    "required": 5,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Tool Storage Cabinet",
+    "required": 2,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Material Storage Rack",
+    "required": 2,
     "weight": 4,
     "remark": null
    },
    {
-    "name": "First aid box",
-    "required": 3,
-    "weight": 4,
-    "remark": null
-   },
-   {
-    "name": "Screwdrivers (insulated)",
-    "required": 10,
+    "name": "Screwdriver set",
+    "required": 25,
     "weight": 3,
     "remark": null
    },
    {
     "name": "Combination pliers",
-    "required": 10,
+    "required": 25,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Long-nose pliers",
+    "required": 13,
     "weight": 3,
     "remark": null
    },
    {
     "name": "Wire stripper and cutter",
-    "required": 10,
+    "required": 25,
     "weight": 3,
     "remark": null
    },
    {
     "name": "Crimping pliers",
-    "required": 10,
+    "required": 13,
     "weight": 3,
     "remark": null
    },
    {
-    "name": "Tester",
-    "required": 10,
+    "name": "Cable lug crimper",
+    "required": 2,
     "weight": 4,
     "remark": null
    },
    {
-    "name": "Voltage tester",
-    "required": 10,
-    "weight": 4,
-    "remark": null
-   },
-   {
-    "name": "Cable pulling tools",
-    "required": 10,
-    "weight": 4,
-    "remark": null
-   },
-   {
-    "name": "Drilling machine",
-    "required": 10,
-    "weight": 6,
-    "remark": null
-   },
-   {
-    "name": "Hack Saw",
-    "required": 10,
-    "weight": 3,
-    "remark": null
-   },
-   {
-    "name": "Pipe cutter",
-    "required": 10,
-    "weight": 4,
-    "remark": null
-   },
-   {
-    "name": "Multimeter",
-    "required": 10,
-    "weight": 6,
-    "remark": null
-   },
-   {
-    "name": "Clamp meter",
-    "required": 10,
-    "weight": 6,
-    "remark": null
-   },
-   {
-    "name": "Watt meter",
-    "required": 10,
-    "weight": 5,
-    "remark": null
-   },
-   {
-    "name": "Insulation resistance tester (Megger)",
-    "required": 10,
-    "weight": 7,
-    "remark": null
-   },
-   {
-    "name": "Earth resistance tester",
-    "required": 10,
-    "weight": 7,
-    "remark": null
-   },
-   {
-    "name": "Phase sequence tester",
-    "required": 10,
-    "weight": 5,
-    "remark": null
-   },
-   {
-    "name": "Continuity tester",
-    "required": 10,
-    "weight": 4,
-    "remark": null
-   },
-   {
-    "name": "OHM tester",
-    "required": 10,
+    "name": "Neon tester",
+    "required": 25,
     "weight": 4,
     "remark": null
    },
    {
     "name": "Voltage detector",
-    "required": 10,
+    "required": 5,
     "weight": 4,
     "remark": null
    },
    {
-    "name": "Power quality analyzer",
-    "required": 10,
-    "weight": 7,
-    "remark": null
-   },
-   {
-    "name": "Loop impedance tester",
-    "required": 10,
+    "name": "Multimeter",
+    "required": 5,
     "weight": 6,
     "remark": null
    },
    {
-    "name": "Tool box set",
-    "required": 10,
+    "name": "Clamp meter",
+    "required": 5,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Insulation resistance tester",
+    "required": 2,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Earth resistance tester",
+    "required": 2,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Phase sequence tester",
+    "required": 2,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Electric drill",
+    "required": 5,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Hack saw",
+    "required": 5,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Pipe cutter",
+    "required": 5,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Conduit bender",
+    "required": 5,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Hammer and chisel",
+    "required": 5,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Measuring tape",
+    "required": 5,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Spirit level",
+    "required": 5,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Cable pulling tools",
+    "required": 5,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Ladder",
+    "required": 2,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Toolbox",
+    "required": 5,
     "weight": 3,
     "remark": null
    }
   ],
   "xlsx": "lab-standards/BPI-lab-standard.xlsx",
-  "cs_pdf": "competency-standards/BPI/3. Final (M)_CS_Revsied Version of the Electrical Works BPI 06 May 26.pdf"
+  "cs_pdf": "competency-standards/BPI/3. Final_Electrical Works _ BPI_15 September 26.pdf"
  },
  {
   "org": "BRTC",

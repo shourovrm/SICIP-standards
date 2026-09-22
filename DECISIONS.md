@@ -30,7 +30,7 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 - CS org badge = client-side zip of that org's PDFs (`downloadOrgPdfs` in app.js, stored entries via `web/js/zip.js`, shared with xlsx-fill.js); duplicate cs_pdf paths deduped. PKSF (largest) ≈19 MB fetched per click.
 - Browsers heuristically cache css/js (http.server sends no cache headers) — bump `?v=N` in index.html whenever web/ assets change, or users get stale code.
 
-- BPI Electrical Works CS: only the repo 06 May 26 PDF (11 units) is valid; an April 2026 6-unit "gas plant" draft is obsolete — never cite it.
+- BPI Electrical Works CS: only the repo 15 Sep 26 PDF (`3. Final_Electrical Works _ BPI_15 September 26.pdf`) is valid; the 06 May 26 revision and the April 2026 6-unit "gas plant" draft are obsolete — never cite them.
 
 ## Tried / rejected
 - pdf→HTML conversion for CS preview — mangles tables; use embedded PDF instead.
@@ -85,3 +85,4 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 2026-09-14 | One-page lab-standard PDF for a tour folder: `build_lab_onepager.py` in the tour folder reads data/data.json and renders with weasyprint (no browser); same template as the earlier BSDI/BEDO one-pagers, Available + Score columns blank to fill by hand | user request
 2026-09-22 | WEAB Fashion Design CS replaced by BWCCI's 29 Apr 2026 (Revised) PDF, copied under its original name (Housekeeping precedent); approved 24 Jul 2025 -> 29 Apr 2026 | user: lab standards already aligned, CS should match
 2026-09-22 | CS directory org badge downloads all that org's CS PDFs as `<ORG>-competency-standards.zip`, built in the browser (zip.js extracted from xlsx-fill.js) | user asked for lab-badge parity; client zip over pre-built zips (no +165 MB duplicates, never stale)
+2026-09-22 | BPI Electrical Works CS replaced by 15 Sep 2026 final (docx→pdf, user ~/Downloads); lab sheet rebuilt from its Workshop/Lab Facility Standard: 39 → 50 items, Σw 252; weights kept where the old sheet had the item, else repo modal weight; CS section sub-headings and 'Preconditions and Utility Requirements' (400V ≥20 KVA supply, lighting/ventilation) not carried into the sheet (template has no slot); Lightning Protection demo set is 'not mandatory' in CS → kept, weight 3; seating 25+01 → required 26 | user supplied new CS
