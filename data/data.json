@@ -2348,7 +2348,7 @@
     "remark": null
    },
    {
-    "name": "Computers/Laptop: \n(Minimum Intel Core i5 processor, 8GB RAM (16GB preferred), 500GB SSD storage (1TB preferred), High-resolution monitors (24-inch minimum, with color accuracy).",
+    "name": "Computers/Laptop: \n(Minimum Intel core i5 or Intel core i3 6 gen/above, or AMD similar spec, 8GB RAM (16GB preferred), 500GB SSD storage (1TB preferred), High-resolution monitors (24-inch minimum, with color accuracy).",
     "required": 25,
     "weight": 9,
     "remark": null
@@ -13760,7 +13760,7 @@
     "remark": null
    },
    {
-    "name": "Computers/Laptop: (Minimum Intel Core i5 processor (8th Gen), 8GB RAM (16GB preferred), 500GB SSD storage (1TB preferred), High-resolution monitors (19/20-inch minimum, with color accuracy).",
+    "name": "Computers/Laptop: (Minimum Intel core i5 or Intel core i3 6 gen/above, or AMD similar spec, 8GB RAM (16GB preferred), 500GB SSD storage (1TB preferred), High-resolution monitors (19/20-inch minimum, with color accuracy).",
     "required": 25,
     "weight": 10,
     "remark": null
@@ -17734,7 +17734,7 @@
     "remark": null
    },
    {
-    "name": "Computers/Laptop: \n(Minimum Intel Core i5 processor (8th Gen), 8GB RAM (16GB preferred), 500GB SSD storage (1TB preferred), High-resolution monitors (19/20-inch minimum, with color accuracy).",
+    "name": "Computers/Laptop: \n(Minimum Intel core i5 or Intel core i3 6 gen/above, or AMD similar spec, 8GB RAM (16GB preferred), 500GB SSD storage (1TB preferred), High-resolution monitors (19/20-inch minimum, with color accuracy).",
     "required": 25,
     "weight": 10,
     "remark": null
@@ -18720,7 +18720,7 @@
     "remark": null
    },
    {
-    "name": "Computers/Laptop: \n(Minimum Intel Core i5 processor (8th Gen), 8GB RAM (16GB preferred), 500GB SSD storage (1TB preferred), High-resolution monitors (19/20-inch minimum, with color accuracy).",
+    "name": "Computers/Laptop: \n(Minimum Intel core i5 or Intel core i3 6 gen/above, or AMD similar spec, 8GB RAM (16GB preferred), 500GB SSD storage (1TB preferred), High-resolution monitors (19/20-inch minimum, with color accuracy).",
     "required": 25,
     "weight": 10,
     "remark": null
@@ -19812,7 +19812,7 @@
     "remark": null
    },
    {
-    "name": "Computers/Laptop: (Minimum Intel Core i5 processor (8th Gen), 8GB RAM (16GB preferred), 500GB SSD storage (1TB preferred), High-resolution monitors (19/20-inch minimum, with color accuracy).",
+    "name": "Computers/Laptop: (Minimum Intel core i5 or Intel core i3 6 gen/above, or AMD similar spec, 8GB RAM (16GB preferred), 500GB SSD storage (1TB preferred), High-resolution monitors (19/20-inch minimum, with color accuracy).",
     "required": 25,
     "weight": 10,
     "remark": null
