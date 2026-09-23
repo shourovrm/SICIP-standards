@@ -227,7 +227,7 @@ function labPage(id) {
         <span class="pill no" id="elig">Below 80 — not eligible</span>
         <div class="row"><span>Points out of 30</span><b id="s30">0</b></div>
         <div class="row"><span>Weighted score</span><b><span id="sum-score">0</span> / ${fmt(sumW)}</b></div>
-        ${e.note && !e.min_rule ? `<label class="ac"><input type="checkbox" id="ac" checked> Lab is air-conditioned</label>` : ''}
+        ${e.note && !e.min_rules.length ? `<label class="ac"><input type="checkbox" id="ac" checked> Lab is air-conditioned</label>` : ''}
         ${e.note ? `<p class="ac-hint" id="ac-hint" hidden></p>` : ''}
         <div class="actions">
           <button class="primary" id="dl">Download .xlsx</button>
@@ -299,11 +299,11 @@ function labPage(id) {
       view.querySelector(`.score[data-i="${i}"]`).textContent = fmt(s);
     });
     const score = sumW ? sum / sumW * 100 : 0, ok = score >= 80;
-    // CS footnote halves the points: lab not air-conditioned, or fewer than the minimum of a key item (e.g. welding booths)
-    const ac = document.getElementById('ac'), rule = e.min_rule;
-    const belowMin = !!rule && (Number(view.querySelector(`.equip input[data-i="${rule.row}"]`).value) || 0) < rule.min;
-    const halved = belowMin || (!!ac && !ac.checked);
-    const why = belowMin ? `fewer than ${rule.min} ${rule.item}` : 'lab not air-conditioned';
+    // CS footnote halves the points: lab not air-conditioned, or fewer than the minimum of key items (e.g. welding booths)
+    const ac = document.getElementById('ac');
+    const unmet = e.min_rules.filter(r => (Number(view.querySelector(`.equip input[data-i="${r.row}"]`).value) || 0) < r.min);
+    const halved = unmet.length > 0 || (!!ac && !ac.checked);
+    const why = unmet.length ? 'fewer than ' + unmet.map(r => `${r.min} ${r.item}`).join(' and ') : 'lab not air-conditioned';
     const points = halved ? score * 30 / 100 / 2 : score * 30 / 100;
     const hint = document.getElementById('ac-hint');
     if (hint) { hint.hidden = !halved; hint.textContent = `${why[0].toUpperCase()}${why.slice(1)} — points halved.`; }

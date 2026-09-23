@@ -110,16 +110,20 @@ def read_sheet(ws):
     return course_name, trainees, space, boilerplate, equip, note
 
 
-def min_rule(note, equip):
-    """Footnote 'at least N <items>. Otherwise ... halved' -> {row, min, item} tied to that equipment row."""
-    m = re.search(r"at least (\d+) ([\w ]+?)\. Otherwise", note or "")
+def min_rules(note, equip):
+    """Footnote 'at least N <items> [and M <items>]. Otherwise ... halved' -> [{row, min, item}, ...].
+    Each item is tied to the one equipment row whose name contains every word of it (plural 's' dropped)."""
+    m = re.search(r"at least (.+?)\. Otherwise", note or "")
     if not m:
-        return None
-    item = m.group(2)
-    stem = item.lower().rstrip("s")
-    rows = [i for i, e in enumerate(equip) if stem in e["name"].lower()]
-    assert len(rows) == 1, (item, rows)
-    return {"row": rows[0], "min": int(m.group(1)), "item": item}
+        return []
+    rules = []
+    for part in m.group(1).split(" and "):
+        count, item = re.match(r"(\d+) (.+)", part.strip()).groups()
+        stems = [w.rstrip("s") for w in re.findall(r"[a-z]+", item.lower())]
+        rows = [i for i, e in enumerate(equip) if all(s in e["name"].lower() for s in stems)]
+        assert len(rows) == 1, (item, rows)
+        rules.append({"row": rows[0], "min": int(count), "item": item})
+    return rules
 
 
 # ---------- 2b. cs_pdf fallback fuzzy match (when peer-data has none) ----------
@@ -234,7 +238,7 @@ def main():
                 "space": str(space).strip() if space else "",
                 "boilerplate": str(boilerplate).strip() if boilerplate else "",
                 "note": note,
-                "min_rule": min_rule(note, equip),
+                "min_rules": min_rules(note, equip),
                 "approved": approved,
                 "equipment": equip,
                 "xlsx": f"lab-standards/{xlsx_path.name}",
