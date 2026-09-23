@@ -227,8 +227,8 @@ function labPage(id) {
         <span class="pill no" id="elig">Below 80 — not eligible</span>
         <div class="row"><span>Points out of 30</span><b id="s30">0</b></div>
         <div class="row"><span>Weighted score</span><b><span id="sum-score">0</span> / ${fmt(sumW)}</b></div>
-        ${e.note ? `<label class="ac"><input type="checkbox" id="ac" checked> Lab is air-conditioned</label>
-        <p class="ac-hint" id="ac-hint" hidden>Not air-conditioned — points halved.</p>` : ''}
+        ${e.note && !e.min_rule ? `<label class="ac"><input type="checkbox" id="ac" checked> Lab is air-conditioned</label>` : ''}
+        ${e.note ? `<p class="ac-hint" id="ac-hint" hidden></p>` : ''}
         <div class="actions">
           <button class="primary" id="dl">Download .xlsx</button>
           <button id="print">Print</button>
@@ -299,10 +299,14 @@ function labPage(id) {
       view.querySelector(`.score[data-i="${i}"]`).textContent = fmt(s);
     });
     const score = sumW ? sum / sumW * 100 : 0, ok = score >= 80;
-    const ac = document.getElementById('ac');
-    const halved = !!ac && !ac.checked;          // CS footnote: no air-conditioning halves the points
+    // CS footnote halves the points: lab not air-conditioned, or fewer than the minimum of a key item (e.g. welding booths)
+    const ac = document.getElementById('ac'), rule = e.min_rule;
+    const belowMin = !!rule && (Number(view.querySelector(`.equip input[data-i="${rule.row}"]`).value) || 0) < rule.min;
+    const halved = belowMin || (!!ac && !ac.checked);
+    const why = belowMin ? `fewer than ${rule.min} ${rule.item}` : 'lab not air-conditioned';
     const points = halved ? score * 30 / 100 / 2 : score * 30 / 100;
-    if (ac) document.getElementById('ac-hint').hidden = !halved;
+    const hint = document.getElementById('ac-hint');
+    if (hint) { hint.hidden = !halved; hint.textContent = `${why[0].toUpperCase()}${why.slice(1)} — points halved.`; }
     document.getElementById('sum-score').textContent = fmt(sum);
     document.getElementById('sum-w-score').textContent = fmt(sum);
     document.getElementById('s100').textContent = fmt(score);
@@ -310,7 +314,7 @@ function labPage(id) {
     const el = document.getElementById('elig');
     el.className = 'pill ' + (ok ? 'ok' : 'no');
     el.textContent = ok ? 'Eligible' : 'Below 80 — not eligible';
-    return { sum, score, points, ok, halved };
+    return { sum, score, points, ok, halved, why };
   };
 
   document.getElementById('dl').addEventListener('click', async () => {
@@ -360,7 +364,7 @@ function printSheet(e, r) {
       <tr class="b"><td>Sum</td><td></td><td></td><td></td>
         <td class="c">${fmt(e.equipment.reduce((n, x) => n + (x.weight || 0), 0))}</td><td class="c">${fmt(r.sum)}</td><td></td></tr>
       <tr class="b"><td colspan="5">Score out of 100</td><td class="c">${fmt(r.score)}</td><td></td></tr>
-      <tr class="b"><td colspan="5">Total achieved points out of 30${r.halved ? ' (halved — lab not air-conditioned)' : ''}</td><td class="c">${fmt(r.points)}</td><td></td></tr>
+      <tr class="b"><td colspan="5">Total achieved points out of 30${r.halved ? ` (halved — ${r.why})` : ''}</td><td class="c">${fmt(r.points)}</td><td></td></tr>
     </table>
     ${e.note ? `<p class="small">${esc(e.note)}</p>` : ''}`;
   document.body.classList.add('printing-sheet');
