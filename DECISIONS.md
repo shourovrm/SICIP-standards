@@ -4,6 +4,7 @@
 Site BUILT and verified locally (Playwright: search, calculator math, print sheet, confirms, CS iframe, mobile, all 164 slugs + asset URLs 200). Pure static: root `index.html` + `web/` (css/js/fonts, self-hosted Space Grotesk + Spline Sans variable woff2). Hash router `#/cs` (default, CS tab first per user) / `#/lab` / `#/{cs,lab}/<org>--<course>`. `data/data.json` = 164 entries (gen via `scripts/gen_data.py`; reads workbooks + reference index + `data/peer-data.json` for dates/pdf map). All 164 courses have cs_pdf; 8 approved=null (no date in filename OR cover — genuinely unknown); 5 sector=null (Beautification). Deploy root = repo root (asset paths `lab-standards/…`, `competency-standards/…` work as-is). NOT yet deployed to Cloudflare.
 
 ## Next
+- Directory layout: user to pick from `docs/mockups/directory-mockups.html` (A packed cards / B org rail / C accordion); then implement in `directory()` + site.css.
 - BP similar-course analysis + all BP sources/text/html moved 2026-09-03 to `~/repos/SICIP-BPs` (own local repo, has its own CLAUDE.md/DECISIONS.md). `Business-Plan/` here is gone.
 - Optional: `_headers` for cache control on pdfs/xlsx; custom domain.
 - LATER — CBLMs (REMIND USER of this runbook when CBLMs come up): files >25MB, ~4.6GB → R2, NOT git/Pages. Steps: (1) dashboard: R2 → create bucket `sicip-cblm`; (2) bucket Settings → enable r2.dev public access (gives base URL); (3) drop files in local `cblm/` (already gitignored), bulk-upload via wrangler (`npx wrangler login` once); (4) add `cblm` URL field to data.json + Download CBLM button on course pages; push → Pages auto-deploys. R2 free: 10GB, zero egress.
@@ -92,3 +93,5 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 2026-09-23 | BASIS UI/UX CPU spec reverted to original (i5) | user: BASIS not part of the change
 2026-09-23 | Welding (all but Asia-TTC): <8 welding booths halves Points/30, auto from booth Available | user rule, mirrors AC rule
 2026-09-23 | Construction EIM (BACI/BMET/DTE/PKSF/REHAB): <15 channel wiring booths or <3 concealed booths halves Points/30; min_rule → min_rules list | user rule
+2026-10-06 | credit footer "Built by Riad Mashrub Shourov" (13px muted, hidden in print) | user request; quiet placement
+2026-10-06 | directory layout mockups A/B/C in docs/mockups/directory-mockups.html, awaiting user pick | BMET (30) stretches its grid row → blank space beside it

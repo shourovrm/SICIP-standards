@@ -19,6 +19,7 @@ body.printing-sheet #print-sheet{display:block}
 
 /* normal print (directories, CS page): drop chrome */
 body:not(.printing-sheet) .top,
+body:not(.printing-sheet) .foot,
 body:not(.printing-sheet) .actions,
 body:not(.printing-sheet) .back,
 body:not(.printing-sheet) .search{display:none !important}

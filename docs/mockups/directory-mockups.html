@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Directory layout options — SICIP Standards</title>
+<link rel="stylesheet" href="../../web/css/fonts.css">
+<link rel="stylesheet" href="../../web/css/site.css">
+<style>
+/* mockup switcher (not part of the site) */
+.pick{background:var(--ink);color:#fff;font-size:14px}
+.pick-in{max-width:1120px;margin:0 auto;padding:8px 20px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.pick a{color:#fff;text-decoration:none;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.3)}
+.pick a[aria-current]{background:#fff;color:var(--ink);border-color:#fff;font-weight:600}
+.pick-note{margin-left:auto;opacity:.75}
+.top{top:0}
+
+/* shared row meta */
+.c-full b{font-weight:400;color:var(--muted)}
+
+/* A — masonry cards, long lists collapsed */
+.masonry{margin-top:20px;columns:3 320px;column-gap:14px}
+.masonry .org{break-inside:avoid;margin:0 0 14px}
+.more{
+  display:block;width:100%;padding:9px 14px;font:inherit;font-size:14.5px;font-weight:500;text-align:left;
+  color:var(--accent-ink);background:var(--panel);border:0;border-top:1px solid var(--line);cursor:pointer;
+}
+.more:hover{background:var(--accent-tint)}
+
+/* B — organisation rail + course pane */
+.split{margin-top:20px;display:grid;grid-template-columns:250px minmax(0,1fr);gap:22px;align-items:start}
+.rail{
+  position:sticky;top:72px;max-height:calc(100vh - 90px);overflow:auto;
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:6px;
+}
+.rail button{
+  display:flex;width:100%;gap:10px;align-items:baseline;padding:6px 10px;font:inherit;font-size:15px;text-align:left;
+  color:var(--ink);background:none;border:0;border-radius:8px;cursor:pointer;
+}
+.rail button:hover{background:var(--panel)}
+.rail button[aria-current]{background:var(--accent-tint);color:var(--accent-ink);font-weight:600}
+.rail button.none{color:var(--faint)}
+.rail span{margin-left:auto;font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.pane{display:grid;gap:14px}
+.pane .org-hd{padding:12px 16px}
+.rows{list-style:none;margin:0;padding:4px 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.rows .course a{padding:8px 16px}
+
+/* C — accordion, one line per organisation */
+.acc{margin-top:20px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
+.acc-item + .acc-item{border-top:1px solid var(--line)}
+.acc-hd{display:flex;align-items:center;gap:12px;padding:0 14px 0 0}
+.acc-hd button{
+  flex:1;min-width:0;display:flex;align-items:baseline;gap:14px;padding:12px 16px;font:inherit;text-align:left;
+  color:var(--ink);background:none;border:0;cursor:pointer;
+}
+.acc-hd button:hover{background:var(--panel)}
+.acc-hd button::before{content:"›";color:var(--faint);font-size:18px;line-height:1;transition:transform .12s}
+.acc-item.open .acc-hd button::before{transform:rotate(90deg)}
+.acc-sectors{flex:1;min-width:0;font-size:13.5px;color:var(--faint);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.acc-body{display:none;list-style:none;margin:0;padding:4px 0 10px 18px;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);background:var(--panel)}
+.acc-item.open .acc-body{display:grid}
+.acc-body .course a:hover{background:var(--surface)}
+
+/* credit footer (same in all options) */
+.foot{max-width:1120px;margin:0 auto;padding:18px 20px 28px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+
+@media (max-width:760px){
+  .split{grid-template-columns:minmax(0,1fr)}
+  .rail{position:static;max-height:none;display:flex;overflow-x:auto;gap:4px}
+  .rail button{width:auto;white-space:nowrap}
+  .rows,.acc-body{grid-template-columns:minmax(0,1fr)}
+  .acc-sectors{display:none}
+  .pick-note{display:none}
+}
+</style>
+</head>
+<body>
+<div class="pick">
+  <div class="pick-in">
+    <span>Mockup</span>
+    <a href="#a" data-option="a">A · Packed cards</a>
+    <a href="#b" data-option="b">B · Organisation rail</a>
+    <a href="#c" data-option="c">C · Accordion</a>
+    <span class="pick-note">real data · search works · course links are inert</span>
+  </div>
+</div>
+<header class="top">
+  <div class="top-in">
+    <a class="wordmark" href="#">SICIP&nbsp;Standards</a>
+    <nav class="tabs" aria-label="Sections">
+      <a href="#" aria-current="page">Competency Standards</a>
+      <a href="#">Lab Standards</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="dir-head">
+    <h1>Competency Standards</h1>
+    <p class="dir-sub" id="sub"></p>
+    <div class="search"><input id="q" type="search" autocomplete="off"
+      placeholder="Search course, sector or organisation…" aria-label="Search"></div>
+  </div>
+  <div id="out"></div>
+</main>
+<footer class="foot">Built by Riad Mashrub Shourov</footer>
+
+<script>
+// [organisation, course, sector, approved] — injected from data/data.json
+const DATA = [["AEOSIB", "Marine Engine Operation and Maintenance", "Shipbuilding", "07 Jan 2026"], ["AEOSIB", "Welding and Fabrication (1G, 2G & 3G)", "Shipbuilding", "07 Jan 2026"], ["AEOSIB", "Electrical Installation and Maintenance (Shipbuilding)", "Shipbuilding", "07 Jan 2026"], ["AEOSIB", "Boiler Operation and Maintenance", "Shipbuilding", "07 Jan 2026"], ["Asia-TTC", "Electrical Terminator and Fitter", "Construction", "28 May 2025"], ["Asia-TTC", "Building Electrification", "Construction", "24 May 2025"], ["Asia-TTC", "TIG and MIG WELDING", "Construction", "13 May 2025"], ["Asia-TTC", "Advanced Masonry", "Construction", "02 Jun 2025"], ["Asia-TTC", "Plumbing and Pipe Fitting", "Construction", "24 May 2025"], ["BACCO", "Accounting Services-Outsourcing", "ICT", "12 Mar 2026"], ["BACCO", "Advanced Image Processing & Technique", "ICT", "29 Mar 2026"], ["BACCO", "Social Media Marketing and Content Moderation", "ICT", "12 May 2026"], ["BACCO", "AI Driven Freelancers", "ICT", "12 May 2026"], ["BACCO", "Digital Business Operations", "ICT", "12 May 2026"], ["BACI", "Masonry and Steel Binding", "Construction", null], ["BACI", "Electrical Installation & Maintenance (Construction)", "Construction", "31 Jul 2025"], ["BACI", "Plumbing and Pipe Fitting", "Construction", "31 Jul 2025"], ["BACI", "Tile and Marble Works", "Construction", "31 Jul 2025"], ["BACI", "Scaffolding", "Construction", "31 Jul 2025"], ["BACI", "Installation of Heating, Ventilation & Air Conditioning (HVAC)", "Construction", "31 Jul 2025"], ["BASIS", "UI/UX Design (IT Sector)", "IT", "17 Apr 2025"], ["BASIS", "AI Tool Management & Prompt Engineering", "ICT", "09 Jul 2026"], ["BASIS", "Python Programming (IT Sector)", "IT", "17 Apr 2025"], ["BASIS", "Technical Sales Specialist (IT Sector)", "IT", "19 Mar 2025"], ["BEIOA", "CAD-CAM Design and Programming (Mechanical)", "Light Engineering", "25 May 2025"], ["BEIOA", "CNC Machine Operation", "Light Engineering", "29 Jan 2025"], ["BEIOA", "Electrical Installation & Maintenance (Industry)", "Light Engineering", "23 Apr 2025"], ["BEIOA", "Refrigeration and Air Conditioning", "Light Engineering", "29 Jul 2025"], ["BEIOA", "Machine Shop Practice", "Light Engineering", "03 Jul 2025"], ["BEIOA", "Welding (1G, 2G & 3G)", "Light Engineering", "16 Jul 2025"], ["BEIOA", "Certificate course in PLC/PLC operation", "Light Engineering", "21 Jul 2025"], ["BGMEA", "Sewing Machine Operation (Lingerie)", "RMG", "28 May 2025"], ["BGMEA", "Sweater Linking Operation", "RMG", "07 Jul 2025"], ["BGMEA", "Computerised Sweater Machine Operation", "RMG", "07 Jul 2025"], ["BGMEA", "Advanced Sewing Machine Operation (Multi Skills)", "RMG", "22 Jun 2025"], ["BGMEA", "Supply Chain Management & Production Planning", "RMG", "16 Jul 2025"], ["BGMEA", "Industrial Engineering and Lean Manufacturing", "RMG", "28 Apr 2025"], ["BGMEA", "Advanced Quality Control Management", "RMG", "22 Jun 2025"], ["BGMEA", "Business Development and Merchandising", "RMG", "17 Jul 2025"], ["BGMEA", "Social Compliance and Environmental Management", "RMG", "29 May 2025"], ["BGMEA", "3D Fashion Design", "RMG", "13 May 2025"], ["BGMEA", "Jacquard Programming", "RMG", "07 Jul 2025"], ["BGMEA", "Advanced Pattern Making with CAD", "RMG", "28 Apr 2025"], ["BITAC", "Industrial Automation", "Light Engineering", "07 Jul 2025"], ["BITAC", "Pneumatic & Hydraulic System Operation and Maintenance", "Light Engineering", "15 Jul 2025"], ["BITAC", "Industrial Robot Operation and Troubleshooting", "Light Engineering", "23 Jun 2025"], ["BITAC", "Industrial Electrical and Electronics Application", "Light Engineering", "30 Jun 2025"], ["BITAC", "3D Printing Technology", "Light Engineering", "16 Jul 2025"], ["BITAC", "CAD-CAM Design and Programming (Mechanical)", "Light Engineering", "25 May 2025"], ["BITAC", "Advanced CNC Machining Center Operation and Practice", "Light Engineering", "20 Oct 2025"], ["BJMA", "Jute Bleaching, Dyeing, and Printing", "Jute", "21 May 2026"], ["BJMA", "Spinning, Winding, Beaming and Twisting Machine Operation", "Jute", "20 May 2026"], ["BJMA", "Compliance and Sustainability Issues", "Jute", null], ["BJMA", "Maintenance of Jute Mills Machinery", "Jute", "06 Aug 2026"], ["BJMA", "Merchandising", "Jute", "06 Aug 2026"], ["BJMA", "Pattern Design and Product Development (Jute Sector)", "Jute", "06 Aug 2026"], ["BJMA", "Weaving and Finishing", "Jute", "06 Aug 2026"], ["BJMA", "Batching, Preparing and Drawing", "Jute", "30 Apr 2026"], ["BJMA", "Industry Supervisor", "Jute", "06 Jul 2026"], ["BKMEA", "Apparel Merchandising", "RMG", "13 Aug 2025"], ["BKMEA", "Advanced Garments Production and Lean Management", "RMG", "17 Jul 2025"], ["BKMEA", "Social and Environmental Compliance for RMG", "RMG", "29 May 2025"], ["BKMEA", "Trade and Business Relations Management", "RMG", "07 Aug 2025"], ["BKMEA", "Production Planning & Supply Chain Management", "RMG", "16 Jul 2025"], ["BKMEA", "Quality Control for RMG", "RMG", "08 Sep 2025"], ["BKMEA", "Computerised Sweater Machine Operation", "RMG", "07 Jul 2025"], ["BKMEA", "Advanced Sewing Machine Operation (Multi Skills)", "RMG", "22 Jun 2025"], ["BMET", "Advanced Auto Mechanics", "Transport", "14 Sep 2025"], ["BMET", "Graphic and UI Design", "ICT", "14 Aug 2025"], ["BMET", "Hotel Housekeeping", "Tourism & Hospitality", "22 Apr 2025"], ["BMET", "Installation of Heating, Ventilation & Air Conditioning (HVAC)", "Construction", "31 Jul 2025"], ["BMET", "Industrial Electronics", "Light Engineering", "09 Feb 2026"], ["BMET", "IT Support Service", "ICT", "20 Oct 2025"], ["BMET", "Machine Shop Practice", "Light Engineering", "03 Jul 2025"], ["BMET", "Marine Engine Artificer", "Shipbuilding", "28 Oct 2025"], ["BMET", "Masonry and Rod Binding", "Construction", null], ["BMET", "Mobile Phone Servicing", "ICT", "31 Jul 2025"], ["BMET", "PLC operation", "Light Engineering", "21 Jul 2025"], ["BMET", "Advanced Culinary Art", "Tourism & Hospitality", "14 Sep 2025"], ["BMET", "Plumbing and Pipe Fitting", "Construction", "31 Jul 2025"], ["BMET", "Quality Control Management", "RMG", "22 Jun 2025"], ["BMET", "Refrigeration and Air Conditioning", "Light Engineering", "29 Jul 2025"], ["BMET", "Scaffolding", "Construction", "31 Jul 2025"], ["BMET", "Ship Piping", "Shipbuilding", "03 Sep 2025"], ["BMET", "Ship Safety and Firefighting", "Shipbuilding", "04 Aug 2025"], ["BMET", "Substation Maintenance and Servicing", "Light Engineering", "07 Jul 2025"], ["BMET", "Ship Painting", "Shipbuilding", "06 Aug 2025"], ["BMET", "Agriculture Machinery Operation and Maintenance", "Agriculture", "13 Aug 2025"], ["BMET", "Heavy Equipment Operation (Road Roller & Excavator)", "Construction", "15 Dec 2025"], ["BMET", "Advanced Sewing Machine Operation", "RMG", "14 Sep 2025"], ["BMET", "Heavy Equipment Operation (Crane and Forklift)", "Construction", null], ["BMET", "Advanced Welding (4G,5G and 6G)", "Shipbuilding", "14 Sep 2025"], ["BMET", "Beautification", null, "14 Sep 2025"], ["BMET", "CAD CAM Design and CNC \nMachine Operation", "Light Engineering", "11 Jan 2026"], ["BMET", "Electrical Installation & Maintenance (Construction)", "Construction", "14 Sep 2025"], ["BMET", "Electrical Installation & Maintenance (Industry)", "Light Engineering", "14 Sep 2025"], ["BMET", "Food and Beverage Service", "Tourism & Hospitality", "27 Apr 2025"], ["BPI", "Gas Pipe Welding in Energy Sector", "Energy", "22 Feb 2026"], ["BPI", "Advanced Pipe Fitting for Gas and Onshore Rigs", "Energy", "22 Feb 2026"], ["BPI", "Electrical Works in Energy Sector", "Energy", "15 Sep 2026"], ["BRTC", "Motor Driving with Basic Maintenance", "Transport", "31 Aug 2025"], ["BSIA", "IC Design and Layout Engineering", "Semiconductor / VLSI", "19 Jul 2026"], ["BSIA", "Advanced Physical Design Program: RTL to GDSII", "Semiconductor / VLSI", "12 Jul 2026"], ["BSIA", "DFT and Verification Engineering Program for ASIC Designers", "Semiconductor / VLSI", "15 Jul 2026"], ["BSIA", "Applied Semiconductor Systems: Power Devices and Industrial Integration", "Semiconductor", "19 Jul 2026"], ["BSIA", "Smart Systems Engineering: Embedded Design and Semiconductor Application Interfaces", "Semiconductor", "20 Jul 2026"], ["BSIA", "Semiconductor Testing Engineering", "Semiconductor", "31 Aug 2026"], ["BWCCI", "Beautification and entrepreneurship development", null, "19 May 2025"], ["BWCCI", "Fashion Design, Product Development and Entrepreneurship", "RMG", "29 Apr 2026"], ["BWCCI", "Food and Beverage Production and Entrepreneurship Development", "Tourism And Hospitality", "31 May 2025"], ["BWCCI", "Digital Marketing, Freelancing and Entrepreneurship Development", "ICT", null], ["BWCCI", "Graphic Design ad Entrepreneurship Development", "ICT", "23 Jul 2025"], ["BWCCI", "Beautification and Entrepreneurship Development (Residential)", null, "24 Jul 2025"], ["BWCCI", "Fashion Design, Product Development and Entrepreneurship (Residential)", "RMG", "24 Jul 2025"], ["DTE", "Welding", "Light Engineering", "16 Jul 2025"], ["DTE", "Sewing Machine Operation", "RMG", "20 Oct 2025"], ["DTE", "4G - 6G Welding", "Shipbuilding", "14 Sep 2025"], ["DTE", "Advanced Sewing Machine Operation", "RMG", "14 Sep 2025"], ["DTE", "Electrical Installation & Maintenance (Construction)", "Construction", "14 Sep 2025"], ["DTE", "Interior Design and Decoration  Fit Out Management", "Construction", "28 Oct 2025"], ["DTE", "IT Support Technique & Mobile Phone Servicing", "ICT", "07 Dec 2025"], ["DTE", "Jute Product Development", "Jute", "07 Aug 2025"], ["DTE", "Motor Cycle Maintenance and Servicing", "Transport", "20 Oct 2025"], ["DTE", "Plumbing and Pipe Fitting", "Construction", "31 Jul 2025"], ["ISC-T&H", "Food And Beverage Production (Cooking)", "Tourism & Hospitality", "16 Apr 2025"], ["ISC-T&H", "Food and Beverage Service", "Tourism & Hospitality", "27 Apr 2025"], ["ISC-T&H", "Housekeeping", "Tourism & Hospitality", "22 Apr 2025"], ["ISC-T&H", "Bakery and Pastry Production", "Tourism & Hospitality", "20 Apr 2025"], ["LFMEAB", "Multitasking Operation for Footwear Manufacturing", "Leather and Footwear Industry", "13 Apr 2025"], ["LFMEAB", "Multitasking Operation for Leather Goods Manufacturing", "Leather and Footwear Industry", "13 Apr 2025"], ["LFMEAB", "Footwear and Leather Goods Design and Development with CAD CAM", "Leather Goods and Footwear", "29 Jul 2025"], ["LFMEAB", "Compliance & Sustainability for Footwear & Leather Goods Sector", "Leather Goods & Footwear", "15 Jul 2025"], ["LFMEAB", "Industrial Productivity Improvement", "Leather Goods & Footwear", "17 Nov 2025"], ["LFMEAB", "Supervisory Management & Leadership Skills Development", "Leather Goods & Footwear", "08 Dec 2025"], ["LFMEAB", "Supply Chain Management for Footwear and Leather Goods Sector", "Leather and Footwear", "23 Nov 2025"], ["LFMEAB", "Merchandising for Footwear & Leather Goods Sector", "Leather Goods & Footwear", "23 Nov 2025"], ["LFMEAB", "Quality Control & Assurance", "Leather Goods & Footwear", "17 Nov 2025"], ["Mahila Polytechnic", "Cyber Security (Advanced)", "ICT", "21 Jul 2026"], ["Mahila Polytechnic", "Bakery and Food Production (Advanced)", "Hotel And Tourism", "19 Jul 2026"], ["Mahila Polytechnic", "Industrial Automation", "Light Engineering", "01 Jul 2026"], ["PKSF", "Bakery and Pastry Production", "Tourism & Hospitality", "23 Jul 2025"], ["PKSF", "Food and Beverage Production", "Tourism & Hospitality", "23 Jul 2025"], ["PKSF", "Professional Digital Marketing", "ICT", null], ["PKSF", "Auto Mechanics", "Transport", "23 Jul 2025"], ["PKSF", "Beautification", null, "23 Jul 2025"], ["PKSF", "Electrical Installation & Maintenance (Construction)", "Construction", "29 Jul 2025"], ["PKSF", "Fashion Garments", "RMG", "24 Jul 2025"], ["PKSF", "Plumbing and Pipe Fitting", "Construction", "29 Jul 2025"], ["PKSF", "Refrigeration and Air Conditioning", "Light Engineering", "29 Jul 2025"], ["PKSF", "Graphic Design", "ICT", null], ["PKSF", "IT Freelancing", "ICT", "15 Dec 2025"], ["PKSF", "Mobile Phone Servicing", "ICT", "31 Jul 2025"], ["PKSF", "Housekeeping", "Tourism & Hospitality", "22 Apr 2025"], ["REHAB", "Electrical Installation & Maintenance (Construction)", "Construction", "31 Jul 2025"], ["REHAB", "Plumbing and Pipe Fitting", "Construction", "31 Jul 2025"], ["REHAB", "Masonry and Steel Binding", "Construction", null], ["REHAB", "Tile and Marble Works", "Construction", "31 Jul 2025"], ["WEAB", "Food and Beverage Production and Entrepreneurship Development", "Tourism and Hospitality", "11 Sep 2025"], ["WEAB", "Bakery & Pastry Production and Entrepreneurship Development", "Tourism and Hospitality", "11 Sep 2025"], ["WEAB", "Digital Marketing, IT Freelancing and Entrepreneurship Development", "ICT", "11 Sep 2025"], ["WEAB", "Fashion Design, Product Development and Entrepreneurship", "RMG", "29 Apr 2026"], ["WEAB", "Beautification and entrepreneurship development", null, "11 Sep 2025"], ["WEAB", "Graphic Design ad Entrepreneurship Development", "ICT", "11 Sep 2025"], ["WEAB", "Professional Barista & Beverage Preparation and Entrepreneurship Development", "Tourism and Hospitality", "08 Dec 2025"]];
+
+const COLLAPSED_LIMIT = 10;  // option A: courses shown before "Show all"
+const MINIMUM_HIDDEN = 3;    // option A: never collapse to hide only one or two rows
+const organisations = [];
+for (const [organisation, course, sector, approved] of DATA) {
+  let entry = organisations.find(item => item.name === organisation);
+  if (!entry) { entry = { name: organisation, courses: [] }; organisations.push(entry); }
+  entry.courses.push({ course, sector, approved });
+}
+
+const state = { option: 'a', query: '', selected: '', expanded: new Set(), open: new Set() };
+const out = document.getElementById('out');
+const esc = text => String(text).replace(/[&<>"]/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch]));
+
+// organisation match shows the whole organisation; otherwise only matching courses
+function visibleCourses(organisation) {
+  if (!state.query || organisation.name.toLowerCase().includes(state.query)) return organisation.courses;
+  return organisation.courses.filter(item => (item.course + ' ' + (item.sector || '')).toLowerCase().includes(state.query));
+}
+
+function courseItem(item) {
+  const meta = [item.sector, item.approved && 'Approved ' + item.approved].filter(Boolean).join(' · ');
+  return `<li class="course"><a href="#" data-inert>
+    <span class="c-name">${esc(item.course)}</span><span class="c-full">${esc(meta)}</span></a></li>`;
+}
+
+function badge(count) {
+  return `<a class="org-count" href="#" data-inert title="Download all">${count} ↓</a>`;
+}
+
+function renderPackedCards(shown) {
+  return `<div class="masonry">${shown.map(({ organisation, courses }) => {
+    const collapsed = !state.query && !state.expanded.has(organisation.name) && courses.length >= COLLAPSED_LIMIT + MINIMUM_HIDDEN;
+    const listed = collapsed ? courses.slice(0, COLLAPSED_LIMIT) : courses;
+    return `<section class="org">
+      <div class="org-hd"><span class="org-name">${esc(organisation.name)}</span>${badge(organisation.courses.length)}</div>
+      <ul class="course-list">${listed.map(courseItem).join('')}</ul>
+      ${collapsed ? `<button class="more" data-expand="${esc(organisation.name)}">Show all ${courses.length}</button>` : ''}
+    </section>`;
+  }).join('')}</div>`;
+}
+
+function renderRail(shown) {
+  const matched = new Map(shown.map(({ organisation, courses }) => [organisation.name, courses.length]));
+  const total = shown.reduce((sum, item) => sum + item.courses.length, 0);
+  const railButton = (name, label, count) =>
+    `<button data-select="${esc(name)}" class="${count ? '' : 'none'}" ${state.selected === name ? 'aria-current="true"' : ''}>${esc(label)}<span>${count}</span></button>`;
+  const inPane = shown.filter(({ organisation }) => !state.selected || organisation.name === state.selected);
+  return `<div class="split">
+    <nav class="rail" aria-label="Organisations">
+      ${railButton('', 'All organisations', total)}
+      ${organisations.map(item => railButton(item.name, item.name, matched.get(item.name) || 0)).join('')}
+    </nav>
+    <div class="pane">${inPane.map(({ organisation, courses }) => `
+      <section class="org">
+        <div class="org-hd"><span class="org-name">${esc(organisation.name)}</span>${badge(organisation.courses.length)}</div>
+        <ul class="rows">${courses.map(courseItem).join('')}</ul>
+      </section>`).join('') || '<p class="empty show">No matches in this organisation.</p>'}
+    </div>
+  </div>`;
+}
+
+function renderAccordion(shown) {
+  return `<div class="acc">${shown.map(({ organisation, courses }) => {
+    const sectors = [...new Set(organisation.courses.map(item => item.sector).filter(Boolean))].join(' · ');
+    const isOpen = state.query || state.open.has(organisation.name);
+    return `<section class="acc-item ${isOpen ? 'open' : ''}">
+      <div class="acc-hd">
+        <button data-toggle="${esc(organisation.name)}" aria-expanded="${Boolean(isOpen)}">
+          <span class="org-name">${esc(organisation.name)}</span><span class="acc-sectors">${esc(sectors)}</span>
+        </button>${badge(organisation.courses.length)}
+      </div>
+      <ul class="acc-body">${courses.map(courseItem).join('')}</ul>
+    </section>`;
+  }).join('')}</div>`;
+}
+
+function render() {
+  const shown = organisations
+    .map(organisation => ({ organisation, courses: visibleCourses(organisation) }))
+    .filter(item => item.courses.length);
+  document.getElementById('sub').textContent = `${organisations.length} organisations · ${DATA.length} standards`;
+  document.querySelectorAll('.pick a').forEach(link => link.toggleAttribute('aria-current', link.dataset.option === state.option));
+  if (!shown.length) { out.innerHTML = '<p class="empty show">No matches.</p>'; return; }
+  const renderers = { a: renderPackedCards, b: renderRail, c: renderAccordion };
+  out.innerHTML = renderers[state.option](shown);
+}
+
+function toggle(set, value) {
+  if (set.has(value)) set.delete(value); else set.add(value);
+}
+
+out.addEventListener('click', event => {
+  const target = event.target.closest('[data-inert],[data-expand],[data-select],[data-toggle]');
+  if (!target) return;
+  event.preventDefault();
+  if ('expand' in target.dataset) state.expanded.add(target.dataset.expand);
+  if ('select' in target.dataset) state.selected = target.dataset.select;
+  if ('toggle' in target.dataset) toggle(state.open, target.dataset.toggle);
+  render();
+});
+document.getElementById('q').addEventListener('input', event => {
+  state.query = event.target.value.trim().toLowerCase();
+  render();
+});
+function readOption() {
+  const fromHash = location.hash.slice(1);
+  if (['a', 'b', 'c'].includes(fromHash)) state.option = fromHash;
+  render();
+}
+addEventListener('hashchange', readOption);
+readOption();
+</script>
+</body>
+</html>

@@ -33,7 +33,10 @@ mark{background:var(--mark);color:inherit;padding:0 1px;border-radius:2px}
 .tabs a:hover{color:var(--ink)}
 .tabs a[aria-current="page"]{background:var(--accent-tint);color:var(--accent-ink);font-weight:600}
 
-main{padding:26px 20px 72px}
+main{padding:26px 20px 48px}
+
+/* Credit footer */
+.foot{max-width:1120px;margin:0 auto;padding:16px 20px 26px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
 
 /* Directory */
 .dir-head h1{margin:0;font-size:26px;font-weight:700}
