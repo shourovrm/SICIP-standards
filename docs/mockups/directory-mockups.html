@@ -41,6 +41,10 @@
 .rail button[aria-current]{background:var(--accent-tint);color:var(--accent-ink);font-weight:600}
 .rail button.none{color:var(--faint)}
 .rail span{margin-left:auto;font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.rail-select{
+  display:none;width:100%;padding:11px 12px;font:inherit;font-size:16px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--line-strong);border-radius:10px;box-shadow:var(--shadow);
+}
 .pane{display:grid;gap:14px}
 .pane .org-hd{padding:12px 16px}
 .rows{list-style:none;margin:0;padding:4px 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -67,8 +71,8 @@
 
 @media (max-width:760px){
   .split{grid-template-columns:minmax(0,1fr)}
-  .rail{position:static;max-height:none;display:flex;overflow-x:auto;gap:4px}
-  .rail button{width:auto;white-space:nowrap}
+  .rail{display:none}
+  .rail-select{display:block}
   .rows,.acc-body{grid-template-columns:minmax(0,1fr)}
   .acc-sectors{display:none}
   .pick-note{display:none}
@@ -156,7 +160,14 @@ function renderRail(shown) {
   const railButton = (name, label, count) =>
     `<button data-select="${esc(name)}" class="${count ? '' : 'none'}" ${state.selected === name ? 'aria-current="true"' : ''}>${esc(label)}<span>${count}</span></button>`;
   const inPane = shown.filter(({ organisation }) => !state.selected || organisation.name === state.selected);
+  // phones get the same choices as a native picker instead of the rail
+  const option = (name, label, count) =>
+    `<option value="${esc(name)}" ${state.selected === name ? 'selected' : ''} ${count ? '' : 'disabled'}>${esc(label)} (${count})</option>`;
   return `<div class="split">
+    <select class="rail-select" aria-label="Organisation">
+      ${option('', 'All organisations', total)}
+      ${organisations.map(item => option(item.name, item.name, matched.get(item.name) || 0)).join('')}
+    </select>
     <nav class="rail" aria-label="Organisations">
       ${railButton('', 'All organisations', total)}
       ${organisations.map(item => railButton(item.name, item.name, matched.get(item.name) || 0)).join('')}
@@ -207,6 +218,11 @@ out.addEventListener('click', event => {
   if ('expand' in target.dataset) state.expanded.add(target.dataset.expand);
   if ('select' in target.dataset) state.selected = target.dataset.select;
   if ('toggle' in target.dataset) toggle(state.open, target.dataset.toggle);
+  render();
+});
+out.addEventListener('change', event => {
+  if (!event.target.matches('.rail-select')) return;
+  state.selected = event.target.value;
   render();
 });
 document.getElementById('q').addEventListener('input', event => {
