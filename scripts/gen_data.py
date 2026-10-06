@@ -249,8 +249,8 @@ def main():
 
     # ---------------- validation ----------------
     print(f"\n=== VALIDATION REPORT ===")
-    print(f"total entries: {len(entries)} (expect 164)")
-    assert len(entries) == 164, f"expected 164 entries, got {len(entries)}"
+    print(f"total entries: {len(entries)} (expect 171)")
+    assert len(entries) == 171, f"expected 171 entries, got {len(entries)}"
 
     seen = set()
     dupes = []

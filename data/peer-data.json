@@ -4,10 +4,10 @@
     "course": "org, org_slug, course_name, sheet, sector|null, trainees, space, approved ('DD Mon YYYY'|null), approved_source, equipment[{name, required(int|str), weight(int)}], cs_pdf(repo-relative|null)"
   },
   "counts": {
-    "courses": 164,
+    "courses": 171,
     "with_date": 156,
-    "with_pdf": 164,
-    "with_sector": 159
+    "with_pdf": 171,
+    "with_sector": 166
   },
   "known_mismatches": [
     "Weaving-and-Finishing-Jute-lab-standard.xlsx is a standalone duplicate of BJMA's 'Weaving and Finishing' sheet — excluded from courses.",
@@ -10608,7 +10608,7 @@
           "weight": 3
         }
       ],
-      "cs_pdf": "competency-standards/BSIA/1. CS_(M)_IC Design and layout Engineering_19 July 26.pdf"
+      "cs_pdf": "competency-standards/BSIA/1. CS _IC Design and layout Engineering_19 July 26.pdf"
     },
     {
       "org": "BSIA",
@@ -10618,7 +10618,7 @@
       "sector": "Semiconductor / VLSI",
       "trainees": 25,
       "space": "Computer Lab (400 sft) and Workshop (700–800 sft) for 25 trainees",
-      "approved": "12 Jul 2026",
+      "approved": "27 Jul 2026",
       "approved_source": "filename",
       "equipment": [
         {
@@ -10717,7 +10717,7 @@
           "weight": 3
         }
       ],
-      "cs_pdf": "competency-standards/BSIA/2. BSIA_ADVANCED PHYSICAL DESIGN PROGRAM RTL TO GDSII12 July 2026.pdf"
+      "cs_pdf": "competency-standards/BSIA/2. Final CS _Advanced Physical Design Program RTL TO GDSII 27 July 2026.pdf"
     },
     {
       "org": "BSIA",
@@ -10727,7 +10727,7 @@
       "sector": "Semiconductor / VLSI",
       "trainees": 25,
       "space": "Computer Lab (400 sft) and Workshop (700–800 sft) for 25 trainees; stationery",
-      "approved": "15 Jul 2026",
+      "approved": "27 Jul 2026",
       "approved_source": "filename",
       "equipment": [
         {
@@ -10826,7 +10826,7 @@
           "weight": 3
         }
       ],
-      "cs_pdf": "competency-standards/BSIA/3. BSIA_DFT AND VERIFICATION ENGINEERING PROGRAM FOR ASIC DESIGNERS_15072026.pdf"
+      "cs_pdf": "competency-standards/BSIA/3. Final CS_DFT and Verification Engineering Program for ASIC Designers 27 Jul 26.pdf"
     },
     {
       "org": "BSIA",
@@ -10945,7 +10945,7 @@
       "sector": "Semiconductor",
       "trainees": 25,
       "space": "Embedded/electronics lab (approx. for 25 trainees) with benches, storage and stationery",
-      "approved": "20 Jul 2026",
+      "approved": "27 Jul 2026",
       "approved_source": "filename",
       "equipment": [
         {
@@ -11044,7 +11044,7 @@
           "weight": 5
         }
       ],
-      "cs_pdf": "competency-standards/BSIA/5. BSIA_SMART SYSTEMS ENGINEERING EMBEDDED DESIGN AND SEMICONDUCTOR APPLICATION INTERFACES 20072026.pdf"
+      "cs_pdf": "competency-standards/BSIA/5. Final CS _Smart_Systems_Engineering_Embedded_Design_and_Semiconductor_Application 27 Jul26.pdf"
     },
     {
       "org": "BSIA",
@@ -16827,6 +16827,83 @@
         }
       ],
       "cs_pdf": "competency-standards/WEAB/7. WEAB_Final _(M)_CS  Professional Barista & Beverage Preparation and Ent-Dev 08 Dec 25.pdf"
+    },
+    {
+      "org": "BTMA",
+      "org_slug": "BTMA",
+      "course_name": "Production Process in Yarn Manufacturing",
+      "sheet": "Yarn Manufacturing",
+      "sector": "Textile",
+      "trainees": 25,
+      "approved": null,
+      "approved_source": null,
+      "cs_pdf": "competency-standards/BTMA/260820 CS_PPYM_Draft.pdf"
+    },
+    {
+      "org": "BTMA",
+      "org_slug": "BTMA",
+      "course_name": "Production Process in Wet Processing",
+      "sheet": "Wet Processing",
+      "sector": "Textile",
+      "trainees": 25,
+      "approved": null,
+      "approved_source": null,
+      "cs_pdf": "competency-standards/BTMA/260823 CS_PPWP_Draft.pdf"
+    },
+    {
+      "org": "BTMA",
+      "org_slug": "BTMA",
+      "course_name": "Production Process in Fabric Manufacturing",
+      "sheet": "Fabric Manufacturing",
+      "sector": "Textile",
+      "trainees": 25,
+      "approved": null,
+      "approved_source": null,
+      "cs_pdf": "competency-standards/BTMA/260825 CS_PPFM_Draft.pdf"
+    },
+    {
+      "org": "BTMA",
+      "org_slug": "BTMA",
+      "course_name": "Productivity Improvement and Quality Control in Yarn",
+      "sheet": "QC in Yarn",
+      "sector": "Textile",
+      "trainees": 25,
+      "approved": null,
+      "approved_source": null,
+      "cs_pdf": "competency-standards/BTMA/260902 CS_PIQCY_Draft.pdf"
+    },
+    {
+      "org": "BTMA",
+      "org_slug": "BTMA",
+      "course_name": "Productivity Improvement and Quality Control in Fabric",
+      "sheet": "QC in Fabric",
+      "sector": "Textile",
+      "trainees": 25,
+      "approved": null,
+      "approved_source": null,
+      "cs_pdf": "competency-standards/BTMA/260903 CS_PIQCF_Draft.pdf"
+    },
+    {
+      "org": "BTMA",
+      "org_slug": "BTMA",
+      "course_name": "Industrial Electrical and Electronic Technology for Textile Industry",
+      "sheet": "Elec & Electronic Tech",
+      "sector": "Textile",
+      "trainees": 25,
+      "approved": null,
+      "approved_source": null,
+      "cs_pdf": "competency-standards/BTMA/260916a CS_IEET_MM_MN_Draft.pdf"
+    },
+    {
+      "org": "BTMA",
+      "org_slug": "BTMA",
+      "course_name": "Machine Management and Maintenance (Mechanical) for Textile Industry",
+      "sheet": "Machine Mgmt & Maint",
+      "sector": "Textile",
+      "trainees": 25,
+      "approved": null,
+      "approved_source": null,
+      "cs_pdf": "competency-standards/BTMA/260924c CS_MMM-R_MN_Draft.pdf"
     }
   ]
 }

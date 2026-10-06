@@ -12835,7 +12835,7 @@
    }
   ],
   "xlsx": "lab-standards/BSIA-lab-standard.xlsx",
-  "cs_pdf": "competency-standards/BSIA/1. CS_(M)_IC Design and layout Engineering_19 July 26.pdf"
+  "cs_pdf": "competency-standards/BSIA/1. CS _IC Design and layout Engineering_19 July 26.pdf"
  },
  {
   "org": "BSIA",
@@ -12848,7 +12848,7 @@
   "boilerplate": "•The institute shall not use the same facilities for any other projects/organizations offering a similar course.\n•The institute must provide sufficient evidence to prove ownership of the proposed training equipment.\nThe list denotes the minimum training equipment and facility required to effectively conduct training for a specific course. Additionally, the institute must ensure that all other necessary training tools, equipment, and furniture are available to meet the requirement of competency standards (CS) provided by SICIP.\nFor the operation of training course on Advanced Physical Design Program: RTL to GDSII, the institute must ensure the availability of at least 80% of the major training equipment and training facilities (according to the CS) to be eligible for SICIP training delivery. If the score is below 80%, the remaining equipment and facilities need to be installed before the commencement of the training.\nThe institute will also provide all other hand tools and power tools as per CS for 25 trainees. Also, they will arrange adequate seating arrangement and classroom setup for the 25 trainees.",
   "note": null,
   "min_rules": [],
-  "approved": "12 Jul 2026",
+  "approved": "27 Jul 2026",
   "equipment": [
    {
     "name": "Computer/Laptop (1 unit) — trainer station",
@@ -12966,7 +12966,7 @@
    }
   ],
   "xlsx": "lab-standards/BSIA-lab-standard.xlsx",
-  "cs_pdf": "competency-standards/BSIA/2. BSIA_ADVANCED PHYSICAL DESIGN PROGRAM RTL TO GDSII12 July 2026.pdf"
+  "cs_pdf": "competency-standards/BSIA/2. Final CS _Advanced Physical Design Program RTL TO GDSII 27 July 2026.pdf"
  },
  {
   "org": "BSIA",
@@ -12979,7 +12979,7 @@
   "boilerplate": "•The institute shall not use the same facilities for any other projects/organizations offering a similar course.\n•The institute must provide sufficient evidence to prove ownership of the proposed training equipment.\nThe list denotes the minimum training equipment and facility required to effectively conduct training for a specific course. Additionally, the institute must ensure that all other necessary training tools, equipment, and furniture are available to meet the requirement of competency standards (CS) provided by SICIP.\nFor the operation of training course on DFT and Verification Engineering Program for ASIC Designers, the institute must ensure the availability of at least 80% of the major training equipment and training facilities (according to the CS) to be eligible for SICIP training delivery. If the score is below 80%, the remaining equipment and facilities need to be installed before the commencement of the training.\nThe institute will also provide all other hand tools and power tools as per CS for 25 trainees. Also, they will arrange adequate seating arrangement and classroom setup for the 25 trainees.",
   "note": null,
   "min_rules": [],
-  "approved": "15 Jul 2026",
+  "approved": "27 Jul 2026",
   "equipment": [
    {
     "name": "Computer/Laptop (1 unit) — trainer station",
@@ -13097,7 +13097,7 @@
    }
   ],
   "xlsx": "lab-standards/BSIA-lab-standard.xlsx",
-  "cs_pdf": "competency-standards/BSIA/3. BSIA_DFT AND VERIFICATION ENGINEERING PROGRAM FOR ASIC DESIGNERS_15072026.pdf"
+  "cs_pdf": "competency-standards/BSIA/3. Final CS_DFT and Verification Engineering Program for ASIC Designers 27 Jul 26.pdf"
  },
  {
   "org": "BSIA",
@@ -13237,129 +13237,147 @@
   "sheet": "Smart Systems Engineering",
   "sector": "Semiconductor",
   "trainees": 25,
-  "space": "Embedded/electronics lab (approx. for 25 trainees) with benches, storage and stationery",
+  "space": "Computer Lab (400 sft) and Electronics Workshop/Laboratory (700–800 sft) for 25 trainees",
   "boilerplate": "•The institute shall not use the same facilities for any other projects/organizations offering a similar course.\n•The institute must provide sufficient evidence to prove ownership of the proposed training equipment.\nThe list denotes the minimum training equipment and facility required to effectively conduct training for a specific course. Additionally, the institute must ensure that all other necessary training tools, equipment, and furniture are available to meet the requirement of competency standards (CS) provided by SICIP.\nFor the operation of training course on Smart Systems Engineering: Embedded Design and Semiconductor Application Interfaces, the institute must ensure the availability of at least 80% of the major training equipment and training facilities (according to the CS) to be eligible for SICIP training delivery. If the score is below 80%, the remaining equipment and facilities need to be installed before the commencement of the training.\nThe institute will also provide all other hand tools and power tools as per CS for 25 trainees. Also, they will arrange adequate seating arrangement and classroom setup for the 25 trainees.",
   "note": null,
   "min_rules": [],
-  "approved": "20 Jul 2026",
+  "approved": "27 Jul 2026",
   "equipment": [
    {
-    "name": "Computer/Laptop (1 unit) — trainer station",
+    "name": "Computer/Laptop (Trainer)",
     "required": 1,
     "weight": 6,
     "remark": null
    },
    {
-    "name": "Multimedia projector & screen (1 unit)",
-    "required": 1,
-    "weight": 6,
-    "remark": null
-   },
-   {
-    "name": "Printer (1 unit)",
+    "name": "Printer",
     "required": 1,
     "weight": 4,
     "remark": null
    },
    {
-    "name": "Desktop/Laptop workstations (25 units) with internet access",
-    "required": 25,
-    "weight": 7,
-    "remark": null
-   },
-   {
-    "name": "Embedded / electronics laboratory (for 25 trainees)",
-    "required": 1,
-    "weight": 7,
-    "remark": null
-   },
-   {
-    "name": "Embedded development boards — Arduino, ESP32, STM32, Raspberry Pi Pico or equivalent (per trainee)",
-    "required": 1,
-    "weight": 9,
-    "remark": null
-   },
-   {
-    "name": "Embedded IDEs / toolchains — Arduino IDE, PlatformIO, STM32CubeIDE, Wokwi or vendor SDK (25)",
-    "required": 25,
-    "weight": 9,
-    "remark": null
-   },
-   {
-    "name": "Sensor modules — temperature, humidity, motion/IMU, current, light/optical, environmental",
-    "required": 1,
-    "weight": 8,
-    "remark": null
-   },
-   {
-    "name": "Communication/interface modules and displays (OLED/LCD; UART/I2C/SPI/RS232/RS485)",
-    "required": 1,
-    "weight": 8,
-    "remark": null
-   },
-   {
-    "name": "PCB design tools — KiCad, EasyEDA, Altium or equivalent EDA tools (25)",
-    "required": 25,
-    "weight": 8,
-    "remark": null
-   },
-   {
-    "name": "Digital oscilloscope (per bench)",
-    "required": 1,
-    "weight": 8,
-    "remark": null
-   },
-   {
-    "name": "Logic analyzer with protocol decoding (per bench)",
-    "required": 1,
-    "weight": 8,
-    "remark": null
-   },
-   {
-    "name": "JTAG/SWD debugger (per bench)",
-    "required": 1,
-    "weight": 8,
-    "remark": null
-   },
-   {
-    "name": "Digital multimeters and adjustable power supplies (per bench)",
-    "required": 1,
-    "weight": 7,
-    "remark": null
-   },
-   {
-    "name": "Semiconductor devices — MCUs, sensor ICs, LDO/switching regulators, MOSFETs, level shifters, ESD protection",
-    "required": 1,
-    "weight": 9,
-    "remark": null
-   },
-   {
-    "name": "Breadboards, prototyping boards, basic components and hand tools",
+    "name": "Multimedia Projector",
     "required": 1,
     "weight": 6,
     "remark": null
    },
    {
-    "name": "Soldering and assembly stations with ESD protection (per bench)",
-    "required": 1,
+    "name": "High-performance Desktop/Laptop",
+    "required": 25,
     "weight": 7,
     "remark": null
    },
    {
-    "name": "PPE, ESD mat and wrist strap; first-aid and fire-safety equipment",
+    "name": "Embedded IDE and Toolchain Software (Arduino IDE / STM32CubeIDE / PlatformIO or equivalent)",
+    "required": 25,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "EDA/PCB Design Software (Schematic Capture and PCB Layout)",
+    "required": 25,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "MCU Development Boards (STM32 / ESP32 / Arduino / RP2040 or equivalent)",
+    "required": 25,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Sensor and Interface Module Kits (Temperature, Humidity, Pressure, IMU, Light, Gas, Display, Relay, etc.)",
+    "required": 25,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "Breadboard and Electronic Component Kits",
+    "required": 25,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "JTAG/SWD Debugger/Programmer",
+    "required": 25,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "Digital Multimeter",
+    "required": 25,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "ESD-safe Workbench with ESD Mat and Wrist Strap",
+    "required": 25,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Digital Storage Oscilloscope",
+    "required": 13,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "Logic Analyzer",
+    "required": 13,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "DC Regulated Power Supply",
+    "required": 13,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Soldering Station with Fume Extractor",
+    "required": 13,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Function Generator",
+    "required": 5,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Current Probe/Power Profiling Tool",
+    "required": 5,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "PCB Prototype Fabrication and Assembly Support (In-house or Outsourced)",
+    "required": 1,
+    "weight": 6,
+    "remark": "01 set"
+   },
+   {
+    "name": "Internet Connectivity with Network Switch and Router",
     "required": 1,
     "weight": 5,
     "remark": null
    },
    {
-    "name": "Serial terminals, USB-serial adapters and cabling",
+    "name": "Central File/Storage Server",
     "required": 1,
     "weight": 5,
     "remark": null
+   },
+   {
+    "name": "First Aid and Fire Safety Equipment",
+    "required": 1,
+    "weight": 5,
+    "remark": "01 set"
    }
   ],
   "xlsx": "lab-standards/BSIA-lab-standard.xlsx",
-  "cs_pdf": "competency-standards/BSIA/5. BSIA_SMART SYSTEMS ENGINEERING EMBEDDED DESIGN AND SEMICONDUCTOR APPLICATION INTERFACES 20072026.pdf"
+  "cs_pdf": "competency-standards/BSIA/5. Final CS _Smart_Systems_Engineering_Embedded_Design_and_Semiconductor_Application 27 Jul26.pdf"
  },
  {
   "org": "BSIA",
@@ -13497,6 +13515,2129 @@
   ],
   "xlsx": "lab-standards/BSIA-lab-standard.xlsx",
   "cs_pdf": "competency-standards/BSIA/6. BSIA_Semiconductor Testing Engineering_31 Aug 26.pdf"
+ },
+ {
+  "org": "BTMA",
+  "org_slug": "BTMA",
+  "course_name": "Production Process in Yarn Manufacturing",
+  "sheet": "Yarn Manufacturing",
+  "sector": "Textile",
+  "trainees": 25,
+  "space": "Classroom – 500 sft (46.45 sqm)\nWorkshop/Lab – 1500 sft (140 sqm)\nOR\nClassroom cum workshop – 1800 sft (167 sqm)",
+  "boilerplate": "•The institute shall not use the same facilities for any other projects/organizations offering a similar course.\n•The institute must provide sufficient evidence to prove ownership of the proposed training equipment.\nThe list denotes the minimum training equipment and facility required to effectively conduct training for a specific course. Additionally, the institute must ensure that all other necessary training tools, equipment, and furniture are available to meet the requirement of competency standards (CS) provided by SICIP.\nFor the operation of training course on Production Process in Yarn Manufacturing, the institute must ensure the availability of at least 80% of the major training equipment and training facilities (according to the CS) to be eligible for SICIP training delivery. If the score is below 80%, the remaining equipment and facilities need to be installed before the commencement of the training.\nWhere a training institute does not possess the full-scale production machinery, the institute must establish a formal linkage with a spinning mill so that the practical sessions of the occupation-specific units can be conducted in an actual workplace under supervision.\nThe institute will also provide all other hand tools and power tools as per CS for 25 trainees. Also, they will arrange adequate seating arrangement and classroom setup for the 25 trainees.",
+  "note": null,
+  "min_rules": [],
+  "approved": null,
+  "equipment": [
+   {
+    "name": "Computer/Laptop",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Multimedia projector & screen",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Printer",
+    "required": 1,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Scanner",
+    "required": 1,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Internet connection with Wi-Fi facility",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Whiteboard with accessories",
+    "required": 1,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Bale opener/plucker with mixing arrangement",
+    "required": 1,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "Blow room line (opener, cleaner, mixer, condenser/chute feed)",
+    "required": 1,
+    "weight": 9,
+    "remark": "1 set"
+   },
+   {
+    "name": "Carding machine",
+    "required": 1,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Draw frame (breaker and finisher)",
+    "required": 2,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Lap former/Unilap machine",
+    "required": 1,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "Comber machine",
+    "required": 1,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "Speed frame (Simplex)",
+    "required": 1,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Ring frame",
+    "required": 1,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Winding machine (drum winder/autoconer)",
+    "required": 1,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Humidification unit/yarn conditioning arrangement",
+    "required": 1,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Wrap reel with wrap block",
+    "required": 2,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Electronic balance (0.001 g and 0.01 g accuracy)",
+    "required": 1,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Lea strength tester/single yarn strength tester",
+    "required": 1,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Twist tester",
+    "required": 1,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Evenness tester (U%/CV%)",
+    "required": 1,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Trash analyser",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Moisture meter",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Hygrometer and thermometer set",
+    "required": 2,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Tachometer",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Feeler gauge and setting gauge set",
+    "required": 5,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Hand lens/magnifier with nep counting board",
+    "required": 5,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Hand tool set (spanner, screwdriver, plier, nipper, hook)",
+    "required": 5,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Cot buffing machine",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Traveller gauge and traveller set (assorted)",
+    "required": 2,
+    "weight": 3,
+    "remark": "2 sets"
+   },
+   {
+    "name": "Sliver cans, roving bobbins, ring tubes/cops, paper cones",
+    "required": null,
+    "weight": 3,
+    "remark": "As required"
+   },
+   {
+    "name": "Material handling trolley for cans, bobbins and cones",
+    "required": 4,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Industrial vacuum cleaner/air blowing gun",
+    "required": 2,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Waste segregation bins (colour coded)",
+    "required": 4,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Tool board and storage cabinet",
+    "required": 2,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Fire extinguisher",
+    "required": 2,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "First aid box",
+    "required": 1,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "PPE set (dust mask, ear plug, gloves, apron, cap, safety shoes)",
+    "required": 25,
+    "weight": 4,
+    "remark": "25 sets"
+   }
+  ],
+  "xlsx": "lab-standards/BTMA-lab-standard.xlsx",
+  "cs_pdf": "competency-standards/BTMA/260820 CS_PPYM_Draft.pdf"
+ },
+ {
+  "org": "BTMA",
+  "org_slug": "BTMA",
+  "course_name": "Production Process in Wet Processing",
+  "sheet": "Wet Processing",
+  "sector": "Textile",
+  "trainees": 25,
+  "space": "Classroom – 500 sft (46 sqm)\nWorkshop/Lab – 6,000 sft (557 sqm)\nOR\nClassroom cum workshop – 6,500 sft (603 sqm)",
+  "boilerplate": "•The institute shall not use the same facilities for any other projects/organizations offering a similar course.\n•The institute must provide sufficient evidence to prove ownership of the proposed training equipment.\nThe list denotes the minimum training equipment and facility required to effectively conduct training for a specific course. Additionally, the institute must ensure that all other necessary training tools, equipment, and furniture are available to meet the requirement of competency standards (CS) provided by SICIP.\nFor the operation of training course on Production Process in Wet Processing, the institute must ensure the availability of at least 80% of the major training equipment and training facilities (according to the CS) to be eligible for SICIP training delivery. If the score is below 80%, the remaining equipment and facilities need to be installed before the commencement of the training.\nThe workshop/lab must have an impervious, anti-slip and properly drained floor, adequate ventilation and exhaust, a separate and ventilated chemical store, a separate colour kitchen area, and a safe steam, water and effluent connection.\nBecause full-scale wet processing machinery is capital-intensive, a training institute that does not possess production-scale machines must establish a formal linkage with a dyeing, printing and finishing unit so that the practical sessions of the occupation-specific units can be conducted in an actual workplace under supervision.\nThe institute will also provide all other hand tools and power tools as per CS for 25 trainees. Also, they will arrange adequate seating arrangement and classroom setup for the 25 trainees.",
+  "note": null,
+  "min_rules": [],
+  "approved": null,
+  "equipment": [
+   {
+    "name": "Computer/Laptop",
+    "required": 2,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Multimedia projector & screen",
+    "required": 2,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Printer",
+    "required": 1,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Scanner",
+    "required": 1,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Internet connection with Wi-Fi facility",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Whiteboard with accessories",
+    "required": 2,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Sample/laboratory dyeing machine (infrared or glycerine bath, 8–12 pot)",
+    "required": 1,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Laboratory padding mangle (padder) with pressure adjustment",
+    "required": 1,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Sample dryer/relax dryer cum curing machine",
+    "required": 1,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "Flat-bed screen printing table with squeegee set (Lab Version)",
+    "required": 1,
+    "weight": 9,
+    "remark": "1 set"
+   },
+   {
+    "name": "Screen frames, screens and squeegees (assorted mesh)",
+    "required": 5,
+    "weight": 7,
+    "remark": "5 sets"
+   },
+   {
+    "name": "Print paste mixer/stirrer with homogenizer",
+    "required": 1,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "Colour kitchen arrangement with dissolving vessels, stirrers and dosing tanks",
+    "required": 1,
+    "weight": 9,
+    "remark": "1 set"
+   },
+   {
+    "name": "Analytical balance (0.001 g accuracy)",
+    "required": 1,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Electronic balance (0.01 g accuracy)",
+    "required": 2,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Platform/bulk weighing balance",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Digital pH meter with buffer solutions",
+    "required": 2,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Spectrophotometer with colour matching software and computer",
+    "required": 1,
+    "weight": 7,
+    "remark": "1 set"
+   },
+   {
+    "name": "Light box/colour matching cabinet (D65, TL84, CWF, UV, incandescent A)",
+    "required": 1,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Crock meter (rubbing fastness tester)",
+    "required": 1,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Wash fastness tester (launder-o-meter/rota wash)",
+    "required": 1,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Perspiration tester with oven",
+    "required": 1,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Grey scale set for colour change and staining",
+    "required": 2,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "GSM cutter with GSM balance",
+    "required": 2,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Shrinkage and spirality template with steel scale",
+    "required": 2,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Hydrometer/Baume meter set",
+    "required": 2,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Viscometer or flow cup for print paste",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Digital thermometer and temperature probe",
+    "required": 5,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Moisture meter",
+    "required": 2,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Laboratory glassware set (beaker, measuring cylinder, pipette, burette, funnel, flask)",
+    "required": 5,
+    "weight": 5,
+    "remark": "5 sets"
+   },
+   {
+    "name": "Titration and laboratory chemical testing set",
+    "required": 2,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Strength tester (tensile/tearing/bursting) where available",
+    "required": 1,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Pilling and abrasion tester (where available)",
+    "required": 1,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Fabric inspection machine with lighting arrangement",
+    "required": 1,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Grey, pre-treated, dyed, printed and finished fabric samples (knit and woven)",
+    "required": null,
+    "weight": 3,
+    "remark": "As required"
+   },
+   {
+    "name": "Dyes – reactive, disperse, direct, vat, sulphur, acid and pigment",
+    "required": null,
+    "weight": 3,
+    "remark": "As required"
+   },
+   {
+    "name": "Chemicals and auxiliaries for pre-treatment, dyeing, printing and finishing",
+    "required": null,
+    "weight": 3,
+    "remark": "As required"
+   },
+   {
+    "name": "Chemical storage rack/cabinet with segregation arrangement",
+    "required": 2,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Eye wash station and emergency safety shower",
+    "required": 1,
+    "weight": 4,
+    "remark": "1 set"
+   },
+   {
+    "name": "Chemical spill kit with absorbent and neutralizing material",
+    "required": 2,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Exhaust/ventilation arrangement for the laboratory and colour kitchen",
+    "required": 1,
+    "weight": 4,
+    "remark": "1 set"
+   },
+   {
+    "name": "Soft water supply/water softening arrangement",
+    "required": 1,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Waste segregation bins (colour coded)",
+    "required": 4,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Tool board with hand tool set (spanner, screwdriver, plier, scissors)",
+    "required": 5,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Fire extinguisher (appropriate types for chemical and electrical fire)",
+    "required": 4,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "First aid box with eye wash bottle",
+    "required": 2,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "PPE set (chemical goggles, chemical gloves, heat-resistant gloves, nose mask, apron, rubber boots, cap)",
+    "required": 25,
+    "weight": 4,
+    "remark": "25 sets"
+   }
+  ],
+  "xlsx": "lab-standards/BTMA-lab-standard.xlsx",
+  "cs_pdf": "competency-standards/BTMA/260823 CS_PPWP_Draft.pdf"
+ },
+ {
+  "org": "BTMA",
+  "org_slug": "BTMA",
+  "course_name": "Production Process in Fabric Manufacturing",
+  "sheet": "Fabric Manufacturing",
+  "sector": "Textile",
+  "trainees": 25,
+  "space": "Classroom - 400 sft (37 sqm)\nWorkshop/Lab - 1800 sft (167 sqm)\nOR\nClassroom cum workshop - 2100 sft (195 sqm)",
+  "boilerplate": "•The institute shall not use the same facilities for any other projects/organizations offering a similar course.\n•The institute must provide sufficient evidence to prove ownership of the proposed training equipment.\nThe list denotes the minimum training equipment and facility required to effectively conduct training for a specific course. Additionally, the institute must ensure that all other necessary training tools, equipment, and furniture are available to meet the requirement of competency standards (CS) provided by SICIP.\nFor the operation of training course on Production Process in Fabric Manufacturing, the institute must ensure the availability of at least 80% of the major training equipment and training facilities (according to the CS) to be eligible for SICIP training delivery. If the score is below 80%, the remaining equipment and facilities need to be installed before the commencement of the training.\nWhere a training institute does not possess the full-scale production machinery, the institute must establish a formal linkage with a weaving and/or knitting factory so that the practical sessions of the occupation-specific units can be conducted in an actual workplace under supervision.\nThe institute will also provide all other hand tools and power tools as per CS for 25 trainees. Also, they will arrange adequate seating arrangement and classroom setup for the 25 trainees.",
+  "note": null,
+  "min_rules": [],
+  "approved": null,
+  "equipment": [
+   {
+    "name": "Computer/Laptop",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Multimedia projector & screen",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Printer",
+    "required": 1,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Scanner",
+    "required": 1,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Internet connection with Wi-Fi facility",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Whiteboard with accessories",
+    "required": 1,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Cone/cheese winding machine (drum winder)",
+    "required": 1,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Pirn winding machine",
+    "required": 1,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "Direct (beam) warping machine with creel",
+    "required": 1,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Sectional warping machine with creel",
+    "required": 1,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Sizing machine with drying arrangement",
+    "required": 1,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Size cooking vessel with stirrer and service tank",
+    "required": 1,
+    "weight": 7,
+    "remark": "1 set"
+   },
+   {
+    "name": "Drawing-in frame with stand and accessories",
+    "required": 2,
+    "weight": 7,
+    "remark": "2 sets"
+   },
+   {
+    "name": "Healds, heald frames, reeds and drop wires (assorted)",
+    "required": null,
+    "weight": 4,
+    "remark": "As required"
+   },
+   {
+    "name": "Warp tying/knotting machine",
+    "required": 1,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Shuttle loom (power loom)",
+    "required": 1,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Rapier loom",
+    "required": 1,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Air-jet loom",
+    "required": 1,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Dobby shedding attachment/dobby loom",
+    "required": 1,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Jacquard shedding attachment/jacquard loom",
+    "required": 1,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Single jersey circular knitting machine",
+    "required": 1,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Rib/interlock circular knitting machine",
+    "required": 1,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Flat bed knitting machine (manual/semi-automatic)",
+    "required": 2,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Computerized flat bed knitting machine",
+    "required": 1,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Fabric inspection machine with light box",
+    "required": 1,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Colour matching cabinet (D65, TL84, CWF, UV)",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Fabric folding and rolling table with length counter",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "GSM cutter and GSM balance",
+    "required": 2,
+    "weight": 5,
+    "remark": "2 sets"
+   },
+   {
+    "name": "Electronic balance (0.001 g and 0.01 g accuracy)",
+    "required": 2,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Pick glass/counting glass and magnifier",
+    "required": 10,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Stitch length (course length) measuring device",
+    "required": 5,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Yarn tension meter",
+    "required": 2,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Reed hook, drawing hook and denting hook set",
+    "required": 10,
+    "weight": 3,
+    "remark": "10 sets"
+   },
+   {
+    "name": "Needle, sinker and needle removal tool set",
+    "required": 5,
+    "weight": 3,
+    "remark": "5 sets"
+   },
+   {
+    "name": "Hand tool set (spanner, screwdriver, plier, nipper)",
+    "required": 5,
+    "weight": 3,
+    "remark": "5 sets"
+   },
+   {
+    "name": "Measuring tape and steel rule",
+    "required": 25,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Viscometer/Brix meter, pH meter and thermometer",
+    "required": 1,
+    "weight": 5,
+    "remark": "1 set"
+   },
+   {
+    "name": "Material handling trolley for beams, packages and fabric rolls",
+    "required": 4,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Industrial vacuum cleaner/air blowing gun",
+    "required": 2,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Lockout-tagout kit",
+    "required": 2,
+    "weight": 4,
+    "remark": "2 sets"
+   },
+   {
+    "name": "Waste segregation bins (colour coded)",
+    "required": 4,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Tool board and storage cabinet",
+    "required": 2,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Fire extinguisher",
+    "required": 2,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "First aid box",
+    "required": 1,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "PPE set (dust mask, ear plug, gloves, apron, cap, safety shoes)",
+    "required": 25,
+    "weight": 4,
+    "remark": "25 sets"
+   }
+  ],
+  "xlsx": "lab-standards/BTMA-lab-standard.xlsx",
+  "cs_pdf": "competency-standards/BTMA/260825 CS_PPFM_Draft.pdf"
+ },
+ {
+  "org": "BTMA",
+  "org_slug": "BTMA",
+  "course_name": "Productivity Improvement and Quality Control in Yarn",
+  "sheet": "QC in Yarn",
+  "sector": "Textile",
+  "trainees": 25,
+  "space": "Classroom – 600 sft (56 sqm)\nTesting laboratory/workshop – 1500 sft (140 sqm), OR\nClassroom cum laboratory/workshop – 2000 sft (186 sqm)",
+  "boilerplate": "•The institute shall not use the same facilities for any other projects/organizations offering a similar course.\n•The institute must provide sufficient evidence to prove ownership of the proposed training equipment.\nThe list denotes the minimum training equipment and facility required to effectively conduct training for a specific course. Additionally, the institute must ensure that all other necessary training tools, equipment, and furniture are available to meet the requirement of competency standards (CS) provided by SICIP.\nFor the operation of training course on Productivity Improvement and Quality Control in Yarn, the institute must ensure the availability of at least 80% of the major training equipment and training facilities (according to the CS) to be eligible for SICIP training delivery. If the score is below 80%, the remaining equipment and facilities need to be installed before the commencement of the training.\nThis occupation requires observation, measurement and analysis to be carried out on running production machinery. Where a training institute does not possess a full-scale spinning line and a fully equipped yarn testing laboratory, the institute must establish a formal linkage with a spinning mill so that the practical sessions of the occupation-specific units – particularly in-process quality control, yarn testing, fault and contamination control, productivity measurement and waste control – can be conducted in an actual workplace under supervision.\nThe institute will also provide all other hand tools and power tools as per CS for 25 trainees. Also, they will arrange adequate seating arrangement and classroom setup for the 25 trainees.",
+  "note": null,
+  "min_rules": [],
+  "approved": null,
+  "equipment": [
+   {
+    "name": "Computer/Laptop",
+    "required": 2,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Multimedia projector & screen",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Printer",
+    "required": 1,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Scanner",
+    "required": 1,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Internet connection with Wi-Fi facility",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Whiteboard with accessories",
+    "required": 1,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Scientific calculator",
+    "required": 5,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Standard testing atmosphere control unit (20 ± 2 °C, 65 ± 2% RH)",
+    "required": 1,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "High Volume Instrument (HVI) or equivalent fibre testing system",
+    "required": 1,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Advanced Fibre Information System (AFIS) or equivalent",
+    "required": 1,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Micronaire (fineness) tester",
+    "required": 1,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Fibrograph/comb sorter/Baer sorter for fibre length",
+    "required": 1,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "Bundle strength tester (Pressley/Stelometer)",
+    "required": 1,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "Trash analyser (Shirley type)",
+    "required": 1,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Fibre identification kit (burning, solubility, melting point apparatus)",
+    "required": 1,
+    "weight": 7,
+    "remark": "1 set"
+   },
+   {
+    "name": "Stereo/projection microscope with slide preparation set",
+    "required": 1,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Hot air oven for moisture determination",
+    "required": 1,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Moisture meter",
+    "required": 1,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Electronic balance (0.001 g accuracy)",
+    "required": 1,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Electronic balance (0.01 g accuracy)",
+    "required": 2,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Platform weighing scale for waste and package weighing",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Wrap reel with wrap block (sliver, roving and yarn)",
+    "required": 3,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Digital sliver/lap weighing scale",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Twist tester",
+    "required": 2,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Lea strength tester (CSP)",
+    "required": 1,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Single yarn strength tester (CRE type) with elongation measurement",
+    "required": 1,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Evenness tester with imperfection, spectrogram and hairiness facility",
+    "required": 1,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Yarn fault classification system (Classimat or equivalent)",
+    "required": 1,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Black board winder with appearance grading cabinet and standard photographs",
+    "required": 1,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Yarn conditioning chamber",
+    "required": 1,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "Nep counting board and hand lens/magnifier",
+    "required": 5,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Whirling/digital hygrometer and thermometer set",
+    "required": 5,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Anemometer",
+    "required": 2,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Lux meter",
+    "required": 2,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Sound level meter",
+    "required": 2,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Tachometer",
+    "required": 3,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Stop watch",
+    "required": 10,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Feeler, setting and thickness gauge set",
+    "required": 5,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Cot hardness (shore) tester",
+    "required": 1,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Cot buffing machine",
+    "required": 1,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Traveller gauge and traveller sample set (assorted)",
+    "required": 2,
+    "weight": 5,
+    "remark": "2 sets"
+   },
+   {
+    "name": "Hand tool set (spanner, screwdriver, plier, nipper, hook)",
+    "required": 5,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Standard weights and reference/standard test materials",
+    "required": 2,
+    "weight": 6,
+    "remark": "2 sets"
+   },
+   {
+    "name": "Sample set of fibre, lap, sliver, roving and yarn of different counts",
+    "required": null,
+    "weight": 5,
+    "remark": "As required"
+   },
+   {
+    "name": "Yarn fault and contamination reference sample board",
+    "required": 3,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Colour coded waste segregation bins and containers",
+    "required": 6,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Material handling trolley",
+    "required": 2,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Industrial vacuum cleaner/air blowing gun",
+    "required": 2,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Tool board, storage cabinet and sample storage rack",
+    "required": 3,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Fire extinguisher",
+    "required": 2,
+    "weight": 4,
+    "remark": null
+   }
+  ],
+  "xlsx": "lab-standards/BTMA-lab-standard.xlsx",
+  "cs_pdf": "competency-standards/BTMA/260902 CS_PIQCY_Draft.pdf"
+ },
+ {
+  "org": "BTMA",
+  "org_slug": "BTMA",
+  "course_name": "Productivity Improvement and Quality Control in Fabric",
+  "sheet": "QC in Fabric",
+  "sector": "Textile",
+  "trainees": 25,
+  "space": "Classroom - 400 sft (37 sqm)\nWorkshop/Lab - 1800 sft (167 sqm), OR\nClassroom cum workshop - 2100 sft (195 sqm)",
+  "boilerplate": "•The institute shall not use the same facilities for any other projects/organizations offering a similar course.\n•The institute must provide sufficient evidence to prove ownership of the proposed training equipment.\nThe list denotes the minimum training equipment and facility required to effectively conduct training for a specific course. Additionally, the institute must ensure that all other necessary training tools, equipment, and furniture are available to meet the requirement of competency standards (CS) provided by SICIP.\nFor the operation of training course on Productivity Improvement and Quality Control in Fabric, the institute must ensure the availability of at least 80% of the major training equipment and training facilities (according to the CS) to be eligible for SICIP training delivery. If the score is below 80%, the remaining equipment and facilities need to be installed before the commencement of the training.\nWhere a training institute does not possess the full-scale production machinery, the institute must establish a formal linkage with a weaving and/or knitting factory so that the practical sessions of the occupation-specific units can be conducted in an actual workplace under supervision.\nThe institute will also provide all other hand tools and power tools as per CS for 25 trainees. Also, they will arrange adequate seating arrangement and classroom setup for the 25 trainees.",
+  "note": null,
+  "min_rules": [],
+  "approved": null,
+  "equipment": [
+   {
+    "name": "Computer/Laptop",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Multimedia projector & screen",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Printer",
+    "required": 1,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Scanner",
+    "required": 1,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Internet connection with Wi-Fi facility",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Whiteboard with accessories",
+    "required": 1,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Cone/cheese winding machine (drum winder)",
+    "required": 1,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Warping machine with creel",
+    "required": 1,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Sizing machine with drying arrangement",
+    "required": 1,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Shuttle loom (power loom)",
+    "required": 1,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Rapier loom",
+    "required": 1,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Air-jet loom",
+    "required": 1,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Projectile loom",
+    "required": 1,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Single/double jersey circular knitting machine",
+    "required": 1,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Flat bed knitting machine (manual/semi-automatic)",
+    "required": 2,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Computerized flat bed knitting machine",
+    "required": 1,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Fabric inspection machine with light box",
+    "required": 1,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "GSM cutter and GSM balance",
+    "required": 2,
+    "weight": 8,
+    "remark": "2 sets"
+   },
+   {
+    "name": "Electronic balance (0.001 g and 0.01 g accuracy)",
+    "required": 2,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Counting glass and magnifier",
+    "required": 10,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Hand tool set (spanner, screwdriver, plier, nipper)",
+    "required": 5,
+    "weight": 3,
+    "remark": "5 sets"
+   },
+   {
+    "name": "Measuring tape and steel rule",
+    "required": 10,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Fire extinguisher",
+    "required": 2,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "First aid box",
+    "required": 1,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "PPE set (dust mask, ear plug, gloves, apron, cap, safety shoes)",
+    "required": 25,
+    "weight": 4,
+    "remark": "25 sets"
+   },
+   {
+    "name": "Stopwatch/timer (for time and motion/productivity study)",
+    "required": 5,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Scientific calculator",
+    "required": 25,
+    "weight": 4,
+    "remark": null
+   }
+  ],
+  "xlsx": "lab-standards/BTMA-lab-standard.xlsx",
+  "cs_pdf": "competency-standards/BTMA/260903 CS_PIQCF_Draft.pdf"
+ },
+ {
+  "org": "BTMA",
+  "org_slug": "BTMA",
+  "course_name": "Industrial Electrical and Electronic Technology for Textile Industry",
+  "sheet": "Elec & Electronic Tech",
+  "sector": "Textile",
+  "trainees": 25,
+  "space": "Classroom – 400 sft (37 sqm)\nWorkshop/Lab – 1,250 sft (116 sqm) OR\nClassroom cum Workshop – 1,550 sft (144 sqm)",
+  "boilerplate": "•The institute shall not use the same facilities for any other projects/organizations offering a similar course.\n•The institute must provide sufficient evidence to prove ownership of the proposed training equipment.\nThe list denotes the minimum training equipment and facility required to effectively conduct training for a specific course. Additionally, the institute must ensure that all other necessary training tools, equipment, and furniture are available to meet the requirement of competency standards (CS) provided by SICIP.\nFor the operation of training course on Industrial Electrical and Electronic Technology for Textile Industry, the institute must ensure the availability of at least 80% of the major training equipment and training facilities (according to the CS) to be eligible for SICIP training delivery. If the score is below 80%, the remaining equipment and facilities need to be installed before the commencement of the training.\nThe institute is encouraged to establish a partnership with at least one textile mill for industry visits and on-machine practical sessions.\nPreconditions and Utility Requirements: Three-phase 400 V utility supply with adequate capacity (minimum 30 kVA) with an approved metering system; Adequate illumination and natural/mechanical ventilation; lab area kept free of lint and dust; Separate clean earth for PLC/electronic trainers and proper equipment earthing throughout the workshop; Emergency stop/isolation switch, fire extinguishers and first aid kit in the workshop; Internet connectivity for software updates, video-based learning and manufacturer resources\nThe institute will also provide all other hand tools and power tools as per CS for 25 trainees. Also, they will arrange adequate seating arrangement and classroom setup for the 25 trainees.",
+  "note": null,
+  "min_rules": [],
+  "approved": null,
+  "equipment": [
+   {
+    "name": "Computer/laptop with PLC, HMI, drive and circuit simulation software",
+    "required": 10,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Multimedia projector with projection screen",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Internet connectivity for video-based and flipped-classroom delivery",
+    "required": 1,
+    "weight": 5,
+    "remark": "01 line"
+   },
+   {
+    "name": "Whiteboard with accessories",
+    "required": 1,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Training seating set and instructor desk",
+    "required": 25,
+    "weight": 4,
+    "remark": "25+01"
+   },
+   {
+    "name": "Charts/models: electrical symbols, single-line diagram, textile process flow, motor control circuits, safety signs, electric-shock treatment",
+    "required": 1,
+    "weight": 5,
+    "remark": "01 set"
+   },
+   {
+    "name": "Diesel generator set, 3-phase 400/230 V, ≥10 kVA with AMF/ATS panel",
+    "required": 1,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "Main LT panel 3-phase 400 V (incoming MCCB/ACB, busbar, CTs, voltmeter/ammeter/energy meter, outgoing MCCBs/MCBs, indicator lamps)",
+    "required": 1,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Motor control centre (MCC) demonstration panel with feeders",
+    "required": 1,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "Sub-distribution boards (with MCB, MCCB, RCCB/ELCB, SPD)",
+    "required": 5,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Transformer bank, 3 × single-phase 2–5 kVA, 400/230 V",
+    "required": 1,
+    "weight": 8,
+    "remark": "01 set"
+   },
+   {
+    "name": "Automatic power factor correction (APFC) panel with capacitor bank ≥10 kVAr and PF controller",
+    "required": 1,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "3-phase energy meter (direct and CT-operated) and single-phase energy meter",
+    "required": 2,
+    "weight": 7,
+    "remark": "02 + 02"
+   },
+   {
+    "name": "Load bank: resistive/inductive, 3-phase, ~5 kW",
+    "required": 2,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Battery bank 12 V/24 V ≥50 Ah with charger and battery bench",
+    "required": 1,
+    "weight": 6,
+    "remark": "01 set"
+   },
+   {
+    "name": "Busbar trunking system with tap-off boxes (demonstration length)",
+    "required": 1,
+    "weight": 6,
+    "remark": "01 set"
+   },
+   {
+    "name": "Cable tray (perforated and ladder) with supports and accessories",
+    "required": 2,
+    "weight": 5,
+    "remark": "02 sets"
+   },
+   {
+    "name": "Earthing installation training set (rod, plate/chemical electrode, earth pit with chamber, accessories)",
+    "required": 2,
+    "weight": 7,
+    "remark": "02 sets"
+   },
+   {
+    "name": "Lightning protection and surge protection demonstration set",
+    "required": 1,
+    "weight": 6,
+    "remark": "01 set"
+   },
+   {
+    "name": "3-phase squirrel cage induction motor, 3–5 HP, 400 V (IE3, TEFC)",
+    "required": 6,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Single-phase motor 0.5–1 HP",
+    "required": 4,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "DC motor with controller (demonstration)",
+    "required": 1,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Servo motor with servo drive (demonstration)",
+    "required": 1,
+    "weight": 8,
+    "remark": "01 set"
+   },
+   {
+    "name": "Motor starter panels: DOL ×2, star-delta ×2, forward-reverse ×2 (contactor, overload relay, timer, push buttons, selector switch, indicator lamps)",
+    "required": 6,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Magnetic contactors with thermal overload relay (spare/for practice)",
+    "required": 25,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Motor protection circuit breakers (MPCB) and phase failure relays",
+    "required": 6,
+    "weight": 8,
+    "remark": "06 + 04"
+   },
+   {
+    "name": "Variable frequency drive (VFD) 0.75–5.5 kW with keypad, manual and PC software",
+    "required": 6,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Soft starter 5.5–7.5 kW",
+    "required": 2,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Line reactor, EMC filter and braking resistor set for VFD",
+    "required": 2,
+    "weight": 7,
+    "remark": "02 sets"
+   },
+   {
+    "name": "Encoder/tachometer for speed feedback",
+    "required": 2,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "PLC trainer (compact PLC with ≥14 DI, 10 DO, 2 AI, 1 AO; e.g., Siemens S7-1200, Mitsubishi FX5, Delta or equivalent) with programming software and cable",
+    "required": 10,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "HMI touch panel 7\" with software",
+    "required": 10,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Industrial communication kit (Modbus RTU/TCP, Profinet/Ethernet switch, cables)",
+    "required": 10,
+    "weight": 8,
+    "remark": "10 sets"
+   },
+   {
+    "name": "Sensor training kit: inductive, capacitive, proximity, photoelectric, fibre-optic, yarn break sensor, limit switch, level switch, pressure switch",
+    "required": 10,
+    "weight": 9,
+    "remark": "10 sets"
+   },
+   {
+    "name": "Temperature sensors (RTD Pt100, thermocouple K) with transmitters and temperature controller",
+    "required": 10,
+    "weight": 8,
+    "remark": "10 sets"
+   },
+   {
+    "name": "Pressure transmitter (4–20 mA) and level transmitter",
+    "required": 10,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "Load cell/tension sensor with amplifier",
+    "required": 1,
+    "weight": 6,
+    "remark": "01 set"
+   },
+   {
+    "name": "Process calibrator (mA/V/RTD/TC simulator)",
+    "required": 2,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Electronic circuit trainer (power supply, transistor, op-amp, timer, logic, SCR/TRIAC, IGBT, dimmer, modules)",
+    "required": 6,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Breadboards, component kits and PCB practice boards",
+    "required": 13,
+    "weight": 6,
+    "remark": "13 sets"
+   },
+   {
+    "name": "Soldering/desoldering station with anti-static mat and wrist strap",
+    "required": 6,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Digital storage oscilloscope, ≥50 MHz, 2-channel",
+    "required": 5,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "Function/signal generator",
+    "required": 5,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Regulated DC power supply, 0–30 V/5 A",
+    "required": 6,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Textile machine electrical training module (simulated machine with motor, VFD, PLC/HMI, sensors, stop motions and fault-insertion facility) OR access to actual textile machines through industry partnership",
+    "required": 1,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Wiring/panel practice boards with DIN rail, trunking, terminal blocks",
+    "required": 12,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Work bench with bench vice",
+    "required": 6,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Tool storage cabinet",
+    "required": 2,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Material storage rack",
+    "required": 2,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Fire extinguishers (CO2 and dry powder) and first aid kit with CPR chart",
+    "required": 2,
+    "weight": 4,
+    "remark": "02 + 01"
+   },
+   {
+    "name": "PPE set (safety glasses, insulated gloves, helmet, dust mask, safety shoes) for trainees",
+    "required": 25,
+    "weight": 4,
+    "remark": "25 sets"
+   },
+   {
+    "name": "LOTO kit (locks, tags, hasps)",
+    "required": 5,
+    "weight": 4,
+    "remark": "05 sets"
+   },
+   {
+    "name": "Insulated screwdriver set",
+    "required": 25,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Combination pliers",
+    "required": 25,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Long-nose pliers",
+    "required": 13,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Wire stripper and cutter",
+    "required": 25,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Crimping pliers (ferrule and lug)",
+    "required": 13,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Hydraulic cable lug crimper",
+    "required": 2,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Neon tester/voltage detector",
+    "required": 25,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Digital multimeter (true RMS), energy meter",
+    "required": 20,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Clamp meter (AC/DC, true RMS)",
+    "required": 8,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Insulation resistance tester (Megger) 1000 V",
+    "required": 3,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Earth resistance tester",
+    "required": 2,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Phase sequence tester",
+    "required": 3,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Power quality analyzer (3-phase, harmonic analysis)",
+    "required": 2,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Digital tachometer (contact/non-contact)",
+    "required": 3,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Infrared thermometer/thermal imaging camera",
+    "required": 2,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Vibration meter",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Electric drill and impact driver",
+    "required": 5,
+    "weight": 3,
+    "remark": "05 + 03"
+   },
+   {
+    "name": "Angle grinder",
+    "required": 2,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Hack saw, pipe cutter, conduit bender",
+    "required": 5,
+    "weight": 3,
+    "remark": "05 each"
+   },
+   {
+    "name": "Hammer and chisel set",
+    "required": 5,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Spanner/socket set and torque wrench",
+    "required": 5,
+    "weight": 3,
+    "remark": "05 + 02"
+   },
+   {
+    "name": "Measuring tape and spirit level",
+    "required": 5,
+    "weight": 3,
+    "remark": "05 each"
+   },
+   {
+    "name": "Cable pulling tools and fish tape",
+    "required": 5,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Ladder",
+    "required": 2,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Toolbox",
+    "required": 5,
+    "weight": 3,
+    "remark": null
+   }
+  ],
+  "xlsx": "lab-standards/BTMA-lab-standard.xlsx",
+  "cs_pdf": "competency-standards/BTMA/260916a CS_IEET_MM_MN_Draft.pdf"
+ },
+ {
+  "org": "BTMA",
+  "org_slug": "BTMA",
+  "course_name": "Machine Management and Maintenance (Mechanical) for Textile Industry",
+  "sheet": "Machine Mgmt & Maint",
+  "sector": "Textile",
+  "trainees": 25,
+  "space": "Classroom - 400 sft (37 sqm)\nWorkshop/Lab - 2000 sft (186 sqm), OR\nClassroom cum workshop - 2300 sft (214 sqm)",
+  "boilerplate": "•The institute shall not use the same facilities for any other projects/organizations offering a similar course.\n•The institute must provide sufficient evidence to prove ownership of the proposed training equipment.\nThe list denotes the minimum training equipment and facility required to effectively conduct training for a specific course. Additionally, the institute must ensure that all other necessary training tools, equipment, and furniture are available to meet the requirement of competency standards (CS) provided by SICIP.\nFor the operation of training course on Machine Management and Maintenance (Mechanical) for Textile Industry, the institute must ensure the availability of at least 80% of the major training equipment and training facilities (according to the CS) to be eligible for SICIP training delivery. If the score is below 80%, the remaining equipment and facilities need to be installed before the commencement of the training.\nWhere a training institute does not possess the full range of production and maintenance machinery, the institute must establish a formal linkage with a spinning, weaving and/or knitting mill's maintenance department so that the practical sessions of the occupation-specific units can be conducted on actual production machinery under supervision.\nThe institute will also provide all other hand tools and power tools as per CS for 25 trainees. Also, they will arrange adequate seating arrangement and classroom setup for the 25 trainees.",
+  "note": null,
+  "min_rules": [],
+  "approved": null,
+  "equipment": [
+   {
+    "name": "Computer/Laptop",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Multimedia projector & screen",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Printer",
+    "required": 1,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Scanner",
+    "required": 1,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Internet connection with Wi-Fi facility",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Whiteboard with accessories",
+    "required": 1,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Sample textile machine sub-assemblies/cutaway models (spinning, weaving, knitting)",
+    "required": 1,
+    "weight": 8,
+    "remark": "1 set"
+   },
+   {
+    "name": "Machine manuals, drawings and maintenance schedule samples",
+    "required": 1,
+    "weight": 6,
+    "remark": "1 set"
+   },
+   {
+    "name": "PPE set (safety helmet, safety shoes, gloves, eye/face protection, ear protection, dust mask)",
+    "required": 25,
+    "weight": 4,
+    "remark": "25 sets"
+   },
+   {
+    "name": "Preventive maintenance checklist and machine history card formats (sample kit)",
+    "required": 1,
+    "weight": 6,
+    "remark": "1 set"
+   },
+   {
+    "name": "Grease gun (manual/pneumatic)",
+    "required": 5,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Oil can/dispenser",
+    "required": 5,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Assorted lubricants and greases (training stock)",
+    "required": 1,
+    "weight": 4,
+    "remark": "1 lot"
+   },
+   {
+    "name": "Vibration pen/meter",
+    "required": 2,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Infrared thermometer/thermal imaging camera",
+    "required": 2,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Mechanic's stethoscope/listening rod",
+    "required": 5,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Tachometer (contact/non-contact)",
+    "required": 2,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Clearance/feeler gauge set",
+    "required": 5,
+    "weight": 6,
+    "remark": "5 sets"
+   },
+   {
+    "name": "Bearing puller set (mechanical/hydraulic)",
+    "required": 3,
+    "weight": 7,
+    "remark": "3 sets"
+   },
+   {
+    "name": "Bearing heater/induction heater",
+    "required": 1,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Assorted bearings, gears, belts, chains and shafts (training stock)",
+    "required": 1,
+    "weight": 5,
+    "remark": "1 lot"
+   },
+   {
+    "name": "Vernier caliper and micrometer set",
+    "required": 5,
+    "weight": 6,
+    "remark": "5 sets"
+   },
+   {
+    "name": "Torque wrench set",
+    "required": 3,
+    "weight": 6,
+    "remark": "3 sets"
+   },
+   {
+    "name": "Hand tool set (spanner, screwdriver, plier, nipper, Allen key)",
+    "required": 5,
+    "weight": 3,
+    "remark": "5 sets"
+   },
+   {
+    "name": "Hydraulic/pneumatic puller",
+    "required": 2,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Chain block/hoist with lifting tackle",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Lifting jack",
+    "required": 2,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Dial gauge with magnetic stand",
+    "required": 5,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Laser shaft alignment tool",
+    "required": 1,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "Straight edge and spirit level set",
+    "required": 5,
+    "weight": 5,
+    "remark": "5 sets"
+   },
+   {
+    "name": "Tension meter",
+    "required": 2,
+    "weight": 6,
+    "remark": null
+   },
+   {
+    "name": "Motor-coupling/drive alignment training rig",
+    "required": 2,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Basic PLC trainer kit with I/O modules",
+    "required": 2,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Sample sensors (proximity, photoelectric, tension) with mounting fixtures",
+    "required": 1,
+    "weight": 7,
+    "remark": "1 set"
+   },
+   {
+    "name": "Mechanical drive training rig (belt/chain/gear drive)",
+    "required": 2,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Arc welding machine",
+    "required": 2,
+    "weight": 8,
+    "remark": null
+   },
+   {
+    "name": "Gas welding/cutting set",
+    "required": 1,
+    "weight": 7,
+    "remark": "1 set"
+   },
+   {
+    "name": "Bench/pedestal grinder",
+    "required": 2,
+    "weight": 7,
+    "remark": null
+   },
+   {
+    "name": "Welding workbench with vice",
+    "required": 4,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Welding PPE (face shield, gloves, apron)",
+    "required": 10,
+    "weight": 4,
+    "remark": "10 sets may be 25 sets"
+   },
+   {
+    "name": "Assorted metal stock, electrodes and welding consumables",
+    "required": 1,
+    "weight": 4,
+    "remark": "1 lot"
+   },
+   {
+    "name": "Spare parts inventory/bin-card training kit",
+    "required": 1,
+    "weight": 5,
+    "remark": "1 set"
+   },
+   {
+    "name": "Lockout-tagout (LOTO) kit",
+    "required": 2,
+    "weight": 4,
+    "remark": "2 sets"
+   },
+   {
+    "name": "Material handling trolley",
+    "required": 2,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Industrial vacuum cleaner/air blowing gun",
+    "required": 2,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Waste segregation bins (colour coded)",
+    "required": 4,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Tool board and storage cabinet",
+    "required": 3,
+    "weight": 3,
+    "remark": null
+   },
+   {
+    "name": "Fire extinguisher",
+    "required": 2,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "First aid box",
+    "required": 1,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Some metals/alloy (Cu, Al, CI, Steel etc.)",
+    "required": 1,
+    "weight": 4,
+    "remark": "1 lot"
+   }
+  ],
+  "xlsx": "lab-standards/BTMA-lab-standard.xlsx",
+  "cs_pdf": "competency-standards/BTMA/260924c CS_MMM-R_MN_Draft.pdf"
  },
  {
   "org": "BWCCI",

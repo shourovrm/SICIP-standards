@@ -1,6 +1,6 @@
 # SICIP Standards Platform
 
-A static site presenting Bangladesh SICIP **Competency Standards (CS)** and **Workshop/Lab Facility Standards** for 22 industry organisations, plus an in-page **facility score calculator**. Deploys to **Cloudflare Pages**. No backend.
+A static site presenting Bangladesh SICIP **Competency Standards (CS)** and **Workshop/Lab Facility Standards** for 23 industry organisations, plus an in-page **facility score calculator**. Deploys to **Cloudflare Pages**. No backend.
 
 ## Token economy
 - If `caveman` plugin/skill available: keep active (full). Terse output always.
@@ -104,8 +104,8 @@ Reconstruct from the workbooks + sectors + filename dates. One entry per course:
 
 ## Repo layout
 ```
-lab-standards/            22 org workbooks + 1 standalone (.xlsx), exact SICIP template
-competency-standards/<ORG>/*.pdf   163 CS as PDFs (docx-only were converted), original filenames (carry the date)
+lab-standards/            23 org workbooks + 1 standalone (.xlsx), exact SICIP template
+competency-standards/<ORG>/*.pdf   171 CS as PDFs (docx-only were converted), original filenames (carry the date)
 data/                     data.json (generated) + xlsx/ per-course single-sheet files (generated)
 web/                      the static site (to build)
 docs/                     reference-lab-index.html, mockups/
@@ -113,7 +113,7 @@ scripts/                  build_lab_standard.py, dump_tail.py, dump_head.py (+ g
 ```
 
 ## Scope
-- **Now:** Lab Standards + Competency Standards + in-page calculator, 163 records.
+- **Now:** Lab Standards + Competency Standards + in-page calculator, 171 records.
 - **Deferred:** CBLMs (~420 docs, ~4.6 GB, some PDFs >25 MB). Would need PDF compression and/or **Cloudflare R2** (10 GB free, no egress, no per-file cap) — not GitHub/Pages-committable. Revisit later.
 
 ## Source of truth
