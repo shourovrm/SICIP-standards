@@ -54,11 +54,26 @@ main{padding:26px 20px 48px}
 .empty{display:none;color:var(--muted);padding:38px 0;text-align:center}
 .empty.show{display:block}
 
-.grid{
-  margin-top:20px;
-  display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));
-  gap:14px;align-items:start;
+.split{margin-top:20px;display:grid;grid-template-columns:250px minmax(0,1fr);gap:22px;align-items:start}
+.rail{
+  position:sticky;top:72px;max-height:calc(100vh - 90px);overflow:auto;
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:6px;
 }
+.rail button{
+  display:flex;width:100%;gap:10px;align-items:baseline;padding:6px 10px;font:inherit;font-size:15px;text-align:left;
+  color:var(--ink);background:none;border:0;border-radius:8px;cursor:pointer;
+}
+.rail button:hover{background:var(--panel)}
+.rail button[aria-current]{background:var(--accent-tint);color:var(--accent-ink);font-weight:600}
+.rail button:disabled{color:var(--faint);cursor:default;background:none}
+.rail span{margin-left:auto;font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+/* phones: native picker replaces the rail */
+.rail-select{
+  display:none;width:100%;padding:11px 12px;font:inherit;font-size:16px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--line-strong);border-radius:10px;box-shadow:var(--shadow);
+}
+.pane{display:grid;gap:14px}
+.rows{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
 .org{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
 .org.dim{display:none}
 .org-hd{
@@ -175,6 +190,12 @@ dialog::backdrop{background:rgba(23,33,28,.35)}
 
 .status{color:var(--muted);padding:40px 0;text-align:center}
 
+@media (max-width:760px){
+  .split{grid-template-columns:minmax(0,1fr);gap:14px}
+  .rail{display:none}
+  .rail-select{display:block}
+  .rows{grid-template-columns:minmax(0,1fr)}
+}
 @media (max-width:640px){
   .top-in{gap:10px;padding:12px 16px}
   .wordmark{font-size:19px}

@@ -63,7 +63,7 @@ One teal accent (links, selection, primary buttons, highlight). No gradient text
 Two top tabs only: **Lab Standards** | **Competency Standards**. (There is NO separate "Score Calculator" tab — calculation lives inside each lab-standard page.)
 
 ## Lab Standards
-- Landing = **searchable org directory** (cards, one per organisation). Search matches **course, sector, AND organisation**; course matches pinpoint+highlight the row, org matches show the whole org (same behaviour as `docs/reference-lab-index.html`).
+- Landing = **searchable org directory**: sticky organisation rail (name + count, "All organisations" first) beside one card per organisation with courses two per row; on phones the rail is a native dropdown. Search shows "N courses in M organisations" under the box. Search matches **course, sector, AND organisation**; course matches pinpoint+highlight the row, org matches show the whole org (same behaviour as `docs/reference-lab-index.html`).
 - Subtitle line is just the counts (e.g. "22 organisations · 163 standards"). Do NOT add "open any to view, calculate a score, or print".
 - **Org card count badge is a DOWNLOAD link** → that organisation's whole `.xlsx` workbook (from `lab-standards/`). Downloads ask for confirmation (see below).
 - **Click a course → its lab-standard page**, which is template-faithful:

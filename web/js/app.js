@@ -4,6 +4,7 @@
 let DATA = [];            // course entries
 let ORGS = [];            // [{org, slug, courses:[entry]}] in source order
 const searchQ = { lab: '', cs: '' };
+const selectedOrg = { lab: '', cs: '' };   // org slug picked in the rail, '' = all
 const view = document.getElementById('view');
 
 const slug = s => s.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
@@ -98,9 +99,12 @@ function directory(kind) {
       placeholder="Search course, sector or organisation…" aria-label="Search"></div>
     <p class="count" id="count"></p>
   </div>
-  <div class="grid" id="grid">
+  <div class="split">
+    <select class="rail-select" id="org-select" aria-label="Organisation"></select>
+    <nav class="rail" id="rail" aria-label="Organisations"></nav>
+    <div class="pane" id="grid">
     ${orgs.map(o => `
-    <section class="org" data-org="${esc((o.slug + ' ' + o.org).toLowerCase())}">
+    <section class="org" data-slug="${esc(o.slug)}" data-org="${esc((o.slug + ' ' + o.org).toLowerCase())}">
       <div class="org-hd">
         <span class="org-name">${esc(o.org)}</span>
         ${isLab
@@ -109,18 +113,19 @@ function directory(kind) {
           : `<a class="org-count" href="#" role="button" data-slug="${esc(o.slug)}"
                title="Download all ${esc(o.org)} competency standards (.zip)">${o.courses.length} ↓</a>`}
       </div>
-      <ul class="course-list">
+      <ul class="course-list rows">
         ${o.courses.map(c => `
         <li class="course" data-course="${esc((c.course_name + ' ' + (c.sector || '')).toLowerCase())}">
           <a href="#/${kind}/${cSlug(c)}">
             <span class="c-name">${esc(c.course_name)}</span>
-            <span class="c-full">${c.sector ? 'Sector: ' + esc(c.sector) : ''}</span>
+            <span class="c-full">${esc([c.sector, c.approved && 'Approved ' + c.approved].filter(Boolean).join(' · '))}</span>
           </a>
         </li>`).join('')}
       </ul>
     </section>`).join('')}
-  </div>
-  <p class="empty" id="empty">No matches.</p>`;
+    <p class="empty" id="empty">No matches.</p>
+    </div>
+  </div>`;
 
   // download confirmation on org badges
   view.querySelectorAll('a.org-count').forEach(a => {
@@ -149,37 +154,64 @@ function directory(kind) {
     if (!term) { node.textContent = text; return; }
     node.innerHTML = esc(text).replace(new RegExp('(' + rxe(esc(term)) + ')', 'ig'), '<mark>$1</mark>');
   };
+  // rail (desktop) and select (phone) list the same organisations with their match counts
+  const rail = document.getElementById('rail'), orgSelect = document.getElementById('org-select');
+  function renderRail(matchCounts) {
+    const total = orgs.reduce((n, o) => n + matchCounts.get(o.slug), 0);
+    const items = [{ slug: '', org: 'All organisations', count: total },
+      ...orgs.map(o => ({ slug: o.slug, org: o.org, count: matchCounts.get(o.slug) }))];
+    const focused = rail.contains(document.activeElement) ? document.activeElement.dataset.slug : null;
+    rail.innerHTML = items.map(i => `
+      <button type="button" data-slug="${esc(i.slug)}" ${i.slug === selectedOrg[kind] ? 'aria-current="true"' : ''}
+        ${i.count ? '' : 'disabled'}>${esc(i.org)}<span>${i.count}</span></button>`).join('');
+    orgSelect.innerHTML = items.map(i => `
+      <option value="${esc(i.slug)}" ${i.slug === selectedOrg[kind] ? 'selected' : ''}
+        ${i.count ? '' : 'disabled'}>${esc(i.org)} (${i.count})</option>`).join('');
+    // the buttons were rebuilt — keep keyboard focus where it was
+    if (focused !== null) [...rail.children].find(b => b.dataset.slug === focused)?.focus();
+  }
   function run() {
     const t = q.value.trim().toLowerCase();
     searchQ[kind] = q.value;
+    const selected = selectedOrg[kind];
+    const matchCounts = new Map();
     let visibleOrgs = 0, hits = 0;
     for (const org of sections) {
-      const courses = [...org.querySelectorAll('.course')];
-      if (!t) {
-        org.classList.remove('dim');
-        courses.forEach(c => { c.classList.remove('off', 'hit'); hl(c.querySelector('.c-name'), c._name, ''); hl(c.querySelector('.c-full'), c._full, ''); });
-        visibleOrgs++; continue;
+      const orgMatch = !t || org.dataset.org.includes(t);
+      let shown = 0, orgHits = 0;
+      for (const c of org.querySelectorAll('.course')) {
+        const cMatch = !orgMatch && c.dataset.course.includes(t);
+        c.classList.toggle('off', !orgMatch && !cMatch);
+        c.classList.toggle('hit', cMatch);
+        hl(c.querySelector('.c-name'), c._name, cMatch ? t : '');
+        hl(c.querySelector('.c-full'), c._full, cMatch ? t : '');
+        if (orgMatch || cMatch) shown++;
+        if (cMatch) orgHits++;
       }
-      const orgMatch = org.dataset.org.includes(t);
-      let shown = 0;
-      for (const c of courses) {
-        const cMatch = c.dataset.course.includes(t);
-        const nameEl = c.querySelector('.c-name'), fullEl = c.querySelector('.c-full');
-        if (orgMatch) { c.classList.remove('off', 'hit'); hl(nameEl, c._name, ''); hl(fullEl, c._full, ''); shown++; }
-        else if (cMatch) { c.classList.remove('off'); c.classList.add('hit'); hl(nameEl, c._name, t); hl(fullEl, c._full, t); shown++; hits++; }
-        else { c.classList.add('off'); c.classList.remove('hit'); hl(nameEl, c._name, ''); hl(fullEl, c._full, ''); }
-      }
-      org.classList.toggle('dim', shown === 0);
-      if (shown) visibleOrgs++;
+      matchCounts.set(org.dataset.slug, shown);
+      const visible = shown > 0 && (!selected || org.dataset.slug === selected);
+      org.classList.toggle('dim', !visible);
+      if (visible) { visibleOrgs++; hits += orgHits; }
     }
+    renderRail(matchCounts);
     emptyEl.classList.toggle('show', !!t && visibleOrgs === 0);
     countEl.innerHTML = !t || visibleOrgs === 0 ? '' :
       (hits ? `<b>${hits}</b> course${hits > 1 ? 's' : ''} in <b>${visibleOrgs}</b> organisation${visibleOrgs > 1 ? 's' : ''}`
             : `<b>${visibleOrgs}</b> organisation${visibleOrgs > 1 ? 's' : ''}`);
   }
-  q.addEventListener('input', run);
-  q.addEventListener('keydown', e => { if (e.key === 'Escape') { q.value = ''; run(); } });
-  if (searchQ[kind]) { q.value = searchQ[kind]; run(); }
+  function selectOrg(orgSlug) {
+    selectedOrg[kind] = orgSlug;
+    run();
+    window.scrollTo(0, 0);
+  }
+  // a new search looks in every organisation, or its matches could sit hidden behind the selection
+  function searchAll() { selectedOrg[kind] = ''; run(); }
+  rail.addEventListener('click', e => { const b = e.target.closest('button'); if (b) selectOrg(b.dataset.slug); });
+  orgSelect.addEventListener('change', () => selectOrg(orgSelect.value));
+  q.addEventListener('input', searchAll);
+  q.addEventListener('keydown', e => { if (e.key === 'Escape') { q.value = ''; searchAll(); } });
+  if (searchQ[kind]) q.value = searchQ[kind];
+  run();
   window.scrollTo(0, 0);
 }
 

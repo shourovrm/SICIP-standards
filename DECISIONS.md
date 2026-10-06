@@ -4,7 +4,6 @@
 Site BUILT and verified locally (Playwright: search, calculator math, print sheet, confirms, CS iframe, mobile, all 164 slugs + asset URLs 200). Pure static: root `index.html` + `web/` (css/js/fonts, self-hosted Space Grotesk + Spline Sans variable woff2). Hash router `#/cs` (default, CS tab first per user) / `#/lab` / `#/{cs,lab}/<org>--<course>`. `data/data.json` = 164 entries (gen via `scripts/gen_data.py`; reads workbooks + reference index + `data/peer-data.json` for dates/pdf map). All 164 courses have cs_pdf; 8 approved=null (no date in filename OR cover — genuinely unknown); 5 sector=null (Beautification). Deploy root = repo root (asset paths `lab-standards/…`, `competency-standards/…` work as-is). NOT yet deployed to Cloudflare.
 
 ## Next
-- Directory layout: user to pick from `docs/mockups/directory-mockups.html` (A packed cards / B org rail / C accordion); then implement in `directory()` + site.css.
 - BP similar-course analysis + all BP sources/text/html moved 2026-09-03 to `~/repos/SICIP-BPs` (own local repo, has its own CLAUDE.md/DECISIONS.md). `Business-Plan/` here is gone.
 - Optional: `_headers` for cache control on pdfs/xlsx; custom domain.
 - LATER — CBLMs (REMIND USER of this runbook when CBLMs come up): files >25MB, ~4.6GB → R2, NOT git/Pages. Steps: (1) dashboard: R2 → create bucket `sicip-cblm`; (2) bucket Settings → enable r2.dev public access (gives base URL); (3) drop files in local `cblm/` (already gitignored), bulk-upload via wrangler (`npx wrangler login` once); (4) add `cblm` URL field to data.json + Download CBLM button on course pages; push → Pages auto-deploys. R2 free: 10GB, zero egress.
@@ -33,11 +32,14 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 
 - BPI Electrical Works CS: only the repo 15 Sep 26 PDF (`3. Final_Electrical Works _ BPI_15 September 26.pdf`) is valid; the 06 May 26 revision and the April 2026 6-unit "gas plant" draft are obsolete — never cite them.
 
+- Directory = org rail (mockup B): sticky rail ≥761px, native `<select>` below; both rebuilt by `renderRail()` on every `run()` with per-org match counts (0 → disabled). Typing a search resets the selection to All; selection + query persist per tab in `selectedOrg`/`searchQ`.
+
 ## Tried / rejected
 - pdf→HTML conversion for CS preview — mangles tables; use embedded PDF instead.
 - Fonts Public Sans / Inter / Source Serif — read as AI-templated; chose Space Grotesk × Spline Sans (#3).
 - Separate "Score Calculator" tab — folded into each lab-standard page.
 - "Open full" button on CS preview — redundant with Download; removed.
+- Directory as CSS grid of org cards — row height = tallest card (BMET 30) → blank space beside it. Also considered packed/masonry cards and accordion (mockups A, C).
 - GitHub Pages for the full set incl. CBLMs — 1 GB cap; CBLMs deferred to R2.
 
 ## Log
@@ -95,3 +97,4 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 2026-09-23 | Construction EIM (BACI/BMET/DTE/PKSF/REHAB): <15 channel wiring booths or <3 concealed booths halves Points/30; min_rule → min_rules list | user rule
 2026-10-06 | credit footer "Built by Riad Mashrub Shourov" (13px muted, hidden in print) | user request; quiet placement
 2026-10-06 | directory layout mockups A/B/C in docs/mockups/directory-mockups.html, awaiting user pick | BMET (30) stretches its grid row → blank space beside it
+2026-10-06 | directory = org rail + 2-col course pane (mockup B), phone = org dropdown; rows show sector · approved | user pick; removes blank space, keeps search count line
