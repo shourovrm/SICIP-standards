@@ -158,6 +158,12 @@ a.org-count:hover{background:var(--accent);color:#fff}
   font-variant-numeric:tabular-nums;
 }
 .equip input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-tint)}
+.equip tr.short input{border-color:#e7b9ae;background:#fdf5f3}
+.equip tr.full input{border-color:#a9d3c5;background:#f3faf7}
+.saved{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:14px 0 0;font-size:14px;color:var(--muted)}
+.saved button{padding:6px 12px;font-size:14px}
+/* phone-only score bar, stays on screen while the equipment list scrolls */
+.scorebar{display:none}
 .equip tfoot td{background:var(--panel);font-weight:600;border-bottom:0;border-top:2px solid var(--line-strong)}
 
 .actions{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0 0}
@@ -206,6 +212,45 @@ dialog::backdrop{background:rgba(23,33,28,.35)}
   .lab-side{position:static;display:contents}
   .lab-main{display:contents}
   .lab .live{order:9}
+  /* the header scrolls away so the score bar can take the top of the screen */
+  .top{position:static}
+  .scorebar{
+    position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:14px;padding:8px 14px;
+    background:var(--surface);border:1px solid var(--line);border-radius:0 0 var(--r) var(--r);box-shadow:0 2px 8px rgba(23,33,28,.08);
+  }
+  .scorebar div{line-height:1.2}
+  .scorebar div > span{display:block;font-size:11.5px;color:var(--muted)}
+  .scorebar b{font-family:"Space Grotesk",sans-serif;font-size:21px;font-weight:700;font-variant-numeric:tabular-nums}
+  .scorebar b small{font-size:12px;font-weight:500;color:var(--muted)}
+  .scorebar .pill{margin:0 0 0 auto;font-size:13px}
+  /* equipment rows: name left, Available box right, required/weight/score underneath — no sideways scroll */
+  .equip,.equip tbody,.equip tfoot{display:block}
+  .equip{min-width:0}
+  .equip thead{display:none}
+  .equip tbody tr{
+    display:grid;grid-template-columns:22px auto 1fr 92px;gap:6px 10px;align-items:center;
+    grid-template-areas:"sn name name avl" ". req wt score";
+    padding:11px 0;border-bottom:1px solid var(--line);
+  }
+  .equip tbody tr:last-child{border-bottom:0}
+  .equip tbody td{padding:0;border:0;width:auto}
+  .equip td.sn{grid-area:sn;text-align:left;font-size:13px;align-self:start;padding-top:2px}
+  .equip td.name{grid-area:name;font-weight:500;font-size:15.5px;line-height:1.35}
+  .equip td.avl{grid-area:avl}
+  .equip td.avl input{width:100%;padding:8px 10px;font-size:17px}
+  .equip td.req,.equip td.wt,.equip td.score{font-size:13.5px;color:var(--muted)}
+  .equip td.req{grid-area:req;text-align:left}
+  .equip td.wt{grid-area:wt;text-align:left}
+  .equip td.score{grid-area:score}
+  .equip td.req::before{content:"Required "}
+  .equip td.wt::before{content:"· Weight "}
+  .equip td.score::before{content:"Score "}
+  .equip td.score::after{content:" / " attr(data-weight)}
+  .equip tfoot tr{display:flex;gap:14px;align-items:baseline;padding:10px 12px;border-top:2px solid var(--line-strong);background:var(--panel)}
+  .equip tfoot td{padding:0;border:0;background:none}
+  .equip tfoot td:first-child{margin-right:auto}
+  .equip tfoot td:nth-child(2)::before{content:"Weight ";font-weight:400;color:var(--muted)}
+  .equip tfoot td:nth-child(3)::before{content:"Score ";font-weight:400;color:var(--muted)}
 }
 @media (prefers-reduced-motion:no-preference){
   .tabs a,button,.btn,.course a,a.org-count{transition:background .12s,color .12s,border-color .12s}

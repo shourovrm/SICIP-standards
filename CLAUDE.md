@@ -86,7 +86,7 @@ Two top tabs only: **Lab Standards** | **Competency Standards**. (There is NO se
 **Every download and every print asks for confirmation first** (a small confirm dialog/modal — not the raw browser print with no warning).
 
 ## Responsive & a11y
-- Desktop: multi-column card grid, full document width. Mobile: single column, key/value stacks label-over-value, wide equipment table scrolls horizontally, score cards stack, nav reachable.
+- Desktop: multi-column card grid, full document width. Mobile: single column, key/value stacks label-over-value, equipment table becomes stacked rows (name left, Available box right, Required/Weight/Score beneath; no horizontal scroll) with a sticky score bar, score cards stack, nav reachable.
 - Body text ≥4.5:1 contrast; visible focus states; keyboard-navigable; `prefers-reduced-motion` honoured.
 
 ## Data model — `data/data.json`

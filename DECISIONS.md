@@ -33,6 +33,8 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 - BPI Electrical Works CS: only the repo 15 Sep 26 PDF (`3. Final_Electrical Works _ BPI_15 September 26.pdf`) is valid; the 06 May 26 revision and the April 2026 6-unit "gas plant" draft are obsolete — never cite them.
 
 - Directory = org rail (mockup B): sticky rail ≥761px, native `<select>` below; both rebuilt by `renderRail()` on every `run()` with per-org match counts (0 → disabled). Typing a search resets the selection to All; selection + query persist per tab in `selectedOrg`/`searchQ`.
+- Lab page ≤640px: equipment `<table>` is restyled as grid rows (name | Available box; Required · Weight · Score underneath, labels via `::before`/`attr(data-weight)`), header is `position:static` and a phone-only sticky `.scorebar` mirrors the score card (`bar-*` ids, updated in `calc()`). Desktop table unchanged.
+- Lab entries autosave to `localStorage['sicip-available:<cSlug>']` = `{values:[…], ac}` on every input; restored on open only when the row count still matches; all-zero + AC ticked removes the key. "Clear entries" button under the table (confirm).
 
 ## Tried / rejected
 - pdf→HTML conversion for CS preview — mangles tables; use embedded PDF instead.
@@ -98,3 +100,4 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 2026-10-06 | credit footer "Built by Riad Mashrub Shourov" (13px muted, hidden in print) | user request; quiet placement
 2026-10-06 | directory layout mockups A/B/C in docs/mockups/directory-mockups.html, awaiting user pick | BMET (30) stretches its grid row → blank space beside it
 2026-10-06 | directory = org rail + 2-col course pane (mockup B), phone = org dropdown; rows show sector · approved | user pick; removes blank space, keeps search count line
+2026-10-06 | lab page phone layout = mockup B (docs/mockups/lab-mobile-mockups.html) + sticky score bar + localStorage autosave | user: sideways scroll to reach Available; entries lost when phone browser reloads

@@ -272,6 +272,11 @@ function labPage(id) {
         <h2 class="sec">Conditions</h2>
         ${rules}
       </div></div>
+      <div class="scorebar" aria-hidden="true">
+        <div><span>Score</span><b><span id="bar-s100">0</span><small> /100</small></b></div>
+        <div><span>Points</span><b><span id="bar-s30">0</span><small> /30</small></b></div>
+        <span class="pill no" id="bar-elig">Below 80</span>
+      </div>
       <div class="card">
         <h2 class="sec">Major training equipment and facilities <small>Enter what the institute has in <em>Available</em> — the score updates as you type.</small></h2>
         <div class="tbl-scroll">
@@ -285,12 +290,12 @@ function labPage(id) {
               ${e.equipment.map((r, i) => `
               <tr>
                 <td class="sn">${i + 1}</td>
-                <td>${esc(r.name)}${r.remark ? `<span class="rmk">${esc(r.remark)}</span>` : ''}</td>
-                <td class="num">${r.required ?? ''}</td>
-                <td class="num"><input type="number" min="0" step="any" value="0" data-i="${i}" inputmode="decimal" enterkeyhint="next"
+                <td class="name">${esc(r.name)}${r.remark ? `<span class="rmk">${esc(r.remark)}</span>` : ''}</td>
+                <td class="num req">${r.required ?? ''}</td>
+                <td class="num avl"><input type="number" min="0" step="any" value="0" data-i="${i}" inputmode="decimal" enterkeyhint="next"
                      aria-label="Available ${esc(r.name)}"></td>
-                <td class="num">${r.weight}</td>
-                <td class="num score" data-i="${i}">0</td>
+                <td class="num wt">${r.weight}</td>
+                <td class="num score" data-i="${i}" data-weight="${r.weight}">0</td>
               </tr>`).join('')}
             </tbody>
             <tfoot><tr>
@@ -298,6 +303,8 @@ function labPage(id) {
             </tr></tfoot>
           </table>
         </div>
+        <p class="saved"><span id="saved-note">Entries are saved in this browser as you type.</span>
+          <button type="button" id="clear">Clear entries</button></p>
       </div>
     </div>
   </div>`;
@@ -313,7 +320,7 @@ function labPage(id) {
   inputs.forEach((inp, k) => {
     inp.addEventListener('focus', () => { if (inp.value === '0') inp.value = ''; });  // select() is unreliable on mobile number inputs
     inp.addEventListener('blur', () => { if (inp.value === '') inp.value = '0'; });
-    inp.addEventListener('input', () => calc());
+    inp.addEventListener('input', () => { calc(); save(); });
     inp.addEventListener('keydown', ev => {
       if (ev.key !== 'Enter') return;
       ev.preventDefault();
@@ -321,7 +328,7 @@ function labPage(id) {
     });
   });
   const acBox = document.getElementById('ac');
-  if (acBox) acBox.addEventListener('change', () => calc());
+  if (acBox) acBox.addEventListener('change', () => { calc(); save(); });
   const calc = () => {
     let sum = 0;
     view.querySelectorAll('.equip input').forEach(inp => {
@@ -329,6 +336,9 @@ function labPage(id) {
       const s = rowScore(e.equipment[i], av);
       sum += s;
       view.querySelector(`.score[data-i="${i}"]`).textContent = fmt(s);
+      const req = Number(e.equipment[i].required), row = inp.closest('tr');
+      row.classList.toggle('full', req > 0 && av >= req);
+      row.classList.toggle('short', av > 0 && av < req);
     });
     const score = sumW ? sum / sumW * 100 : 0, ok = score >= 80;
     // CS footnote halves the points: lab not air-conditioned, or fewer than the minimum of key items (e.g. welding booths)
@@ -346,8 +356,43 @@ function labPage(id) {
     const el = document.getElementById('elig');
     el.className = 'pill ' + (ok ? 'ok' : 'no');
     el.textContent = ok ? 'Eligible' : 'Below 80 — not eligible';
+    document.getElementById('bar-s100').textContent = fmt(score);
+    document.getElementById('bar-s30').textContent = fmt(points);
+    const barEl = document.getElementById('bar-elig');
+    barEl.className = el.className;
+    barEl.textContent = ok ? 'Eligible' : 'Below 80';
     return { sum, score, points, ok, halved, why };
   };
+
+  // autosave: phones often reload the page after switching apps, which used to wipe the entries
+  const storeKey = 'sicip-available:' + cSlug(e);
+  const savedNote = document.getElementById('saved-note');
+  const save = () => {
+    const values = inputs.map(inp => Math.max(0, Number(inp.value) || 0));
+    const untouched = values.every(v => v === 0) && (!acBox || acBox.checked);
+    try {
+      if (untouched) localStorage.removeItem(storeKey);
+      else localStorage.setItem(storeKey, JSON.stringify({ values, ac: acBox ? acBox.checked : null }));
+    } catch (err) { savedNote.textContent = 'This browser is not saving entries (private mode or storage full).'; }
+  };
+  const restore = () => {
+    let stored = null;
+    try { stored = JSON.parse(localStorage.getItem(storeKey)); } catch (err) { /* unreadable entry = nothing saved */ }
+    // a different row count means the standard was revised since the entries were saved
+    if (!stored || !Array.isArray(stored.values) || stored.values.length !== inputs.length) return;
+    inputs.forEach((inp, k) => { inp.value = stored.values[k]; });
+    if (acBox && stored.ac !== null) acBox.checked = stored.ac;
+    savedNote.textContent = 'Your earlier entries were restored from this browser.';
+    calc();
+  };
+  restore();
+  document.getElementById('clear').addEventListener('click', async () => {
+    if (!await confirmBox(`Clear every Available entry for “${e.course_name}”?`)) return;
+    inputs.forEach(inp => { inp.value = '0'; });
+    if (acBox) acBox.checked = true;
+    calc(); save();
+    savedNote.textContent = 'Entries are saved in this browser as you type.';
+  });
 
   document.getElementById('dl').addEventListener('click', async () => {
     if (!await confirmBox(`Download the “${e.course_name}” lab standard?`)) return;
