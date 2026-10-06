@@ -5,7 +5,7 @@
   },
   "counts": {
     "courses": 171,
-    "with_date": 156,
+    "with_date": 161,
     "with_pdf": 171,
     "with_sector": 166
   },
@@ -16835,8 +16835,8 @@
       "sheet": "Yarn Manufacturing",
       "sector": "Textile",
       "trainees": 25,
-      "approved": null,
-      "approved_source": null,
+      "approved": "20 Aug 2026",
+      "approved_source": "filename",
       "cs_pdf": "competency-standards/BTMA/260820 CS_PPYM_Draft.pdf"
     },
     {
@@ -16846,8 +16846,8 @@
       "sheet": "Wet Processing",
       "sector": "Textile",
       "trainees": 25,
-      "approved": null,
-      "approved_source": null,
+      "approved": "23 Aug 2026",
+      "approved_source": "filename",
       "cs_pdf": "competency-standards/BTMA/260823 CS_PPWP_Draft.pdf"
     },
     {
@@ -16857,8 +16857,8 @@
       "sheet": "Fabric Manufacturing",
       "sector": "Textile",
       "trainees": 25,
-      "approved": null,
-      "approved_source": null,
+      "approved": "25 Aug 2026",
+      "approved_source": "filename",
       "cs_pdf": "competency-standards/BTMA/260825 CS_PPFM_Draft.pdf"
     },
     {
@@ -16868,8 +16868,8 @@
       "sheet": "QC in Yarn",
       "sector": "Textile",
       "trainees": 25,
-      "approved": null,
-      "approved_source": null,
+      "approved": "02 Sep 2026",
+      "approved_source": "filename",
       "cs_pdf": "competency-standards/BTMA/260902 CS_PIQCY_Draft.pdf"
     },
     {
@@ -16879,8 +16879,8 @@
       "sheet": "QC in Fabric",
       "sector": "Textile",
       "trainees": 25,
-      "approved": null,
-      "approved_source": null,
+      "approved": "03 Sep 2026",
+      "approved_source": "filename",
       "cs_pdf": "competency-standards/BTMA/260903 CS_PIQCF_Draft.pdf"
     },
     {
