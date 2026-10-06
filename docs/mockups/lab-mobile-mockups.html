@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lab standard on a phone — layout options</title>
+<link rel="stylesheet" href="../../web/css/fonts.css">
+<link rel="stylesheet" href="../../web/css/site.css">
+<style>
+/* mockup switcher (not part of the site) */
+.pick{background:var(--ink);color:#fff;font-size:14px}
+.pick-in{max-width:460px;margin:0 auto;padding:8px 14px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.pick a{color:#fff;text-decoration:none;padding:4px 11px;border-radius:20px;border:1px solid rgba(255,255,255,.3)}
+.pick a[aria-current]{background:#fff;color:var(--ink);border-color:#fff;font-weight:600}
+
+/* phone-width column so the desktop browser shows the same thing as a phone */
+.top{position:static}
+.top-in,main.wrap{max-width:460px}
+main.wrap{padding:16px 10px 40px;display:grid;gap:12px}
+.card{padding:16px 14px}
+.back{margin:0}
+.course-h{font-size:21px;font-weight:700;line-height:1.2;margin:0}
+.facts-line{margin:8px 0 0;font-size:14.5px;color:var(--muted)}
+
+/* score bar stays on screen while the list scrolls */
+.scorebar{
+  position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:14px;padding:8px 14px;
+  background:var(--surface);border:1px solid var(--line);border-radius:0 0 var(--r) var(--r);box-shadow:0 2px 8px rgba(23,33,28,.08);
+}
+.scorebar div{line-height:1.2}
+.scorebar div > span{display:block;font-size:11.5px;color:var(--muted)}
+.scorebar b{font-family:"Space Grotesk",sans-serif;font-size:21px;font-weight:700;font-variant-numeric:tabular-nums}
+.scorebar b small{font-size:12px;font-weight:500;color:var(--muted)}
+.scorebar .pill{margin:0 0 0 auto;font-size:13px}
+
+/* equipment rows — shared */
+.sec-h{font-size:18px;font-weight:600;margin:0 0 2px}
+.rows{list-style:none;margin:0;padding:0;font-variant-numeric:tabular-nums}
+.row{display:grid;gap:6px 10px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.sn{grid-area:sn;font-size:13px;color:var(--faint);align-self:start;padding-top:2px}
+.name{grid-area:name;font-weight:500;font-size:15.5px;line-height:1.35}
+.name small{display:block;font-weight:400;font-size:13px;color:var(--faint)}
+.meta{grid-area:meta;font-size:13.5px;color:var(--muted)}
+.meta b{color:var(--ink);font-weight:600}
+.avl{grid-area:avl}
+.avl input{
+  width:100%;padding:8px 10px;font:inherit;font-size:17px;text-align:right;color:var(--ink);
+  border:1px solid var(--line-strong);border-radius:8px;background:var(--surface);
+}
+.avl input::placeholder{color:var(--faint);font-size:13px}
+.avl input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-tint)}
+.row.short .avl input{border-color:#e7b9ae;background:#fdf5f3}
+.row.full .avl input{border-color:#a9d3c5;background:#f3faf7}
+.score{grid-area:score;font-size:13.5px;color:var(--muted);text-align:right;white-space:nowrap}
+.fill{grid-area:fill;display:none;padding:7px 10px;font-size:14px;white-space:nowrap}
+
+/* A — two lines: name + required on top, Available box + score below (as on the WEAB tools page) */
+.layout-a .row{grid-template-columns:22px 104px 1fr auto;grid-template-areas:"sn name name meta" ". avl score score"}
+.layout-a .meta{text-align:right;align-self:start;white-space:nowrap}
+.layout-a .meta .weight{display:block}
+.layout-a .meta .dot{display:none}
+
+/* B — name on the left, Available box on the right of the same block */
+.layout-b .row{grid-template-columns:22px 1fr 92px;grid-template-areas:"sn name avl" ". meta score"}
+
+/* C — as B, plus a button that fills the required quantity in one tap */
+.layout-c .row{grid-template-columns:22px 1fr auto 84px;grid-template-areas:"sn name name name" ". meta fill avl" ". score score score"}
+.layout-c .fill{display:block}
+.layout-c .score{text-align:left}
+
+.saved{font-size:13.5px;color:var(--muted);margin:0;display:flex;gap:10px;align-items:center;justify-content:space-between}
+.saved button{padding:6px 12px;font-size:14px}
+</style>
+</head>
+<body>
+<div class="pick">
+  <div class="pick-in">
+    <span>Mockup</span>
+    <a href="#a" data-option="a">A · Two lines</a>
+    <a href="#b" data-option="b">B · Side by side</a>
+    <a href="#c" data-option="c">C · Quick fill</a>
+  </div>
+</div>
+<header class="top">
+  <div class="top-in">
+    <a class="wordmark" href="#">SICIP&nbsp;Standards</a>
+    <nav class="tabs" aria-label="Sections">
+      <a href="#">Competency Standards</a>
+      <a href="#" aria-current="page">Lab Standards</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <a class="back" href="#">← Lab Standards</a>
+  <div class="card">
+    <p class="docname">Course-wise Training Infrastructure and Facilities</p>
+    <h1 class="course-h" id="course"></h1>
+    <p class="facts-line" id="facts"></p>
+  </div>
+
+  <div class="scorebar" aria-live="polite">
+    <div><span>Score</span><b><span id="s100">0</span><small> /100</small></b></div>
+    <div><span>Points</span><b><span id="s30">0</span><small> /30</small></b></div>
+    <span class="pill no" id="elig">Below 80</span>
+  </div>
+
+  <div class="card">
+    <h2 class="sec-h">Major training equipment and facilities</h2>
+    <ul class="rows" id="rows"></ul>
+  </div>
+
+  <p class="saved"><span id="saved-note">Entries are saved on this phone as you type.</span><button id="reset" type="button">Clear entries</button></p>
+</main>
+<footer class="foot">Built by Riad Mashrub Shourov</footer>
+
+<script>
+// one real course, injected from data/data.json
+const COURSE = {"org": "DTE", "course_name": "IT Support Technique & Mobile Phone Servicing", "sector": "ICT", "trainees": 25, "approved": "07 Dec 2025", "equipment": [{"name": "Computer/Laptop", "required": 1, "weight": 8, "remark": null}, {"name": "Printer", "required": 1, "weight": 6, "remark": null}, {"name": "Scanner", "required": 1, "weight": 6, "remark": null}, {"name": "Computers/Laptop: \n(Minimum Intel Core i5 processor (8th Gen), 8GB RAM (16GB preferred), 500GB SSD/HDD storage (1TB preferred), High-resolution monitors (19/20-inch minimum, with color accuracy).", "required": 25, "weight": 10, "remark": null}, {"name": "Projector: \nHigh-resolution projector (HD or 4K) for instructor presentations, large screen for the room to ensure visibility for all trainees.", "required": 1, "weight": 6, "remark": null}, {"name": "Network Devices (Switches and Wi-Fi Routers)", "required": 5, "weight": 9, "remark": "05 sets"}, {"name": "Network tools (Clamping tools and cable testers)", "required": 10, "weight": 8, "remark": "10 sets each"}, {"name": "Network Cables (UTP and Fiber Optics)", "required": 100, "weight": 7, "remark": "100 meters"}, {"name": "Connectors (RJ 45, MTP/MPO)", "required": 100, "weight": 4, "remark": null}, {"name": "Ergonomic chairs and desks", "required": 25, "weight": 3, "remark": null}, {"name": "Internet connectivity with power back-up", "required": 1, "weight": 7, "remark": null}, {"name": "Soldering Stations", "required": 25, "weight": 8, "remark": null}, {"name": "Soldering Irons", "required": 25, "weight": 8, "remark": null}, {"name": "Hoyt air gun", "required": 25, "weight": 7, "remark": null}, {"name": "Multimeters", "required": 25, "weight": 8, "remark": null}, {"name": "Power Supply Units", "required": 25, "weight": 7, "remark": null}, {"name": "Battery Testers", "required": 5, "weight": 6, "remark": null}, {"name": "Screen Testing Jigs (for LCD and touchscreens)", "required": 1, "weight": 6, "remark": null}, {"name": "USB Testers (for current and voltage checks)", "required": 5, "weight": 5, "remark": null}, {"name": "Screwdrivers Set (Precision set, including Phillips and flathead)", "required": 25, "weight": 4, "remark": null}, {"name": "Tweezers (ESD-safe, various sizes)", "required": 25, "weight": 3, "remark": null}, {"name": "Opening Tools", "required": 25, "weight": 3, "remark": null}, {"name": "Suction Cups (for screen removal)", "required": 25, "weight": 3, "remark": null}, {"name": "Magnifying Glasses with Lamp", "required": 25, "weight": 4, "remark": null}, {"name": "Defective Mobile Phone", "required": 15, "weight": 8, "remark": null}, {"name": "New Mobile Phone", "required": 10, "weight": 7, "remark": null}]};
+const STORE = 'sicip-mockup-available:' + COURSE.org + ':' + COURSE.course_name;
+
+const esc = text => String(text).replace(/[&<>"]/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch]));
+const fmt = number => (Math.round(number * 100) / 100).toLocaleString('en', { maximumFractionDigits: 2 });
+const rowsEl = document.getElementById('rows');
+
+document.getElementById('course').textContent = COURSE.course_name;
+document.getElementById('facts').textContent =
+  [COURSE.org, COURSE.sector, COURSE.trainees + ' trainees', COURSE.approved && 'Approved ' + COURSE.approved].filter(Boolean).join(' · ');
+
+rowsEl.innerHTML = COURSE.equipment.map((item, index) => `
+  <li class="row" data-index="${index}">
+    <span class="sn">${index + 1}</span>
+    <span class="name">${esc(item.name)}${item.remark ? `<small>${esc(item.remark)}</small>` : ''}</span>
+    <span class="meta">Required <b>${item.required ?? '—'}</b> <span class="weight"><span class="dot">· </span>Weight <b>${item.weight}</b></span></span>
+    <button class="fill" type="button" data-fill="${index}">Fill ${item.required ?? 0}</button>
+    <span class="avl"><input inputmode="decimal" enterkeyhint="next" autocomplete="off" placeholder="Available"
+      aria-label="Available: ${esc(item.name)}"></span>
+    <span class="score">Score <b>0</b> / ${item.weight}</span>
+  </li>`).join('');
+const inputs = [...rowsEl.querySelectorAll('input')];
+
+// same formula as the site: MIN(available, required) * weight / required
+function rowScore(item, available) {
+  const required = Number(item.required);
+  if (!required || required <= 0) return 0;
+  return Math.min(available, required) * item.weight / required;
+}
+
+function recalculate() {
+  let scoreSum = 0, weightSum = 0;
+  inputs.forEach((input, index) => {
+    const item = COURSE.equipment[index];
+    const available = Math.max(0, parseFloat(input.value) || 0);
+    const score = rowScore(item, available);
+    scoreSum += score;
+    weightSum += item.weight || 0;
+    const row = input.closest('.row');
+    row.querySelector('.score b').textContent = fmt(score);
+    row.classList.toggle('full', available >= Number(item.required) && Number(item.required) > 0);
+    row.classList.toggle('short', input.value.trim() !== '' && available < Number(item.required));
+  });
+  const score = weightSum ? scoreSum / weightSum * 100 : 0;
+  const eligible = score >= 80;
+  document.getElementById('s100').textContent = fmt(score);
+  document.getElementById('s30').textContent = fmt(score * 30 / 100);
+  const pill = document.getElementById('elig');
+  pill.className = 'pill ' + (eligible ? 'ok' : 'no');
+  pill.textContent = eligible ? 'Eligible' : 'Below 80';
+}
+
+// persistence: survives the browser being closed or killed in the background
+function save() {
+  const values = inputs.map(input => input.value);
+  localStorage.setItem(STORE, JSON.stringify(values));
+}
+function load() {
+  const values = JSON.parse(localStorage.getItem(STORE) || '[]');
+  inputs.forEach((input, index) => { if (values[index]) input.value = values[index]; });
+  if (values.some(Boolean)) document.getElementById('saved-note').textContent = 'Your earlier entries were restored from this phone.';
+}
+
+rowsEl.addEventListener('input', event => {
+  // numbers only: strip anything that is not a digit or a single decimal point
+  const clean = event.target.value.replace(/[^\d.]/g, '').replace(/(\..*)\./g, '$1');
+  if (clean !== event.target.value) event.target.value = clean;
+  recalculate();
+  save();
+});
+rowsEl.addEventListener('keydown', event => {
+  if (event.key !== 'Enter') return;
+  event.preventDefault();
+  const next = inputs[inputs.indexOf(event.target) + 1];
+  if (next) next.focus();
+});
+rowsEl.addEventListener('click', event => {
+  const button = event.target.closest('[data-fill]');
+  if (!button) return;
+  const index = Number(button.dataset.fill);
+  inputs[index].value = COURSE.equipment[index].required ?? 0;
+  recalculate();
+  save();
+});
+document.getElementById('reset').addEventListener('click', () => {
+  if (!confirm('Clear every Available entry for this course?')) return;
+  inputs.forEach(input => { input.value = ''; });
+  localStorage.removeItem(STORE);
+  document.getElementById('saved-note').textContent = 'Entries are saved on this phone as you type.';
+  recalculate();
+});
+
+function readOption() {
+  const fromHash = location.hash.slice(1);
+  const option = ['a', 'b', 'c'].includes(fromHash) ? fromHash : 'a';
+  rowsEl.className = 'rows layout-' + option;
+  document.querySelectorAll('.pick a').forEach(link => link.toggleAttribute('aria-current', link.dataset.option === option));
+}
+addEventListener('hashchange', readOption);
+readOption();
+load();
+recalculate();
+</script>
+</body>
+</html>
