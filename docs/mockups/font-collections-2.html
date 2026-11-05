@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Font collections 2 — SICIP Standards</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Familjen+Grotesk:wght@500;700&family=Schibsted+Grotesk:wght@500;700&family=Instrument+Sans:wght@400;600&family=Hanken+Grotesk:wght@400;600&family=Onest:wght@400;600&family=Geologica:wght@500;700&family=Albert+Sans:wght@400;600&family=Gantari:wght@400;600&family=Host+Grotesk:wght@500;700&family=Wix+Madefor+Text:wght@400;600&family=Funnel+Display:wght@500;700&family=Funnel+Sans:wght@400;600&family=Rethink+Sans:wght@400;600&family=Radio+Canada+Big:wght@500;700&family=Golos+Text:wght@400;600&family=Afacad:wght@400;600&family=Reddit+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f4f2;--surface:#fff;--ink:#17211c;--muted:#586158;--line:#e4e7e3;--accent:#0e6b58;--accent-tint:#e4f1ec;--mark:#ffe294}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,sans-serif}
+.page{padding:28px clamp(20px,3vw,48px)}
+h1.t{font-size:22px;margin:0 0 4px}
+.lead{color:var(--muted);margin:0 0 24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:20px}
+.opt{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px 22px}
+.optlabel{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;margin-bottom:14px;font:600 13px system-ui,sans-serif}
+.optnum{background:var(--accent);color:#fff;border-radius:99px;padding:1px 9px}
+.optmeta{color:var(--muted);font-weight:400}
+.wm{font-family:var(--head);font-weight:700;font-size:24px;color:var(--accent-ink,var(--ink));margin:0}
+.opt h2{font-family:var(--head);font-weight:700;font-size:25px;line-height:1.2;margin:10px 0 8px}
+.opt p,.opt td,.opt th,.opt .tab{font-family:var(--body)}
+.opt p{font-size:16.5px;line-height:1.6;margin:0 0 12px}
+.tab{display:inline-block;background:var(--accent-tint);color:var(--accent);border-radius:8px;padding:6px 12px;font-weight:600;font-size:15px}
+table{border-collapse:collapse;width:100%;font-size:15.5px}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line)}
+th{font-weight:600;color:var(--muted)}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+mark{background:var(--mark)}
+.f1{--head:"Bricolage Grotesque";--body:"Hanken Grotesk"}
+.f2{--head:"Familjen Grotesk";--body:"Instrument Sans"}
+.f3{--head:"Schibsted Grotesk";--body:"Onest"}
+.f4{--head:"Geologica";--body:"Albert Sans"}
+.f5{--head:"Host Grotesk";--body:"Gantari"}
+.f6{--head:"Funnel Display";--body:"Funnel Sans"}
+.f7{--head:"Radio Canada Big";--body:"Wix Madefor Text"}
+.f8{--head:"Afacad";--body:"Golos Text"}
+.f9{--head:"Rethink Sans";--body:"Reddit Sans"}
+</style>
+</head>
+<body>
+<div class="page">
+<h1 class="t">Font collections 2</h1>
+<p class="lead">Nine less common pairings. Reading font (body) is always a sans. Pick a number.</p>
+<div class="grid" id="g"></div>
+</div>
+<script>
+// Option data: number, heading, body, mood
+const opts=[
+[1,"Bricolage Grotesque","Hanken Grotesk","Quirky ink-trap display, calm body"],
+[2,"Familjen Grotesk","Instrument Sans","Editorial grotesque, crisp UI body"],
+[3,"Schibsted Grotesk","Onest","Newsroom sturdy, friendly round body"],
+[4,"Geologica","Albert Sans","Wide technical headings, neutral body"],
+[5,"Host Grotesk","Gantari","Clean modern grotesque pair"],
+[6,"Funnel Display","Funnel Sans","One family, display and text cuts"],
+[7,"Radio Canada Big","Wix Madefor Text","Broadcast-sturdy, highly readable body"],
+[8,"Afacad","Golos Text","Narrow humanist headings, open body"],
+[9,"Rethink Sans","Reddit Sans","Soft geometric, large x-height body"]];
+// Same sample content as the real lab page, one card per option
+document.getElementById("g").innerHTML=opts.map(([n,h,b,m])=>`
+<section class="opt f${n}">
+<div class="optlabel"><span class="optnum">${n}</span><span>${h} + ${b}</span><span class="optmeta">${m}</span></div>
+<p class="wm">SICIP Standards</p>
+<h2>Course-wise Training Infrastructure and Facilities</h2>
+<p>Sector · Garments &amp; Textile. The facility is <mark>eligible</mark> when the score reaches 80% of the weighted total. Numbers: 0123456789.</p>
+<span class="tab">Lab Standards</span>
+<table><tr><th>Major equipment</th><th class="n">Required</th><th class="n">Weight</th></tr>
+<tr><td>Industrial sewing machine</td><td class="n">20</td><td class="n">12.5</td></tr>
+<tr><td>Cutting table, 3 × 1.5 m</td><td class="n">4</td><td class="n">8.0</td></tr></table>
+</section>`).join("");
+</script>
+</body>
+</html>
