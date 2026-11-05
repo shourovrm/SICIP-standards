@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3 Three columns — SICIP list mockup</title>
+<link rel="stylesheet" href="../../../web/css/fonts.css">
+<link rel="stylesheet" href="list.css">
+</head>
+<body data-layout="3col">
+<div id="mockbar"></div>
+<header class="top"><div class="in">
+  <span class="wordmark">SICIP Standards</span>
+  <nav class="tabs" aria-label="Sections"><a href="#" aria-current="page">Lab Standards</a><a href="#">Competency Standards</a></nav>
+</div></header>
+<main class="wrap">
+  <h1>Lab Standards</h1>
+  <p class="sub">23 organisations · 171 standards</p>
+  <div class="finder">
+    <label for="q">Search standards</label>
+    <span class="hint" id="q-hint">Course, sector or organisation</span>
+    <input id="q" type="search" aria-describedby="q-hint" autocomplete="off">
+    <p class="count"></p>
+  </div>
+  <div class="shell"><nav class="rail" id="rail" aria-label="Organisations"></nav><div id="list"></div></div>
+</main>
+<script src="courses.js"></script>
+<script src="list.js"></script>
+</body>
+</html>
