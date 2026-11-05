@@ -16853,24 +16853,24 @@
     {
       "org": "BTMA",
       "org_slug": "BTMA",
-      "course_name": "Production Process in Fabric Manufacturing",
+      "course_name": "Production Process in Woven Fabric Manufacturing",
       "sheet": "Fabric Manufacturing",
       "sector": "Textile",
       "trainees": 25,
-      "approved": "25 Aug 2026",
+      "approved": "05 Nov 2026",
       "approved_source": "filename",
-      "cs_pdf": "competency-standards/BTMA/260825 CS_PPFM_Draft.pdf"
+      "cs_pdf": "competency-standards/BTMA/261105 CS_PPFM_Final.pdf"
     },
     {
       "org": "BTMA",
       "org_slug": "BTMA",
-      "course_name": "Productivity Improvement and Quality Control in Yarn",
+      "course_name": "Quality Control in Yarn Manufacturing",
       "sheet": "QC in Yarn",
       "sector": "Textile",
       "trainees": 25,
-      "approved": "02 Sep 2026",
+      "approved": "05 Nov 2026",
       "approved_source": "filename",
-      "cs_pdf": "competency-standards/BTMA/260902 CS_PIQCY_Draft.pdf"
+      "cs_pdf": "competency-standards/BTMA/261105 CS_QCYM_Final.pdf"
     },
     {
       "org": "BTMA",

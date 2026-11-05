@@ -14063,15 +14063,15 @@
  {
   "org": "BTMA",
   "org_slug": "BTMA",
-  "course_name": "Production Process in Fabric Manufacturing",
+  "course_name": "Production Process in Woven Fabric Manufacturing",
   "sheet": "Fabric Manufacturing",
   "sector": "Textile",
   "trainees": 25,
-  "space": "Classroom - 400 sft (37 sqm)\nWorkshop/Lab - 1800 sft (167 sqm)\nOR\nClassroom cum workshop - 2100 sft (195 sqm)",
-  "boilerplate": "•The institute shall not use the same facilities for any other projects/organizations offering a similar course.\n•The institute must provide sufficient evidence to prove ownership of the proposed training equipment.\nThe list denotes the minimum training equipment and facility required to effectively conduct training for a specific course. Additionally, the institute must ensure that all other necessary training tools, equipment, and furniture are available to meet the requirement of competency standards (CS) provided by SICIP.\nFor the operation of training course on Production Process in Fabric Manufacturing, the institute must ensure the availability of at least 80% of the major training equipment and training facilities (according to the CS) to be eligible for SICIP training delivery. If the score is below 80%, the remaining equipment and facilities need to be installed before the commencement of the training.\nWhere a training institute does not possess the full-scale production machinery, the institute must establish a formal linkage with a weaving and/or knitting factory so that the practical sessions of the occupation-specific units can be conducted in an actual workplace under supervision.\nThe institute will also provide all other hand tools and power tools as per CS for 25 trainees. Also, they will arrange adequate seating arrangement and classroom setup for the 25 trainees.",
+  "space": "Classroom - 350 sft (33 sqm)\nWorkshop/Lab - 1800 sft (167 sqm)\nOR\nClassroom cum workshop - 2100 sft (195 sqm)",
+  "boilerplate": "•The institute shall not use the same facilities for any other projects/organizations offering a similar course.\n•The institute must provide sufficient evidence to prove ownership of the proposed training equipment.\nThe list denotes the minimum training equipment and facility required to effectively conduct training for a specific course. Additionally, the institute must ensure that all other necessary training tools, equipment, and furniture are available to meet the requirement of competency standards (CS) provided by SICIP.\nFor the operation of training course on Production Process in Woven Fabric Manufacturing, the institute must ensure the availability of at least 80% of the major training equipment and training facilities (according to the CS) to be eligible for SICIP training delivery. If the score is below 80%, the remaining equipment and facilities need to be installed before the commencement of the training.\nWhere a training institute does not possess the full-scale production machinery, the institute must establish a formal linkage with a weaving and/or knitting factory so that the practical sessions of the occupation-specific units can be conducted in an actual workplace under supervision.\nThe institute will also provide all other hand tools and power tools as per CS for 25 trainees. Also, they will arrange adequate seating arrangement and classroom setup for the 25 trainees.",
   "note": null,
   "min_rules": [],
-  "approved": "25 Aug 2026",
+  "approved": "05 Nov 2026",
   "equipment": [
    {
     "name": "Computer/Laptop",
@@ -14086,283 +14086,61 @@
     "remark": null
    },
    {
-    "name": "Printer",
-    "required": 1,
-    "weight": 4,
-    "remark": null
-   },
-   {
-    "name": "Scanner",
-    "required": 1,
-    "weight": 4,
-    "remark": null
-   },
-   {
-    "name": "Internet connection with Wi-Fi facility",
-    "required": 1,
-    "weight": 5,
-    "remark": null
-   },
-   {
     "name": "Whiteboard with accessories",
     "required": 1,
     "weight": 4,
     "remark": null
    },
    {
-    "name": "Cone/cheese winding machine (drum winder)",
+    "name": "Winding machine",
     "required": 1,
     "weight": 9,
     "remark": null
    },
    {
-    "name": "Pirn winding machine",
-    "required": 1,
-    "weight": 8,
-    "remark": null
-   },
-   {
-    "name": "Direct (beam) warping machine with creel",
+    "name": "Warping machine",
     "required": 1,
     "weight": 9,
     "remark": null
    },
    {
-    "name": "Sectional warping machine with creel",
+    "name": "Sizing machine",
     "required": 1,
     "weight": 9,
     "remark": null
    },
    {
-    "name": "Sizing machine with drying arrangement",
-    "required": 1,
-    "weight": 9,
-    "remark": null
-   },
-   {
-    "name": "Size cooking vessel with stirrer and service tank",
-    "required": 1,
-    "weight": 7,
-    "remark": "1 set"
-   },
-   {
-    "name": "Drawing-in frame with stand and accessories",
-    "required": 2,
-    "weight": 7,
-    "remark": "2 sets"
-   },
-   {
-    "name": "Healds, heald frames, reeds and drop wires (assorted)",
-    "required": null,
-    "weight": 4,
-    "remark": "As required"
-   },
-   {
-    "name": "Warp tying/knotting machine",
-    "required": 1,
-    "weight": 7,
-    "remark": null
-   },
-   {
-    "name": "Shuttle loom (power loom)",
-    "required": 1,
+    "name": "Modern Loom",
+    "required": 10,
     "weight": 10,
     "remark": null
    },
    {
-    "name": "Rapier loom",
-    "required": 1,
-    "weight": 10,
-    "remark": null
-   },
-   {
-    "name": "Air-jet loom",
-    "required": 1,
-    "weight": 10,
-    "remark": null
-   },
-   {
-    "name": "Dobby shedding attachment/dobby loom",
-    "required": 1,
-    "weight": 9,
-    "remark": null
-   },
-   {
-    "name": "Jacquard shedding attachment/jacquard loom",
-    "required": 1,
-    "weight": 9,
-    "remark": null
-   },
-   {
-    "name": "Single jersey circular knitting machine",
-    "required": 1,
-    "weight": 10,
-    "remark": null
-   },
-   {
-    "name": "Rib/interlock circular knitting machine",
-    "required": 1,
-    "weight": 10,
-    "remark": null
-   },
-   {
-    "name": "Flat bed knitting machine (manual/semi-automatic)",
-    "required": 2,
-    "weight": 9,
-    "remark": null
-   },
-   {
-    "name": "Computerized flat bed knitting machine",
-    "required": 1,
-    "weight": 9,
-    "remark": null
-   },
-   {
-    "name": "Fabric inspection machine with light box",
+    "name": "Fabric inspection machine",
     "required": 1,
     "weight": 6,
     "remark": null
-   },
-   {
-    "name": "Colour matching cabinet (D65, TL84, CWF, UV)",
-    "required": 1,
-    "weight": 5,
-    "remark": null
-   },
-   {
-    "name": "Fabric folding and rolling table with length counter",
-    "required": 1,
-    "weight": 5,
-    "remark": null
-   },
-   {
-    "name": "GSM cutter and GSM balance",
-    "required": 2,
-    "weight": 5,
-    "remark": "2 sets"
-   },
-   {
-    "name": "Electronic balance (0.001 g and 0.01 g accuracy)",
-    "required": 2,
-    "weight": 6,
-    "remark": null
-   },
-   {
-    "name": "Pick glass/counting glass and magnifier",
-    "required": 10,
-    "weight": 3,
-    "remark": null
-   },
-   {
-    "name": "Stitch length (course length) measuring device",
-    "required": 5,
-    "weight": 5,
-    "remark": null
-   },
-   {
-    "name": "Yarn tension meter",
-    "required": 2,
-    "weight": 5,
-    "remark": null
-   },
-   {
-    "name": "Reed hook, drawing hook and denting hook set",
-    "required": 10,
-    "weight": 3,
-    "remark": "10 sets"
-   },
-   {
-    "name": "Needle, sinker and needle removal tool set",
-    "required": 5,
-    "weight": 3,
-    "remark": "5 sets"
-   },
-   {
-    "name": "Hand tool set (spanner, screwdriver, plier, nipper)",
-    "required": 5,
-    "weight": 3,
-    "remark": "5 sets"
-   },
-   {
-    "name": "Measuring tape and steel rule",
-    "required": 25,
-    "weight": 3,
-    "remark": null
-   },
-   {
-    "name": "Viscometer/Brix meter, pH meter and thermometer",
-    "required": 1,
-    "weight": 5,
-    "remark": "1 set"
-   },
-   {
-    "name": "Material handling trolley for beams, packages and fabric rolls",
-    "required": 4,
-    "weight": 4,
-    "remark": null
-   },
-   {
-    "name": "Industrial vacuum cleaner/air blowing gun",
-    "required": 2,
-    "weight": 3,
-    "remark": null
-   },
-   {
-    "name": "Lockout-tagout kit",
-    "required": 2,
-    "weight": 4,
-    "remark": "2 sets"
-   },
-   {
-    "name": "Waste segregation bins (colour coded)",
-    "required": 4,
-    "weight": 3,
-    "remark": null
-   },
-   {
-    "name": "Tool board and storage cabinet",
-    "required": 2,
-    "weight": 3,
-    "remark": null
-   },
-   {
-    "name": "Fire extinguisher",
-    "required": 2,
-    "weight": 4,
-    "remark": null
-   },
-   {
-    "name": "First aid box",
-    "required": 1,
-    "weight": 4,
-    "remark": null
-   },
-   {
-    "name": "PPE set (dust mask, ear plug, gloves, apron, cap, safety shoes)",
-    "required": 25,
-    "weight": 4,
-    "remark": "25 sets"
    }
   ],
   "xlsx": "lab-standards/BTMA-lab-standard.xlsx",
-  "cs_pdf": "competency-standards/BTMA/260825 CS_PPFM_Draft.pdf"
+  "cs_pdf": "competency-standards/BTMA/261105 CS_PPFM_Final.pdf"
  },
  {
   "org": "BTMA",
   "org_slug": "BTMA",
-  "course_name": "Productivity Improvement and Quality Control in Yarn",
+  "course_name": "Quality Control in Yarn Manufacturing",
   "sheet": "QC in Yarn",
   "sector": "Textile",
   "trainees": 25,
-  "space": "Classroom – 600 sft (56 sqm)\nTesting laboratory/workshop – 1500 sft (140 sqm), OR\nClassroom cum laboratory/workshop – 2000 sft (186 sqm)",
-  "boilerplate": "•The institute shall not use the same facilities for any other projects/organizations offering a similar course.\n•The institute must provide sufficient evidence to prove ownership of the proposed training equipment.\nThe list denotes the minimum training equipment and facility required to effectively conduct training for a specific course. Additionally, the institute must ensure that all other necessary training tools, equipment, and furniture are available to meet the requirement of competency standards (CS) provided by SICIP.\nFor the operation of training course on Productivity Improvement and Quality Control in Yarn, the institute must ensure the availability of at least 80% of the major training equipment and training facilities (according to the CS) to be eligible for SICIP training delivery. If the score is below 80%, the remaining equipment and facilities need to be installed before the commencement of the training.\nThis occupation requires observation, measurement and analysis to be carried out on running production machinery. Where a training institute does not possess a full-scale spinning line and a fully equipped yarn testing laboratory, the institute must establish a formal linkage with a spinning mill so that the practical sessions of the occupation-specific units – particularly in-process quality control, yarn testing, fault and contamination control, productivity measurement and waste control – can be conducted in an actual workplace under supervision.\nThe institute will also provide all other hand tools and power tools as per CS for 25 trainees. Also, they will arrange adequate seating arrangement and classroom setup for the 25 trainees.",
+  "space": "Classroom – 500 sft (56 sqm)\nTesting laboratory/workshop – 1500 sft (140 sqm)",
+  "boilerplate": "•The institute shall not use the same facilities for any other projects/organizations offering a similar course.\n•The institute must provide sufficient evidence to prove ownership of the proposed training equipment.\nThe list denotes the minimum training equipment and facility required to effectively conduct training for a specific course. Additionally, the institute must ensure that all other necessary training tools, equipment, and furniture are available to meet the requirement of competency standards (CS) provided by SICIP.\nFor the operation of training course on Quality Control in Yarn Manufacturing, the institute must ensure the availability of at least 80% of the major training equipment and training facilities (according to the CS) to be eligible for SICIP training delivery. If the score is below 80%, the remaining equipment and facilities need to be installed before the commencement of the training.\nThis occupation requires observation, measurement and analysis to be carried out on running production machinery. Where a training institute does not possess a full-scale spinning line and a fully equipped yarn testing laboratory, the institute must establish a formal linkage with a spinning mill so that the practical sessions of the occupation-specific units – particularly in-process quality control, yarn testing, fault and contamination control, productivity measurement and waste control – can be conducted in an actual workplace under supervision.\nThe institute will also provide all other hand tools and power tools as per CS for 25 trainees. Also, they will arrange adequate seating arrangement and classroom setup for the 25 trainees.",
   "note": null,
   "min_rules": [],
-  "approved": "02 Sep 2026",
+  "approved": "05 Nov 2026",
   "equipment": [
    {
     "name": "Computer/Laptop",
-    "required": 2,
+    "required": 1,
     "weight": 5,
     "remark": null
    },
@@ -14373,39 +14151,9 @@
     "remark": null
    },
    {
-    "name": "Printer",
-    "required": 1,
-    "weight": 4,
-    "remark": null
-   },
-   {
-    "name": "Scanner",
-    "required": 1,
-    "weight": 4,
-    "remark": null
-   },
-   {
-    "name": "Internet connection with Wi-Fi facility",
-    "required": 1,
-    "weight": 5,
-    "remark": null
-   },
-   {
     "name": "Whiteboard with accessories",
     "required": 1,
     "weight": 4,
-    "remark": null
-   },
-   {
-    "name": "Scientific calculator",
-    "required": 5,
-    "weight": 4,
-    "remark": null
-   },
-   {
-    "name": "Standard testing atmosphere control unit (20 ± 2 °C, 65 ± 2% RH)",
-    "required": 1,
-    "weight": 9,
     "remark": null
    },
    {
@@ -14415,21 +14163,9 @@
     "remark": null
    },
    {
-    "name": "Advanced Fibre Information System (AFIS) or equivalent",
+    "name": "Advanced Fiber Information System (AFIS) or equivalent",
     "required": 1,
     "weight": 10,
-    "remark": null
-   },
-   {
-    "name": "Micronaire (fineness) tester",
-    "required": 1,
-    "weight": 9,
-    "remark": null
-   },
-   {
-    "name": "Fibrograph/comb sorter/Baer sorter for fibre length",
-    "required": 1,
-    "weight": 8,
     "remark": null
    },
    {
@@ -14439,27 +14175,9 @@
     "remark": null
    },
    {
-    "name": "Trash analyser (Shirley type)",
+    "name": "Roving/Sliver/Yarn Testing Machine (USTER-4/USTER-6 or Equivalent)",
     "required": 1,
-    "weight": 7,
-    "remark": null
-   },
-   {
-    "name": "Fibre identification kit (burning, solubility, melting point apparatus)",
-    "required": 1,
-    "weight": 7,
-    "remark": "1 set"
-   },
-   {
-    "name": "Stereo/projection microscope with slide preparation set",
-    "required": 1,
-    "weight": 7,
-    "remark": null
-   },
-   {
-    "name": "Hot air oven for moisture determination",
-    "required": 1,
-    "weight": 7,
+    "weight": 10,
     "remark": null
    },
    {
@@ -14469,33 +14187,9 @@
     "remark": null
    },
    {
-    "name": "Electronic balance (0.001 g accuracy)",
-    "required": 1,
-    "weight": 7,
-    "remark": null
-   },
-   {
-    "name": "Electronic balance (0.01 g accuracy)",
-    "required": 2,
-    "weight": 7,
-    "remark": null
-   },
-   {
-    "name": "Platform weighing scale for waste and package weighing",
-    "required": 1,
-    "weight": 5,
-    "remark": null
-   },
-   {
     "name": "Wrap reel with wrap block (sliver, roving and yarn)",
     "required": 3,
     "weight": 7,
-    "remark": null
-   },
-   {
-    "name": "Digital sliver/lap weighing scale",
-    "required": 1,
-    "weight": 5,
     "remark": null
    },
    {
@@ -14517,152 +14211,20 @@
     "remark": null
    },
    {
-    "name": "Evenness tester with imperfection, spectrogram and hairiness facility",
-    "required": 1,
-    "weight": 10,
-    "remark": null
-   },
-   {
     "name": "Yarn fault classification system (Classimat or equivalent)",
     "required": 1,
     "weight": 9,
     "remark": null
    },
    {
-    "name": "Black board winder with appearance grading cabinet and standard photographs",
-    "required": 1,
-    "weight": 7,
-    "remark": null
-   },
-   {
-    "name": "Yarn conditioning chamber",
-    "required": 1,
-    "weight": 8,
-    "remark": null
-   },
-   {
-    "name": "Nep counting board and hand lens/magnifier",
-    "required": 5,
-    "weight": 5,
-    "remark": null
-   },
-   {
-    "name": "Whirling/digital hygrometer and thermometer set",
-    "required": 5,
-    "weight": 5,
-    "remark": null
-   },
-   {
-    "name": "Anemometer",
-    "required": 2,
-    "weight": 5,
-    "remark": null
-   },
-   {
-    "name": "Lux meter",
-    "required": 2,
-    "weight": 5,
-    "remark": null
-   },
-   {
-    "name": "Sound level meter",
-    "required": 2,
-    "weight": 5,
-    "remark": null
-   },
-   {
-    "name": "Tachometer",
-    "required": 3,
-    "weight": 6,
-    "remark": null
-   },
-   {
-    "name": "Stop watch",
-    "required": 10,
-    "weight": 4,
-    "remark": null
-   },
-   {
-    "name": "Feeler, setting and thickness gauge set",
-    "required": 5,
-    "weight": 6,
-    "remark": null
-   },
-   {
-    "name": "Cot hardness (shore) tester",
+    "name": "Tachometer/Stroboscope",
     "required": 1,
     "weight": 6,
-    "remark": null
-   },
-   {
-    "name": "Cot buffing machine",
-    "required": 1,
-    "weight": 6,
-    "remark": null
-   },
-   {
-    "name": "Traveller gauge and traveller sample set (assorted)",
-    "required": 2,
-    "weight": 5,
-    "remark": "2 sets"
-   },
-   {
-    "name": "Hand tool set (spanner, screwdriver, plier, nipper, hook)",
-    "required": 5,
-    "weight": 3,
-    "remark": null
-   },
-   {
-    "name": "Standard weights and reference/standard test materials",
-    "required": 2,
-    "weight": 6,
-    "remark": "2 sets"
-   },
-   {
-    "name": "Sample set of fibre, lap, sliver, roving and yarn of different counts",
-    "required": null,
-    "weight": 5,
-    "remark": "As required"
-   },
-   {
-    "name": "Yarn fault and contamination reference sample board",
-    "required": 3,
-    "weight": 5,
-    "remark": null
-   },
-   {
-    "name": "Colour coded waste segregation bins and containers",
-    "required": 6,
-    "weight": 3,
-    "remark": null
-   },
-   {
-    "name": "Material handling trolley",
-    "required": 2,
-    "weight": 3,
-    "remark": null
-   },
-   {
-    "name": "Industrial vacuum cleaner/air blowing gun",
-    "required": 2,
-    "weight": 3,
-    "remark": null
-   },
-   {
-    "name": "Tool board, storage cabinet and sample storage rack",
-    "required": 3,
-    "weight": 3,
-    "remark": null
-   },
-   {
-    "name": "Fire extinguisher",
-    "required": 2,
-    "weight": 4,
     "remark": null
    }
   ],
   "xlsx": "lab-standards/BTMA-lab-standard.xlsx",
-  "cs_pdf": "competency-standards/BTMA/260902 CS_PIQCY_Draft.pdf"
+  "cs_pdf": "competency-standards/BTMA/261105 CS_QCYM_Final.pdf"
  },
  {
   "org": "BTMA",
