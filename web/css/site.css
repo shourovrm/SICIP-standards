@@ -11,10 +11,10 @@
 html{-webkit-text-size-adjust:100%}
 body{
   margin:0; background:var(--bg); color:var(--ink);
-  font:16.5px/1.6 "Spline Sans",system-ui,sans-serif;
+  font:16.5px/1.6 "Reddit Sans",system-ui,sans-serif;
   -webkit-font-smoothing:antialiased;
 }
-h1,h2,h3,.wordmark{font-family:"Space Grotesk","Spline Sans",system-ui,sans-serif;letter-spacing:-.015em}
+h1,h2,h3,.wordmark{font-family:"Rethink Sans","Reddit Sans",system-ui,sans-serif;letter-spacing:-.015em}
 a{color:var(--accent-ink)}
 ::selection{background:var(--accent-tint)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
@@ -80,7 +80,7 @@ main{padding:26px 20px 48px}
   display:flex;align-items:center;gap:10px;padding:11px 14px;
   border-bottom:1px solid var(--line);background:var(--panel);
 }
-.org-name{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:16px}
+.org-name{font-family:"Rethink Sans",sans-serif;font-weight:600;font-size:16px}
 .org-count{
   margin-left:auto;font-size:12.5px;font-weight:600;border-radius:20px;padding:2px 10px;white-space:nowrap;
   color:var(--muted);background:var(--bg);border:1px solid var(--line);
@@ -112,12 +112,12 @@ a.org-count:hover{background:var(--accent);color:#fff}
 .facts{display:grid;gap:12px;margin:16px 0 0}
 .facts dt{font-size:13px;color:var(--muted);letter-spacing:.02em;margin:0 0 1px}
 .facts dd{margin:0;font-size:16.5px;font-weight:500;font-variant-numeric:tabular-nums}
-.side-h{font-family:"Spline Sans",system-ui,sans-serif;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.side-h{font-family:"Reddit Sans",system-ui,sans-serif;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
 .hint{font-size:14px;color:var(--muted);margin:0 0 8px}
 .space{margin:0;font-weight:500;font-variant-numeric:tabular-nums}
 .pre{white-space:pre-line}
 .lab .sec{font-size:19px;font-weight:600;margin:0 0 10px;text-wrap:balance}
-.lab .sec small{display:block;font-family:"Spline Sans",system-ui,sans-serif;font-size:15px;font-weight:400;color:var(--muted);letter-spacing:0;margin-top:2px}
+.lab .sec small{display:block;font-family:"Reddit Sans",system-ui,sans-serif;font-size:15px;font-weight:400;color:var(--muted);letter-spacing:0;margin-top:2px}
 .rules{max-width:68ch}
 .rules ul{margin:0 0 14px;padding-left:19px}
 .rules li{margin:0 0 6px}
@@ -129,13 +129,13 @@ a.org-count:hover{background:var(--accent);color:#fff}
 .rules .note{margin-top:16px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:15.5px}
 
 /* live score card */
-.live .n{font-family:"Space Grotesk",sans-serif;font-size:36px;font-weight:700;line-height:1.2;font-variant-numeric:tabular-nums}
-.live .n small{font-size:15px;color:var(--muted);font-weight:500;font-family:"Spline Sans",system-ui,sans-serif}
+.live .n{font-family:"Rethink Sans",sans-serif;font-size:36px;font-weight:700;line-height:1.2;font-variant-numeric:tabular-nums}
+.live .n small{font-size:15px;color:var(--muted);font-weight:500;font-family:"Reddit Sans",system-ui,sans-serif}
 .pill{display:inline-block;white-space:nowrap;font-size:14px;font-weight:600;padding:3px 11px;border-radius:999px;margin:6px 0 12px}
 .pill.ok{background:var(--accent-tint);color:var(--accent-ink)}
 .pill.no{background:#fbe9e5;color:var(--warn)}
 .live .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:7px 0;border-top:1px solid var(--line);font-size:15px;font-variant-numeric:tabular-nums}
-.live .row b{font-family:"Space Grotesk",sans-serif;font-size:19px;font-weight:700;white-space:nowrap}
+.live .row b{font-family:"Rethink Sans",sans-serif;font-size:19px;font-weight:700;white-space:nowrap}
 /* air-conditioning condition — halves the points when unchecked */
 .live .ac{display:flex;align-items:center;gap:8px;padding:9px 0 0;border-top:1px solid var(--line);margin-top:7px;font-size:15px;cursor:pointer}
 .live .ac input{accent-color:var(--accent);width:16px;height:16px;cursor:pointer}
@@ -220,7 +220,7 @@ dialog::backdrop{background:rgba(23,33,28,.35)}
   }
   .scorebar div{line-height:1.2}
   .scorebar div > span{display:block;font-size:11.5px;color:var(--muted)}
-  .scorebar b{font-family:"Space Grotesk",sans-serif;font-size:21px;font-weight:700;font-variant-numeric:tabular-nums}
+  .scorebar b{font-family:"Rethink Sans",sans-serif;font-size:21px;font-weight:700;font-variant-numeric:tabular-nums}
   .scorebar b small{font-size:12px;font-weight:500;color:var(--muted)}
   .scorebar .pill{margin:0 0 0 auto;font-size:13px}
   /* equipment rows: name left, Available box right, required/weight/score underneath — no sideways scroll */

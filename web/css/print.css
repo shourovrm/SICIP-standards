@@ -3,9 +3,9 @@ body.printing-sheet > *:not(#print-sheet){display:none !important}
 body.printing-sheet #print-sheet{display:block}
 
 #print-sheet{
-  font:11pt/1.4 "Spline Sans",Calibri,Arial,sans-serif;color:#000;
+  font:11pt/1.4 "Reddit Sans",Calibri,Arial,sans-serif;color:#000;
 }
-#print-sheet h1{font:bold 13pt/1.3 "Spline Sans",Calibri,Arial,sans-serif;text-align:center;margin:0 0 12pt}
+#print-sheet h1{font:bold 13pt/1.3 "Reddit Sans",Calibri,Arial,sans-serif;text-align:center;margin:0 0 12pt}
 #print-sheet p{margin:0 0 6pt}
 #print-sheet .sec{font-weight:bold;margin:10pt 0 6pt}
 #print-sheet .small{font-size:9.5pt}

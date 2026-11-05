@@ -1,7 +1,7 @@
 # DECISIONS
 
 ## Current state
-Site BUILT and verified locally (Playwright: search, calculator math, print sheet, confirms, CS iframe, mobile, all 164 slugs + asset URLs 200). Pure static: root `index.html` + `web/` (css/js/fonts, self-hosted Space Grotesk + Spline Sans variable woff2). Hash router `#/cs` (default, CS tab first per user) / `#/lab` / `#/{cs,lab}/<org>--<course>`. `data/data.json` = 171 entries (23 orgs) (gen via `scripts/gen_data.py`; reads workbooks + reference index + `data/peer-data.json` for dates/pdf map). All 171 courses have cs_pdf; 10 approved=null (8 with no date in filename or cover; 2 BTMA drafts converted from docx); 5 sector=null (Beautification). Deploy root = repo root (asset paths `lab-standards/…`, `competency-standards/…` work as-is). NOT yet deployed to Cloudflare.
+Site BUILT and verified locally (Playwright: search, calculator math, print sheet, confirms, CS iframe, mobile, all 164 slugs + asset URLs 200). Pure static: root `index.html` + `web/` (css/js/fonts, self-hosted Rethink Sans + Reddit Sans variable woff2). Hash router `#/cs` (default, CS tab first per user) / `#/lab` / `#/{cs,lab}/<org>--<course>`. `data/data.json` = 171 entries (23 orgs) (gen via `scripts/gen_data.py`; reads workbooks + reference index + `data/peer-data.json` for dates/pdf map). All 171 courses have cs_pdf; 10 approved=null (8 with no date in filename or cover; 2 BTMA drafts converted from docx); 5 sector=null (Beautification). Deploy root = repo root (asset paths `lab-standards/…`, `competency-standards/…` work as-is). NOT yet deployed to Cloudflare.
 
 ## Next
 - BP similar-course analysis + all BP sources/text/html moved 2026-09-03 to `~/repos/SICIP-BPs` (own local repo, has its own CLAUDE.md/DECISIONS.md). `Business-Plan/` here is gone.
@@ -41,7 +41,7 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 
 ## Tried / rejected
 - pdf→HTML conversion for CS preview — mangles tables; use embedded PDF instead.
-- Fonts Public Sans / Inter / Source Serif — read as AI-templated; chose Space Grotesk × Spline Sans (#3).
+- Fonts Public Sans / Inter / Source Serif — read as AI-templated; chose Space Grotesk × Spline Sans (#3). Space Grotesk × Spline Sans replaced 2026-11-05 by Rethink Sans × Reddit Sans (#9).
 - Separate "Score Calculator" tab — folded into each lab-standard page.
 - "Open full" button on CS preview — redundant with Download; removed.
 - Directory as CSS grid of org cards — row height = tallest card (BMET 30) → blank space beside it. Also considered packed/masonry cards and accordion (mockups A, C).
@@ -108,3 +108,4 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 2026-10-06 | BTMA approved dates = YYMMDD filename prefix for the 5 PDFs; 2 docx-sourced stay blank | user decision
 2026-11-05 | BTMA QC in Yarn + Fabric Mfg CS replaced by 05 Nov 26 Final (now "Quality Control in Yarn Manufacturing" 14 rows, "Production Process in Woven Fabric Manufacturing" 8 rows = CS facility tables; weights reused from old sheets, new by analogy); docx→pdf via soffice; approved 05 Nov 2026 | user supplied ~/Downloads docx
 2026-11-05 | Removed 1120px cap on .wrap/.top-in/.foot (full-width, padding clamp 20-48px); added docs/mockups/font-collections-2.html (9 uncommon sans pairings, awaiting pick) | site was not fullscreen on PC; user wants less-common fonts, sans body
+2026-11-05 | font = Rethink Sans (headings) × Reddit Sans (body), self-hosted latin woff2 | user pick #9 from font-collections-2 mockup; old Space Grotesk/Spline Sans files deleted

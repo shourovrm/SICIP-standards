@@ -51,7 +51,7 @@ The mockups in `docs/mockups/` are **visual reference** (an early iteration). Wh
 - **Hash router** (`#/lab`, `#/cs`, `#/lab/<slug>`, `#/cs/<slug>`): every page is a shareable, bookmarkable URL with working back-button. (Mockup used bare show/hide — replace with the router.)
 
 ## Typography — FINAL
-- **Headings / wordmark:** Space Grotesk. **Body / UI:** Spline Sans. (Font collection #3.)
+- **Headings / wordmark:** Rethink Sans. **Body / UI:** Reddit Sans. (font-collections-2 #9, picked 2026-11-05.)
 - **Self-host** the woff2 files (offline-safe, faster, no Google CDN dependency). Do NOT use Public Sans / Inter / Source Serif (earlier iterations — rejected as templated).
 - Comfortable sizing: body ~16.5px, headings 22–27px. Never cramped.
 
