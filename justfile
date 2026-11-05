@@ -1,31 +1,10 @@
-# SICIP Standards: static site, no build step. `just check` is the gate before every commit.
+# Base justfile. The stack profile (profile.just, copied from
+# ~/.claude/stacks/<stack>/) defines: lint, types, dead, test, build, dev,
+# slice-check. `just check` is the one command run before a commit.
+import 'profile.just'
 
-default:
-    @just --list
+check: lint types dead test
 
-# Serve the site at http://localhost:8765 (hash router needs the repository root)
-serve port="8765":
-    python3 -m http.server {{port}}
-
-# Everything that must pass before a commit
-check: js py data
-
-# Syntax-check the browser JavaScript
-js:
-    for f in web/js/*.js; do node --check "$f" || exit 1; done
-
-# Syntax-check the Python scripts (parses only, leaves no .pyc behind)
-py:
-    python3 -I -c "import ast, pathlib; [ast.parse(p.read_text(), str(p)) for p in sorted(pathlib.Path('scripts').glob('*.py'))]"
-
-# data/data.json parses, and every workbook and PDF it points to exists
-data:
-    #!/usr/bin/env python3
-    import json, pathlib
-    entries = json.load(open("data/data.json"))
-    paths = [p for e in entries for p in (e["xlsx"], e["cs_pdf"]) if p]
-    missing = [p for p in paths if not pathlib.Path(p).exists()]
-    for p in missing:
-        print("missing:", p)
-    print(f"{len(entries)} courses, {len(paths)} files referenced, {len(missing)} missing")
-    raise SystemExit(1 if missing else 0)
+# Reports files longer than the soft limit. Reported, never blocking.
+long-files limit="400":
+    @git ls-files | grep -vE '\.(lock|json|svg|png|jpg)$' | xargs wc -l 2>/dev/null | awk -v lim={{limit}} '$1 > lim && $2 != "total" {print}' || true

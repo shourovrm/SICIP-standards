@@ -1,0 +1,14 @@
+line-length = 100
+
+[lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "C90", "PLR", "RUF", "PGH"]
+# PGH003/PGH004 flag blanket `type: ignore` / `noqa`; RUF100 flags unused ones.
+
+[lint.mccabe]
+max-complexity = 10
+
+[lint.pylint]
+max-args = 4
+max-branches = 10
+max-statements = 30     # proxy for function length
+max-returns = 4
