@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en" data-theme="jute">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>C Concourse — SICIP Standards mockup</title>
+<link rel="stylesheet" href="../../../web/css/fonts.css">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="themes.css">
+<style>
+/* C Concourse: search-first, one 760px reading column. Each course lists both its documents. Lab page is three numbered steps. */
+.top{display:flex;justify-content:space-between;align-items:baseline;max-width:760px;margin:0 auto;padding:var(--s5) var(--s5) 0}
+.top nav{display:flex;gap:var(--s5)}
+.top nav a{color:var(--muted);text-decoration:none;font-weight:600}
+.top nav a[aria-current]{color:var(--ink);text-decoration:underline;text-decoration-thickness:3px;text-decoration-color:var(--accent);text-underline-offset:8px}
+.col{max-width:760px;margin:0 auto;padding:var(--s7) var(--s5) var(--s8)}
+.hero h1{font-size:56px;line-height:1.05;margin-bottom:var(--s5)}
+.hero .search{max-width:none;min-height:56px;font-size:19px;padding:0 var(--s4)}
+.browse{margin:var(--s5) 0 var(--s7)}
+.browse p{margin:0 0 var(--s2)}
+.browse a{margin-right:var(--s4);white-space:nowrap}
+.results h2{font-size:var(--t-h3);margin-bottom:var(--s4);padding-bottom:var(--s2);border-bottom:2px solid var(--ink)}
+.res{padding:var(--s4) 0;border-bottom:1px solid var(--line)}
+.res h3{font-size:var(--t-h3)}
+.res h3 a{color:var(--ink);text-decoration-color:var(--accent);text-decoration-thickness:2px}
+.res .meta{color:var(--muted);margin:var(--s1) 0 var(--s2)}
+.res .docs{display:flex;gap:var(--s5);font-size:var(--t-sm);font-weight:600}
+.step{margin:var(--s7) 0}
+.step h2{font-size:var(--t-h3);display:flex;gap:var(--s3);align-items:baseline;margin-bottom:var(--s4)}
+.step h2 b{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:99px;background:var(--accent);color:var(--on-accent);font-size:var(--t-body)}
+.result{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:var(--s5);display:flex;flex-wrap:wrap;gap:var(--s5) var(--s7);align-items:center}
+.result small{display:block;color:var(--muted);font-size:var(--t-sm)}
+.row-acts{display:flex;gap:var(--s3);flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div id="mockbar"></div>
+<header class="top">
+  <span class="wordmark" style="font-size:var(--t-h3)">SICIP Standards</span>
+  <nav aria-label="Sections"><a href="#dir" aria-current="page">Lab Standards</a><a href="#cs">Competency Standards</a></nav>
+</header>
+
+<main class="col">
+<section data-screen="dir">
+  <div class="hero">
+    <h1>Find a training standard</h1>
+    <input class="search" type="search" value="welding" aria-label="Search course, sector or organisation">
+  </div>
+  <div class="browse">
+    <p class="small muted">Browse by sector</p><p id="sectors"></p>
+    <p class="small muted" style="margin-top:var(--s4)">Organisations</p><p id="orgs"></p>
+  </div>
+  <div class="results">
+    <h2>2 courses in 1 organisation</h2>
+    <div id="res"></div>
+  </div>
+</section>
+
+<section data-screen="lab">
+  <p class="small muted"><a href="#dir">All standards</a> / BEIOA</p>
+  <h1 style="margin:var(--s3) 0 var(--s5)">Course-wise Training Infrastructure and Facilities</h1>
+  <dl class="kv" id="kv"></dl>
+  <div class="step"><h2><b>1</b>Enter what the lab has</h2>
+    <table class="eq">
+      <thead><tr><th>#</th><th>Major equipment and facilities</th><th class="num">Required</th><th class="num">Available</th><th class="num">Weight</th><th class="num">Score</th></tr></thead>
+      <tbody data-eq></tbody>
+    </table>
+  </div>
+  <div class="step"><h2><b>2</b>Check the score</h2>
+    <div class="result">
+      <div><small>Score out of 100</small><span class="score-n" data-score>0</span></div>
+      <div><small>Points out of 30</small><span class="score-n" data-points>0</span></div>
+      <span data-status class="pill"></span>
+      <button class="btn primary" style="margin-left:auto">Calculate</button>
+    </div>
+  </div>
+  <div class="step"><h2><b>3</b>Keep a copy</h2>
+    <div class="row-acts"><button class="btn">Print</button><button class="btn">Download .xlsx</button></div>
+  </div>
+</section>
+
+<section data-screen="cs">
+  <p class="small muted"><a href="#dir">All standards</a> / BEIOA</p>
+  <h1 style="margin:var(--s3) 0 var(--s3)">Machine Shop Practice</h1>
+  <p class="muted">Competency standard · Light Engineering · BEIOA · Approved 03 Jul 2025</p>
+  <div class="row-acts" style="margin:var(--s5) 0"><button class="btn primary">Download PDF</button><button class="btn">Print</button></div>
+  <div class="pdf"><h3>Competency Standard<br>Machine Shop Practice</h3><i></i><i style="width:92%"></i><i style="width:96%"></i><i style="width:60%"></i><br><i></i><i style="width:88%"></i><i style="width:94%"></i><i style="width:40%"></i></div>
+</section>
+</main>
+
+<script src="mock.js"></script>
+<script>
+$("#sectors").innerHTML = SAMPLE.sectors.map(s => `<a href="#dir">${s}</a>`).join("");
+$("#orgs").innerHTML = SAMPLE.orgs.map(o => `<a href="#dir">${o.org}</a>`).join("");
+$("#res").innerHTML = ["Welding", "4G - 6G Welding"].map(n => {
+  const c = SAMPLE.orgs[3].courses.find(x => x[0] === n);
+  return `<div class="res"><h3><a href="#lab">${n.replace(/welding/i, m => `<mark>${m}</mark>`)}</a></h3>
+  <p class="meta">DTE · ${c[1]} · Approved ${c[2]}</p>
+  <div class="docs"><a href="#lab">Lab standard</a><a href="#cs">Competency standard</a></div></div>`;
+}).join("");
+const c = SAMPLE.course;
+$("#kv").innerHTML = `<dt>Course name</dt><dd>${c.name}</dd><dt>Number of trainees</dt><dd>${c.trainees}</dd><dt>Sector · Organisation</dt><dd>${c.sector} · ${c.org}</dd><dt>Approved</dt><dd>${c.approved}</dd><dt>Training space</dt><dd>${c.space}</dd>`;
+</script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en" data-theme="jute">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>B Rail — SICIP Standards mockup</title>
+<link rel="stylesheet" href="../../../web/css/fonts.css">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="themes.css">
+<style>
+/* B Rail: app-style left rail (nav + organisations), 920px work area, scoresheet panel beside the table. */
+.shell{display:grid;grid-template-columns:272px 1fr;max-width:1280px;margin:0 auto;min-height:calc(100vh - 46px)}
+.rail{position:sticky;top:46px;align-self:start;height:calc(100vh - 46px);overflow:auto;background:var(--surface);
+  border-right:1px solid var(--line);padding:var(--s5) var(--s4)}
+.wordmark{display:block;font-size:var(--t-h3);padding:0 var(--s2) var(--s5)}
+.rail nav a,.rail .orgs a{display:flex;justify-content:space-between;padding:var(--s2) var(--s3);border-radius:var(--r);color:var(--ink);text-decoration:none}
+.rail nav a{font-weight:600}
+.rail [aria-current]{background:var(--tint);color:var(--accent);font-weight:700}
+.rail h2{font-size:var(--t-sm);font-weight:600;color:var(--muted);padding:var(--s5) var(--s3) var(--s2);letter-spacing:0}
+.rail .orgs{list-style:none;margin:0;padding:0}
+.rail .orgs span{color:var(--muted)}
+main{padding:var(--s7) var(--s7) var(--s8);min-width:0}
+.sectorbar{display:flex;flex-wrap:wrap;gap:var(--s2);margin:var(--s5) 0 var(--s6)}
+.sectorbar button{min-height:36px;padding:0 var(--s3);border:1px solid var(--edge);border-radius:var(--r);background:transparent;color:var(--ink);font:inherit;cursor:pointer}
+.sectorbar button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.group{margin-bottom:var(--s6)}
+.group header{display:flex;align-items:baseline;gap:var(--s3);margin-bottom:var(--s2)}
+.group header a{margin-left:auto;font-size:var(--t-sm)}
+.group ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 var(--s6)}
+.group li{padding:var(--s3) 0;border-top:1px solid var(--line)}
+.group li a{font-weight:600}
+.group li span{display:block;font-size:var(--t-sm);color:var(--muted)}
+.lab{display:grid;grid-template-columns:1fr 296px;gap:var(--s6);align-items:start;margin-top:var(--s6)}
+.sheet{position:sticky;top:70px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:var(--s5)}
+.sheet h3{margin-bottom:var(--s4)}
+.sheet .score-n{display:block;font-size:var(--t-h1)}
+.sheet .row{margin:var(--s4) 0}
+.sheet .btn{width:100%;margin-top:var(--s2)}
+.cs{display:grid;grid-template-columns:1fr 280px;gap:var(--s6);margin-top:var(--s6);align-items:start}
+.cs .side .btn{width:100%;margin-top:var(--s2)}
+</style>
+</head>
+<body>
+<div id="mockbar"></div>
+<div class="shell">
+<aside class="rail">
+  <span class="wordmark">SICIP Standards</span>
+  <nav aria-label="Sections"><a href="#dir" aria-current="page">Lab Standards</a><a href="#cs">Competency Standards</a></nav>
+  <h2>Organisations</h2>
+  <ul class="orgs" id="orgs"></ul>
+</aside>
+
+<main>
+<section data-screen="dir">
+  <h1>Lab Standards</h1>
+  <p class="muted" style="margin-top:var(--s2)">23 organisations · 171 standards</p>
+  <div style="margin-top:var(--s5)"><input class="search" type="search" placeholder="Search course, sector or organisation" aria-label="Search"></div>
+  <div class="sectorbar" id="sectorbar"></div>
+  <div id="groups"></div>
+</section>
+
+<section data-screen="lab">
+  <p class="small muted"><a href="#dir">Lab Standards</a> / BEIOA</p>
+  <h1 style="margin:var(--s3) 0 var(--s5)">Course-wise Training Infrastructure and Facilities</h1>
+  <dl class="kv" id="kv"></dl>
+  <div class="lab">
+    <table class="eq">
+      <thead><tr><th>#</th><th>Major equipment and facilities</th><th class="num">Required</th><th class="num">Available</th><th class="num">Weight</th><th class="num">Score</th></tr></thead>
+      <tbody data-eq></tbody>
+    </table>
+    <aside class="sheet" aria-label="Scoresheet">
+      <h3>Scoresheet</h3>
+      <div class="row"><span class="muted small">Score out of 100</span><span class="score-n" data-score>0</span></div>
+      <div class="row"><span class="muted small">Points out of 30</span><span class="score-n" data-points>0</span></div>
+      <span data-status class="pill"></span>
+      <p class="small muted" style="margin-top:var(--s4)">Eligible at 80 or more.</p>
+      <button class="btn primary">Calculate</button><button class="btn">Print</button><button class="btn">Download .xlsx</button>
+    </aside>
+  </div>
+</section>
+
+<section data-screen="cs">
+  <p class="small muted"><a href="#dir">Competency Standards</a> / BEIOA</p>
+  <h1 style="margin-top:var(--s3)">Machine Shop Practice</h1>
+  <div class="cs">
+    <div class="pdf"><h3>Competency Standard<br>Machine Shop Practice</h3><i></i><i style="width:92%"></i><i style="width:96%"></i><i style="width:60%"></i><br><i></i><i style="width:88%"></i><i style="width:94%"></i><i style="width:40%"></i></div>
+    <div class="side">
+      <dl class="kv" style="grid-template-columns:1fr"><dt>Sector</dt><dd>Light Engineering</dd><dt>Organisation</dt><dd>BEIOA</dd><dt>Approved</dt><dd>03 Jul 2025</dd></dl>
+      <div style="margin-top:var(--s5)"><button class="btn primary">Download PDF</button><button class="btn">Print</button></div>
+    </div>
+  </div>
+</section>
+</main>
+</div>
+
+<script src="mock.js"></script>
+<script>
+$("#orgs").innerHTML = '<li><a href="#dir" aria-current="true">All organisations <span>171</span></a></li>' +
+  SAMPLE.orgs.map(o => `<li><a href="#dir">${o.org} <span>${o.n}</span></a></li>`).join("");
+$("#sectorbar").innerHTML = ["All sectors", ...SAMPLE.sectors].map((s, i) => `<button aria-pressed="${i === 0}">${s}</button>`).join("");
+$("#groups").innerHTML = SAMPLE.orgs.map(o =>
+  `<section class="group"><header><h3>${o.org}</h3><span class="muted small">${o.n} courses</span><a href="#dir">Workbook .xlsx</a></header>
+   <ul>${o.courses.map(c => `<li><a href="#lab">${c[0]}</a><span>${c[1]}${c[2] ? " · Approved " + c[2] : ""}</span></li>`).join("")}</ul></section>`).join("");
+const c = SAMPLE.course;
+$("#kv").innerHTML = `<dt>Course name</dt><dd>${c.name}</dd><dt>Number of trainees</dt><dd>${c.trainees}</dd><dt>Sector · Organisation</dt><dd>${c.sector} · ${c.org}</dd><dt>Approved</dt><dd>${c.approved}</dd><dt>Training space</dt><dd>${c.space}</dd>`;
+</script>
+</body>
+</html>

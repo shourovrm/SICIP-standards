@@ -1,0 +1,6 @@
+/* Five palettes. Each sets the same 10 roles; every layout reads only these. */
+:root,[data-theme=jute]{--bg:#efe8d8;--surface:#faf6ec;--ink:#2a2118;--muted:#62564a;--accent:#9a3412;--on-accent:#fff;--tint:#f3dccd;--mark:#f2cf5b;--good:#3a5a12;--bad:#a3201b}
+[data-theme=plum]{--bg:#f2ecf0;--surface:#fbf8fa;--ink:#26151f;--muted:#625058;--accent:#7a2a62;--on-accent:#fff;--tint:#ead6e4;--mark:#f6d56a;--good:#1f5f3a;--bad:#a3201b}
+[data-theme=graphite]{--bg:#ececea;--surface:#f8f8f6;--ink:#1a1a1a;--muted:#575757;--accent:#b8390a;--on-accent:#fff;--tint:#fdeee6;--mark:#ffd84d;--good:#1f5f3a;--bad:#b3261e}
+[data-theme=monsoon]{--bg:#0e1613;--surface:#16221e;--ink:#e8efe9;--muted:#a0b3a9;--accent:#c8e04c;--on-accent:#11200d;--tint:#26361d;--mark:#6b5d12;--good:#8fd18f;--bad:#ff9a8a}
+[data-theme=paddy]{--bg:#f1f0dc;--surface:#fbfaee;--ink:#1d2813;--muted:#586045;--accent:#4a6a14;--on-accent:#fff;--tint:#dfe7bf;--mark:#f0d24a;--good:#2f5a0f;--bad:#a3201b}

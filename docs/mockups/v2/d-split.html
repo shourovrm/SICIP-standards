@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en" data-theme="jute">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>D Split — SICIP Standards mockup</title>
+<link rel="stylesheet" href="../../../web/css/fonts.css">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="themes.css">
+<style>
+/* D Split: course-first. One list pane, one detail pane. A course shows its Lab standard and Competency standard as two views of the same record. */
+.app{max-width:1360px;margin:0 auto;display:grid;grid-template-rows:auto 1fr;height:calc(100vh - 46px)}
+.bar{display:flex;align-items:center;gap:var(--s5);padding:var(--s3) var(--s5);border-bottom:2px solid var(--ink)}
+.bar .wordmark{font-size:var(--t-h3);margin-right:var(--s4)}
+.bar .search{max-width:420px}
+.bar select{max-width:200px}
+.panes{display:grid;grid-template-columns:400px 1fr;min-height:0}
+.list{overflow:auto;border-right:1px solid var(--line);padding:var(--s3) 0 var(--s7)}
+.list h3{font-size:var(--t-sm);font-weight:600;color:var(--muted);padding:var(--s4) var(--s5) var(--s2);letter-spacing:0;display:flex;justify-content:space-between}
+.list a.item{display:block;padding:var(--s2) var(--s5);color:var(--ink);text-decoration:none;border-radius:var(--r);margin:0 var(--s2)}
+.list a.item span{display:block;font-size:var(--t-sm);color:var(--muted)}
+.list a.item b{font-weight:600}
+body:not([data-now=dir]) .list a.sel{background:var(--tint)}
+.detail{overflow:auto;padding:var(--s6) var(--s7) var(--s8);min-width:0}
+.seg{display:inline-flex;border:2px solid var(--ink);border-radius:var(--r);margin-bottom:var(--s5)}
+.seg button{min-height:40px;padding:0 var(--s5);background:none;border:0;color:var(--ink);font:700 var(--t-body) "Reddit Sans",system-ui,sans-serif;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+.head{display:flex;flex-wrap:wrap;gap:var(--s3) var(--s5);align-items:flex-start;justify-content:space-between;margin-bottom:var(--s5)}
+.head .acts{display:flex;gap:var(--s3)}
+.summary{display:flex;gap:var(--s6);align-items:center;margin:var(--s5) 0;padding:var(--s4) 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);flex-wrap:wrap}
+.summary small{display:block;color:var(--muted);font-size:var(--t-sm)}
+.empty .sectors a{margin-right:var(--s4);white-space:nowrap}
+</style>
+</head>
+<body>
+<div id="mockbar"></div>
+<div class="app">
+<header class="bar">
+  <span class="wordmark">SICIP Standards</span>
+  <input class="search" type="search" placeholder="Search course, sector or organisation" aria-label="Search">
+  <select aria-label="Organisation"><option>All organisations</option><option>BEIOA</option><option>BGMEA</option><option>BMET</option><option>DTE</option><option>PKSF</option></select>
+  <span class="muted small" style="margin-left:auto">171 standards · 23 organisations</span>
+</header>
+<div class="panes">
+  <nav class="list" id="list" aria-label="Courses"></nav>
+  <main class="detail">
+    <section data-screen="dir" class="empty">
+      <h1>Pick a course</h1>
+      <p class="muted" style="margin-top:var(--s3)">Each course has a lab standard (equipment and score) and a competency standard (PDF). Choose one on the left, or start from a sector.</p>
+      <p class="sectors" id="sectors" style="margin-top:var(--s5)"></p>
+    </section>
+
+    <section data-screen="lab">
+      <div class="seg" role="group" aria-label="Document"><button data-go="lab">Lab standard</button><button data-go="cs">Competency standard</button></div>
+      <div class="head"><h1 style="font-size:var(--t-h2)">Course-wise Training Infrastructure and Facilities</h1></div>
+      <dl class="kv" id="kv"></dl>
+      <div class="summary">
+        <div><small>Score out of 100</small><span class="score-n" data-score>0</span></div>
+        <div><small>Points out of 30</small><span class="score-n" data-points>0</span></div>
+        <span data-status class="pill"></span>
+        <div style="margin-left:auto;display:flex;gap:var(--s3)"><button class="btn">Print</button><button class="btn">Download .xlsx</button><button class="btn primary">Calculate</button></div>
+      </div>
+      <table class="eq">
+        <thead><tr><th>#</th><th>Major equipment and facilities</th><th class="num">Required</th><th class="num">Available</th><th class="num">Weight</th><th class="num">Score</th></tr></thead>
+        <tbody data-eq></tbody>
+      </table>
+    </section>
+
+    <section data-screen="cs">
+      <div class="seg" role="group" aria-label="Document"><button data-go="lab">Lab standard</button><button data-go="cs">Competency standard</button></div>
+      <div class="head"><div><h1 style="font-size:var(--t-h2)">Machine Shop Practice</h1><p class="muted" style="margin-top:var(--s2)">Light Engineering · BEIOA · Approved 03 Jul 2025</p></div>
+        <div class="acts"><button class="btn">Print</button><button class="btn primary">Download PDF</button></div></div>
+      <div class="pdf"><h3>Competency Standard<br>Machine Shop Practice</h3><i></i><i style="width:92%"></i><i style="width:96%"></i><i style="width:60%"></i><br><i></i><i style="width:88%"></i><i style="width:94%"></i><i style="width:40%"></i></div>
+    </section>
+  </main>
+</div>
+</div>
+
+<script src="mock.js"></script>
+<script>
+$("#list").innerHTML = SAMPLE.orgs.map(o =>
+  `<h3><span>${o.org}</span><span>${o.n}</span></h3>` +
+  o.courses.map(c => `<a class="item ${c[0] === "Machine Shop Practice" ? "sel" : ""}" href="#lab"><b>${c[0]}</b><span>${c[1]}${c[2] ? " · " + c[2] : ""}</span></a>`).join("")).join("");
+$("#sectors").innerHTML = SAMPLE.sectors.map(s => `<a href="#dir">${s}</a>`).join("");
+const c = SAMPLE.course;
+$("#kv").innerHTML = `<dt>Course name</dt><dd>${c.name}</dd><dt>Number of trainees</dt><dd>${c.trainees}</dd><dt>Sector · Organisation</dt><dd>${c.sector} · ${c.org}</dd><dt>Approved</dt><dd>${c.approved}</dd><dt>Training space</dt><dd>${c.space}</dd>`;
+</script>
+</body>
+</html>
