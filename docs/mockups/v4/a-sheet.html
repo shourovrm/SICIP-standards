@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A Sheet — lab page mockup</title>
+<link rel="stylesheet" href="../../../web/css/fonts.css">
+<link rel="stylesheet" href="lab.css">
+<style>
+/* A Sheet: one wide column read top to bottom. Facts and training space share a band, conditions run in two balanced
+   columns, the table spans the page, and a score dock stays at the bottom. */
+.info{display:grid;gap:24px 48px;margin:24px 0 40px;padding:20px 0;border-block:1px solid var(--line-strong)}
+@container page (min-width:900px){.info{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}}
+.cond{margin-bottom:40px}
+.cond-body{column-count:2}
+.dock{position:sticky;bottom:0;z-index:5;display:flex;align-items:center;flex-wrap:wrap;gap:16px 32px;margin:32px calc(-1 * var(--gut)) -72px;
+  padding:12px var(--gut);background:var(--surface);border-top:2px solid var(--ink)}
+.dock .scorebox{display:flex;align-items:center;gap:8px 32px;flex-wrap:wrap}
+.dock .sc-n{font-size:34px}
+.dock .sc-rows{display:flex;gap:8px 24px;padding:0;border:0}
+.dock .sc-rows dd{margin-right:8px}
+.dock .actions{margin-left:auto}
+@container page (max-width:640px){.dock{display:none}.scorebar{display:flex}}
+</style>
+</head>
+<body>
+<div id="mockbar"></div>
+<div class="page">
+  <header class="top"><div class="top-in"><span class="wordmark">SICIP Standards</span>
+    <nav class="tabs" aria-label="Sections"><a href="#">Competency Standards</a><a href="#" aria-current="page">Lab Standards</a></nav></div></header>
+  <main class="main">
+    <a class="back" href="#">← Lab Standards</a>
+    <header class="head" data-slot="head"></header>
+    <div class="info"><div data-slot="facts"></div><div data-slot="space"></div></div>
+    <div data-slot="conditions"></div>
+    <div data-slot="table"></div>
+    <div class="dock"><div data-slot="score"></div><div data-slot="actions"></div></div>
+  </main>
+  <div class="scorebar"><div><small>Score</small><b data-score>0</b> / 100</div><div><small>Points</small><b data-points>0</b> / 30</div><span data-status class="pill"></span></div>
+</div>
+<script src="lab-data.js"></script>
+<script src="lab.js"></script>
+</body>
+</html>

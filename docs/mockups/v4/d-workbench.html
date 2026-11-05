@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>D Workbench — lab page mockup</title>
+<link rel="stylesheet" href="../../../web/css/fonts.css">
+<link rel="stylesheet" href="lab.css">
+<style>
+/* D Workbench: reference on the left (facts, space, conditions), work on the right (table + score). On a wide screen you read
+   the conditions while you type, with no scrolling past them. Below 960px it becomes one column. */
+.bench{display:grid;gap:32px;margin-top:20px}
+.ref{display:grid;gap:28px;align-content:start}
+.ref .opts{grid-template-columns:1fr}
+.ref .or{justify-self:start}
+.cond-body{column-width:auto;columns:1}
+.work{display:grid;gap:24px;align-content:start;min-width:0}
+.workbar{display:flex;flex-wrap:wrap;align-items:center;gap:16px 32px;padding:16px 20px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.workbar .scorebox{display:flex;align-items:center;gap:8px 32px;flex-wrap:wrap}
+.workbar .sc-rows{display:flex;gap:8px 24px;padding:0;border:0}
+.workbar .sc-n{font-size:36px}
+.workbar .actions{margin-left:auto}
+@container page (min-width:960px){
+  .bench{grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:start}
+  .ref{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow:auto;padding-right:8px}
+  .workbar{position:sticky;top:16px;z-index:4}
+}
+@container page (max-width:959px){.scorebar{display:flex}}
+</style>
+</head>
+<body>
+<div id="mockbar"></div>
+<div class="page">
+  <header class="top"><div class="top-in"><span class="wordmark">SICIP Standards</span>
+    <nav class="tabs" aria-label="Sections"><a href="#">Competency Standards</a><a href="#" aria-current="page">Lab Standards</a></nav></div></header>
+  <main class="main">
+    <a class="back" href="#">← Lab Standards</a>
+    <header class="head" data-slot="head"></header>
+    <div class="bench">
+      <div class="ref"><div data-slot="facts"></div><div data-slot="space"></div><div data-slot="conditions"></div></div>
+      <div class="work">
+        <div class="workbar"><div data-slot="score"></div><div data-slot="actions"></div></div>
+        <div data-slot="table"></div>
+      </div>
+    </div>
+  </main>
+  <div class="scorebar"><div><small>Score</small><b data-score>0</b> / 100</div><div><small>Points</small><b data-points>0</b> / 30</div><span data-status class="pill"></span></div>
+</div>
+<script src="lab-data.js"></script>
+<script src="lab.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+/* v4 lab-page mockups: Plum, Rethink Sans + Reddit Sans. All responsive rules use container queries on .page, so the
+   toolbar's Tablet/Phone frames behave exactly like a real narrow screen. */
+:root{
+  --bg:#f2ecf0;--surface:#fbf8fa;--panel:#f6f0f4;--ink:#26151f;--muted:#625058;--line:#e3d8e0;--line-strong:#cdbec8;
+  --accent:#7a2a62;--accent-ink:#5c1f4a;--accent-tint:#ead6e4;--mark:#f6d56a;--good:#1f5f3a;--bad:#a3201b;
+  --edge:color-mix(in srgb,var(--ink) 50%,var(--bg));
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.6 "Reddit Sans",system-ui,sans-serif;--frame:1440px}
+body[data-view=tablet]{--frame:768px}
+body[data-view=phone]{--frame:390px}
+h1,h2,.wordmark,.sc-n{font-family:"Rethink Sans","Reddit Sans",system-ui,sans-serif;letter-spacing:-.01em}
+h1,h2,p,dl,dd,ul{margin:0}
+a{color:var(--accent-ink)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+button{font:inherit}
+.muted{color:var(--muted)}
+
+/* Frame */
+.page{container:page / inline-size;max-width:var(--frame);margin:0 auto;background:var(--bg);--gut:clamp(16px,3cqi,48px);min-height:100vh}
+body:not([data-view=desktop]) .page{border-inline:1px solid var(--line-strong)}
+.top{border-bottom:1px solid var(--line-strong)}
+.top-in{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 24px;padding:14px var(--gut)}
+.wordmark{font-size:22px;font-weight:700}
+.tabs{display:flex;gap:4px;margin-left:auto}
+.tabs a{padding:7px 14px;border-radius:8px;color:var(--muted);font-weight:500;text-decoration:none}
+.tabs a[aria-current]{background:var(--accent-tint);color:var(--accent-ink);font-weight:600}
+.main{padding:20px var(--gut) 72px}
+.back{display:inline-block;margin-bottom:16px;color:var(--muted);text-decoration:none;font-size:15px}
+.back:hover{color:var(--ink)}
+
+/* Head */
+.head h1{font-size:34px;line-height:1.15;font-weight:700;text-wrap:balance}
+.head p{margin-top:6px;color:var(--muted)}
+.sec-h{font:700 20px/1.3 "Rethink Sans",system-ui,sans-serif;margin-bottom:12px}
+
+/* Facts: label above value, one aligned left edge */
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 24px}
+.facts dt{font-size:14px;color:var(--muted)}
+.facts dd{font-weight:600}
+
+/* Training space: options sit side by side when there is room, "or" between them */
+.space .intro{color:var(--muted);font-size:15px;margin-bottom:12px;max-width:62ch;text-wrap:pretty}
+.opts{display:grid;gap:8px 16px;align-items:start}
+.opt{display:grid;gap:2px;padding:12px 14px;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+.opt span{display:block}
+.or{justify-self:start;font-size:14px;font-weight:600;color:var(--muted)}
+@container page (min-width:760px){.opts{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:stretch}.or{align-self:center;justify-self:center}}
+
+/* Conditions: the text fills its box in balanced columns. Bullets hang, paragraphs share one measure. */
+.cond{margin:0}
+.cond-body{column-width:26rem;column-gap:48px}
+.rules{list-style:none;padding:0}
+.rules li{position:relative;padding-left:20px;margin-bottom:12px;text-wrap:pretty;break-inside:avoid}
+.rules li::before{content:"";position:absolute;left:3px;top:.72em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.prose p{margin-bottom:14px;text-wrap:pretty;break-inside:avoid}
+.prose p.elig{padding:12px 14px;background:var(--accent-tint);border-radius:8px}
+.prose p.elig strong{font-weight:700}
+
+/* Equipment table */
+.eq-note{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;align-items:center;margin-top:12px;color:var(--muted);font-size:14px}
+.eq{width:100%;border-collapse:collapse}
+.eq th{padding:8px 12px;font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);text-align:left;border-bottom:2px solid var(--ink);white-space:nowrap}
+.eq td{padding:8px 12px;border-bottom:1px solid var(--line);vertical-align:middle}
+.eq .num{text-align:right;font-variant-numeric:tabular-nums}
+.eq .sn{color:var(--muted);width:48px}
+.eq tfoot td{font-weight:700;border-bottom:0;background:var(--panel)}
+.eq input{width:84px;min-height:44px;padding:0 12px;text-align:right;font:inherit;font-variant-numeric:tabular-nums;
+  color:var(--ink);background:var(--surface);border:2px solid var(--edge);border-radius:4px}
+.eq td.name{font-weight:500}
+
+/* Buttons: one primary per page */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 22px;border:2px solid var(--ink);border-radius:4px;
+  background:transparent;color:var(--ink);font-weight:700;cursor:pointer}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.small{min-height:36px;padding:0 14px;font-size:15px;border-width:1px;border-color:var(--edge)}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+
+/* Score read-out */
+.scorebox{display:grid;gap:12px}
+.sc-line{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.sc-n{font-size:44px;font-weight:700;line-height:1;font-variant-numeric:tabular-nums}
+.sc-of{color:var(--muted)}
+.sc-rows{display:grid;grid-template-columns:1fr auto;gap:8px 16px;padding-top:12px;border-top:1px solid var(--line)}
+.sc-rows dt{color:var(--muted)}
+.sc-rows dd{font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+.pill{display:inline-block;padding:2px 12px;border-radius:99px;font-size:14px;font-weight:600;white-space:nowrap;
+  background:color-mix(in srgb,var(--c) 14%,var(--surface));color:var(--c)}
+.pill.good{--c:var(--good)}.pill.bad{--c:var(--bad)}
+
+/* Phone score bar: always reachable, shown by each layout when it is narrow */
+.scorebar{display:none;position:sticky;bottom:0;z-index:5;align-items:center;gap:14px;padding:10px var(--gut);
+  background:var(--surface);border-top:2px solid var(--ink)}
+.scorebar b{font:700 22px/1 "Rethink Sans",system-ui,sans-serif;font-variant-numeric:tabular-nums}
+.scorebar small{display:block;font-size:12px;color:var(--muted)}
+.scorebar .pill{margin-left:auto}
+
+/* Equipment rows become stacked rows on phones: name + Available box, then Required / Weight / Score */
+@container page (max-width:640px){
+  .head h1{font-size:28px}
+  .eq,.eq tbody{display:block}
+  .eq thead{display:none}
+  .eq tr.row{display:grid;grid-template-columns:28px repeat(3,minmax(0,1fr));grid-template-areas:"sn name name av" ". rq wt sc";gap:6px 10px;
+    align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+  .eq td{padding:0;border:0}
+  .eq td.sn{grid-area:sn;width:auto}.eq td.name{grid-area:name}.eq td.av{grid-area:av}
+  .eq td.rq{grid-area:rq}.eq td.wt{grid-area:wt}.eq td.sc{grid-area:sc}
+  .eq td[data-l]{text-align:left;font-size:14px;color:var(--muted)}
+  .eq td[data-l]::before{content:attr(data-l) " ";font-size:12px}
+  .eq td.av{justify-self:end}
+  .eq tfoot,.eq tfoot tr{display:flex;justify-content:space-between;width:100%;padding:12px 0}
+  .eq tfoot td{background:none;padding:0}
+  .eq tfoot td:empty{display:none}
+  .btn{flex:1 1 auto}
+}
+
+/* Mock chrome, not part of the design */
+#mockbar{position:sticky;top:0;z-index:50;display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center;background:#1b1b1b;color:#eee;padding:8px 16px;font:600 13px/1 system-ui,sans-serif}
+#mockbar b{opacity:.6;font-weight:600;margin-right:4px}
+#mockbar a,#mockbar button{color:#eee;background:none;border:1px solid #555;border-radius:99px;padding:5px 11px;font:inherit;cursor:pointer;text-decoration:none}
+#mockbar [aria-pressed=true],#mockbar a[aria-current]{background:#eee;color:#111;border-color:#eee}

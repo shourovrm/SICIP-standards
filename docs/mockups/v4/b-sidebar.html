@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>B Sidebar — lab page mockup</title>
+<link rel="stylesheet" href="../../../web/css/fonts.css">
+<link rel="stylesheet" href="lab.css">
+<style>
+/* B Sidebar: a readable 760px work column (conditions then table) beside a sticky 360px side with facts, space, score, actions.
+   The work column is narrow enough that the conditions text fills it; the side keeps the score in view while you type. */
+.layout{display:grid;gap:32px;margin-top:20px}
+.work > * + *{margin-top:40px}
+.side{display:grid;gap:28px;align-content:start}
+.side .block{padding:20px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.side .block + .block{margin-top:0}
+.side .opts{grid-template-columns:1fr}
+.side .or{justify-self:start}
+.side .actions .btn{flex:1 1 100%}
+.side .facts{grid-template-columns:1fr 1fr}
+@container page (min-width:960px){
+  .layout{grid-template-columns:minmax(0,1fr) 360px;align-items:start}
+  .side{position:sticky;top:16px}
+}
+@container page (max-width:959px){.scorebar{display:flex}.side .block.score-block{display:none}}
+</style>
+</head>
+<body>
+<div id="mockbar"></div>
+<div class="page">
+  <header class="top"><div class="top-in"><span class="wordmark">SICIP Standards</span>
+    <nav class="tabs" aria-label="Sections"><a href="#">Competency Standards</a><a href="#" aria-current="page">Lab Standards</a></nav></div></header>
+  <main class="main">
+    <a class="back" href="#">← Lab Standards</a>
+    <header class="head" data-slot="head"></header>
+    <div class="layout">
+      <div class="work">
+        <div data-slot="conditions"></div>
+        <div data-slot="table"></div>
+      </div>
+      <aside class="side">
+        <div class="block"><div data-slot="facts"></div></div>
+        <div class="block"><div data-slot="space"></div></div>
+        <div class="block score-block"><div data-slot="score"></div><div style="margin-top:16px" data-slot="actions"></div></div>
+      </aside>
+    </div>
+  </main>
+  <div class="scorebar"><div><small>Score</small><b data-score>0</b> / 100</div><div><small>Points</small><b data-points>0</b> / 30</div><span data-status class="pill"></span></div>
+</div>
+<script src="lab-data.js"></script>
+<script src="lab.js"></script>
+</body>
+</html>
