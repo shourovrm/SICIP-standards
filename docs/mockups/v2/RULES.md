@@ -25,4 +25,4 @@ Where these rules differ from the live site, these win for the mockups.
 - Eyebrow kickers, gradient text, glass, side-stripe borders, nested cards, icon-title-text card grids, hero-metric template.
 
 ## Not decided here
-- Which layout, which theme. Default theme in the files is Jute; the toolbar switches layout, screen and theme.
+- Which layout, which theme. Default theme in the files is Kiln; the toolbar switches layout, screen and theme.

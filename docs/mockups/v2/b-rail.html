@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="jute">
+<html lang="en" data-theme="kiln">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -24,6 +24,7 @@ main{padding:var(--s7) var(--s7) var(--s8);min-width:0}
 .sectorbar button{min-height:36px;padding:0 var(--s3);border:1px solid var(--edge);border-radius:var(--r);background:transparent;color:var(--ink);font:inherit;cursor:pointer}
 .sectorbar button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .group{margin-bottom:var(--s6)}
+.group h2,.sheet h2{font-size:var(--t-h3)}
 .group header{display:flex;align-items:baseline;gap:var(--s3);margin-bottom:var(--s2)}
 .group header a{margin-left:auto;font-size:var(--t-sm)}
 .group ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 var(--s6)}
@@ -32,7 +33,7 @@ main{padding:var(--s7) var(--s7) var(--s8);min-width:0}
 .group li span{display:block;font-size:var(--t-sm);color:var(--muted)}
 .lab{display:grid;grid-template-columns:1fr 296px;gap:var(--s6);align-items:start;margin-top:var(--s6)}
 .sheet{position:sticky;top:70px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:var(--s5)}
-.sheet h3{margin-bottom:var(--s4)}
+.sheet h2{margin-bottom:var(--s4)}
 .sheet .score-n{display:block;font-size:var(--t-h1)}
 .sheet .row{margin:var(--s4) 0}
 .sheet .btn{width:100%;margin-top:var(--s2)}
@@ -69,7 +70,7 @@ main{padding:var(--s7) var(--s7) var(--s8);min-width:0}
       <tbody data-eq></tbody>
     </table>
     <aside class="sheet" aria-label="Scoresheet">
-      <h3>Scoresheet</h3>
+      <h2>Scoresheet</h2>
       <div class="row"><span class="muted small">Score out of 100</span><span class="score-n" data-score>0</span></div>
       <div class="row"><span class="muted small">Points out of 30</span><span class="score-n" data-points>0</span></div>
       <span data-status class="pill"></span>
@@ -83,7 +84,7 @@ main{padding:var(--s7) var(--s7) var(--s8);min-width:0}
   <p class="small muted"><a href="#dir">Competency Standards</a> / BEIOA</p>
   <h1 style="margin-top:var(--s3)">Machine Shop Practice</h1>
   <div class="cs">
-    <div class="pdf"><h3>Competency Standard<br>Machine Shop Practice</h3><i></i><i style="width:92%"></i><i style="width:96%"></i><i style="width:60%"></i><br><i></i><i style="width:88%"></i><i style="width:94%"></i><i style="width:40%"></i></div>
+    <div class="pdf"><h2>Competency Standard<br>Machine Shop Practice</h2><i></i><i style="width:92%"></i><i style="width:96%"></i><i style="width:60%"></i><br><i></i><i style="width:88%"></i><i style="width:94%"></i><i style="width:40%"></i></div>
     <div class="side">
       <dl class="kv" style="grid-template-columns:1fr"><dt>Sector</dt><dd>Light Engineering</dd><dt>Organisation</dt><dd>BEIOA</dd><dt>Approved</dt><dd>03 Jul 2025</dd></dl>
       <div style="margin-top:var(--s5)"><button class="btn primary">Download PDF</button><button class="btn">Print</button></div>
@@ -99,7 +100,7 @@ $("#orgs").innerHTML = '<li><a href="#dir" aria-current="true">All organisations
   SAMPLE.orgs.map(o => `<li><a href="#dir">${o.org} <span>${o.n}</span></a></li>`).join("");
 $("#sectorbar").innerHTML = ["All sectors", ...SAMPLE.sectors].map((s, i) => `<button aria-pressed="${i === 0}">${s}</button>`).join("");
 $("#groups").innerHTML = SAMPLE.orgs.map(o =>
-  `<section class="group"><header><h3>${o.org}</h3><span class="muted small">${o.n} courses</span><a href="#dir">Workbook .xlsx</a></header>
+  `<section class="group"><header><h2>${o.org}</h2><span class="muted small">${o.n} courses</span><a href="#dir">Workbook .xlsx</a></header>
    <ul>${o.courses.map(c => `<li><a href="#lab">${c[0]}</a><span>${c[1]}${c[2] ? " · Approved " + c[2] : ""}</span></li>`).join("")}</ul></section>`).join("");
 const c = SAMPLE.course;
 $("#kv").innerHTML = `<dt>Course name</dt><dd>${c.name}</dd><dt>Number of trainees</dt><dd>${c.trainees}</dd><dt>Sector · Organisation</dt><dd>${c.sector} · ${c.org}</dd><dt>Approved</dt><dd>${c.approved}</dd><dt>Training space</dt><dd>${c.space}</dd>`;

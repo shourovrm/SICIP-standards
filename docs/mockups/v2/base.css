@@ -50,7 +50,7 @@ input,select{min-height:var(--ctl);border:2px solid var(--edge);border-radius:va
 
 /* Fake PDF page for the CS preview */
 .pdf{background:#fff;color:#222;border:1px solid var(--line);padding:var(--s6) var(--s6) var(--s7);min-height:420px}
-.pdf h3{margin-bottom:var(--s4);font-size:var(--t-h3)}
+.pdf h2{margin-bottom:var(--s4);font-size:var(--t-h3)}
 .pdf i{display:block;height:8px;background:#e3e3e3;margin-bottom:var(--s3);border-radius:2px}
 
 /* Mock chrome (not part of the design) */

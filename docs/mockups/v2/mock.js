@@ -16,7 +16,7 @@ const SAMPLE = {
 };
 const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
 
-const THEMES = [["jute","Jute"],["plum","Plum"],["graphite","Graphite"],["monsoon","Monsoon"],["paddy","Paddy"]];
+const THEMES = [["kiln","Kiln"],["plum","Plum"],["graphite","Graphite"],["monsoon","Monsoon"],["paddy","Paddy"]];
 const LAYOUTS = [["a-register.html","A Register"],["b-rail.html","B Rail"],["c-concourse.html","C Concourse"],["d-split.html","D Split"]];
 const SCREENS = [["dir","Directory"],["lab","Lab page"],["cs","CS page"]];
 
@@ -71,7 +71,7 @@ function calculate() {
 addEventListener("DOMContentLoaded", () => {
   buildBar();
   buildEquipment();
-  setTheme(localStorage.mockTheme || "jute");
+  setTheme(localStorage.mockTheme || "kiln");
   const first = location.hash.slice(1);
   showScreen(["dir", "lab", "cs"].includes(first) ? first : "dir");
 });

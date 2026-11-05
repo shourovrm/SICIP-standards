@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="jute">
+<html lang="en" data-theme="kiln">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -26,6 +26,7 @@
 .sectors a{display:block;padding:var(--s2) 0;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
 .sectors a[aria-current]{font-weight:700;color:var(--accent)}
 .org{margin-bottom:var(--s7)}
+.org h2{font-size:var(--t-h3)}
 .org header{display:flex;align-items:baseline;gap:var(--s4);border-bottom:2px solid var(--ink);padding-bottom:var(--s2)}
 .org header a{margin-left:auto;font-size:var(--t-sm)}
 .reg{width:100%;border-collapse:collapse}
@@ -87,7 +88,7 @@
   <h1>Machine Shop Practice</h1>
   <dl class="kv" style="margin-top:var(--s5)"><dt>Sector</dt><dd>Light Engineering</dd><dt>Organisation</dt><dd>BEIOA</dd><dt>Approved</dt><dd>03 Jul 2025</dd></dl>
   <div class="actions"><button class="btn primary">Download PDF</button><button class="btn">Print</button></div>
-  <div class="pdf"><h3>Competency Standard<br>Machine Shop Practice</h3><i></i><i style="width:92%"></i><i style="width:96%"></i><i style="width:60%"></i><br><i></i><i style="width:88%"></i><i style="width:94%"></i><i style="width:40%"></i></div>
+  <div class="pdf"><h2>Competency Standard<br>Machine Shop Practice</h2><i></i><i style="width:92%"></i><i style="width:96%"></i><i style="width:60%"></i><br><i></i><i style="width:88%"></i><i style="width:94%"></i><i style="width:40%"></i></div>
 </section>
 </main>
 
@@ -97,7 +98,7 @@ $("#sectors").innerHTML = '<li><a href="#dir">All sectors</a></li>' +
   SAMPLE.sectors.map(s => `<li><a href="#dir" ${s === "RMG" ? "aria-current=true" : ""}>${s}</a></li>`).join("");
 const hit = c => /sewing/i.test(c[0]);
 $("#register").innerHTML = SAMPLE.orgs.map(o => ({o, rows: o.courses.filter(hit)})).filter(x => x.rows.length).map(({o, rows}) =>
-  `<section class="org"><header><h3>${o.org}</h3><span class="muted small">${o.n} courses</span><a href="#dir">Workbook .xlsx</a></header>
+  `<section class="org"><header><h2>${o.org}</h2><span class="muted small">${o.n} courses</span><a href="#dir">Workbook .xlsx</a></header>
    <table class="reg">${rows.map(c => `<tr><td><a href="#lab">${c[0].replace(/sewing/i, m => `<mark>${m}</mark>`)}</a></td><td>${c[1]}</td><td>${c[2] ? "Approved " + c[2] : ""}</td></tr>`).join("")}</table></section>`).join("");
 const c = SAMPLE.course;
 $("#kv").innerHTML = `<dt>Course name</dt><dd>${c.name}</dd><dt>Number of trainees</dt><dd>${c.trainees}</dd><dt>Sector · Organisation</dt><dd>${c.sector} · ${c.org}</dd><dt>Approved</dt><dd>${c.approved}</dd><dt>Training space</dt><dd>${c.space}</dd>`;
