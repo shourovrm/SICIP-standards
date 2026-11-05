@@ -40,6 +40,7 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 - "As required" quantities → Required blank, row always scores 0, so 100 is unreachable on those sheets (existing precedent; BTMA adds 6 such rows).
 
 ## Tried / rejected
+- Teal/greige palette (read as generic AI), full-bleed width, 2-up org cards (replaced 2026-11-05 by Plum, 1440px cap, register list).
 - pdf→HTML conversion for CS preview — mangles tables; use embedded PDF instead.
 - Fonts Public Sans / Inter / Source Serif — read as AI-templated; chose Space Grotesk × Spline Sans (#3). Space Grotesk × Spline Sans replaced 2026-11-05 by Rethink Sans × Reddit Sans (#9).
 - Separate "Score Calculator" tab — folded into each lab-standard page.
@@ -111,3 +112,4 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 2026-11-05 | font = Rethink Sans (headings) × Reddit Sans (body), self-hosted latin woff2 | user pick #9 from font-collections-2 mockup; old Space Grotesk/Spline Sans files deleted
 2026-11-05 | full-width rejected as "not that good"; docs/mockups/v2/ = 4 layout mocks (A Register, B Rail, C Concourse, D Split) x 5 palettes (Kiln, Plum, Graphite, Monsoon, Paddy), shared base.css/themes.css/RULES.md (USWDS skeleton numbers) | user wants non-generic look; awaiting layout + palette pick, then apply to web/
 2026-11-05 | v3 list mockups (docs/mockups/v3): 5 list layouts x 3 widths (1120/1440/full) x 5 course-name styles, Plum; search control = 44px, 2px border, 4px radius, ~480px max, label above + hint, no placeholder | user wants list/column variety + name contrast; earlier non-wide site in Plum is the base; nothing applied to web/ yet
+2026-11-05 | real site: Plum palette, content max 1440px, directory = register (org heading+rule, rows: bold name, sector pill, approved date), search = labelled 44px box, no placeholder | user picked from v3 mockups (register, wide 1440, bold + sector pill); sector names left as in data (near-duplicates e.g. Tourism And/and/& Hospitality) pending user call

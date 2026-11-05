@@ -55,17 +55,17 @@ The mockups in `docs/mockups/` are **visual reference** (an early iteration). Wh
 - **Self-host** the woff2 files (offline-safe, faster, no Google CDN dependency). Do NOT use Public Sans / Inter / Source Serif (earlier iterations — rejected as templated).
 - Comfortable sizing: body ~16.5px, headings 22–27px. Never cramped.
 
-## Palette (committed light theme)
-`--bg:#f3f4f2  --surface:#fff  --panel:#fafbf9  --ink:#17211c  --muted:#586158  --faint:#87908a  --line:#e4e7e3  --line-strong:#d3d8d2  --accent:#0e6b58  --accent-ink:#0a4f42  --accent-tint:#e4f1ec  --mark:#ffe294  --warn:#b4402f`
-One teal accent (links, selection, primary buttons, highlight). No gradient text, no glassmorphism, no eyebrow kickers, no identical-card overload — no AI tells.
+## Palette (committed light theme, "Plum", picked 2026-11-05)
+`--bg:#f2ecf0  --surface:#fbf8fa  --panel:#f6f0f4  --ink:#26151f  --muted:#625058  --faint:#85737d  --line:#e3d8e0  --line-strong:#cdbec8  --accent:#7a2a62  --accent-ink:#5c1f4a  --accent-tint:#ead6e4  --mark:#f6d56a  --warn:#a3201b`
+One plum accent (links, selection, primary buttons, highlight). No gradient text, no glassmorphism, no eyebrow kickers, no identical-card overload — no AI tells.
 
 ## Navigation
 Two top tabs only: **Lab Standards** | **Competency Standards**. (There is NO separate "Score Calculator" tab — calculation lives inside each lab-standard page.)
 
 ## Lab Standards
-- Landing = **searchable org directory**: sticky organisation rail (name + count, "All organisations" first) beside one card per organisation with courses two per row; on phones the rail is a native dropdown. Search shows "N courses in M organisations" under the box. Search matches **course, sector, AND organisation**; course matches pinpoint+highlight the row, org matches show the whole org (same behaviour as `docs/reference-lab-index.html`).
+- Landing = **searchable org directory**: sticky organisation rail (name + count, "All organisations" first) beside a register: one heading per organisation, then one row per course (bold name · sector pill · approved date); page content max 1440px; on phones the rail is a native dropdown. Search shows "N courses in M organisations" under the box. Search matches **course, sector, AND organisation**; course matches pinpoint+highlight the row, org matches show the whole org (same behaviour as `docs/reference-lab-index.html`).
 - Subtitle line is just the counts (e.g. "22 organisations · 163 standards"). Do NOT add "open any to view, calculate a score, or print".
-- **Org card count badge is a DOWNLOAD link** → that organisation's whole `.xlsx` workbook (from `lab-standards/`). Downloads ask for confirmation (see below).
+- **Org heading count badge is a DOWNLOAD link** → that organisation's whole `.xlsx` workbook (from `lab-standards/`). Downloads ask for confirmation (see below).
 - **Click a course → its lab-standard page**, which is template-faithful:
   - Title **"Course-wise Training Infrastructure and Facilities"**; then Course Name, Number of Trainees, Sector · Organisation, Approved date, Training Space block; then the boilerplate paragraph (80% rule etc.). Texts match the xlsx template exactly; table UI may be modernised.
   - Equipment table: `S.N. | Major equipment & facilities | Required | Available | Weight | Score`. **Available is an editable input defaulting to 0** on every row.

@@ -95,8 +95,11 @@ function directory(kind) {
   <div class="dir-head">
     <h1>${isLab ? 'Lab Standards' : 'Competency Standards'}</h1>
     <p class="dir-sub">${orgs.length} organisations · ${total} standards</p>
-    <div class="search"><input id="q" type="search" autocomplete="off"
-      placeholder="Search course, sector or organisation…" aria-label="Search"></div>
+    <div class="search">
+      <label for="q">Search standards</label>
+      <span class="hint" id="q-hint">Course, sector or organisation</span>
+      <input id="q" type="search" autocomplete="off" aria-describedby="q-hint">
+    </div>
     <p class="count" id="count"></p>
   </div>
   <div class="split">
@@ -113,12 +116,13 @@ function directory(kind) {
           : `<a class="org-count" href="#" role="button" data-slug="${esc(o.slug)}"
                title="Download all ${esc(o.org)} competency standards (.zip)">${o.courses.length} ↓</a>`}
       </div>
-      <ul class="course-list rows">
+      <ul class="course-list">
         ${o.courses.map(c => `
         <li class="course" data-course="${esc((c.course_name + ' ' + (c.sector || '')).toLowerCase())}">
           <a href="#/${kind}/${cSlug(c)}">
             <span class="c-name">${esc(c.course_name)}</span>
-            <span class="c-full">${esc([c.sector, c.approved && 'Approved ' + c.approved].filter(Boolean).join(' · '))}</span>
+            <span class="c-sec">${esc(c.sector || '')}</span>
+            <span class="c-date">${c.approved ? 'Approved ' + esc(c.approved) : ''}</span>
           </a>
         </li>`).join('')}
       </ul>
@@ -147,7 +151,7 @@ function directory(kind) {
   const sections = [...view.querySelectorAll('.org')];
   for (const c of view.querySelectorAll('.course')) {
     c._name = c.querySelector('.c-name').textContent;
-    c._full = c.querySelector('.c-full').textContent;
+    c._sec = c.querySelector('.c-sec').textContent;
   }
   const rxe = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const hl = (node, text, term) => {
@@ -184,7 +188,7 @@ function directory(kind) {
         c.classList.toggle('off', !orgMatch && !cMatch);
         c.classList.toggle('hit', cMatch);
         hl(c.querySelector('.c-name'), c._name, cMatch ? t : '');
-        hl(c.querySelector('.c-full'), c._full, cMatch ? t : '');
+        hl(c.querySelector('.c-sec'), c._sec, cMatch ? t : '');
         if (orgMatch || cMatch) shown++;
         if (cMatch) orgHits++;
       }
