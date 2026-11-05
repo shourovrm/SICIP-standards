@@ -68,6 +68,7 @@ Two top tabs only: **Lab Standards** | **Competency Standards**. (There is NO se
 - **Org heading count badge is a DOWNLOAD link** → that organisation's whole `.xlsx` workbook (from `lab-standards/`). Downloads ask for confirmation (see below).
 - **Click a course → its lab-standard page**, which is template-faithful:
   - Title **"Course-wise Training Infrastructure and Facilities"**; then Course Name, Number of Trainees, Sector · Organisation, Approved date, Training Space block; then the boilerplate paragraph (80% rule etc.). Texts match the xlsx template exactly; table UI may be modernised.
+  - **Layout "Workbench"** (picked 2026-11-05): left = reference (facts 2x2, training-space options as boxes with "or", conditions with hanging bullets and the 80% paragraph tinted); right = sticky score bar (score, points, Download, Print, A/C rule) above the equipment table. Two panes from 1120px; one column below; phone = stacked rows + sticky score bar.
   - Equipment table: `S.N. | Major equipment & facilities | Required | Available | Weight | Score`. **Available is an editable input defaulting to 0** on every row.
   - **Calculate button below the table.** Score formula per row = `MIN(available, required) * weight / required`; **Score/100** = `Σrow / Σweight * 100`; **Points/30** = `score * 30/100`; eligible when **≥ 80**.
   - **Print button** → prints the standard as the **exact xlsx template layout**, filled with the entered Available column (dedicated print stylesheet). Asks for confirmation.

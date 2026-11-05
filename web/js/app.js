@@ -233,55 +233,68 @@ function labPage(id) {
     const lines = (e.boilerplate || '').split('\n').map(l => l.trim()).filter(Boolean);
     const li = lines.filter(l => l.startsWith('•')).map(l => `<li>${esc(l.slice(1).trim())}</li>`).join('');
     const ps = lines.filter(l => !l.startsWith('•'))
-      .map(l => `<p>${esc(l).replace('at least 80%', '<strong>at least 80%</strong>')}</p>`).join('');
+      .map(l => l.includes('at least 80%')
+        ? `<p class="elig">${esc(l).replace('at least 80%', '<strong>at least 80%</strong>')}</p>`
+        : `<p>${esc(l)}</p>`).join('');
     return (li ? `<ul>${li}</ul>` : '') + ps
       + (e.note ? `<p class="note">${esc(e.note)}</p>` : '');
   })();
-  const space = esc((e.space || '').split('\n').map(l => l.trim()).filter(Boolean).join('\n'));
+  // training space: a trailing "OR" starts the next option, shown as its own box
+  const spaceOptions = [[]];
+  for (const line of (e.space || '').split('\n').map(l => l.trim()).filter(Boolean)) {
+    spaceOptions.at(-1).push(line.replace(/\s*\bOR$/i, ''));
+    if (/\bOR$/i.test(line)) spaceOptions.push([]);
+  }
+  const space = spaceOptions.filter(o => o.length)
+    .map(o => `<div class="opt">${o.map(l => `<span>${esc(l)}</span>`).join('')}</div>`).join('<span class="or">or</span>');
 
   view.innerHTML = `
   <a class="back" href="#/lab">← Lab Standards</a>
-  <div class="lab">
-    <aside class="lab-side">
-      <div class="card">
-        <p class="docname">Course-wise Training Infrastructure and Facilities</p>
-        <h1 class="course-h">${esc(e.course_name)}</h1>
-        <dl class="facts">
-          <div><dt>Organisation</dt><dd>${esc(e.org)}${e.sector ? ' · ' + esc(e.sector) : ''}</dd></div>
-          <div><dt>Number of Trainees</dt><dd>${e.trainees}</dd></div>
-          ${e.approved ? `<div><dt>Approved</dt><dd>${esc(e.approved)}</dd></div>` : ''}
-        </dl>
-      </div>
-      <div class="card">
-        <h3 class="side-h">Training space</h3>
+  <header class="lab-head">
+    <h1 class="course-h">${esc(e.course_name)}</h1>
+    <p class="docname">Course-wise Training Infrastructure and Facilities</p>
+  </header>
+  <div class="bench">
+    <div class="ref">
+      <dl class="facts">
+        <div><dt>Organisation</dt><dd>${esc(e.org)}</dd></div>
+        ${e.sector ? `<div><dt>Sector</dt><dd>${esc(e.sector)}</dd></div>` : ''}
+        <div><dt>Number of Trainees</dt><dd>${e.trainees}</dd></div>
+        ${e.approved ? `<div><dt>Approved</dt><dd>${esc(e.approved)}</dd></div>` : ''}
+      </dl>
+      <section>
+        <h2 class="sec">Training space</h2>
         <p class="hint">Theoretical classroom, workshop/lab, or classroom cum workshop — SICIP required space for ${e.trainees} trainees</p>
-        <p class="pre space">${space}</p>
-      </div>
-      <div class="card live">
-        <h3 class="side-h">Facility score</h3>
-        <div class="n"><span id="s100">0</span><small> / 100</small></div>
-        <span class="pill no" id="elig">Below 80 — not eligible</span>
-        <div class="row"><span>Points out of 30</span><b id="s30">0</b></div>
-        <div class="row"><span>Weighted score</span><b><span id="sum-score">0</span> / ${fmt(sumW)}</b></div>
-        ${e.note && !e.min_rules.length ? `<label class="ac"><input type="checkbox" id="ac" checked> Lab is air-conditioned</label>` : ''}
-        ${e.note ? `<p class="ac-hint" id="ac-hint" hidden></p>` : ''}
+        <div class="opts">${space}</div>
+      </section>
+      <section class="rules">
+        <h2 class="sec">Conditions</h2>
+        ${rules}
+      </section>
+    </div>
+    <div class="work">
+      <div class="card live workbar" role="group" aria-label="Facility score">
+        <div>
+          <div class="n"><span id="s100">0</span><small> / 100</small></div>
+          <span class="pill no" id="elig">Below 80 — not eligible</span>
+        </div>
+        <div class="wb-rows">
+          <div class="row"><span>Points out of 30</span><b id="s30">0</b></div>
+          <div class="row"><span>Weighted score</span><b><span id="sum-score">0</span> / ${fmt(sumW)}</b></div>
+        </div>
         <div class="actions">
           <button class="primary" id="dl">Download .xlsx</button>
           <button id="print">Print</button>
         </div>
+        ${e.note && !e.min_rules.length ? `<label class="ac"><input type="checkbox" id="ac" checked> Lab is air-conditioned</label>` : ''}
+        ${e.note ? `<p class="ac-hint" id="ac-hint" hidden></p>` : ''}
       </div>
-    </aside>
-    <div class="lab-main">
-      <div class="card"><div class="rules">
-        <h2 class="sec">Conditions</h2>
-        ${rules}
-      </div></div>
       <div class="scorebar" aria-hidden="true">
         <div><span>Score</span><b><span id="bar-s100">0</span><small> /100</small></b></div>
         <div><span>Points</span><b><span id="bar-s30">0</span><small> /30</small></b></div>
         <span class="pill no" id="bar-elig">Below 80</span>
       </div>
-      <div class="card">
+      <section>
         <h2 class="sec">Major training equipment and facilities <small>Enter what the institute has in <em>Available</em> — the score updates as you type.</small></h2>
         <div class="tbl-scroll">
           <table class="equip" id="equip">
@@ -309,7 +322,7 @@ function labPage(id) {
         </div>
         <p class="saved"><span id="saved-note">Entries are saved in this browser as you type.</span>
           <button type="button" id="clear">Clear entries</button></p>
-      </div>
+      </section>
     </div>
   </div>`;
 

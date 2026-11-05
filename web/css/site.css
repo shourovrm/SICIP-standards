@@ -104,49 +104,58 @@ a.org-count:hover{background:var(--accent);color:#fff}
 .back:hover{color:var(--accent-ink)}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:22px 26px}
 
-/* Lab standard: sticky sidebar + sheet */
-.lab{display:grid;grid-template-columns:300px minmax(0,1fr);gap:22px;align-items:start}
-.lab-side{position:sticky;top:72px;display:grid;gap:16px}
-.lab-main{display:grid;gap:16px}
-.docname{font-size:14px;color:var(--muted);font-weight:500;margin:0 0 6px}
-.lab .course-h{font-size:24px;font-weight:700;line-height:1.2;margin:0;text-wrap:balance}
-.facts{display:grid;gap:12px;margin:16px 0 0}
-.facts dt{font-size:13px;color:var(--muted);letter-spacing:.02em;margin:0 0 1px}
-.facts dd{margin:0;font-size:16.5px;font-weight:500;font-variant-numeric:tabular-nums}
-.side-h{font-family:"Reddit Sans",system-ui,sans-serif;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
-.hint{font-size:14px;color:var(--muted);margin:0 0 8px}
-.space{margin:0;font-weight:500;font-variant-numeric:tabular-nums}
-.pre{white-space:pre-line}
-.lab .sec{font-size:19px;font-weight:600;margin:0 0 10px;text-wrap:balance}
-.lab .sec small{display:block;font-family:"Reddit Sans",system-ui,sans-serif;font-size:15px;font-weight:400;color:var(--muted);letter-spacing:0;margin-top:2px}
-.rules{max-width:68ch}
-.rules ul{margin:0 0 14px;padding-left:19px}
-.rules li{margin:0 0 6px}
-.rules li::marker{color:var(--accent)}
+/* Lab standard: reference (facts, space, conditions) on the left, work (score + equipment) on the right.
+   One column below 1120px. */
+.lab-head{margin:0 0 22px}
+.lab-head .course-h{font-size:30px;font-weight:700;line-height:1.15;margin:0;text-wrap:balance}
+.docname{margin:6px 0 0;color:var(--muted)}
+.bench{display:grid;gap:28px;align-items:start}
+.ref{display:grid;gap:28px;align-content:start}
+.work{display:grid;gap:22px;align-content:start;min-width:0}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 24px;margin:0}
+.facts dt{font-size:14px;color:var(--muted);margin:0 0 1px}
+.facts dd{margin:0;font-weight:600;font-variant-numeric:tabular-nums}
+.bench .sec{font-size:20px;font-weight:700;margin:0 0 10px;text-wrap:balance}
+.bench .sec small{display:block;font-family:"Reddit Sans",system-ui,sans-serif;font-size:15px;font-weight:400;color:var(--muted);letter-spacing:0;margin-top:2px}
+.hint{font-size:15px;color:var(--muted);margin:0 0 12px;text-wrap:pretty}
+.opts{display:grid;gap:8px}
+.opt{display:grid;gap:2px;padding:12px 14px;background:var(--surface);border:1px solid var(--line);border-radius:8px;font-weight:500;font-variant-numeric:tabular-nums}
+.or{font-size:14px;font-weight:600;color:var(--muted)}
+/* conditions: hanging bullets, one measure, the 80% rule tinted */
+.rules ul{list-style:none;margin:0 0 14px;padding:0}
+.rules li{position:relative;padding-left:20px;margin:0 0 12px;text-wrap:pretty}
+.rules li::before{content:"";position:absolute;left:3px;top:.72em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
 .rules p{margin:0 0 14px;text-wrap:pretty}
 .rules p:last-child{margin:0}
-.rules strong{font-weight:600}
+.rules p.elig{padding:12px 14px;background:var(--accent-tint);border-radius:8px}
+.rules strong{font-weight:700}
 /* CS footnote (air-conditioning halving rule) */
 .rules .note{margin-top:16px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:15.5px}
 
-/* live score card */
+/* score bar above the table: score, points, actions on one line, wrapping when narrow */
+.workbar{display:flex;flex-wrap:wrap;align-items:center;gap:12px 28px;padding:16px 20px}
 .live .n{font-family:"Rethink Sans",sans-serif;font-size:36px;font-weight:700;line-height:1.2;font-variant-numeric:tabular-nums}
 .live .n small{font-size:15px;color:var(--muted);font-weight:500;font-family:"Reddit Sans",system-ui,sans-serif}
-.pill{display:inline-block;white-space:nowrap;font-size:14px;font-weight:600;padding:3px 11px;border-radius:999px;margin:6px 0 12px}
+.pill{display:inline-block;white-space:nowrap;font-size:14px;font-weight:600;padding:3px 11px;border-radius:999px}
 .pill.ok{background:var(--accent-tint);color:var(--accent-ink)}
 .pill.no{background:#fbe9e5;color:var(--warn)}
-.live .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:7px 0;border-top:1px solid var(--line);font-size:15px;font-variant-numeric:tabular-nums}
-.live .row b{font-family:"Rethink Sans",sans-serif;font-size:19px;font-weight:700;white-space:nowrap}
+.wb-rows{display:flex;flex-wrap:wrap;gap:6px 24px}
+.live .row{display:flex;align-items:baseline;gap:10px;font-size:15px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.live .row b{font-family:"Rethink Sans",sans-serif;font-size:19px;font-weight:700}
+.workbar .actions{margin:0 0 0 auto}
 /* air-conditioning condition — halves the points when unchecked */
-.live .ac{display:flex;align-items:center;gap:8px;padding:9px 0 0;border-top:1px solid var(--line);margin-top:7px;font-size:15px;cursor:pointer}
+.live .ac{flex:1 0 100%;display:flex;align-items:center;gap:8px;padding-top:10px;border-top:1px solid var(--line);font-size:15px;cursor:pointer}
 .live .ac input{accent-color:var(--accent);width:16px;height:16px;cursor:pointer}
-.live .ac-hint{margin:4px 0 0;font-size:14px;color:var(--warn)}
-.live .actions{margin-top:14px;flex-direction:column;align-items:stretch}
-.live .actions button{text-align:center}
+.live .ac-hint{flex:1 0 100%;margin:0;font-size:14px;color:var(--warn)}
+@media (min-width:1120px){
+  .bench{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:36px}
+  .ref{position:sticky;top:72px;max-height:calc(100vh - 88px);overflow:auto;padding-right:8px}
+  .workbar{position:sticky;top:72px;z-index:4}
+}
 
 /* equipment table */
 .tbl-scroll{overflow-x:auto}
-.equip{width:100%;border-collapse:collapse;font-size:16px;font-variant-numeric:tabular-nums;min-width:640px}
+.equip{width:100%;border-collapse:collapse;font-size:16px;font-variant-numeric:tabular-nums;min-width:560px}
 .equip th,.equip td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}
 .equip thead th{font-size:12px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--line-strong);padding-bottom:8px}
 .equip td.num,.equip th.num{text-align:right;white-space:nowrap}
@@ -154,11 +163,11 @@ a.org-count:hover{background:var(--accent);color:#fff}
 .equip td.score{color:var(--muted)}
 .equip .rmk{display:block;font-size:13px;color:var(--faint)}
 .equip input{
-  width:88px;padding:6px 10px;font:inherit;font-size:16px;text-align:right;
-  border:1px solid var(--line-strong);border-radius:7px;background:var(--surface);color:var(--ink);
+  width:88px;min-height:44px;padding:0 10px;font:inherit;font-size:16px;text-align:right;
+  border:2px solid color-mix(in srgb,var(--ink) 50%,var(--bg));border-radius:4px;background:var(--surface);color:var(--ink);
   font-variant-numeric:tabular-nums;
 }
-.equip input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-tint)}
+.equip input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 .equip tr.short input{border-color:#d9a99f;background:#fdf5f3}
 .equip tr.full input{border-color:#b98aa9;background:#f3e8ef}
 .saved{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:14px 0 0;font-size:14px;color:var(--muted)}
@@ -210,10 +219,10 @@ dialog::backdrop{background:rgba(38,21,31,.35)}
   .tabs{margin-left:0}
   main{padding:20px 14px 60px}
   .card{padding:18px 16px 20px}
-  .lab{grid-template-columns:minmax(0,1fr);gap:14px}
-  .lab-side{position:static;display:contents}
-  .lab-main{display:contents}
-  .lab .live{order:9}
+  .lab-head .course-h{font-size:26px}
+  .work .workbar{order:9}
+  .workbar .actions{margin-left:0;width:100%}
+  .workbar .actions button{flex:1}
   /* the header scrolls away so the score bar can take the top of the screen */
   .top{position:static}
   .scorebar{
