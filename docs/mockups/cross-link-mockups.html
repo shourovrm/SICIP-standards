@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockups: link between a lab standard and its competency standard</title>
+<link rel="stylesheet" href="../../web/css/fonts.css">
+<link rel="stylesheet" href="../../web/css/site.css">
+<style>
+/* Mockup scaffolding, not part of the site */
+.mock-wrap{max-width:1440px;margin:0 auto;padding:24px 20px 80px}
+.mock-intro{max-width:70ch;color:var(--muted)}
+.option{margin:44px 0 0}
+.option>h2{font-size:22px;margin:0 0 4px}
+.option>p{margin:0 0 16px;color:var(--muted);max-width:80ch}
+.page{background:var(--bg);border:1px solid var(--line-strong);border-radius:12px;padding:22px 26px;margin:0 0 18px}
+.page-label{font-size:13px;font-weight:600;color:var(--muted);margin:0 0 12px}
+.page .workbar{position:static}
+.pdf-stub{height:150px;display:grid;place-items:center;color:var(--muted);border:1px solid var(--line-strong);border-radius:10px;background:var(--surface)}
+.table-stub{margin:16px 0 0;padding:18px;color:var(--muted);border:1px dashed var(--line-strong);border-radius:10px}
+
+/* New CSS each option would add to site.css */
+
+/* B: link on the same line as the back link */
+.crumbs{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.crumbs .pair{font-size:14.5px;font-weight:600;text-decoration:none;color:var(--accent-ink)}
+.crumbs .pair:hover{text-decoration:underline}
+
+/* C: two-part switch under the title */
+.docswitch{display:inline-flex;margin:14px 0 0;border:1px solid var(--line-strong);border-radius:9px;overflow:hidden;background:var(--surface)}
+.docswitch a,.docswitch span{padding:7px 16px;font-size:15px;font-weight:500;text-decoration:none;color:var(--ink)}
+.docswitch a:hover{color:var(--accent-ink);background:var(--panel)}
+.docswitch [aria-current]{background:var(--accent-tint);color:var(--accent-ink);font-weight:600}
+.docswitch>*+*{border-left:1px solid var(--line-strong)}
+</style>
+</head>
+<body>
+<div class="mock-wrap">
+
+<h1 style="font-size:27px;margin:0 0 8px">Link between a lab standard and its competency standard</h1>
+<p class="mock-intro">Three placements. Each option shows the lab standard page first and the competency standard page second. The example course is AEOSIB, Marine Engine Operation and Maintenance. All 171 courses have both documents, so the link always has a target.</p>
+
+<!-- ================= A ================= -->
+<section class="option">
+  <h2>A. Button in the existing button row</h2>
+  <p>The new button sits next to Download and Print. On the lab page that is the score bar, which stays visible while scrolling on desktop. Smallest change: one button per page, no new CSS.</p>
+
+  <div class="page">
+    <p class="page-label">Lab standard page</p>
+    <a class="back" href="#">← Lab Standards</a>
+    <header class="lab-head">
+      <h1 class="course-h">Marine Engine Operation and Maintenance</h1>
+      <p class="docname">Course-wise Training Infrastructure and Facilities</p>
+    </header>
+    <div class="card live workbar">
+      <div>
+        <div class="n"><span>0</span><small> / 100</small></div>
+        <span class="pill no">Below 80 — not eligible</span>
+      </div>
+      <div class="wb-rows">
+        <div class="row"><span>Points out of 30</span><b>0</b></div>
+        <div class="row"><span>Weighted score</span><b>0 / 100</b></div>
+      </div>
+      <div class="actions">
+        <button class="primary">Download .xlsx</button>
+        <button>Print</button>
+        <a class="btn" href="#">Competency standard →</a>
+      </div>
+    </div>
+    <div class="table-stub">Equipment table</div>
+  </div>
+
+  <div class="page">
+    <p class="page-label">Competency standard page</p>
+    <a class="back" href="#">← Competency Standards</a>
+    <h1 style="font-size:24px;margin:0">Marine Engine Operation and Maintenance</h1>
+    <p class="cs-meta"><span>Maritime · AEOSIB</span><span>Approved: 07 Jan 2026</span></p>
+    <div class="actions" style="margin:0 0 14px">
+      <button class="primary">Download PDF</button>
+      <button>Print</button>
+      <a class="btn" href="#">Lab standard →</a>
+    </div>
+    <div class="pdf-stub">PDF preview</div>
+  </div>
+</section>
+
+<!-- ================= B ================= -->
+<section class="option">
+  <h2>B. Text link at the top right, opposite the back link</h2>
+  <p>The back link goes up to the list; the new link goes across to the other document. It is the first thing on the page, but it is a text link, so it is quieter than a button and scrolls away with the header.</p>
+
+  <div class="page">
+    <p class="page-label">Lab standard page</p>
+    <div class="crumbs">
+      <a class="back" href="#">← Lab Standards</a>
+      <a class="pair" href="#">Competency standard for this course →</a>
+    </div>
+    <header class="lab-head">
+      <h1 class="course-h">Marine Engine Operation and Maintenance</h1>
+      <p class="docname">Course-wise Training Infrastructure and Facilities</p>
+    </header>
+    <div class="card live workbar">
+      <div>
+        <div class="n"><span>0</span><small> / 100</small></div>
+        <span class="pill no">Below 80 — not eligible</span>
+      </div>
+      <div class="wb-rows">
+        <div class="row"><span>Points out of 30</span><b>0</b></div>
+        <div class="row"><span>Weighted score</span><b>0 / 100</b></div>
+      </div>
+      <div class="actions">
+        <button class="primary">Download .xlsx</button>
+        <button>Print</button>
+      </div>
+    </div>
+    <div class="table-stub">Equipment table</div>
+  </div>
+
+  <div class="page">
+    <p class="page-label">Competency standard page</p>
+    <div class="crumbs">
+      <a class="back" href="#">← Competency Standards</a>
+      <a class="pair" href="#">Lab standard for this course →</a>
+    </div>
+    <h1 style="font-size:24px;margin:0">Marine Engine Operation and Maintenance</h1>
+    <p class="cs-meta"><span>Maritime · AEOSIB</span><span>Approved: 07 Jan 2026</span></p>
+    <div class="actions" style="margin:0 0 14px">
+      <button class="primary">Download PDF</button>
+      <button>Print</button>
+    </div>
+    <div class="pdf-stub">PDF preview</div>
+  </div>
+</section>
+
+<!-- ================= C ================= -->
+<section class="option">
+  <h2>C. Two-part switch under the course title</h2>
+  <p>The same control on both pages, with the current document marked. It tells the reader that a course has two documents and which one is open. It adds one row of height under the title.</p>
+
+  <div class="page">
+    <p class="page-label">Lab standard page</p>
+    <a class="back" href="#">← Lab Standards</a>
+    <header class="lab-head">
+      <h1 class="course-h">Marine Engine Operation and Maintenance</h1>
+      <p class="docname">Course-wise Training Infrastructure and Facilities</p>
+      <nav class="docswitch" aria-label="Documents for this course">
+        <a href="#">Competency standard</a>
+        <span aria-current="page">Lab standard</span>
+      </nav>
+    </header>
+    <div class="card live workbar">
+      <div>
+        <div class="n"><span>0</span><small> / 100</small></div>
+        <span class="pill no">Below 80 — not eligible</span>
+      </div>
+      <div class="wb-rows">
+        <div class="row"><span>Points out of 30</span><b>0</b></div>
+        <div class="row"><span>Weighted score</span><b>0 / 100</b></div>
+      </div>
+      <div class="actions">
+        <button class="primary">Download .xlsx</button>
+        <button>Print</button>
+      </div>
+    </div>
+    <div class="table-stub">Equipment table</div>
+  </div>
+
+  <div class="page">
+    <p class="page-label">Competency standard page</p>
+    <a class="back" href="#">← Competency Standards</a>
+    <h1 style="font-size:24px;margin:0">Marine Engine Operation and Maintenance</h1>
+    <p class="cs-meta"><span>Maritime · AEOSIB</span><span>Approved: 07 Jan 2026</span></p>
+    <nav class="docswitch" aria-label="Documents for this course" style="margin:0 0 14px">
+      <span aria-current="page">Competency standard</span>
+      <a href="#">Lab standard</a>
+    </nav>
+    <div class="actions" style="margin:0 0 14px">
+      <button class="primary">Download PDF</button>
+      <button>Print</button>
+    </div>
+    <div class="pdf-stub">PDF preview</div>
+  </div>
+</section>
+
+</div>
+</body>
+</html>
