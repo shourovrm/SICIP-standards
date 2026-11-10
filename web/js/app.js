@@ -285,6 +285,7 @@ function labPage(id) {
         <div class="actions">
           <button class="primary" id="dl">Download .xlsx</button>
           <button id="print">Print</button>
+          ${e.cs_pdf ? `<a class="btn" href="#/cs/${cSlug(e)}">Competency standard →</a>` : ''}
         </div>
         ${e.note && !e.min_rules.length ? `<label class="ac"><input type="checkbox" id="ac" checked> Lab is air-conditioned</label>` : ''}
         ${e.note ? `<p class="ac-hint" id="ac-hint" hidden></p>` : ''}
@@ -487,6 +488,7 @@ function csPage(id) {
   <div class="actions" style="margin:0 0 14px">
     <button class="primary" id="dl-pdf">Download PDF</button>
     <button id="print-pdf">Print</button>
+    <a class="btn" href="#/lab/${cSlug(e)}">Lab standard →</a>
   </div>
   <iframe class="cs-frame" id="pdf-frame" src="${viewerUrl(e.cs_pdf)}" title="${esc(e.course_name)} — competency standard PDF"></iframe>`;
   // fill the rest of the viewport so the whole preview window is on screen
