@@ -89,9 +89,9 @@ The mockups in `docs/mockups/` are **visual reference** (an early iteration). Wh
 - **Self-host** the woff2 files (offline-safe, faster, no Google CDN dependency). Do NOT use Public Sans / Inter / Source Serif (earlier iterations — rejected as templated).
 - Comfortable sizing: body ~16.5px, headings 22–27px. Never cramped.
 
-## Palette (committed light theme, "Plum", picked 2026-11-05)
-`--bg:#f2ecf0  --surface:#fbf8fa  --panel:#f6f0f4  --ink:#26151f  --muted:#625058  --faint:#85737d  --line:#e3d8e0  --line-strong:#cdbec8  --accent:#7a2a62  --accent-ink:#5c1f4a  --accent-tint:#ead6e4  --mark:#f6d56a  --warn:#a3201b`
-One plum accent (links, selection, primary buttons, highlight). No gradient text, no glassmorphism, no eyebrow kickers, no identical-card overload — no AI tells.
+## Palette (committed light theme, "Graphite teal", picked 2026-11-13)
+`--bg:#eff0f0  --surface:#ffffff  --panel:#f5f6f6  --ink:#1a1d1f  --muted:#4f5559  --faint:#656b6f  --line:#dfe2e3  --line-strong:#c5cacc  --accent:#0d6a70  --accent-ink:#084f54  --accent-tint:#d3ebec  --mark:#f7dc6f  --warn:#b42318`
+One teal accent (links, selection, primary buttons, highlight). No gradient text, no glassmorphism, no eyebrow kickers, no identical-card overload — no AI tells.
 
 ## Navigation
 Two top tabs only: **Lab Standards** | **Competency Standards**. (There is NO separate "Score Calculator" tab — calculation lives inside each lab-standard page.)

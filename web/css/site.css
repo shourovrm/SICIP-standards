@@ -1,11 +1,11 @@
 /* SICIP Standards — committed light theme */
 :root{
-  --bg:#f2ecf0; --surface:#fbf8fa; --panel:#f6f0f4;
-  --ink:#26151f; --muted:#625058; --faint:#85737d;
-  --line:#e3d8e0; --line-strong:#cdbec8;
-  --accent:#7a2a62; --accent-ink:#5c1f4a; --accent-tint:#ead6e4;
-  --mark:#f6d56a; --warn:#a3201b;
-  --r:12px; --shadow:0 1px 2px rgba(38,21,31,.05);
+  --bg:#eff0f0; --surface:#ffffff; --panel:#f5f6f6;
+  --ink:#1a1d1f; --muted:#4f5559; --faint:#656b6f;
+  --line:#dfe2e3; --line-strong:#c5cacc;
+  --accent:#0d6a70; --accent-ink:#084f54; --accent-tint:#d3ebec;
+  --mark:#f7dc6f; --warn:#b42318;
+  --r:12px; --shadow:0 1px 2px rgba(26,29,31,.05);
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -138,7 +138,7 @@ a.org-count:hover{background:var(--accent);color:#fff}
 .live .n small{font-size:15px;color:var(--muted);font-weight:500;font-family:"Reddit Sans",system-ui,sans-serif}
 .pill{display:inline-block;white-space:nowrap;font-size:14px;font-weight:600;padding:3px 11px;border-radius:999px}
 .pill.ok{background:var(--accent-tint);color:var(--accent-ink)}
-.pill.no{background:#fbe9e5;color:var(--warn)}
+.pill.no{background:#fbe8e5;color:var(--warn)}
 .wb-rows{display:flex;flex-wrap:wrap;gap:6px 24px}
 .live .row{display:flex;align-items:baseline;gap:10px;font-size:15px;font-variant-numeric:tabular-nums;white-space:nowrap}
 .live .row b{font-family:"Rethink Sans",sans-serif;font-size:19px;font-weight:700}
@@ -168,8 +168,8 @@ a.org-count:hover{background:var(--accent);color:#fff}
   font-variant-numeric:tabular-nums;
 }
 .equip input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-.equip tr.short input{border-color:#d9a99f;background:#fdf5f3}
-.equip tr.full input{border-color:#b98aa9;background:#f3e8ef}
+.equip tr.short input{border-color:#dda59c;background:#fdf4f2}
+.equip tr.full input{border-color:#8fc2c5;background:#e5f3f3}
 .saved{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:14px 0 0;font-size:14px;color:var(--muted)}
 .saved button{padding:6px 12px;font-size:14px}
 /* phone-only score bar, stays on screen while the equipment list scrolls */
@@ -196,9 +196,9 @@ button:hover,.btn:hover{border-color:var(--accent);color:var(--accent-ink)}
 /* Confirm dialog */
 dialog{
   border:1px solid var(--line-strong);border-radius:12px;padding:22px 24px;max-width:420px;
-  background:var(--surface);color:var(--ink);box-shadow:0 12px 40px rgba(38,21,31,.18);
+  background:var(--surface);color:var(--ink);box-shadow:0 12px 40px rgba(26,29,31,.18);
 }
-dialog::backdrop{background:rgba(38,21,31,.35)}
+dialog::backdrop{background:rgba(26,29,31,.35)}
 #confirm-msg{margin:0 0 18px;font-size:15.5px}
 .dlg-actions{display:flex;gap:10px;justify-content:flex-end}
 
@@ -227,7 +227,7 @@ dialog::backdrop{background:rgba(38,21,31,.35)}
   .top{position:static}
   .scorebar{
     position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:14px;padding:8px 14px;
-    background:var(--surface);border:1px solid var(--line);border-radius:0 0 var(--r) var(--r);box-shadow:0 2px 8px rgba(38,21,31,.08);
+    background:var(--surface);border:1px solid var(--line);border-radius:0 0 var(--r) var(--r);box-shadow:0 2px 8px rgba(26,29,31,.08);
   }
   .scorebar div{line-height:1.2}
   .scorebar div > span{display:block;font-size:11.5px;color:var(--muted)}

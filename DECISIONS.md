@@ -43,6 +43,7 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 ## Tried / rejected
 - Python/TS stack profiles as-is: they need pyproject.toml, package.json and tsconfig this repo lacks. `profile.just` is composed by hand (ruff and vulture via pinned uvx, unittest, oxlint for JS).
 - Teal/greige palette (read as generic AI), full-bleed width, 2-up org cards (replaced 2026-11-05 by Plum, 1440px cap, register list).
+- Plum palette — user disliked it; replaced 2026-11-13 by Graphite teal (neutral grey + deep teal, not the old greige).
 - pdf→HTML conversion for CS preview — mangles tables; use embedded PDF instead.
 - Fonts Public Sans / Inter / Source Serif — read as AI-templated; chose Space Grotesk × Spline Sans (#3). Space Grotesk × Spline Sans replaced 2026-11-05 by Rethink Sans × Reddit Sans (#9).
 - Separate "Score Calculator" tab — folded into each lab-standard page.
@@ -120,3 +121,4 @@ Site BUILT and verified locally (Playwright: search, calculator math, print shee
 2026-11-05 | justfile added: check = js (node --check) + py (ast parse) + data (data.json + every xlsx/pdf path exists); no profile used | no static-site stack profile; python/ts profiles need pyproject/package.json + lint configs this repo lacks; hooks/AGENTS.md/lint configs deliberately not added
 2026-11-06 | full base setup: justfile (base) + profile.just (hand-composed), ruff.toml (python profile), .oxlintrc.json (ts profile), hooks/protect.sh + .claude/settings.json, AGENTS.md (CLAUDE.md = @AGENTS.md), tests/ (unittest, 9 tests); scripts refactored to pass ruff, data.json / peer-data.json / workbook output byte-identical | user asked for them "at appropriate places"; JS lint is `just lint-js`, NOT in `check`: app.js labPage (194 lines) and run (complexity 21) exceed the profile limits, splitting them is a separate change for the user to approve
 2026-11-10 | lab page and CS page link to each other: `.btn` anchor after Print ("Competency standard →" / "Lab standard →"), same `cSlug` on both routes | user pick A from docs/mockups/cross-link-mockups.html; all 171 records carry both documents, so no lookup table
+2026-11-13 | palette Plum → Graphite teal (accent #0d6a70, neutral graphite canvas); all text pairs ≥4.5:1 | user pick 4 of 5 palette mockups (.design-mockups/, local only)
