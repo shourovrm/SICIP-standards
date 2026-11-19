@@ -16853,13 +16853,13 @@
     {
       "org": "BTMA",
       "org_slug": "BTMA",
-      "course_name": "Production Process in Woven Fabric Manufacturing",
-      "sheet": "Fabric Manufacturing",
+      "course_name": "Woven Dyeing Operation",
+      "sheet": "Woven Dyeing",
       "sector": "Textile",
       "trainees": 25,
-      "approved": "05 Nov 2026",
+      "approved": "15 Nov 2026",
       "approved_source": "filename",
-      "cs_pdf": "competency-standards/BTMA/261105 CS_PPFM_Final.pdf"
+      "cs_pdf": "competency-standards/BTMA/261115 CS_WDO_Final.pdf"
     },
     {
       "org": "BTMA",

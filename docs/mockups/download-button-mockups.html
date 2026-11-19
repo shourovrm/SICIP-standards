@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockups: organisation download button</title>
+<link rel="stylesheet" href="../../web/css/fonts.css">
+<link rel="stylesheet" href="../../web/css/site.css">
+<style>
+/* Mockup scaffolding, not part of the site */
+.mock-wrap{max-width:1100px;margin:0 auto;padding:24px 20px 80px}
+.mock-intro{max-width:70ch;color:var(--muted)}
+.opt{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px 20px;margin:22px 0}
+.opt h2{font-size:20px;margin:0 0 4px}
+.opt p.note{margin:0 0 14px;color:var(--muted);font-size:14.5px}
+.row{display:flex;align-items:center;gap:12px;padding:10px 0;border-top:1px solid var(--line)}
+.row .org{font-family:"Rethink Sans",sans-serif;font-weight:600;font-size:18px}
+.row .sp{flex:1}
+.row .meta{color:var(--faint);font-size:14px}
+.tb{display:inline-flex;align-items:center;gap:7px;font:inherit;font-size:14px;cursor:pointer;text-decoration:none}
+.tb svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+/* A: pill with label */
+.a{padding:5px 12px;border-radius:999px;background:var(--accent-tint);color:var(--accent-ink);border:1px solid transparent}
+.a:hover{background:var(--accent);color:#fff}
+/* B: outlined button */
+.b{padding:6px 12px;border-radius:6px;background:var(--surface);color:var(--accent-ink);border:1px solid var(--line-strong)}
+.b:hover{border-color:var(--accent);background:var(--accent-tint)}
+/* C: solid primary */
+.c{padding:6px 14px;border-radius:6px;background:var(--accent);color:#fff;border:1px solid var(--accent)}
+.c:hover{background:var(--accent-ink)}
+/* D: split chip */
+.d{border:1px solid var(--line-strong);border-radius:6px;overflow:hidden;background:var(--surface);color:var(--ink);gap:0}
+.d b{padding:5px 10px;background:var(--panel);font-weight:600;border-right:1px solid var(--line-strong)}
+.d span{padding:5px 12px;color:var(--accent-ink)}
+.d:hover span{background:var(--accent);color:#fff}
+/* E: text link */
+.e{color:var(--accent-ink);text-decoration:underline;text-underline-offset:3px;padding:4px 2px}
+.e:hover{color:var(--accent)}
+/* F: icon only */
+.f{width:34px;height:34px;justify-content:center;border-radius:50%;border:1px solid var(--line-strong);background:var(--surface);color:var(--accent-ink)}
+.f:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="mock-wrap">
+<h1>Organisation download button</h1>
+<p class="mock-intro">Today the button is the teal count badge "7 ↓" on each organisation heading. It does not say what it downloads, and the two pages differ: the lab page gives the .xlsx workbook, the CS page gives a .zip of PDFs. Six alternatives; each shows the lab-page row first, then the CS-page row.</p>
+
+<svg width="0" height="0" style="position:absolute"><symbol id="dl" viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 20h16"/></symbol></svg>
+
+<section class="opt"><h2>Current</h2><p class="note">Count badge with arrow.</p>
+<div class="row"><span class="org">BTMA</span><span class="sp"></span><a class="org-count" href="#">7 ↓</a></div></section>
+
+<section class="opt"><h2>A. Pill with label</h2><p class="note">Keeps the tint of the current badge; says what you get.</p>
+<div class="row"><span class="org">BTMA</span><span class="meta">7 standards</span><span class="sp"></span><a class="tb a" href="#"><svg><use href="#dl"/></svg>Workbook .xlsx</a></div>
+<div class="row"><span class="org">BTMA</span><span class="meta">7 standards</span><span class="sp"></span><a class="tb a" href="#"><svg><use href="#dl"/></svg>All PDFs .zip</a></div></section>
+
+<section class="opt"><h2>B. Outlined button</h2><p class="note">Quiet; reads as a secondary action next to the heading.</p>
+<div class="row"><span class="org">BTMA</span><span class="meta">7 standards</span><span class="sp"></span><a class="tb b" href="#"><svg><use href="#dl"/></svg>Download workbook</a></div>
+<div class="row"><span class="org">BTMA</span><span class="meta">7 standards</span><span class="sp"></span><a class="tb b" href="#"><svg><use href="#dl"/></svg>Download all (.zip)</a></div></section>
+
+<section class="opt"><h2>C. Solid primary</h2><p class="note">Most visible; matches the Download buttons on the course pages. Repeated on every heading it may feel loud.</p>
+<div class="row"><span class="org">BTMA</span><span class="meta">7 standards</span><span class="sp"></span><a class="tb c" href="#"><svg><use href="#dl"/></svg>Download .xlsx</a></div>
+<div class="row"><span class="org">BTMA</span><span class="meta">7 standards</span><span class="sp"></span><a class="tb c" href="#"><svg><use href="#dl"/></svg>Download .zip</a></div></section>
+
+<section class="opt"><h2>D. Split chip</h2><p class="note">Count on the left (as today), action on the right.</p>
+<div class="row"><span class="org">BTMA</span><span class="sp"></span><a class="tb d" href="#"><b>7</b><span>.xlsx ↓</span></a></div>
+<div class="row"><span class="org">BTMA</span><span class="sp"></span><a class="tb d" href="#"><b>7</b><span>.zip ↓</span></a></div></section>
+
+<section class="opt"><h2>E. Text link</h2><p class="note">Lightest; fits the register look but is the least discoverable.</p>
+<div class="row"><span class="org">BTMA</span><span class="meta">7 standards</span><span class="sp"></span><a class="tb e" href="#">Download workbook (.xlsx)</a></div>
+<div class="row"><span class="org">BTMA</span><span class="meta">7 standards</span><span class="sp"></span><a class="tb e" href="#">Download all PDFs (.zip)</a></div></section>
+
+<section class="opt"><h2>F. Icon only</h2><p class="note">Smallest; hover title explains. Weak on touch screens, which have no hover.</p>
+<div class="row"><span class="org">BTMA</span><span class="meta">7 standards</span><span class="sp"></span><a class="tb f" href="#" title="Download workbook (.xlsx)" aria-label="Download workbook"><svg><use href="#dl"/></svg></a></div>
+<div class="row"><span class="org">BTMA</span><span class="meta">7 standards</span><span class="sp"></span><a class="tb f" href="#" title="Download all PDFs (.zip)" aria-label="Download all PDFs"><svg><use href="#dl"/></svg></a></div></section>
+</div>
+</body>
+</html>
