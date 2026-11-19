@@ -83,8 +83,15 @@ main{padding:26px 20px 48px}
   margin-left:auto;font-size:12.5px;font-weight:600;border-radius:20px;padding:2px 10px;white-space:nowrap;
   color:var(--muted);background:var(--bg);border:1px solid var(--line);
 }
-a.org-count{color:var(--accent-ink);text-decoration:none;background:var(--accent-tint);border-color:transparent}
-a.org-count:hover{background:var(--accent);color:#fff}
+/* download badge: grey count half + solid teal action half */
+a.org-count{
+  display:inline-flex;align-self:center;padding:0;overflow:hidden;font-size:14px;font-weight:400;
+  color:var(--ink);text-decoration:none;background:none;border:1px solid var(--accent);border-radius:6px;
+}
+a.org-count b{padding:6px 11px;background:var(--panel);font-weight:600}
+a.org-count span{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;background:var(--accent);color:#fff;font-weight:600}
+a.org-count:hover span{background:var(--accent-ink)}
+a.org-count svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .course-list{list-style:none;margin:0;padding:0}
 .course a{
   display:grid;grid-template-columns:minmax(0,1fr) 220px 150px;gap:16px;align-items:baseline;

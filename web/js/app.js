@@ -58,11 +58,17 @@ function route() {
 const find = id => DATA.find(e => cSlug(e) === id);
 const setTitle = t => { document.title = t ? t + ' — SICIP Standards' : 'SICIP Standards'; };
 
+// course count on the left, download action (icon + file type) on the right
+const DOWNLOAD_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>';
+function downloadBadge(count, fileType) {
+  return `<b>${count}</b><span>${DOWNLOAD_ICON}${fileType}</span>`;
+}
+
 /* ---------- CS org zip: fetch every PDF, pack client-side ---------- */
 async function downloadOrgPdfs(org, badge) {
   // a PDF shared by two courses would otherwise appear twice in the zip
   const paths = [...new Set(org.courses.map(c => c.cs_pdf))];
-  const label = badge.textContent;
+  const label = badge.innerHTML;
   badge.textContent = '…';
   badge.setAttribute('aria-busy', 'true');
   try {
@@ -79,7 +85,7 @@ async function downloadOrgPdfs(org, badge) {
   } catch (err) {
     alert('Download failed: ' + err.message);
   } finally {
-    badge.textContent = label;
+    badge.innerHTML = label;
     badge.removeAttribute('aria-busy');
   }
 }
@@ -112,9 +118,9 @@ function directory(kind) {
         <span class="org-name">${esc(o.org)}</span>
         ${isLab
           ? `<a class="org-count" href="${encPath(o.courses[0].xlsx)}" download
-               title="Download ${esc(o.org)} workbook (.xlsx)">${o.courses.length} ↓</a>`
+               title="Download ${esc(o.org)} workbook (.xlsx)">${downloadBadge(o.courses.length, 'XLSX')}</a>`
           : `<a class="org-count" href="#" role="button" data-slug="${esc(o.slug)}"
-               title="Download all ${esc(o.org)} competency standards (.zip)">${o.courses.length} ↓</a>`}
+               title="Download all ${esc(o.org)} competency standards (.zip)">${downloadBadge(o.courses.length, 'ZIP')}</a>`}
       </div>
       <ul class="course-list">
         ${o.courses.map(c => `
