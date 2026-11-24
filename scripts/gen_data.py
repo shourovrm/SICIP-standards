@@ -38,7 +38,7 @@ MONTH_NAMES = [
 MONTHS_FULL = {name: i for i, name in enumerate(MONTH_NAMES, 1)}
 MONTHS = {name[:3]: i for i, name in enumerate(MONTH_NAMES, 1)}
 
-EXPECTED_ENTRIES = 171
+EXPECTED_ENTRIES = 172
 MIN_TOKEN_LENGTH = 4  # shorter words are too common to identify a course
 PDF_MATCH_THRESHOLD = 0.6  # share of significant course-name words found in a PDF name
 TWO_DIGIT_YEAR_LIMIT = 100  # a year below this is written 'yy' and means 20yy

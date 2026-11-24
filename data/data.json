@@ -14063,6 +14063,71 @@
  {
   "org": "BTMA",
   "org_slug": "BTMA",
+  "course_name": "Production Process in Woven Fabric Manufacturing",
+  "sheet": "Fabric Manufacturing",
+  "sector": "Textile",
+  "trainees": 25,
+  "space": "Classroom - 350 sft (33 sqm)\nWorkshop/Lab - 1800 sft (167 sqm)\nOR\nClassroom cum workshop - 2100 sft (195 sqm)",
+  "boilerplate": "•The institute shall not use the same facilities for any other projects/organizations offering a similar course.\n•The institute must provide sufficient evidence to prove ownership of the proposed training equipment.\nThe list denotes the minimum training equipment and facility required to effectively conduct training for a specific course. Additionally, the institute must ensure that all other necessary training tools, equipment, and furniture are available to meet the requirement of competency standards (CS) provided by SICIP.\nFor the operation of training course on Production Process in Woven Fabric Manufacturing, the institute must ensure the availability of at least 80% of the major training equipment and training facilities (according to the CS) to be eligible for SICIP training delivery. If the score is below 80%, the remaining equipment and facilities need to be installed before the commencement of the training.\nWhere a training institute does not possess the full-scale production machinery, the institute must establish a formal linkage with a weaving and/or knitting factory so that the practical sessions of the occupation-specific units can be conducted in an actual workplace under supervision.\nThe institute will also provide all other hand tools and power tools as per CS for 25 trainees. Also, they will arrange adequate seating arrangement and classroom setup for the 25 trainees.",
+  "note": null,
+  "min_rules": [],
+  "approved": "05 Nov 2026",
+  "equipment": [
+   {
+    "name": "Computer/Laptop",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Multimedia projector & screen",
+    "required": 1,
+    "weight": 5,
+    "remark": null
+   },
+   {
+    "name": "Whiteboard with accessories",
+    "required": 1,
+    "weight": 4,
+    "remark": null
+   },
+   {
+    "name": "Winding machine",
+    "required": 1,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Warping machine",
+    "required": 1,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Sizing machine",
+    "required": 1,
+    "weight": 9,
+    "remark": null
+   },
+   {
+    "name": "Modern Loom",
+    "required": 10,
+    "weight": 10,
+    "remark": null
+   },
+   {
+    "name": "Fabric inspection machine",
+    "required": 1,
+    "weight": 6,
+    "remark": null
+   }
+  ],
+  "xlsx": "lab-standards/BTMA-lab-standard.xlsx",
+  "cs_pdf": "competency-standards/BTMA/261105 CS_PPFM_Final.pdf"
+ },
+ {
+  "org": "BTMA",
+  "org_slug": "BTMA",
   "course_name": "Woven Dyeing Operation",
   "sheet": "Woven Dyeing",
   "sector": "Textile",
