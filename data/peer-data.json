@@ -10388,6 +10388,17 @@
       "cs_pdf": "competency-standards/BPI/3. Final_Electrical Works _ BPI_15 September 26.pdf"
     },
     {
+      "org": "BPI",
+      "org_slug": "BPI",
+      "course_name": "Solar System Installation and Maintenance",
+      "sheet": "Solar Installation",
+      "sector": "Renewable Energy",
+      "trainees": 25,
+      "approved": "26 Oct 2026",
+      "approved_source": "filename",
+      "cs_pdf": "competency-standards/BPI/4. Final_Solar System Installation and Maintenance 26 Oct 26.pdf"
+    },
+    {
       "org": "BRTC",
       "org_slug": "BRTC",
       "course_name": "Motor Driving with Basic Maintenance",
