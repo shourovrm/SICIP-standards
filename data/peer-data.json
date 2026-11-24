@@ -4658,6 +4658,17 @@
       "cs_pdf": "competency-standards/BITAC/7. BITAC-FINAL (M)_CS_Advanced CNC Machining Center Operation and Practice 20 Oct 2025.pdf"
     },
     {
+      "org": "BITAC",
+      "org_slug": "BITAC",
+      "course_name": "Solar System Installation and Maintenance",
+      "sheet": "Solar Installation",
+      "sector": "Renewable Energy",
+      "trainees": 25,
+      "approved": "26 Oct 2026",
+      "approved_source": "filename",
+      "cs_pdf": "competency-standards/BITAC/8. BITAC-FINAL_CS_Solar System Installation and Maintenance 26 Oct 26.pdf"
+    },
+    {
       "org": "BJMA",
       "org_slug": "BJMA",
       "course_name": "Jute Bleaching, Dyeing, and Printing",
@@ -10011,6 +10022,17 @@
       "cs_pdf": "competency-standards/BMET/9. BMET-CS-Food and Beverage Service 27 April 2025.pdf"
     },
     {
+      "org": "BMET",
+      "org_slug": "BMET",
+      "course_name": "Solar System Installation and Maintenance",
+      "sheet": "Solar Installation",
+      "sector": "Renewable Energy",
+      "trainees": 25,
+      "approved": "26 Oct 2026",
+      "approved_source": "filename",
+      "cs_pdf": "competency-standards/BMET/BMET_CS_Solar System Installation and Maintenance 26 Oct 26.pdf"
+    },
+    {
       "org": "BPI",
       "org_slug": "BPI",
       "course_name": "Gas Pipe Welding in Energy Sector",
@@ -10386,17 +10408,6 @@
         }
       ],
       "cs_pdf": "competency-standards/BPI/3. Final_Electrical Works _ BPI_15 September 26.pdf"
-    },
-    {
-      "org": "BPI",
-      "org_slug": "BPI",
-      "course_name": "Solar System Installation and Maintenance",
-      "sheet": "Solar Installation",
-      "sector": "Renewable Energy",
-      "trainees": 25,
-      "approved": "26 Oct 2026",
-      "approved_source": "filename",
-      "cs_pdf": "competency-standards/BPI/4. Final_Solar System Installation and Maintenance 26 Oct 26.pdf"
     },
     {
       "org": "BRTC",

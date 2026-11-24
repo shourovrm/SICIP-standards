@@ -5601,6 +5601,269 @@
   "cs_pdf": "competency-standards/BITAC/7. BITAC-FINAL (M)_CS_Advanced CNC Machining Center Operation and Practice 20 Oct 2025.pdf"
  },
  {
+  "org": "BITAC",
+  "org_slug": "BITAC",
+  "course_name": "Solar System Installation and Maintenance",
+  "sheet": "Solar Installation",
+  "sector": "Renewable Energy",
+  "trainees": 25,
+  "space": "Classroom – 350 sft (33 sqm)\nWorkshop/ lab (indoor: electrical, battery, inverter and computer design lab) – 1000 sft (93 sqm)\nOutdoor/rooftop training area with unshaded access for PV array installation (flat roof mock-up, tin-shed mock-up and ground mount) – 1200 sft (111 sqm)\nSecure store for modules, batteries and tools – 150 sft (14 sqm)",
+  "boilerplate": "•The institute shall not use the same facilities for any other projects/organizations offering a similar course.\n•The institute must provide sufficient evidence to prove ownership of the proposed training equipment.\n•The institute must have an unshaded outdoor/rooftop area with safe access and fall-protection provisions for PV array installation practice, and a ventilated battery area with spill containment.\nThe list denotes the minimum training equipment and facility required to effectively conduct training for a specific course. Additionally, the institute must ensure that all other necessary training tools, equipment, and furniture are available to meet the requirement of competency standards (CS) provided by SICIP.\nFor the operation of training course on Solar System Design, Installation and Maintenance, the institute must ensure the availability of at least 80% of the major training equipment and training facilities (according to the CS) to be eligible for SICIP training delivery. If the score is below 80%, the remaining equipment and facilities need to be installed before the commencement of the training.\nThe institute will also provide all other hand tools and power tools as per CS for 25 trainees. Also, they will arrange adequate seating arrangement and classroom setup for the 25 trainees.",
+  "note": null,
+  "min_rules": [],
+  "approved": "26 Oct 2026",
+  "equipment": [
+   {
+    "name": "Computer/Laptop with internet facility (for trainers)",
+    "required": 1,
+    "weight": 2,
+    "remark": "01"
+   },
+   {
+    "name": "Multimedia projector & screen",
+    "required": 1,
+    "weight": 2,
+    "remark": "01"
+   },
+   {
+    "name": "Printer/scanner",
+    "required": 1,
+    "weight": 1,
+    "remark": "01"
+   },
+   {
+    "name": "Internet connectivity (Wi-Fi) for monitoring platforms and resource databases",
+    "required": 1,
+    "weight": 1,
+    "remark": "01"
+   },
+   {
+    "name": "PV modules, 100–150 Wp",
+    "required": 12,
+    "weight": 6,
+    "remark": "12"
+   },
+   {
+    "name": "PV module 600–620 Wp (1 monofacial and 1 bifacial)",
+    "required": 2,
+    "weight": 3,
+    "remark": "02"
+   },
+   {
+    "name": "Mounting structures: flat-roof tilted (GI/aluminium) with ballast/anchor, tin-shed rail and clamp kit, ground-mount kit",
+    "required": 3,
+    "weight": 5,
+    "remark": "03 sets"
+   },
+   {
+    "name": "Mock flat roof platform and mock tin-shed roof section",
+    "required": 1,
+    "weight": 3,
+    "remark": "01 each"
+   },
+   {
+    "name": "Charge controllers 12/24 V, 10–30 A",
+    "required": 10,
+    "weight": 4,
+    "remark": "10"
+   },
+   {
+    "name": "Off-grid inverters 1–3 kVA (pure sine wave)",
+    "required": 1,
+    "weight": 4,
+    "remark": "01"
+   },
+   {
+    "name": "Hybrid inverter 3–5 kW with battery interface",
+    "required": 1,
+    "weight": 5,
+    "remark": "01"
+   },
+   {
+    "name": "Inverter 1–2 kW (on-grid)",
+    "required": 1,
+    "weight": 4,
+    "remark": "01"
+   },
+   {
+    "name": "Solar pump inverter (VFD) with submersible/surface pump and water tank test rig",
+    "required": 1,
+    "weight": 2,
+    "remark": "01 (optional)"
+   },
+   {
+    "name": "Deep-cycle lead-acid batteries 12 V 100–200 Ah",
+    "required": 5,
+    "weight": 3,
+    "remark": "05"
+   },
+   {
+    "name": "Lithium iron phosphate battery",
+    "required": 1,
+    "weight": 3,
+    "remark": "01 set"
+   },
+   {
+    "name": "Battery racks, cabinets, busbars, fused disconnects, hydrometer, battery analyzer",
+    "required": 3,
+    "weight": 2,
+    "remark": "03 sets"
+   },
+   {
+    "name": "DC combiner boxes with string fuses, DC isolators and Type II DC SPDs",
+    "required": 6,
+    "weight": 3,
+    "remark": "06"
+   },
+   {
+    "name": "AC distribution boards with MCB/MCCB, RCCB (Type A/B), AC SPD, changeover switch, ATS, contactors, indicators",
+    "required": 6,
+    "weight": 3,
+    "remark": "06"
+   },
+   {
+    "name": "Bi-directional (net) energy meters, generation meters and CTs",
+    "required": 4,
+    "weight": 2,
+    "remark": "04"
+   },
+   {
+    "name": "Data loggers / Wi-Fi/GSM communication modules, smart energy meters, weather sensors (irradiance, module & ambient temperature)",
+    "required": 3,
+    "weight": 2,
+    "remark": "03 sets"
+   },
+   {
+    "name": "Grid simulator / isolated grid supply with protection for interconnection training (or utility-approved grid connection point)",
+    "required": 1,
+    "weight": 3,
+    "remark": "01"
+   },
+   {
+    "name": "Solar PV cables 1x6 mm², AC cables, battery cables, earthing conductors",
+    "required": 2000,
+    "weight": 2,
+    "remark": "2000 m"
+   },
+   {
+    "name": "Solar PV cables 1x6 mm², preferably NYY for AC",
+    "required": 200,
+    "weight": 1,
+    "remark": "200 m"
+   },
+   {
+    "name": "MC4 connectors (pairs), MC4 crimping/disassembly tools, cable lugs and ferrules",
+    "required": 200,
+    "weight": 2,
+    "remark": "200 / 10 sets"
+   },
+   {
+    "name": "Cable management: trays, conduits, UV cable ties, clips, glands",
+    "required": null,
+    "weight": 1,
+    "remark": "as required"
+   },
+   {
+    "name": "Earthing kits: electrodes, earth pits, bonding lugs, lightning air terminals and down conductors",
+    "required": 5,
+    "weight": 2,
+    "remark": "05 sets"
+   },
+   {
+    "name": "Digital multimeters 1000 V",
+    "required": 25,
+    "weight": 3,
+    "remark": "25"
+   },
+   {
+    "name": "DC/AC clamp meters",
+    "required": 13,
+    "weight": 2,
+    "remark": "13"
+   },
+   {
+    "name": "Surge protection device for DC and AC",
+    "required": 2,
+    "weight": 1,
+    "remark": "02 sets each"
+   },
+   {
+    "name": "Insulation resistance testers (1000 V DC) / PV installation testers",
+    "required": 6,
+    "weight": 3,
+    "remark": "06"
+   },
+   {
+    "name": "Earth resistance testers",
+    "required": 4,
+    "weight": 2,
+    "remark": "04"
+   },
+   {
+    "name": "Oscilloscope and function generator (for electrical fundamentals)",
+    "required": 1,
+    "weight": 2,
+    "remark": "01 each"
+   },
+   {
+    "name": "DC regulated power supplies and electrical fundamentals trainer kits (resistors, lamps, switches, breadboards)",
+    "required": 6,
+    "weight": 2,
+    "remark": "06 sets"
+   },
+   {
+    "name": "Soldering stations and tools",
+    "required": 13,
+    "weight": 1,
+    "remark": "13"
+   },
+   {
+    "name": "Hand tool kits (screwdrivers, pliers, spanners, cutters, strippers, crimpers, hacksaw, files, hammers)",
+    "required": 13,
+    "weight": 2,
+    "remark": "13 sets"
+   },
+   {
+    "name": "Torque wrenches (5–50 Nm) and socket sets",
+    "required": 6,
+    "weight": 1,
+    "remark": "06"
+   },
+   {
+    "name": "Ladders (extension and step), mobile scaffold, module lifting aids",
+    "required": 4,
+    "weight": 2,
+    "remark": "04 / 01 / 02"
+   },
+   {
+    "name": "Fall protection: full-body harness, lanyards, anchor points, lifelines",
+    "required": 13,
+    "weight": 3,
+    "remark": "13 sets"
+   },
+   {
+    "name": "PPE: helmets, insulated gloves, safety shoes, goggles, face shields, high-visibility vests, dust masks",
+    "required": 25,
+    "weight": 3,
+    "remark": "25 sets"
+   },
+   {
+    "name": "First aid kits, fire extinguishers, emergency rescue hook/insulated rod",
+    "required": 2,
+    "weight": 1,
+    "remark": "02 each"
+   },
+   {
+    "name": "Module cleaning kit (soft brushes, squeegee, water hose/low-pressure sprayer)",
+    "required": 3,
+    "weight": 1,
+    "remark": "03 sets"
+   }
+  ],
+  "xlsx": "lab-standards/BITAC-lab-standard.xlsx",
+  "cs_pdf": "competency-standards/BITAC/8. BITAC-FINAL_CS_Solar System Installation and Maintenance 26 Oct 26.pdf"
+ },
+ {
   "org": "BJMA",
   "org_slug": "BJMA",
   "course_name": "Jute Bleaching, Dyeing, and Printing",
@@ -12045,6 +12308,269 @@
   "cs_pdf": "competency-standards/BMET/9. BMET-CS-Food and Beverage Service 27 April 2025.pdf"
  },
  {
+  "org": "BMET",
+  "org_slug": "BMET",
+  "course_name": "Solar System Installation and Maintenance",
+  "sheet": "Solar Installation",
+  "sector": "Renewable Energy",
+  "trainees": 25,
+  "space": "Classroom – 350 sft (33 sqm)\nWorkshop/ lab (indoor: electrical, battery, inverter and computer design lab) – 1000 sft (93 sqm)\nOutdoor/rooftop training area with unshaded access for PV array installation (flat roof mock-up, tin-shed mock-up and ground mount) – 1200 sft (111 sqm)\nSecure store for modules, batteries and tools – 150 sft (14 sqm)",
+  "boilerplate": "•The institute shall not use the same facilities for any other projects/organizations offering a similar course.\n•The institute must provide sufficient evidence to prove ownership of the proposed training equipment.\n•The institute must have an unshaded outdoor/rooftop area with safe access and fall-protection provisions for PV array installation practice, and a ventilated battery area with spill containment.\nThe list denotes the minimum training equipment and facility required to effectively conduct training for a specific course. Additionally, the institute must ensure that all other necessary training tools, equipment, and furniture are available to meet the requirement of competency standards (CS) provided by SICIP.\nFor the operation of training course on Solar System Design, Installation and Maintenance, the institute must ensure the availability of at least 80% of the major training equipment and training facilities (according to the CS) to be eligible for SICIP training delivery. If the score is below 80%, the remaining equipment and facilities need to be installed before the commencement of the training.\nThe institute will also provide all other hand tools and power tools as per CS for 25 trainees. Also, they will arrange adequate seating arrangement and classroom setup for the 25 trainees.",
+  "note": null,
+  "min_rules": [],
+  "approved": "26 Oct 2026",
+  "equipment": [
+   {
+    "name": "Computer/Laptop with internet facility (for trainers)",
+    "required": 1,
+    "weight": 2,
+    "remark": "01"
+   },
+   {
+    "name": "Multimedia projector & screen",
+    "required": 1,
+    "weight": 2,
+    "remark": "01"
+   },
+   {
+    "name": "Printer/scanner",
+    "required": 1,
+    "weight": 1,
+    "remark": "01"
+   },
+   {
+    "name": "Internet connectivity (Wi-Fi) for monitoring platforms and resource databases",
+    "required": 1,
+    "weight": 1,
+    "remark": "01"
+   },
+   {
+    "name": "PV modules, 100–150 Wp",
+    "required": 12,
+    "weight": 6,
+    "remark": "12"
+   },
+   {
+    "name": "PV module 600–620 Wp (1 monofacial and 1 bifacial)",
+    "required": 2,
+    "weight": 3,
+    "remark": "02"
+   },
+   {
+    "name": "Mounting structures: flat-roof tilted (GI/aluminium) with ballast/anchor, tin-shed rail and clamp kit, ground-mount kit",
+    "required": 3,
+    "weight": 5,
+    "remark": "03 sets"
+   },
+   {
+    "name": "Mock flat roof platform and mock tin-shed roof section",
+    "required": 1,
+    "weight": 3,
+    "remark": "01 each"
+   },
+   {
+    "name": "Charge controllers 12/24 V, 10–30 A",
+    "required": 10,
+    "weight": 4,
+    "remark": "10"
+   },
+   {
+    "name": "Off-grid inverters 1–3 kVA (pure sine wave)",
+    "required": 1,
+    "weight": 4,
+    "remark": "01"
+   },
+   {
+    "name": "Hybrid inverter 3–5 kW with battery interface",
+    "required": 1,
+    "weight": 5,
+    "remark": "01"
+   },
+   {
+    "name": "Inverter 1–2 kW (on-grid)",
+    "required": 1,
+    "weight": 4,
+    "remark": "01"
+   },
+   {
+    "name": "Solar pump inverter (VFD) with submersible/surface pump and water tank test rig",
+    "required": 1,
+    "weight": 2,
+    "remark": "01 (optional)"
+   },
+   {
+    "name": "Deep-cycle lead-acid batteries 12 V 100–200 Ah",
+    "required": 5,
+    "weight": 3,
+    "remark": "05"
+   },
+   {
+    "name": "Lithium iron phosphate battery",
+    "required": 1,
+    "weight": 3,
+    "remark": "01 set"
+   },
+   {
+    "name": "Battery racks, cabinets, busbars, fused disconnects, hydrometer, battery analyzer",
+    "required": 3,
+    "weight": 2,
+    "remark": "03 sets"
+   },
+   {
+    "name": "DC combiner boxes with string fuses, DC isolators and Type II DC SPDs",
+    "required": 6,
+    "weight": 3,
+    "remark": "06"
+   },
+   {
+    "name": "AC distribution boards with MCB/MCCB, RCCB (Type A/B), AC SPD, changeover switch, ATS, contactors, indicators",
+    "required": 6,
+    "weight": 3,
+    "remark": "06"
+   },
+   {
+    "name": "Bi-directional (net) energy meters, generation meters and CTs",
+    "required": 4,
+    "weight": 2,
+    "remark": "04"
+   },
+   {
+    "name": "Data loggers / Wi-Fi/GSM communication modules, smart energy meters, weather sensors (irradiance, module & ambient temperature)",
+    "required": 3,
+    "weight": 2,
+    "remark": "03 sets"
+   },
+   {
+    "name": "Grid simulator / isolated grid supply with protection for interconnection training (or utility-approved grid connection point)",
+    "required": 1,
+    "weight": 3,
+    "remark": "01"
+   },
+   {
+    "name": "Solar PV cables 1x6 mm², AC cables, battery cables, earthing conductors",
+    "required": 2000,
+    "weight": 2,
+    "remark": "2000 m"
+   },
+   {
+    "name": "Solar PV cables 1x6 mm², preferably NYY for AC",
+    "required": 200,
+    "weight": 1,
+    "remark": "200 m"
+   },
+   {
+    "name": "MC4 connectors (pairs), MC4 crimping/disassembly tools, cable lugs and ferrules",
+    "required": 200,
+    "weight": 2,
+    "remark": "200 / 10 sets"
+   },
+   {
+    "name": "Cable management: trays, conduits, UV cable ties, clips, glands",
+    "required": null,
+    "weight": 1,
+    "remark": "as required"
+   },
+   {
+    "name": "Earthing kits: electrodes, earth pits, bonding lugs, lightning air terminals and down conductors",
+    "required": 5,
+    "weight": 2,
+    "remark": "05 sets"
+   },
+   {
+    "name": "Digital multimeters 1000 V",
+    "required": 25,
+    "weight": 3,
+    "remark": "25"
+   },
+   {
+    "name": "DC/AC clamp meters",
+    "required": 13,
+    "weight": 2,
+    "remark": "13"
+   },
+   {
+    "name": "Surge protection device for DC and AC",
+    "required": 2,
+    "weight": 1,
+    "remark": "02 sets each"
+   },
+   {
+    "name": "Insulation resistance testers (1000 V DC) / PV installation testers",
+    "required": 6,
+    "weight": 3,
+    "remark": "06"
+   },
+   {
+    "name": "Earth resistance testers",
+    "required": 4,
+    "weight": 2,
+    "remark": "04"
+   },
+   {
+    "name": "Oscilloscope and function generator (for electrical fundamentals)",
+    "required": 1,
+    "weight": 2,
+    "remark": "01 each"
+   },
+   {
+    "name": "DC regulated power supplies and electrical fundamentals trainer kits (resistors, lamps, switches, breadboards)",
+    "required": 6,
+    "weight": 2,
+    "remark": "06 sets"
+   },
+   {
+    "name": "Soldering stations and tools",
+    "required": 13,
+    "weight": 1,
+    "remark": "13"
+   },
+   {
+    "name": "Hand tool kits (screwdrivers, pliers, spanners, cutters, strippers, crimpers, hacksaw, files, hammers)",
+    "required": 13,
+    "weight": 2,
+    "remark": "13 sets"
+   },
+   {
+    "name": "Torque wrenches (5–50 Nm) and socket sets",
+    "required": 6,
+    "weight": 1,
+    "remark": "06"
+   },
+   {
+    "name": "Ladders (extension and step), mobile scaffold, module lifting aids",
+    "required": 4,
+    "weight": 2,
+    "remark": "04 / 01 / 02"
+   },
+   {
+    "name": "Fall protection: full-body harness, lanyards, anchor points, lifelines",
+    "required": 13,
+    "weight": 3,
+    "remark": "13 sets"
+   },
+   {
+    "name": "PPE: helmets, insulated gloves, safety shoes, goggles, face shields, high-visibility vests, dust masks",
+    "required": 25,
+    "weight": 3,
+    "remark": "25 sets"
+   },
+   {
+    "name": "First aid kits, fire extinguishers, emergency rescue hook/insulated rod",
+    "required": 2,
+    "weight": 1,
+    "remark": "02 each"
+   },
+   {
+    "name": "Module cleaning kit (soft brushes, squeegee, water hose/low-pressure sprayer)",
+    "required": 3,
+    "weight": 1,
+    "remark": "03 sets"
+   }
+  ],
+  "xlsx": "lab-standards/BMET-lab-standard.xlsx",
+  "cs_pdf": "competency-standards/BMET/BMET_CS_Solar System Installation and Maintenance 26 Oct 26.pdf"
+ },
+ {
   "org": "BPI",
   "org_slug": "BPI",
   "course_name": "Gas Pipe Welding in Energy Sector",
@@ -12568,269 +13094,6 @@
   ],
   "xlsx": "lab-standards/BPI-lab-standard.xlsx",
   "cs_pdf": "competency-standards/BPI/3. Final_Electrical Works _ BPI_15 September 26.pdf"
- },
- {
-  "org": "BPI",
-  "org_slug": "BPI",
-  "course_name": "Solar System Installation and Maintenance",
-  "sheet": "Solar Installation",
-  "sector": "Renewable Energy",
-  "trainees": 25,
-  "space": "Classroom – 350 sft (33 sqm)\nWorkshop/ lab (indoor: electrical, battery, inverter and computer design lab) – 1000 sft (93 sqm)\nOutdoor/rooftop training area with unshaded access for PV array installation (flat roof mock-up, tin-shed mock-up and ground mount) – 1200 sft (111 sqm)\nSecure store for modules, batteries and tools – 150 sft (14 sqm)",
-  "boilerplate": "•The institute shall not use the same facilities for any other projects/organizations offering a similar course.\n•The institute must provide sufficient evidence to prove ownership of the proposed training equipment.\n•The institute must have an unshaded outdoor/rooftop area with safe access and fall-protection provisions for PV array installation practice, and a ventilated battery area with spill containment.\nThe list denotes the minimum training equipment and facility required to effectively conduct training for a specific course. Additionally, the institute must ensure that all other necessary training tools, equipment, and furniture are available to meet the requirement of competency standards (CS) provided by SICIP.\nFor the operation of training course on Solar System Design, Installation and Maintenance, the institute must ensure the availability of at least 80% of the major training equipment and training facilities (according to the CS) to be eligible for SICIP training delivery. If the score is below 80%, the remaining equipment and facilities need to be installed before the commencement of the training.\nThe institute will also provide all other hand tools and power tools as per CS for 25 trainees. Also, they will arrange adequate seating arrangement and classroom setup for the 25 trainees.",
-  "note": null,
-  "min_rules": [],
-  "approved": "26 Oct 2026",
-  "equipment": [
-   {
-    "name": "Computer/Laptop with internet facility (for trainers)",
-    "required": 1,
-    "weight": 2,
-    "remark": "01"
-   },
-   {
-    "name": "Multimedia projector & screen",
-    "required": 1,
-    "weight": 2,
-    "remark": "01"
-   },
-   {
-    "name": "Printer/scanner",
-    "required": 1,
-    "weight": 1,
-    "remark": "01"
-   },
-   {
-    "name": "Internet connectivity (Wi-Fi) for monitoring platforms and resource databases",
-    "required": 1,
-    "weight": 1,
-    "remark": "01"
-   },
-   {
-    "name": "PV modules, 100–150 Wp",
-    "required": 12,
-    "weight": 6,
-    "remark": "12"
-   },
-   {
-    "name": "PV module 600–620 Wp (1 monofacial and 1 bifacial)",
-    "required": 2,
-    "weight": 3,
-    "remark": "02"
-   },
-   {
-    "name": "Mounting structures: flat-roof tilted (GI/aluminium) with ballast/anchor, tin-shed rail and clamp kit, ground-mount kit",
-    "required": 3,
-    "weight": 5,
-    "remark": "03 sets"
-   },
-   {
-    "name": "Mock flat roof platform and mock tin-shed roof section",
-    "required": 1,
-    "weight": 3,
-    "remark": "01 each"
-   },
-   {
-    "name": "Charge controllers 12/24 V, 10–30 A",
-    "required": 10,
-    "weight": 4,
-    "remark": "10"
-   },
-   {
-    "name": "Off-grid inverters 1–3 kVA (pure sine wave)",
-    "required": 1,
-    "weight": 4,
-    "remark": "01"
-   },
-   {
-    "name": "Hybrid inverter 3–5 kW with battery interface",
-    "required": 1,
-    "weight": 5,
-    "remark": "01"
-   },
-   {
-    "name": "Inverter 1–2 kW (on-grid)",
-    "required": 1,
-    "weight": 4,
-    "remark": "01"
-   },
-   {
-    "name": "Solar pump inverter (VFD) with submersible/surface pump and water tank test rig",
-    "required": 1,
-    "weight": 2,
-    "remark": "01 (optional)"
-   },
-   {
-    "name": "Deep-cycle lead-acid batteries 12 V 100–200 Ah",
-    "required": 5,
-    "weight": 3,
-    "remark": "05"
-   },
-   {
-    "name": "Lithium iron phosphate battery",
-    "required": 1,
-    "weight": 3,
-    "remark": "01 set"
-   },
-   {
-    "name": "Battery racks, cabinets, busbars, fused disconnects, hydrometer, battery analyzer",
-    "required": 3,
-    "weight": 2,
-    "remark": "03 sets"
-   },
-   {
-    "name": "DC combiner boxes with string fuses, DC isolators and Type II DC SPDs",
-    "required": 6,
-    "weight": 3,
-    "remark": "06"
-   },
-   {
-    "name": "AC distribution boards with MCB/MCCB, RCCB (Type A/B), AC SPD, changeover switch, ATS, contactors, indicators",
-    "required": 6,
-    "weight": 3,
-    "remark": "06"
-   },
-   {
-    "name": "Bi-directional (net) energy meters, generation meters and CTs",
-    "required": 4,
-    "weight": 2,
-    "remark": "04"
-   },
-   {
-    "name": "Data loggers / Wi-Fi/GSM communication modules, smart energy meters, weather sensors (irradiance, module & ambient temperature)",
-    "required": 3,
-    "weight": 2,
-    "remark": "03 sets"
-   },
-   {
-    "name": "Grid simulator / isolated grid supply with protection for interconnection training (or utility-approved grid connection point)",
-    "required": 1,
-    "weight": 3,
-    "remark": "01"
-   },
-   {
-    "name": "Solar PV cables 1x6 mm², AC cables, battery cables, earthing conductors",
-    "required": 2000,
-    "weight": 2,
-    "remark": "2000 m"
-   },
-   {
-    "name": "Solar PV cables 1x6 mm², preferably NYY for AC",
-    "required": 200,
-    "weight": 1,
-    "remark": "200 m"
-   },
-   {
-    "name": "MC4 connectors (pairs), MC4 crimping/disassembly tools, cable lugs and ferrules",
-    "required": 200,
-    "weight": 2,
-    "remark": "200 / 10 sets"
-   },
-   {
-    "name": "Cable management: trays, conduits, UV cable ties, clips, glands",
-    "required": null,
-    "weight": 1,
-    "remark": "as required"
-   },
-   {
-    "name": "Earthing kits: electrodes, earth pits, bonding lugs, lightning air terminals and down conductors",
-    "required": 5,
-    "weight": 2,
-    "remark": "05 sets"
-   },
-   {
-    "name": "Digital multimeters 1000 V",
-    "required": 25,
-    "weight": 3,
-    "remark": "25"
-   },
-   {
-    "name": "DC/AC clamp meters",
-    "required": 13,
-    "weight": 2,
-    "remark": "13"
-   },
-   {
-    "name": "Surge protection device for DC and AC",
-    "required": 2,
-    "weight": 1,
-    "remark": "02 sets each"
-   },
-   {
-    "name": "Insulation resistance testers (1000 V DC) / PV installation testers",
-    "required": 6,
-    "weight": 3,
-    "remark": "06"
-   },
-   {
-    "name": "Earth resistance testers",
-    "required": 4,
-    "weight": 2,
-    "remark": "04"
-   },
-   {
-    "name": "Oscilloscope and function generator (for electrical fundamentals)",
-    "required": 1,
-    "weight": 2,
-    "remark": "01 each"
-   },
-   {
-    "name": "DC regulated power supplies and electrical fundamentals trainer kits (resistors, lamps, switches, breadboards)",
-    "required": 6,
-    "weight": 2,
-    "remark": "06 sets"
-   },
-   {
-    "name": "Soldering stations and tools",
-    "required": 13,
-    "weight": 1,
-    "remark": "13"
-   },
-   {
-    "name": "Hand tool kits (screwdrivers, pliers, spanners, cutters, strippers, crimpers, hacksaw, files, hammers)",
-    "required": 13,
-    "weight": 2,
-    "remark": "13 sets"
-   },
-   {
-    "name": "Torque wrenches (5–50 Nm) and socket sets",
-    "required": 6,
-    "weight": 1,
-    "remark": "06"
-   },
-   {
-    "name": "Ladders (extension and step), mobile scaffold, module lifting aids",
-    "required": 4,
-    "weight": 2,
-    "remark": "04 / 01 / 02"
-   },
-   {
-    "name": "Fall protection: full-body harness, lanyards, anchor points, lifelines",
-    "required": 13,
-    "weight": 3,
-    "remark": "13 sets"
-   },
-   {
-    "name": "PPE: helmets, insulated gloves, safety shoes, goggles, face shields, high-visibility vests, dust masks",
-    "required": 25,
-    "weight": 3,
-    "remark": "25 sets"
-   },
-   {
-    "name": "First aid kits, fire extinguishers, emergency rescue hook/insulated rod",
-    "required": 2,
-    "weight": 1,
-    "remark": "02 each"
-   },
-   {
-    "name": "Module cleaning kit (soft brushes, squeegee, water hose/low-pressure sprayer)",
-    "required": 3,
-    "weight": 1,
-    "remark": "03 sets"
-   }
-  ],
-  "xlsx": "lab-standards/BPI-lab-standard.xlsx",
-  "cs_pdf": "competency-standards/BPI/4. Final_Solar System Installation and Maintenance 26 Oct 26.pdf"
  },
  {
   "org": "BRTC",
